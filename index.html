@@ -74,6 +74,62 @@ time.rec.old{opacity:.65}
 article.item.tweet{border-left:3px solid var(--teal)}
 article.item.tweet .hl{font:600 14px var(--sans);color:var(--text);margin-bottom:6px}
 article.item.tweet .sum{font-family:var(--serif);font-size:16px;line-height:1.5;color:var(--text);white-space:pre-line}
+/* card additions */
+.quote{margin:0 0 8px;font-family:var(--serif);font-size:16px;line-height:1.5;color:var(--text);white-space:pre-line}
+.hl a{color:inherit}
+.rt{font-variant-numeric:tabular-nums;white-space:nowrap}
+.acts{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:11px;padding-top:10px;border-top:1px solid var(--line)}
+.btn{appearance:none;display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:0 12px;border-radius:999px;border:1px solid var(--line);
+  background:var(--bg2);color:var(--text);font:600 13px var(--sans);cursor:pointer;text-decoration:none;white-space:nowrap}
+.btn:hover{border-color:var(--teal-dim);text-decoration:none}
+.btn.read{border-color:rgba(45,212,191,.45);color:var(--teal)}
+.btn.read .car{font-size:10px;transition:transform .2s}
+.btn.read[aria-expanded="true"] .car{transform:rotate(180deg)}
+.btn.ask{background:var(--teal);border-color:var(--teal);color:#06201c}
+.btn.ask:hover{background:#5eead4;border-color:#5eead4}
+.btn.ghost{color:var(--muted);font-weight:500}
+.votes{margin-left:auto;display:flex;gap:6px}
+.btn.vote{min-width:42px;justify-content:center;padding:0 10px;font-size:16px;line-height:1}
+.btn.vote[aria-pressed="true"].up{background:rgba(45,212,191,.18);border-color:var(--teal);color:var(--teal)}
+.btn.vote[aria-pressed="true"].down{background:rgba(244,114,94,.16);border-color:#f4725e;color:#f4725e}
+.brief{margin-top:12px;padding:12px 2px 2px;border-top:1px dashed var(--line)}
+.brief[hidden]{display:none}
+.brief h4{margin:14px 0 5px;font:700 11.5px var(--sans);letter-spacing:.09em;text-transform:uppercase;color:var(--teal)}
+.brief h4:first-child{margin-top:0}
+.brief ul{margin:0;padding-left:18px}
+.brief li{margin:0 0 5px;font-size:14.5px;line-height:1.55;color:#d9d3c9}
+.brief .bnote{margin:12px 0 0;padding:8px 10px;border-left:3px solid #c9a227;background:rgba(201,162,39,.08);color:#d8c98a;font-size:13px;border-radius:0 8px 8px 0}
+.brief .bsrc{margin:12px 0 0;font-size:12.5px;color:var(--muted)}
+.askbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 16px;padding:12px;border:1px solid var(--line);background:var(--bg2);border-radius:14px}
+.askbar .hint{font-size:12px;color:var(--muted);flex:1 1 180px}
+.askbar .btn{min-height:40px;font-size:14px}
+/* feedback */
+.fab{position:fixed;right:calc(var(--sar) + 14px);bottom:calc(var(--sab) + 14px);z-index:30;min-height:46px;padding:0 16px;border-radius:999px;border:1px solid var(--teal);
+  background:#0f2a27;color:var(--text);font:600 14px var(--sans);display:flex;gap:8px;align-items:center;cursor:pointer;box-shadow:0 6px 24px rgba(0,0,0,.55)}
+.fab .badge{min-width:20px;height:20px;border-radius:10px;background:var(--teal);color:#06201c;font-size:12px;line-height:20px;text-align:center;padding:0 5px}
+.fab .badge[hidden]{display:none}
+.scrim{position:fixed;inset:0;z-index:40;background:rgba(0,0,0,.6);display:flex;align-items:flex-end;justify-content:center}
+.scrim[hidden]{display:none}
+.sheet{width:100%;max-width:640px;max-height:88vh;max-height:88dvh;overflow:auto;background:var(--bg2);border:1px solid var(--line);border-radius:18px 18px 0 0;
+  padding:16px 16px calc(var(--sab) + 16px)}
+@media (min-width:760px){.scrim{align-items:center}.sheet{border-radius:18px}}
+.sheet h2{font-family:var(--serif);font-size:21px;margin:0 0 4px}
+.sheet .sub{font-size:13px;color:var(--muted);margin:0 0 12px}
+.sheet h5{margin:14px 0 6px;font:700 11.5px var(--sans);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.fbrow{display:flex;gap:10px;align-items:flex-start;padding:9px 10px;border:1px solid var(--line);border-radius:10px;margin-bottom:6px;background:var(--card)}
+.fbrow .v{font-size:17px;line-height:1.3}
+.fbrow .tx{flex:1;min-width:0}
+.fbrow .t1{font-size:14px;font-weight:600;line-height:1.35}
+.fbrow .t2{font-size:12px;color:var(--muted);margin-top:2px;overflow-wrap:anywhere}
+.fbrow .x{appearance:none;background:none;border:0;color:var(--muted);font-size:20px;cursor:pointer;min-width:36px;min-height:36px}
+.sheet textarea{width:100%;min-height:56px;resize:vertical;background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:10px;padding:9px 10px;font:14px var(--sans)}
+.sheet .row{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.sheet .row .btn{min-height:42px;font-size:14px}
+.sheet .warn{font-size:12px;color:#d8c98a;margin:8px 0 0}
+.sheet .after{margin-top:12px;padding:10px 12px;border:1px solid var(--teal-dim);border-radius:10px;background:rgba(45,212,191,.08);font-size:14px}
+.sheet .after[hidden]{display:none}
+.toast{position:fixed;left:50%;bottom:calc(var(--sab) + 74px);transform:translateX(-50%);z-index:60;background:#e9fff9;color:#06201c;font:600 13px var(--sans);padding:8px 14px;border-radius:999px;box-shadow:0 6px 20px rgba(0,0,0,.5)}
+.toast[hidden]{display:none}
 .empty{color:var(--muted);padding:6px 4px 16px;font-size:14px}
 footer{max-width:1100px;margin:26px auto 0;padding:0 16px;color:var(--muted);font-size:12px;line-height:1.6}
 noscript{display:block;padding:24px 16px;color:var(--text)}
@@ -96,12 +152,15 @@ noscript{display:block;padding:24px 16px;color:var(--text)}
 </div></header>
 <main id="main"><noscript>This dashboard needs JavaScript to render the news items.</noscript></main>
 <footer id="foot"></footer>
+<button type="button" class="fab" id="fab" aria-haspopup="dialog"><span aria-hidden="true">&#x1F4AC;</span><span>Send feedback</span><span class="badge" id="fab-n" hidden>0</span></button>
+<div class="scrim" id="scrim" hidden><div class="sheet" role="dialog" aria-modal="true" aria-labelledby="fb-t" id="sheet"></div></div>
+<div class="toast" id="toast" role="status" hidden></div>
 
 <script type="application/json" id="news-data">
 {
  "meta": {
   "title": "News",
-  "generated_at": "2026-10-11T06:56:36+08:00",
+  "generated_at": "2026-10-11T11:44:53+08:00",
   "timezone": "Asia/Singapore",
   "note": "Times are ISO-8601 with offset (or date-only / absent when the source did not state a time). The page renders everything in SGT."
  },
@@ -109,307 +168,2998 @@ noscript{display:block;padding:24px 16px;color:var(--text)}
   "cricket": [
    {
     "headline": "Renshaw's 190 turns first Test; SA 27-1 trailing by 363 overnight",
-    "summary": "Matt Renshaw's highest Test score (190 off 397 balls, first century in nine years) and a 134-run ninth-wicket stand with Nathan Lyon lifted Australia to 390 all out at Kingsmead after they had been 124-6 on day one. Josh Hazlewood then removed Ryan Rickelton for a duck; South Africa resume day three (Sunday) on 27-1.",
+    "teaser": "Matt Renshaw's career-best 190 and a 134-run ninth-wicket stand with Nathan Lyon lifted Australia from 124-6 to 390 all out in Durban; South Africa resume day three on 27-1.",
     "source": "The Guardian",
     "url": "https://www.theguardian.com/sport/2026/oct/10/south-africa-australia-first-test-second-day-match-report",
-    "published": "2026-10-10T15:51:00+00:00"
+    "published": "2026-10-10T15:51:00+00:00",
+    "tags": [
+     "Cricket",
+     "Test",
+     "Australia",
+     "South Africa",
+     "Matt Renshaw",
+     "Geoff Lemon (Guardian)"
+    ],
+    "brief": [
+     {
+      "h": "What happened",
+      "b": [
+       "Australia were 124-6 on day one at Kingsmead; Matt Renshaw (46* overnight) then batted through two long sessions on day two to make 190.",
+       "He was last man out, driving off-spinner Simon Harmer to slip just after tea, with Australia all out for 390.",
+       "Pat Cummins helped add 86 for the seventh wicket before poking an old ball to slip for 43; Mitchell Starc was then bowled by Wiaan Mulder's ball that pitched on leg and took middle and off.",
+       "At 230-8, South Africa expected a quick finish. Instead Renshaw farmed the strike while Nathan Lyon defended.",
+       "Josh Hazlewood then had Ryan Rickelton caught at slip, leaving South Africa 27-1 at stumps, 363 behind."
+      ]
+     },
+     {
+      "h": "Key numbers and facts",
+      "b": [
+       "190 is Renshaw's highest Test score; his previous best was 184.",
+       "His hundred came after 9 years and 280 days since his last. Only Bob Simpson and Warren Bardsley waited longer between Test centuries for Australia.",
+       "Renshaw and Lyon added 134 for the ninth wicket, Australia's second-highest ninth-wicket partnership.",
+       "Lyon made 27 from 92 balls. He faced 24 balls without scoring across 16 overs around lunch. It was his first century stand in 144 Tests, more than any cricketer had played before achieving one.",
+       "Durban records: highest score by an Australian there (past Phil Hughes' 160) and highest by any batter at No. 5 or lower.",
+       "Australia batted fewer than nine overs in the last session before bad light stopped play."
+      ]
+     },
+     {
+      "h": "Why it matters",
+      "b": [
+       "Renshaw's innings rescued Australia from peril and moved them to dominance in the first Test.",
+       "South Africa's attack lost its bite: Marco Jansen and Anrich Nortje bowled tough spells, but by the second session the pitch had 'gone to sleep' and even part-timer Aiden Markram was bowling.",
+       "Temba Bavuma's decision to spread the field for Renshaw let him rotate strike. The Guardian notes this tactic often backfires against batters with the right temperament, as it did here."
+      ]
+     },
+     {
+      "h": "Selection story behind it",
+      "b": [
+       "Opening with Nic Maddinson was a bust, but it pushed Renshaw down to No. 5, where he thrived.",
+       "Usman Khawaja went from No. 5 to the top of the order, then Travis Head did the same to replace him.",
+       "Cam Green was the most convincing batter in Australia's previous series but is injured. Renshaw may have to shuttle back to opener when Green returns."
+      ]
+     },
+     {
+      "h": "What to watch next",
+      "b": [
+       "Day three (Sunday): South Africa resume on 27-1, 363 behind.",
+       "Whether Australia's bowlers can build on Hazlewood's early strike, with the Guardian noting bad light has repeatedly stopped play.",
+       "Whether Renshaw gets a settled batting slot, with the No. 5 versus opener question likely to return next week."
+      ]
+     }
+    ],
+    "id": "1743dd52"
    },
    {
     "headline": "West Indies chase 250 to level India T20I series; Indore third match tonight",
-    "summary": "Shai Hope's unbeaten 102 off 45 and Sherfane Rutherford's 84 off 37 powered West Indies to 252-4 with nine balls spare in Ranchi — their highest successful T20I chase and the second-highest ever. The five-match series is 1-1; the third T20I at Holkar Stadium, Indore starts 7:00pm IST / 9:30pm SGT on Sunday.",
+    "teaser": "Shai Hope's unbeaten 102 off 45 and Sherfane Rutherford's 84 off 37 powered West Indies to 252-4 in Ranchi, their highest successful T20I chase. Third T20I is Sunday in Indore.",
     "source": "Al Jazeera (AP)",
     "url": "https://www.aljazeera.com/sports/2026/10/10/hopes-hundred-fires-west-indies-to-record-t20-win-over-india",
-    "published": "2026-10-10T08:21:22+00:00"
+    "published": "2026-10-10T08:21:22+00:00",
+    "tags": [
+     "Cricket",
+     "T20I",
+     "India",
+     "West Indies",
+     "Shai Hope",
+     "AP"
+    ],
+    "brief": [
+     {
+      "h": "What happened",
+      "b": [
+       "Playing in Ranchi on Friday, West Indies chased India's 249-5 with 252-4, winning by six wickets with nine balls to spare.",
+       "West Indies captain Shai Hope hit an unbeaten 102 off 45 balls (nine sixes, six fours), his second T20 hundred.",
+       "Sherfane Rutherford made 84 off 37 (seven sixes, seven fours). Romario Shepherd finished it with 34 off 13.",
+       "The five-match series is now level at 1-1."
+      ]
+     },
+     {
+      "h": "Key numbers and facts",
+      "b": [
+       "It is West Indies' highest successful T20I chase and the second-highest successful chase in all T20 history; South Africa's 259-4 against the West Indies in March is the highest.",
+       "Hope and Rutherford added 120 off 54 balls after West Indies had lost three wickets in the powerplay.",
+       "Hope reached 50 off 24 and 100 off 45, the second fifty coming off 21 balls. It was his third century against India in four innings across T20Is and ODIs.",
+       "India's 249-5 was its eighth-highest T20 total. Sanju Samson made 82 off 41, with a 50 off 21 balls; Ishan Kishan added 43 off 22.",
+       "Shreyas Iyer (40 off 18) and Tilak Varma (44* off 18) put on 83 off 32 balls at the end.",
+       "Roston Chase took 3-24; Mayank Yadav took 3-36, including Pooran for 4 and a golden duck for Hetmyer."
+      ]
+     },
+     {
+      "h": "Why it matters",
+      "b": [
+       "A total of 249 did not hold: the chase is the second-highest in T20 history.",
+       "India still lost despite scoring 79-1 in the powerplay and reaching 100 in 8.1 overs. The late-innings bowling and the middle overs in the chase decided it.",
+       "Former India spinner Ravichandran Ashwin criticised Hope's tactics, saying he bowled Akeal Hosein for three straight powerplay overs to Samson, 'like serving a hungry lion a goat on a platter'."
+      ]
+     },
+     {
+      "h": "What to watch next",
+      "b": [
+       "Third T20I: Holkar Stadium, Indore, Sunday. Start 7:00pm IST, which is 9:30pm SGT.",
+       "Whether India's bowlers regroup. A Times of India headline reports Gautam Gambhir sending a 'blunt message' after India's bowling struggles.",
+       "Whether Hope and Rutherford can repeat the powerplay recovery against Mayank Yadav and Kuldeep Yadav, who both took wickets in Ranchi."
+      ]
+     }
+    ],
+    "id": "a6376723"
+   },
+   {
+    "headline": "Rahmat Shah's unbeaten 84 steadies Afghanistan against Bangladesh in Abu Dhabi Test",
+    "teaser": "Afghanistan reached 211-4 on day two of the one-off Test at Sheikh Zayed Stadium, 135 runs behind Bangladesh's 346. Skipper Rahmat Shah is 84 not out.",
+    "source": "Dawn (AFP)",
+    "url": "https://www.dawn.com/news/2036285/afghanistan-skipper-rahmat-thwarts-bd-in-abu-dhabi-test",
+    "published": "2026-10-11T02:37:09+00:00",
+    "tags": [
+     "Cricket",
+     "Test",
+     "Afghanistan",
+     "Bangladesh",
+     "Rahmat Shah",
+     "AFP"
+    ],
+    "note": "Short briefing: the only full report found was a ~300-word AFP wire story, so detail is limited to what it states.",
+    "brief": [
+     {
+      "h": "What happened",
+      "b": [
+       "Bangladesh resumed day two on 317-8 and were bowled out for 346; their last two wickets lasted only 8.2 overs.",
+       "Afghanistan's openers fell cheaply: Sediqullah Atal made 17 and Shahidullah Kamal 20, both to the Bangladesh pace pair Hasan Mahmud and Ebadot Hossain.",
+       "Skipper Rahmat Shah then took charge, adding 70 for the third wicket with Abdul Malik (62, his maiden Test fifty).",
+       "At stumps Afghanistan were 211-4, 135 behind, with Rahmat on 84 from 186 balls and wicketkeeper Ikram Alikhil on 26."
+      ]
+     },
+     {
+      "h": "Key numbers and facts",
+      "b": [
+       "Bangladesh 346 all out. Afghanistan bowlers: Mohammad Saleem 4-82, Yamin Ahmadzai 3-79, Ismat Alam 2-20.",
+       "Afghanistan 211-4 at the close of day two.",
+       "Rahmat Shah 84* (186 balls). Abdul Malik 62, including a six and four fours.",
+       "Unbroken fifth-wicket stand of 72 between Rahmat and Alikhil in the final session.",
+       "Ebadot Hossain was Bangladesh's best bowler with 2-50.",
+       "Former skipper Hashmatullah Shahidi was stumped by Litton Das off Mehidy Hasan Miraz for a duck, to make it 139-4."
+      ]
+     },
+     {
+      "h": "Why it matters",
+      "b": [
+       "The conditions were dry and hot against what Dawn calls probing pace and spin, so Rahmat's innings kept Afghanistan in the contest.",
+       "AFP says the unbroken fifth-wicket stand boosted hopes of a first-innings lead; Afghanistan are 135 runs short of Bangladesh's total."
+      ]
+     },
+     {
+      "h": "What to watch next",
+      "b": [
+       "Day three: can Rahmat convert 84* into a century and can Afghanistan close the 135-run gap?",
+       "Bangladesh's pace pair and Mehidy Hasan Miraz against the lower-middle order.",
+       "Whether Afghanistan secure a first-innings lead in the one-off Test."
+      ]
+     }
+    ],
+    "id": "dcee7f91"
    }
   ],
   "football": [
    {
     "headline": "Man Utd 1-1 Spurs: Solanke's stoppage-time header rescues 10-man Tottenham",
-    "summary": "Bryan Mbeumo put United ahead in the 73rd minute before Rodrigo Bentancur was sent off for a headbutt on Luke Shaw; Dominic Solanke then glanced Sandro Tonali's cross past Senne Lammens in the 90+2nd. Spurs lift off the bottom on three points but remain winless; United (six points from six) were booed off after their worst league start in 40 years.",
+    "teaser": "Bryan Mbeumo put United ahead in the 73rd minute; Rodrigo Bentancur was sent off for a headbutt motion at Luke Shaw, but Dominic Solanke levelled in the 90+2nd. United were booed off.",
     "source": "Sky Sports",
     "url": "https://www.skysports.com/football/news/13592777/man-utd-1-1-tottenham-dominic-solanke-rescues-dramatic-draw-for-10-man-spurs-at-old-trafford",
-    "published": "2026-10-10T19:30:00+01:00"
+    "published": "2026-10-10T19:30:00+01:00",
+    "tags": [
+     "Football",
+     "Premier League",
+     "Manchester United",
+     "Tottenham",
+     "Dominic Solanke",
+     "Sky Sports"
+    ],
+    "brief": [
+     {
+      "h": "What happened",
+      "b": [
+       "Spurs dominated the opening hour at Old Trafford but wasted chances, with Dominic Solanke particularly guilty of spurning them.",
+       "Bryan Mbeumo broke the deadlock in the 73rd minute, combining with Matheus Cunha and turning to finish low across Antonin Kinsky.",
+       "Five minutes later Rodrigo Bentancur was sent off for a headbutt motion towards Luke Shaw, sparking a touchline brawl between both benches.",
+       "Spurs still equalised: in the 90+2nd minute Solanke glanced in a Sandro Tonali cross, with Martinez losing sight of the ball and Senne Lammens static in goal."
+      ]
+     },
+     {
+      "h": "Key numbers and facts",
+      "b": [
+       "Final score 1-1. United have 6 points from 6 games, their fewest at this stage since 1986-87, and their worst start to a season in 40 years.",
+       "Spurs are off the foot of the table but remain in the relegation zone, without a league win since May.",
+       "Missed chances for Spurs: 3' Bergvall pass and Solanke miss; 21' Kudus hooked wide; 42' Gallagher took too long; 51' Solanke ballooned from six yards.",
+       "United were booed off at half time and full time.",
+       "It was Solanke's first game as captain."
+      ]
+     },
+     {
+      "h": "What the managers and pundits said",
+      "b": [
+       "Michael Carrick: 'With the ball, without the ball, we were off it.' He said he is not hiding from the points tally and wants United to be 'more streetwise and stubborn'.",
+       "Roberto De Zerbi: 'for the first time we showed we're a team' and he wants to see that character every week.",
+       "Gary Neville said Spurs deserved a point and that Carrick has a lot to think about after a 'worrying' performance.",
+       "Jamie Redknapp saw no connections in midfield and said United look 'devoid of any confidence, ideas, or patterns of play'."
+      ]
+     },
+     {
+      "h": "Why it matters",
+      "b": [
+       "Sky calls it a result that leaves 'more questions than answers' for both clubs.",
+       "United's start is historically poor, and Spurs' predicament is 'arguably more damning still' because they have not won since May."
+      ]
+     },
+     {
+      "h": "What to watch next",
+      "b": [
+       "Whether Carrick can quickly fix a start he called 'challenging', with Neville saying a big week lies ahead.",
+       "Whether De Zerbi's 'different character' turns into a first Spurs league win of the season.",
+       "Any suspension for Bentancur after the red card (the report does not say)."
+      ]
+     }
+    ],
+    "id": "69fdd22e"
    },
    {
     "headline": "Arsenal 2-1 Leeds: Calafiori and Guimarães complete comeback",
-    "summary": "James Justin put unbeaten Leeds ahead on 54 minutes at the Emirates before Riccardo Calafiori levelled (62') and substitute Bruno Guimarães won it (69') with his first Emirates goal. Arsenal move level on points with Manchester City (15 from six); Leeds suffer their first Premier League loss of the season.",
+    "teaser": "Leeds led through James Justin at 54 minutes, but Riccardo Calafiori equalised and substitute Bruno Guimarães won it with his first Emirates goal. Arsenal now have 5 wins from 6.",
     "source": "Arsenal FC",
     "url": "https://www.arsenal.com/news/report-arsenal-2-1-leeds-united-aZRg37i5KpH0",
-    "published": "2026-10-10"
+    "published": "2026-10-10",
+    "tags": [
+     "Football",
+     "Premier League",
+     "Arsenal",
+     "Leeds United",
+     "Bruno Guimarães",
+     "Arsenal.com (club site)"
+    ],
+    "note": "Source is the club's own match report, so tone is partisan; facts and stats were taken as stated.",
+    "brief": [
+     {
+      "h": "What happened",
+      "b": [
+       "After a slow, ponderous first half with many offsides, Leeds were the better side; David Raya made a chest save from Justin and a point-blank stop from Gabriel Gudmundsson.",
+       "Leeds went ahead in the 54th/56th minute (the report gives both) when Gudmundsson's low cross reached James Justin, who finished first time.",
+       "Within five minutes, Ben White nodded a Noni Madueke delivery across goal and Calafiori's shot spun in off keeper James Trafford for 1-1.",
+       "Mikel Arteta then brought on Viktor Gyokeres, Jurrien Timber and Bruno Guimarães. Guimarães tucked into the bottom corner (69th) after Declan Rice's backheel."
+      ]
+     },
+     {
+      "h": "Key numbers and facts",
+      "b": [
+       "Arsenal: five wins from six games to start their title defence; level on 15 points with Manchester City.",
+       "Leeds suffered their first Premier League loss of the season; their winless run against Arsenal is now 17 games in all competitions.",
+       "Leeds' first win at Arsenal in 23 years remained out of reach.",
+       "Arsenal are the first team to win two league games from behind this season (also beating Chelsea 2-1).",
+       "Guimarães is the first player to score twice from the bench this season. Both his league goals have come from outside the box, assisted by Rice.",
+       "Calafiori has 3 goal involvements (1 goal, 2 assists), as many in six games as in 26 appearances last term; it is his first league goal since August 2025.",
+       "Leeds had not lost a Premier League game after opening the scoring in the second half since October 1992."
+      ]
+     },
+     {
+      "h": "Why it matters",
+      "b": [
+       "The win keeps Arsenal level with City at the top and shows they can turn a game with substitutions.",
+       "It also extends Leeds' bad record at the Emirates despite their unbeaten start and joint-best defensive record before kickoff.",
+       "The club site notes it came in the week Arteta signed a new contract."
+      ]
+     },
+     {
+      "h": "What to watch next",
+      "b": [
+       "Tuesday: Arsenal host Lille in the Champions League.",
+       "Next Sunday: away at Nottingham Forest.",
+       "Wednesday 21 October: away at Bayern Munich, which the club calls a 'massive match'."
+      ]
+     }
+    ],
+    "id": "12a25d3b"
+   },
+   {
+    "headline": "Chelsea 5-1 Bournemouth: Henderson double, early goals and a bounce-back win",
+    "teaser": "Jordan Henderson scored twice, including a free-kick, and Joao Pedro also netted a double as Chelsea were 2-0 up inside three minutes and went fifth.",
+    "source": "Sky Sports",
+    "url": "https://www.skysports.com/football/news/13592771/chelsea-5-1-bournemouth-jordan-hendersons-stunning-strikes-help-fast-starting-blues-to-bounce-back-win",
+    "published": "2026-10-10T18:01:00+01:00",
+    "tags": [
+     "Football",
+     "Premier League",
+     "Chelsea",
+     "Bournemouth",
+     "Jordan Henderson",
+     "Sky Sports"
+    ],
+    "brief": [
+     {
+      "h": "What happened",
+      "b": [
+       "Chelsea bounced back from their bad loss at Brentford before the international break with a 5-1 win at Stamford Bridge.",
+       "Jordan Henderson, 36, scored after 65 seconds, a shot in off the post after good play by Cole Palmer.",
+       "Morgan Rogers' shot flicked off Antonio Silva for the second goal at 2 minutes 29 seconds, the earliest Chelsea have ever led 2-0 in a Premier League game.",
+       "Thirty seconds into the second half, Silva's mistake let Pedro Neto cut the ball back for Joao Pedro to make it 3-0.",
+       "Evanilson blocked Moises Caicedo's clearance into his own net for 3-1, then Joao Pedro tapped in Pep Chavarria's cross (67') and Henderson curled in a free-kick from 25 yards (70')."
+      ]
+     },
+     {
+      "h": "Key numbers and facts",
+      "b": [
+       "Final: Chelsea 5-1 Bournemouth. Chelsea move up to fifth.",
+       "Chelsea's early goals this season: Joao Pedro 1 min v Fulham, Lavia 4 min v Brighton, Rogers 2 min v Arsenal, Rogers 7 min v Hull, and now Henderson 2 min and Rogers 3 min.",
+       "Bournemouth have 3 points after six games and are still winless.",
+       "Cole Palmer extended his Chelsea contract earlier in the day.",
+       "Chelsea keeper Emi Martinez made a one-on-one double save at 36'."
+      ]
+     },
+     {
+      "h": "What the managers said",
+      "b": [
+       "Xabi Alonso called it a 'very complete performance' and praised Henderson's work beyond the goals.",
+       "Marco Rose: 'We were not ready, we were not sharp enough', and said he can deal with rumours about his job.",
+       "Alonso said Caicedo played 65 minutes so his load could be adjusted."
+      ]
+     },
+     {
+      "h": "Why it matters",
+      "b": [
+       "Sky says Chelsea's season will be shaped by the run of games before the November international break, with the aim of returning to Champions League football.",
+       "A Carabao Cup tie at Liverpool is described as a possible launchpad for early silverware.",
+       "The defensive record remains a concern: Chelsea were nervy after the 3-1 goal."
+      ]
+     },
+     {
+      "h": "What to watch next",
+      "b": [
+       "Chelsea's key run of games before the November break, including the Carabao Cup tie at Liverpool.",
+       "Bournemouth: three points from six games and pressure on Rose.",
+       "Whether Henderson, Palmer, Rogers and Joao Pedro can keep clicking."
+      ]
+     }
+    ],
+    "id": "806fd48a"
    }
   ],
   "golf": [
    {
     "headline": "Open de España: Forrest and Dean share lead at −13 ahead of Sunday final",
-    "summary": "Grant Forrest (66-67-67) and Joe Dean (68-67-65) are tied at 13 under at Real Club de Campo after round three; Joel Girrbach, Victor Perez and Jacob Skov Olesen sit one back on −12. Final-round tee times begin around 13:00 local (Madrid) / ~7:00pm SGT Sunday.",
+    "teaser": "Grant Forrest and Joe Dean are tied at 13 under at Real Club de Campo after round three, with Girrbach, Perez and Skov Olesen one shot back on −12.",
     "source": "DP World Tour",
     "url": "https://www.europeantour.com/dpworld-tour/news/articles/detail/grant-forrest-and-joe-dean-share-lead-ahead-of-final-round-in-madrid/",
-    "published": "2026-10-10"
+    "published": "2026-10-10",
+    "tags": [
+     "Golf",
+     "DP World Tour",
+     "Open de España",
+     "Grant Forrest",
+     "Joe Dean",
+     "DP World Tour (official site)"
+    ],
+    "note": "Short briefing: the official report is brief (about 450 words) and gives no final-round tee times, so none are shown.",
+    "brief": [
+     {
+      "h": "What happened",
+      "b": [
+       "Grant Forrest began Saturday one shot ahead but slipped back after birdies at the third and fourth were followed by a bogey and five pars.",
+       "He then birdied the 11th, 14th and 16th to reach 13 under and share the lead with England's Joe Dean.",
+       "Dean had eight birdies in his first 15 holes to lead by three, then made a double bogey at the 16th and a bogey at the 17th.",
+       "He birdied the last from 31 feet to tie Forrest at 13 under."
+      ]
+     },
+     {
+      "h": "Key numbers and facts",
+      "b": [
+       "Forrest: 66-67-67. Dean: 68-67-65. Both −13 at Real Club de Campo, Madrid.",
+       "One shot back on −12: Joel Girrbach, Victor Perez and Jacob Skov Olesen.",
+       "Forrest shared the first-round lead and led alone after round two; he is chasing a wire-to-wire win and his third DP World Tour title.",
+       "Forrest's birdie putts on Saturday included 14 feet (3rd), 32 feet (11th) and 20 feet (16th), plus an 11-foot par save at 17.",
+       "Dean's birdie at the last was from 31 feet."
+      ]
+     },
+     {
+      "h": "What the players said",
+      "b": [
+       "Forrest: 'I didn't have my best stuff but I'm really proud of how I dug in and made some nice putts'. He called it one of his favourite tournaments.",
+       "Dean said the last-hole birdie 'gave a little bit of hope after those previous two holes', adding 'nothing's guaranteed in this game'."
+      ]
+     },
+     {
+      "h": "Why it matters",
+      "b": [
+       "A two-man tie with three players one back makes the final round a genuine five-way fight on a course where scoring was 'favourable'.",
+       "Forrest has led from the start while Dean's late wobble and recovery shows how quickly a lead can disappear.",
+       "The article describes Forrest as in contention for a wire-to-wire victory."
+      ]
+     },
+     {
+      "h": "What to watch next",
+      "b": [
+       "Sunday's final round at the Open de España presented by Madrid.",
+       "Whether Forrest can complete a wire-to-wire win for a third DP World Tour title.",
+       "Whether Dean, Girrbach, Perez or Skov Olesen can overtake the leaders."
+      ]
+     }
+    ],
+    "id": "f26fcc45"
    },
    {
     "headline": "DP World Tour in advanced talks to take in exiting LIV players; Rahm out of LIV 2.0",
-    "summary": "Today's Golfer reports several LIV golfers are negotiating exit deals for 2027 DP World Tour starts, contingent on rejecting LIV 2.0 terms (deadline Oct 25) and excluding Rolex Series events for now. Jon Rahm's lawyer told a LIV bankruptcy hearing the proposed terms are unacceptable and he will not participate going forward.",
+    "teaser": "Golfweek, citing Today's Golfer, reports several LIV players are negotiating exit deals for 2027 DP World Tour starts; Jon Rahm's lawyer told a LIV bankruptcy hearing his client will not take part in LIV 2.0.",
     "source": "Golfweek (USA Today)",
     "url": "https://golfweek.usatoday.com/story/sports/golf/dpworldtour/2026/10/09/report-dp-world-tour-advanced-talks-liv-golfers-return/92170303007/",
-    "published": "2026-10-09T12:30:00-04:00"
+    "published": "2026-10-09T12:30:00-04:00",
+    "tags": [
+     "Golf",
+     "LIV Golf",
+     "DP World Tour",
+     "Jon Rahm",
+     "Golfweek (USA Today)"
+    ],
+    "note": "Based on Golfweek's account of a Today's Golfer report; talks are not confirmed deals.",
+    "brief": [
+     {
+      "h": "What happened",
+      "b": [
+       "Today's Golfer reported that several LIV Golf players are in advanced talks over an exit plan with deals promising playing opportunities on the European circuit.",
+       "Jon Rahm is the most recent LIV golfer to say he is done with the league. His lawyer John Beck spoke at a LIV bankruptcy hearing on Wednesday.",
+       "Beck said Rahm 'independently reviewed the proposed terms of LIV 2.0 … and has determined that those terms are unacceptable to him, and he will not be participating going forward.'"
+      ]
+     },
+     {
+      "h": "Key facts",
+      "b": [
+       "There is a looming Oct. 25 deadline for LIV golfers to re-up on LIV 2.0 terms.",
+       "The DP World Tour agreement reportedly requires golfers to 'reject the new terms proposed for LIV 2.0'.",
+       "Returning players would be allowed into multiple DP World Tour events in 2027 but not the Rolex Series, the five marquee events, 'for now'.",
+       "LIV announced a restructuring agreement with BC Partners two days before the hearing. CEO Scott O'Neal said it showed he was 'delivering' on a 'new player-owned, team-focused, truly global league'.",
+       "The PGA Tour has a rule that LIV players face a one-year suspension from their last competitive LIV round before they can seek any return.",
+       "Some LIV golfers hold DP World Tour exemptions, but this phase of talks involves players without DP World Tour membership."
+      ]
+     },
+     {
+      "h": "The Tour's stated position",
+      "b": [
+       "A DP World Tour representative said interest is high: 'Given the high volume of inbound interest and inquiries we have received in recent weeks, we are exploring the terms on which we are willing to accommodate players'.",
+       "Conditions: players must be free of third-party contractual restrictions and abide by membership regulations."
+      ]
+     },
+     {
+      "h": "Why it matters",
+      "b": [
+       "Golfweek says the Today's Golfer story paints a 'much more dire picture' for LIV's future, with the league 'about to lose many of its players'.",
+       "It would give the European tour a route to attract top players back, but with limits on the biggest events.",
+       "The story is a report of talks, not a finalised deal."
+      ]
+     },
+     {
+      "h": "What to watch next",
+      "b": [
+       "The Oct. 25 LIV 2.0 deadline.",
+       "Which players follow Rahm in rejecting the LIV 2.0 terms.",
+       "Whether the DP World Tour confirms its terms and whether the Rolex Series restriction stays.",
+       "How the PGA Tour's one-year-suspension rule affects any wider return."
+      ]
+     }
+    ],
+    "id": "929e3452"
+   },
+   {
+    "headline": "Baycurrent Classic: three tied at −13, Adam Scott one back and chasing first PGA Tour win in six years",
+    "teaser": "Michael Brennan, Zach Bauchou and Jacob Bridgeman share the 54-hole lead in Yokohama; Scott (65 with two eagles) and Justin Thomas are among five at −12. The final round is under way Sunday.",
+    "source": "PGA Tour (AP)",
+    "url": "https://www.pgatour.com/article/news/daily-wrapup/2026/10/10/round-three-baycurrent-classic-yokohama-country-club-scores-leaderboards-results-hideki-matsuyama-xander-schauffele",
+    "published": "2026-10-10",
+    "tags": [
+     "Golf",
+     "PGA Tour",
+     "Baycurrent Classic",
+     "Adam Scott",
+     "Zach Bauchou",
+     "AP"
+    ],
+    "note": "Short briefing: the AP report is brief; some figures (purse, notes) come from the PGA Tour's round-three notes.",
+    "brief": [
+     {
+      "h": "What happened",
+      "b": [
+       "After three rounds at Yokohama Country Club, Michael Brennan (65 on Saturday), Zach Bauchou (67) and first-round leader Jacob Bridgeman (69) share the lead at 13-under 200.",
+       "Adam Scott shot a 6-under 65 with two eagles, including an approach from 97 yards that set up an eagle at No. 9. He and Justin Thomas (67) are one stroke back.",
+       "Eight players are within a stroke of the lead."
+      ]
+     },
+     {
+      "h": "Key numbers and facts",
+      "b": [
+       "Leaders at −13: Brennan 68-67-65, Bauchou 69-64-67, Bridgeman 63-68-69.",
+       "At −12: Scott (69-67-65), Jordan Smith (64-71-66), Thomas (69-65-67), Stephan Jaeger (69-65-67), Keith Mitchell (66-65-70).",
+       "Defending champion Xander Schauffele shot 65 and is T12 at −9.",
+       "Tournament: Oct 8–11, par 71, $8 million purse, winner's share $1.44 million, 500 FedExCup points; the third of eight FedExCup Fall events.",
+       "Bauchou is a Tour rookie. The three leaders are all Americans and play in the final group.",
+       "The leaders tee off at 9:21pm ET Saturday, which is about 9:21am SGT Sunday, so the final round is under way or finishing."
+      ]
+     },
+     {
+      "h": "What the players said",
+      "b": [
+       "Scott: 'You got to be pleased with that and something like that tomorrow might be enough. It's not a bad spot to be a few back.'",
+       "Scott is looking for his first PGA Tour win in six years."
+      ]
+     },
+     {
+      "h": "Why it matters",
+      "b": [
+       "This is the PGA Tour's only stop in Asia this year and has the strongest field of the FedExCup Fall, with 13 of the 24 Presidents Cup players from two weeks ago at Medinah.",
+       "With eight players within one shot, the final round is wide open."
+      ]
+     },
+     {
+      "h": "More detail",
+      "b": [
+       "Round three was played in mostly sunny conditions, high of 77°F, with a NE wind of 8–14 mph, on a par-71 course of about 7,315 yards.",
+       "At −10: Ryan Gerard, Max Homa and Mac Meissner. At −9: Brian Harman, Sungjae Im, Michael Kim and Xander Schauffele.",
+       "Tournament notes call it the third of eight FedExCup Fall events, with 500 FedExCup points for the winner.",
+       "The three leaders were all in the final group; Scott's group goes out just ahead of them."
+      ]
+     },
+     {
+      "h": "What to watch next",
+      "b": [
+       "Sunday's final round: check the PGA Tour leaderboard for the result, since play was in progress when this was compiled.",
+       "Whether Scott can end his six-year drought, or a rookie like Bauchou can win."
+      ]
+     }
+    ],
+    "id": "7a7e3976"
    }
   ],
   "f1": [
    {
     "headline": "Singapore GP: Verstappen on pole ahead of Leclerc and Hamilton; race 8pm SGT",
-    "summary": "Max Verstappen took his first Singapore pole with 1:31.373, 0.054s clear of Charles Leclerc and Lewis Hamilton third. Kimi Antonelli and Lando Norris complete the top five; George Russell starts further back after a grid penalty for a power-unit change. The race starts Sunday at 8:00pm SGT.",
+    "teaser": "Max Verstappen took his first Singapore pole with 1:31.373, 0.054s clear of Charles Leclerc. Hamilton was third; Russell starts 21st after a 40-place penalty. The race starts at 8:00pm SGT Sunday.",
     "source": "Formula 1",
     "url": "https://www.formula1.com/en/latest/article/verstappen-beats-leclerc-to-pole-position-for-the-singapore-gp.7yum1V3S9aSTyj3Zzzs0Y9",
-    "published": "2026-10-10T14:46:00+00:00"
+    "published": "2026-10-10T14:46:00+00:00",
+    "tags": [
+     "F1",
+     "Singapore Grand Prix",
+     "Max Verstappen",
+     "Charles Leclerc",
+     "Lewis Hamilton",
+     "Formula 1 (official site)"
+    ],
+    "brief": [
+     {
+      "h": "What happened",
+      "b": [
+       "Verstappen claimed his first career Singapore pole with a 1m 31.373s on his first Q3 run and was not beaten.",
+       "Ferrari's Hamilton had set the pace in Q1 and Q2, but could not improve on his final lap and was third.",
+       "Leclerc improved on his final run to take P2, only 0.054s off pole."
+      ]
+     },
+     {
+      "h": "Key numbers and facts",
+      "b": [
+       "Top five: Verstappen 1:31.373, Leclerc 1:31.427, Hamilton 1:31.496, Antonelli 1:31.562, Norris 1:31.712.",
+       "Next: Russell (before penalty), Piastri 7th, Gasly, Lawson, Lindblad.",
+       "Hamilton's Q2 benchmark was 1:31.529; Verstappen had complained of 'insanely bad shifts' in Q2.",
+       "Knocked out in Q1: Alonso, Albon, Stroll, Perez, Bottas, Hadjar. Aston Martin had hoped for a good weekend but failed to reach Q2.",
+       "Red Bull's Isack Hadjar had a nightmare day: he retired from the Sprint and again had reliability problems and set no representative lap.",
+       "Russell takes a 40-place grid penalty for power-unit changes and starts 21st; Hadjar is 22nd after being allowed to start. Verstappen and Leclerc share the front row."
+      ]
+     },
+     {
+      "h": "What Verstappen said",
+      "b": [
+       "'The margins are very close I think between us throughout the whole of Qualifying. Of course, I'm very happy to be on pole, because this is the one that I wanted.'",
+       "He said the car has been strong all weekend."
+      ]
+     },
+     {
+      "h": "Why it matters",
+      "b": [
+       "Verstappen has never won in Singapore, a track F1 notes is one of the few where he has never won, despite more than one second place.",
+       "Overtaking is hard: Verstappen himself said 'you can't pass around here', F1's stats show 58 overtakes in 2025, and the safety-car probability is 67% based on the last six races.",
+       "Pole run to Turn 1 braking point is 198 metres."
+      ]
+     },
+     {
+      "h": "What to watch next",
+      "b": [
+       "Race start: 8:00pm SGT Sunday (20:00 local) at Marina Bay.",
+       "Whether Verstappen can convert pole after his start problems in the Sprint.",
+       "How far Russell can climb from 21st and whether Antonelli (4th) extends his championship lead."
+      ]
+     }
+    ],
+    "id": "721126f4"
    },
    {
     "headline": "Verstappen wins rain-hit Singapore Sprint; Russell crashes, McLarens collide",
-    "summary": "After a 30-minute rain delay (formation lap 5:30pm SGT), Verstappen won the Sprint from Hamilton and Leclerc. Russell led into Turn 1 then crashed at the end of lap one; Norris tagged Piastri late, promoting Antonelli to fourth. Qualifying was pushed 30 minutes later to 9:00pm SGT.",
+    "teaser": "After a long rain delay, Verstappen won from Hamilton and Leclerc. Russell crashed at the end of lap one while leading, and Norris tagged Piastri late.",
     "source": "Formula 1",
     "url": "https://www.formula1.com/en/latest/article/verstappen-wins-dramatic-rain-hit-singapore-sprint-as-russell-crashes-and-mclarens-collide.4r90mH2skljBa5sinFAsyp",
-    "published": "2026-10-10T10:30:00+00:00"
+    "published": "2026-10-10T10:30:00+00:00",
+    "tags": [
+     "F1",
+     "Singapore Grand Prix",
+     "Sprint",
+     "Max Verstappen",
+     "George Russell",
+     "Formula 1 (official site)"
+    ],
+    "brief": [
+     {
+      "h": "What happened",
+      "b": [
+       "A pre-race downpour delayed the start by about half an hour; the field started on intermediate tyres after a Safety Car formation lap at 5:30pm local.",
+       "Russell passed polesitter Verstappen at Turn 1 and pulled away, but crashed at the final corner of lap one ('I'm fine. Sorry, sorry, sorry').",
+       "Verstappen led after the restart on lap 6, managed his intermediates as the track dried and won.",
+       "Late on, Norris tagged Piastri at Turn 5 as they fought for a podium; both spun. Piastri stopped and classified 14th, Norris fell to 8th, no penalty was given."
+      ]
+     },
+     {
+      "h": "Key numbers and facts",
+      "b": [
+       "Result: Verstappen (39:48.162, 8 pts), Hamilton +2.591s, Leclerc +16.871s, Antonelli, Lawson.",
+       "Bearman and Hulkenberg completed the points scorers; Norris was eighth.",
+       "Antonelli finished fourth for 5 points. Russell, in the race lead, scored none; he is now 89 points behind Antonelli in the Drivers' Championship.",
+       "Early retirements included Perez and Stroll (collision), Hadjar, Colapinto and Russell; Albon, Bortoleto and Bottas were also out after a three-car collision, eight non-finishers in all.",
+       "It was the first Sprint ever in Singapore."
+      ]
+     },
+     {
+      "h": "What the winner said",
+      "b": [
+       "Verstappen: 'the start was horrendous again, so that's definitely something that we need to improve on'.",
+       "He admitted a bit of luck with Russell's crash but added 'I want to win tomorrow, not today.'"
+      ]
+     },
+     {
+      "h": "Why it matters",
+      "b": [
+       "It was Verstappen's second straight win after Bahrain GP in Malaysia.",
+       "Russell lost points to Antonelli in the title race and enters Sunday's race with a heavy grid penalty as well.",
+       "Qualifying followed at 9:00pm local, the same evening."
+      ]
+     },
+     {
+      "h": "What to watch next",
+      "b": [
+       "Sunday's Grand Prix at 8:00pm SGT.",
+       "Whether Verstappen fixes his starts, which he called 'horrendous again'.",
+       "McLaren's intra-team tension after Norris and Piastri's collision."
+      ]
+     }
+    ],
+    "id": "37018ad0"
+   },
+   {
+    "headline": "Russell starts 21st in Singapore after 40-place penalty; Antonelli leads title race by 89",
+    "teaser": "Mercedes' George Russell, now 89 points behind team-mate Kimi Antonelli, starts at the back after engine-part changes, with seven races left.",
+    "source": "The Race",
+    "url": "https://www.the-race.com/formula-1/f1-2026-singapore-grand-prix-starting-grid-after-two-penalties/",
+    "published": "2026-10-10",
+    "tags": [
+     "F1",
+     "Singapore Grand Prix",
+     "Kimi Antonelli",
+     "George Russell",
+     "Mercedes",
+     "The Race"
+    ],
+    "note": "Based on a one-paragraph grid report plus F1's preview; the penalty total and standings are from The Race, F1 and the Independent.",
+    "brief": [
+     {
+      "h": "What happened",
+      "b": [
+       "Russell's late retirement from the Bahrain Grand Prix in Malaysia forced Mercedes to fit new power-unit components, triggering a grid penalty at Singapore.",
+       "The Race puts the total at 40 places. Russell will therefore start 21st, ahead only of Red Bull's Isack Hadjar, who set no time in qualifying but was allowed to start.",
+       "Aston Martin said it will change the power unit on Fernando Alonso's car, which should send him to the back too, but the FIA had not yet confirmed that penalty.",
+       "Verstappen (Red Bull) and Leclerc (Ferrari) share the front row."
+      ]
+     },
+     {
+      "h": "Key numbers and facts",
+      "b": [
+       "Before the weekend Antonelli led by 84 points (Independent standings: Antonelli 320, Russell 236, Hamilton 214, Leclerc 191, Norris 188, Verstappen 188).",
+       "Russell then scored no points in the Sprint while Antonelli took 5, so the gap is 89 points.",
+       "Constructors before the weekend: Mercedes 556, Ferrari 405, McLaren 316, Red Bull 298.",
+       "Penalty rules (F1): a first exceedance of an element brings 10 places, later ones 5; any total over 15 sends the driver to the back.",
+       "Singapore is Round 17 and the final Sprint weekend; the Grand Prix is on Sunday 11 October."
+      ]
+     },
+     {
+      "h": "What Russell said",
+      "b": [
+       "'All-out attack; just trying to enjoy the weekend.'",
+       "He said Singapore is probably the 'second bottom of the list after Monaco' as a place to take a penalty, but he loves the circuit and will 'carve my way through the pack'.",
+       "He also suggested his own title chances may be over and said he will probably have to take another penalty later in the season."
+      ]
+     },
+     {
+      "h": "Why it matters",
+      "b": [
+       "Starting 21st at a circuit where passing is hard limits Russell's ability to recover points, while Antonelli starts fourth.",
+       "Russell won pole and the race in Singapore last year, per F1, so the penalty hurts at a track that suited him.",
+       "Mercedes are also comparing old and new W17 specs: Antonelli the latest updates, Russell his previous package."
+      ]
+     },
+     {
+      "h": "What to watch next",
+      "b": [
+       "Sunday's race at 8:00pm SGT, and how far Russell moves up.",
+       "FIA confirmation of Alonso's grid penalty.",
+       "Russell says there are 'still seven races to go' and he expects to take another penalty later."
+      ]
+     }
+    ],
+    "id": "684130cd"
    }
   ],
   "tennis": [
    {
     "headline": "Hurkacz stuns Djokovic 6-4, 6-3 in Shanghai second round",
-    "summary": "Hubert Hurkacz, the 2023 champion, won his first match in nine meetings with Novak Djokovic, who looked low on energy after winning Beijing days earlier. Hurkacz next faces Chinese wild card Zhou Yi after Lorenzo Musetti lost; Djokovic's next scheduled event is the Paris Masters in November.",
+    "teaser": "Hubert Hurkacz, the 2023 champion, won his first match in nine meetings against Djokovic, who looked low on energy after winning Beijing days earlier.",
     "source": "ATP Tour",
     "url": "https://www.atptour.com/en/news/djokovic-hurkacz-shanghai-2026-friday",
-    "published": "2026-10-09"
+    "published": "2026-10-09",
+    "tags": [
+     "Tennis",
+     "ATP Masters 1000",
+     "Shanghai",
+     "Hubert Hurkacz",
+     "Novak Djokovic",
+     "ATP Tour (official site)"
+    ],
+    "brief": [
+     {
+      "h": "What happened",
+      "b": [
+       "In a Friday-night upset at the Rolex Shanghai Masters, Hubert Hurkacz beat Novak Djokovic 6-4, 6-3 in 87 minutes at Qi Zhong Tennis Center.",
+       "It was the Pole's first win over Djokovic in nine meetings.",
+       "Djokovic appeared to struggle physically in his sixth match in 10 days; Hurkacz looked the fresher player even after beating James Duckworth in round one.",
+       "Hurkacz saved two break points in the third game, then was largely in control."
+      ]
+     },
+     {
+      "h": "Key numbers and facts",
+      "b": [
+       "Hurkacz won 82% (36/44) of points behind his first serve.",
+       "He is only the fourth player with at least one hard-court win against all of Federer, Nadal and Djokovic, after Andy Murray, Dominic Thiem and Alexander Zverev.",
+       "Hurkacz, 29, is competing in Shanghai for the first time since winning it in 2023 and is on an eight-match winning streak there.",
+       "Djokovic won his 102nd tour-level title at the China Open in Beijing on Tuesday; Hurkacz reached the Chengdu final a week earlier.",
+       "Djokovic, 39, is ninth in the PIF ATP Live Race To Turin."
+      ]
+     },
+     {
+      "h": "What the players said",
+      "b": [
+       "Hurkacz: 'It's a special night. I've been playing Novak for like seven years, so it's been unsuccessful but [he has been] such a great champion for so many years.'",
+       "He said it was vital to 'stay there with Novak' early, because if Djokovic gets ahead 'it's not easy to come back'.",
+       "He admitted feeling nerves towards the end but said he stayed focused."
+      ]
+     },
+     {
+      "h": "Why it matters",
+      "b": [
+       "The former World No. 1, fresh from a Beijing title, is out in the second round of a Masters 1000.",
+       "Djokovic is now in the contention zone for the Nitto ATP Finals in Turin; his next scheduled event is November's Rolex Paris Masters.",
+       "Hurkacz next plays third-round opponent Zhou Yi."
+      ]
+     },
+     {
+      "h": "What to watch next",
+      "b": [
+       "Hurkacz v home wild card Zhou Yi (world No. 277, who beat Lorenzo Musetti in a third-set tie-break) on Sunday.",
+       "Djokovic's European indoor season, starting with the Paris Masters.",
+       "The Race to Turin standings."
+      ]
+     }
+    ],
+    "id": "3b5a31d1"
    },
    {
     "headline": "Shanghai Masters: Alcaraz, Medvedev, Fritz and Vacherot advance on Saturday",
-    "summary": "Second seed Carlos Alcaraz beat Juan Manuel Cerundolo 6-3, 6-3; Daniil Medvedev came from a set down to beat Jan-Lennard Struff 4-6, 6-4, 6-3; Taylor Fritz and defending champion Valentin Vacherot also won. Round of 32 continues Sunday; the final is 18 Oct.",
+    "teaser": "Second seed Carlos Alcaraz beat Juan Manuel Cerundolo 6-3, 6-3; Medvedev and Auger-Aliassime came from behind; Fritz, Fils, Tsitsipas and defending champion Vacherot also won.",
     "source": "ATP Tour",
     "url": "https://www.atptour.com/en/news/shanghai-2026-results",
-    "published": "2026-10-10"
+    "published": "2026-10-10",
+    "tags": [
+     "Tennis",
+     "ATP Masters 1000",
+     "Shanghai",
+     "Carlos Alcaraz",
+     "Daniil Medvedev",
+     "ATP Tour (official site)"
+    ],
+    "brief": [
+     {
+      "h": "What happened",
+      "b": [
+       "Round of 64 play continued Saturday at the Rolex Shanghai Masters (7-18 October).",
+       "Second seed Carlos Alcaraz beat Juan Manuel Cerundolo 6-3, 6-3.",
+       "Fifth seed Daniil Medvedev rallied from a set down to beat Jan-Lennard Struff 4-6, 6-4, 6-3 and improve to 10-2 against him.",
+       "Fourth seed Felix Auger-Aliassime beat Camilo Ugo Carabelli 4-6, 7-6(1), 7-5 after squandering a 5-2 lead in the second set."
+      ]
+     },
+     {
+      "h": "Key results",
+      "b": [
+       "Arthur Fils (8) d Pavel Kotov 6-3, 6-4. Taylor Fritz (11) d Matteo Arnaldi 7-5, 6-4.",
+       "Rafael Jodar (12) d Thiago Tirante 4-6, 6-2, 6-3 on debut. He is 11th in the Race to Turin.",
+       "Learner Tien (14) d Zachary Svajda 7-5, 7-5; Tommy Paul (15) d Adolfo Vallejo 6-2, 6-2.",
+       "Defending champion Valentin Vacherot (17) d Sebastian Baez 6-4, 7-6(5).",
+       "Stefanos Tsitsipas d Luciano Darderi (18) 6-3, 6-4; Casper Ruud (20) d Yunchaokete Bu 6-1, 7-6(2).",
+       "Qualifier Dalibor Svrcina d Tomas Martin Etcheverry (28) 6-3, 3-6, 7-5; Jiri Lehecka (22) d Nuno Borges 6-3, 3-6, 6-3."
+      ]
+     },
+     {
+      "h": "Doubles and other notes",
+      "b": [
+       "In doubles, Medvedev and Ivan Liutarevich beat Alexander Bublik and Ben Shelton 6-4, 6-3.",
+       "Home pair Zhizhen Zhang and Yi Zhou won through; Sander Arends and Luke Johnson beat Marcelo Melo and Alexander Zverev 7-6(5), 7-6(5)."
+      ]
+     },
+     {
+      "h": "Why it matters",
+      "b": [
+       "The favourites are advancing, but several needed three sets, such as Medvedev, Auger-Aliassime and Jodar.",
+       "Jodar's win keeps his bid to reach the Nitto ATP Finals alive after a breakout season.",
+       "Vacherot, the defending champion, is through."
+      ]
+     },
+     {
+      "h": "More detail",
+      "b": [
+       "Singles round-of-64 results also included Zizou Bergs d Ignacio Buse 6-0, 6-3 and Botic van de Zandschulp d Alex Michelsen 6-4, 6-4.",
+       "Pablo Carreno Busta d Alejandro Tabilo 4-6, 7-6(2), 6-4.",
+       "World No. 1 Jannik Sinner is out of the event with a knee injury, leaving Alexander Zverev as top seed (Rolex Shanghai Masters).",
+       "Several matches went three sets, with Auger-Aliassime levelling after squandering a 5-2 second-set lead."
+      ]
+     },
+     {
+      "h": "What to watch next",
+      "b": [
+       "The tournament continues Sunday; the final is on 18 October.",
+       "See the Sunday preview for Zverev v Halys, Shelton v Gea and Hurkacz v Zhou Yi."
+      ]
+     }
+    ],
+    "id": "74532976"
+   },
+   {
+    "headline": "Zverev eyes year-end No. 1 in Shanghai as Sinner sits out; Sunday third-round preview",
+    "teaser": "Top seed Alexander Zverev meets Quentin Halys Sunday; reaching the semi-finals would clinch year-end No. 1. Ben Shelton, Hurkacz v Zhou Yi and de Minaur also play.",
+    "source": "Rolex Shanghai Masters",
+    "url": "https://en.rolexshanghaimasters.com/en/media/news/sunday-preview-zverev-shelton-zhou-in-action",
+    "published": "2026-10-10",
+    "tags": [
+     "Tennis",
+     "ATP Masters 1000",
+     "Shanghai",
+     "Alexander Zverev",
+     "Jannik Sinner",
+     "Rolex Shanghai Masters (official site)"
+    ],
+    "note": "Source is an official tournament preview; Sinner's injury detail is from a secondary aggregator (stats-data.com).",
+    "brief": [
+     {
+      "h": "What happened",
+      "b": [
+       "Sunday's Day 5 order of play in Shanghai is headlined by top seed Alexander Zverev against Frenchman Quentin Halys.",
+       "Zverev is chasing his first Masters 1000 title of the year. He has won just two events in 2026, but they were Roland Garros and the US Open, his first two majors.",
+       "Current World No. 1 Jannik Sinner has ruled himself out for the rest of the season; a secondary report says the knee injury has kept him off court since Wimbledon in July."
+      ]
+     },
+     {
+      "h": "Key numbers and facts",
+      "b": [
+       "Zverev, 29, won his 30th hard-court match of the year on Friday, beating Wu Yibing 6-4, 7-6(4).",
+       "If he reaches the semi-finals he clinches year-end No. 1 honours. He also clinches it if neither Carlos Alcaraz nor Ben Shelton wins the title.",
+       "Even if he wins Shanghai he cannot immediately move to World No. 1, because Sinner's late-season 2025 points remain on his ranking.",
+       "Halys (No. 48) trails 0-3 in career meetings, all in 2026, but led two sets to one at the US Open in a match that finished after 2am; Zverev hit 29 aces, creating 20 break points and converting five.",
+       "Zverev has not won three or more titles in a season since 2021, when he won six."
+      ]
+     },
+     {
+      "h": "The rest of the card",
+      "b": [
+       "Ben Shelton (3), a recent US Open finalist, meets 21-year-old Arthur Gea for the first time; Shelton is next in line to qualify for the Nitto ATP Finals.",
+       "Zhou Yi, 21, world No. 277, plays 2023 champion Hubert Hurkacz after beating Lorenzo Musetti in a third-set tie-break.",
+       "Alex de Minaur (9) plays Rei Sakamoto, who upset Andrey Rublev; de Minaur received a walkover from Alex Molcan.",
+       "Jakub Mensik plays Francisco Cerundolo; Alexander Bublik plays Brandon Nakashima."
+      ]
+     },
+     {
+      "h": "Why it matters",
+      "b": [
+       "The year-end No. 1 race is decided largely by Zverev's results this week.",
+       "Zverev's quote after the US Open match: this is what he trains for, 'to be able to come out on top of these difficult moments when you're not playing best'."
+      ]
+     },
+     {
+      "h": "What to watch next",
+      "b": [
+       "Zverev v Halys, then whether Zverev reaches the semi-finals.",
+       "Shelton's push toward the Nitto ATP Finals.",
+       "Whether Zhou Yi can pull off another upset against Hurkacz."
+      ]
+     }
+    ],
+    "id": "27159a2b"
    }
   ]
  },
  "finance": {
   "macro": [
    {
-    "tag": "Rates",
     "headline": "Waller: more Fed hikes likely, but not necessarily consecutive; markets lean to October pause",
-    "summary": "At the Istanbul Economic Forum, Governor Christopher Waller said additional hikes are appropriate if data hold, but need not come at consecutive meetings. Futures price roughly 18% odds of an October 28 hike vs ~87% of one by December; the funds rate sits at 3.75–4.00% after September's 25bp move.",
+    "teaser": "At the Istanbul Economic Forum, Governor Waller said more hikes are appropriate if data hold, but they need not come at consecutive meetings. The funds rate is 3.75–4.00% after September's 25bp hike.",
     "source": "Federal Reserve",
     "url": "https://www.federalreserve.gov/newsevents/speech/waller20261008a.htm",
-    "published": "2026-10-08"
+    "published": "2026-10-08",
+    "tag": "Rates",
+    "tags": [
+     "Rates",
+     "Fed",
+     "FOMC",
+     "Christopher Waller",
+     "Federal Reserve (primary source)"
+    ],
+    "brief": [
+     {
+      "h": "What happened",
+      "b": [
+       "Fed Governor Christopher Waller spoke on 8 October in Istanbul on 'The Signaling Value of the Summary of Economic Projections'.",
+       "He explained why he backed September's 25bp hike to 3.75–4.00%, the first move after nine months on hold and after 75bp of cuts from September to December 2025.",
+       "His message on the path: if data come in as expected he anticipates additional hikes, but 'the hikes do not need to come at consecutive meetings'."
+      ]
+     },
+     {
+      "h": "Why he changed his mind",
+      "b": [
+       "The labor market stabilised in the first half of 2026 while progress on inflation stalled.",
+       "Hopes for a quick end to the Middle East conflict faded, with oil seen staying high through 2027 because of low inventories and damaged infrastructure.",
+       "The AI buildout is pushing up high-tech consumer prices, and trade conflicts threaten new tariffs.",
+       "A hot first August inflation reading made it 'impossible to deny' inflation was still too high."
+      ]
+     },
+     {
+      "h": "Key numbers",
+      "b": [
+       "August core PCE rose 0.25% on the month and 3% over 12 months. Twelve-month core has stayed between roughly 2.5% and 3.0% since spring 2024.",
+       "Inflation will soon have been above target for five and a half years.",
+       "September dot plot: 16 of 18 participants expect at least one more hike this year; four of them expect two.",
+       "Eight participants expect rates 50bp higher at end-2027 than today.",
+       "Futures (as of 7 Oct): ~85% odds of at least one hike by December, nearly 20% of two; by March 2027, nearly 80% for at least two and 33% for three or more."
+      ]
+     },
+     {
+      "h": "Why it matters",
+      "b": [
+       "Waller says the economy is 'roughly in the same place' as at the September meeting: a stable labour market and inflation 'too high', so policy stays focused on inflation.",
+       "He is signalling a destination (about 50bp more) without locking in pace, which he calls a 'signaling option' between silence and strict forward guidance.",
+       "The Daily DXY reads his remark as opening the door to an October pause without dropping the hike bias, with roughly 18% odds of an October hike versus roughly 87% by December (per FXStreet)."
+      ]
+     },
+     {
+      "h": "What to watch next",
+      "b": [
+       "The FOMC meeting on 27–28 October.",
+       "US CPI for September on 14 October (see this week's calendar item).",
+       "Whether Fed speakers echo the 'not consecutive' idea, and whether the dots move again in December."
+      ]
+     }
+    ],
+    "id": "f5d6fc29"
    },
    {
-    "tag": "FX",
     "headline": "Dollar firms near 102; USD/CAD jumps on Canadian jobs miss",
-    "summary": "DXY rose to about 102.09 Friday as USD/CAD climbed to ~1.4275 after September Canadian employment fell 68,300 vs a ~9,000 gain expected. EUR/USD hovered near 1.1190 on French fiscal stress; USD/JPY traded around 158.3 on the US–Japan rate gap. US yields: 10-year ~5.25%, 30-year ~5.61%.",
+    "teaser": "DXY rose to about 102.09 Friday as USD/CAD climbed to ~1.4275 after Canadian employment fell 68,300 versus a ~9,000 gain expected. US stocks rose and the VIX fell to 14.85.",
     "source": "The Daily DXY",
     "url": "https://www.thedailydxy.com/archive/2026-10-10",
-    "published": "2026-10-10"
+    "published": "2026-10-10",
+    "tag": "FX",
+    "tags": [
+     "FX",
+     "US dollar",
+     "Canada",
+     "Yields",
+     "VIX",
+     "The Daily DXY"
+    ],
+    "note": "Source is a daily newsletter desk note, not a primary data publisher; one oil figure differs from Reuters.",
+    "brief": [
+     {
+      "h": "What happened",
+      "b": [
+       "The US Dollar Index ticked up 0.17% to 102.09 on Friday.",
+       "The loonie slid past 1.4280 after Statistics Canada reported that September employment fell 68,300, versus a forecast gain near 9,000.",
+       "Equities were firm: S&P 500 +0.46%, Dow +0.73%, and the VIX fell 3.63% to 14.85, a risk-on tone alongside a steady dollar."
+      ]
+     },
+     {
+      "h": "Key numbers",
+      "b": [
+       "EUR/USD 1.1190 (−0.19%), pressured by French political and debt risk; GBP/USD 1.3227 (flat); USD/JPY 158.31 (+0.26%); USD/CAD 1.4275 (+0.35%).",
+       "US yields: 10-year 5.248% (+1.7bp), 5-year 5.023%, 3-month 4.057%, 30-year 5.605% (roughly flat).",
+       "Canada: unemployment rose to 6.5% from 6.4%, after a 41,700 loss in August. Manufacturing −12,700, youth employment −48,000.",
+       "Per Bloomberg, USD/CAD hit 1.4299, the loonie's weakest since April 2025; the data cut odds of a Bank of Canada hike.",
+       "Fed funds are 3.75–4.00% after the 16 September hike."
+      ]
+     },
+     {
+      "h": "Why it matters",
+      "b": [
+       "The live question for the Fed is further hikes, not cuts. Waller's comment that hikes need not be consecutive shifted timing, not direction.",
+       "Hike odds quoted: roughly 18% for October, roughly 87% by December.",
+       "Trump's new committee on Fed Governor Cook adds political noise the desk 'cannot yet size for FX'.",
+       "The desk's oil figures (Brent $103.89, WTI $91.19) differ slightly from Reuters' settlement (see the oil item)."
+      ]
+     },
+     {
+      "h": "More detail from the desk note",
+      "b": [
+       "ECB President Lagarde's dovish remarks last week pulled EUR/USD off a 17-month low of 1.1161.",
+       "Canada's job losses were concentrated in public-sector health care, social assistance and education, plus manufacturing and youth employment.",
+       "The Fed's Waller said on 8 October that further hikes do not need to come at consecutive meetings; the desk reads that as opening the door to an October pause.",
+       "Oil was mixed on Friday after Trump said US–Iran talks were productive and that no strike is planned before the 3 November midterms.",
+       "Monday is a market holiday in Canada, and the US cash bond market is closed for Columbus Day."
+      ]
+     },
+     {
+      "h": "What to watch next",
+      "b": [
+       "Monday 12 October: Canadian Thanksgiving (TSX closed), US Columbus Day (bond-market hours affected), Japan holiday.",
+       "28 October: Bank of Canada decision with a press conference; ECB on 29 October; BoJ 29–30 October; BoE on 5 November.",
+       "UK Budget is on 28 October, with UK fiscal concerns weighing on sterling.",
+       "Whether the euro, which touched a 17-month low of 1.1161 last week, holds above that."
+      ]
+     }
+    ],
+    "id": "22b26d43"
    },
    {
-    "tag": "Central banks",
     "headline": "Trump forms inquiry committee on Fed's Lisa Cook; White House hearing Nov 5",
-    "summary": "A three-person panel (Hassett, Sonderling, Lucas) will hear mortgage-fraud allegations Cook denies and recommend whether Trump has cause to fire her; the final call is Trump's and would likely return to the courts. Cook is expected to vote at the Oct 28 FOMC, so no immediate rate impact.",
+    "teaser": "A three-person panel (Hassett, Sonderling, Lucas) will hear mortgage-fraud allegations Cook denies and recommend whether Trump has cause to fire her. Cook is expected to vote at the Oct 28 FOMC.",
     "source": "CNBC",
     "url": "https://www.cnbc.com/2026/10/09/trump-lisa-cook-fed-firing-committee-explained.html",
-    "published": "2026-10-09T14:20:00-04:00"
+    "published": "2026-10-09T14:20:00-04:00",
+    "tag": "Central banks",
+    "tags": [
+     "Central banks",
+     "Fed independence",
+     "Lisa Cook",
+     "Donald Trump",
+     "CNBC"
+    ],
+    "brief": [
+     {
+      "h": "What happened",
+      "b": [
+       "On Friday President Trump created a 'committee of inquiry' to recommend whether he has cause to fire Fed Governor Lisa Cook over mortgage-fraud allegations she denies.",
+       "Cook is expected at a White House hearing on 5 November, may bring an attorney, and has until 10 November to follow up.",
+       "The committee cannot fire her. Trump makes the final call, with no set deadline."
+      ]
+     },
+     {
+      "h": "Who and how",
+      "b": [
+       "Members: Kevin Hassett (National Economic Council), Keith Sonderling (acting OGE director and Labor secretary) and Andrea Lucas (EEOC chair). All are Trump appointees, not independent.",
+       "Precedent: President Taft convened a similar committee in 1912; it recommended removal of two board members.",
+       "The Supreme Court (Trump v. Cook, Chief Justice Roberts) said Cook is entitled to notice, an explanation of the evidence and a chance to defend herself, possibly in writing. A governor is not entitled to 'a full-blown judicial trial'.",
+       "The committee only needs to show cause, not a crime. The court has not defined cause in detail."
+      ]
+     },
+     {
+      "h": "Legal background",
+      "b": [
+       "Trump ordered Cook fired in 2025; the Supreme Court blocked that on procedural grounds but said he could try again. He told her in August he was considering another attempt.",
+       "Her lawyers Abbe Lowell and Norm Eisen say she 'welcomes the opportunity to present the facts' but have 'grave doubts' the hearing is legitimate.",
+       "Justice Department officials may question her; it is unclear whether her answers would be protected in a later criminal case."
+      ]
+     },
+     {
+      "h": "Rates and the Fed",
+      "b": [
+       "No immediate effect on rates: Cook is expected to vote at the 28 October FOMC and remains a member in good standing.",
+       "A firing would likely go back to the Supreme Court, 'a process that could take months'.",
+       "Jerome Powell ended his term as chair in May but can stay as a governor through January 2028; a DOJ probe into him ended two weeks ago without charges. Kevin Warsh is Fed chair."
+      ]
+     },
+     {
+      "h": "What to watch next",
+      "b": [
+       "5 November hearing and 10 November follow-up deadline.",
+       "Whether Cook seeks assurances on the use of her testimony or invokes the Fifth Amendment.",
+       "Whether Trump moves to fire her and how the courts respond."
+      ]
+     }
+    ],
+    "id": "c96d1ed9"
    },
    {
-    "tag": "Geopolitics",
-    "headline": "IRGC: oil tanker explodes after mine strike in Strait of Hormuz",
-    "summary": "Iran's Revolutionary Guards said a large tanker hit a naval mine while using an unauthorised southern exit route, exploded and caught fire; vessel identity and casualties were not confirmed. Brent closed Friday near $103.89 with WTI ~$91 after Trump said no Iran strike is planned before the Nov 3 midterms.",
+    "headline": "Oil settles higher as hurricane shuts US Gulf output; Trump says Iran talks 'productive'",
+    "teaser": "Brent settled at $104.72 and WTI at $91.85 on Friday as more than 70% of US offshore crude output was shut for Hurricane Isaias, offsetting Trump's comments on Iran talks.",
+    "source": "Reuters (via Business Recorder)",
+    "url": "https://www.brecorder.com/news/40443543",
+    "published": "2026-10-10",
+    "tag": "Oil",
+    "tags": [
+     "Oil",
+     "Energy",
+     "Iran",
+     "Hurricane Isaias",
+     "Reuters (via Business Recorder)"
+    ],
+    "brief": [
+     {
+      "h": "What happened",
+      "b": [
+       "Oil closed higher Friday as Hurricane Isaias moved toward the northern Gulf of Mexico and producers shut over 70% of US offshore crude production.",
+       "Early in the session prices fell after Trump said talks with Iran to end the war were 'productive'. He also teased a diesel announcement and said he was considering suspending the federal gasoline tax.",
+       "China plans to resume refined fuel exports after a Golden Week pause, which also weighed on prices."
+      ]
+     },
+     {
+      "h": "Key numbers",
+      "b": [
+       "Brent settled at $104.72 (+44 cents, +0.42%); WTI at $91.85 (+36 cents, +0.39%). Both set for a weekly gain.",
+       "Producers shut in about 1.3 million barrels per day, or 62.9% of Gulf output, as of Thursday (US Marine Minerals Administration).",
+       "The Strait of Hormuz carried shipments equal to about 20% of global oil and fuel before the war.",
+       "US sanctions hit individuals, networks and 17 vessels moving Iranian crude, products and petrochemicals."
+      ]
+     },
+     {
+      "h": "Iran angle",
+      "b": [
+       "Trump said no attack was planned before the 3 November midterms after reports he was considering one.",
+       "Tasnim reports Foreign Minister Araqchi said Tehran is reviewing the US response to its proposal to reopen Hormuz within seven days.",
+       "Prices have been volatile this week as threats to Gulf and Hormuz shipping increased."
+      ]
+     },
+     {
+      "h": "Why it matters",
+      "b": [
+       "Refined products, especially diesel, are disrupted by both the Iran war and the Russia–Ukraine conflict, which is why Washington is acting on diesel.",
+       "PVM analyst Tamas Varga attributed the early dip to Trump's Iran pledge and China's export resumption.",
+       "Supply risks cut both ways: de-escalation lowers prices, but weather and shipping threats push them up."
+      ]
+     },
+     {
+      "h": "Related market notes",
+      "b": [
+       "Mitrade reports Brent held around $100.20 on 7 October after Iran's latest Hormuz warnings, so Reuters' $104.72 settlement is roughly $4.50 higher in two days.",
+       "The Daily DXY's own oil figures (Brent $103.89, WTI $91.19) differ from Reuters' settlement; Reuters' numbers are used here.",
+       "Briefs headlines on 9 October also flag that tanker attacks near Hormuz are now almost daily, and that Australia is doubling down on its Russian fuel ban while the US moves to release Russian diesel (headlines only).",
+       "Reuters lists the Iran war and the Russia–Ukraine conflict as the disruptors of refined-fuel supply."
+      ]
+     },
+     {
+      "h": "What to watch next",
+      "b": [
+       "Hurricane Isaias' path and how fast Gulf output restarts.",
+       "Iran's answer to the US response on reopening Hormuz.",
+       "Any Trump diesel or gasoline-tax announcement before the 3 November midterms."
+      ]
+     }
+    ],
+    "id": "dd25ae6c"
+   },
+   {
+    "headline": "IRGC says supertanker hit a mine and exploded in the Strait of Hormuz",
+    "teaser": "Iran's Revolutionary Guards said a tanker able to carry about 2 million barrels struck a mine on an 'unauthorized' southern route; identity and casualties were unconfirmed.",
     "source": "Anadolu Agency",
     "url": "https://www.aa.com.tr/en/middle-east/supertanker-explodes-after-striking-mine-in-strait-of-hormuz-irans-revolutionary-guards-say/4084743",
-    "published": "2026-10-10"
+    "published": "2026-10-10",
+    "tag": "Geopolitics",
+    "tags": [
+     "Geopolitics",
+     "Strait of Hormuz",
+     "Iran",
+     "Oil shipping",
+     "Anadolu Agency"
+    ],
+    "note": "Based on a single wire report of an IRGC claim; independent confirmation was not available.",
+    "brief": [
+     {
+      "h": "What happened",
+      "b": [
+       "The IRGC said Saturday that an oil supertanker struck a naval mine and exploded while trying to leave Hormuz through an unauthorised southern route.",
+       "It said the vessel, capable of carrying around 2 million barrels, had switched off its navigation systems.",
+       "The explosion was visible from coastal areas, the IRGC said, warning that 'the fate of every vessel that ignores the rules in the Strait of Hormuz is a horrific fire'."
+      ]
+     },
+     {
+      "h": "What is not known",
+      "b": [
+       "There is no immediate information on the vessel's identity, crew or casualties. This is the IRGC's account only.",
+       "A day earlier Iranian state TV reported heavy explosions in the strait, with military sources saying tankers on routes Tehran deems unauthorised may have hit mines."
+      ]
+     },
+     {
+      "h": "Background",
+      "b": [
+       "Iran announced on 12 July that it had again closed Hormuz after US attacks resumed on 8 July.",
+       "Tehran has threatened vessels that use routes other than those it designates or transit without permission.",
+       "The US and Israel launched a war on Iran on 28 February; Tehran says over 3,000 were killed. A ceasefire was reached in April.",
+       "A memorandum of understanding was signed in mid-June but the US later carried out further strikes. Talks remain deadlocked over navigation through Hormuz."
+      ]
+     },
+     {
+      "h": "Why it matters for markets",
+      "b": [
+       "Hormuz carried about 20% of global oil and fuel before the war (Reuters), so attacks on shipping feed oil risk premia.",
+       "Brent settled at $104.72 on Friday (Reuters), and Iran says it is reviewing a US proposal to reopen the strait within seven days.",
+       "The Daily DXY notes Trump said no Iran strike is planned before the 3 November midterms."
+      ]
+     },
+     {
+      "h": "Related reporting",
+      "b": [
+       "Reuters says the Strait of Hormuz carried about 20% of global oil and fuel before the war and that shipping threats have increased this week.",
+       "Mitrade noted Brent near $100.20 on 7 October after Iran's latest warnings about Hormuz.",
+       "A Briefs headline on 9 October says tanker attacks near Hormuz are now almost daily (headline only).",
+       "Iran's Foreign Minister Araqchi is reportedly reviewing the US response to Iran's proposal to reopen Hormuz within seven days (Tasnim, via Reuters)."
+      ]
+     },
+     {
+      "h": "What to watch next",
+      "b": [
+       "Confirmation of the tanker's identity and any casualties.",
+       "Oil's reaction when markets reopen Monday.",
+       "Whether the US-Iran talks on navigation make progress."
+      ]
+     }
+    ],
+    "id": "ad3f4f01"
    },
    {
-    "tag": "Volatility",
-    "headline": "VIX slips to ~14.85 as equities firm; bond yields stay elevated",
-    "summary": "The VIX fell about 3.6% to 14.85 Friday while the S&P 500 rose ~0.5% and the Dow ~0.7%, a risk-on equity backdrop alongside a steady dollar. The 10-year yield held near 5.25% and the 30-year near 5.61%, keeping rate-sensitive assets under watch into Columbus Day-shortened Monday.",
-    "source": "The Daily DXY",
-    "url": "https://www.thedailydxy.com/archive/2026-10-10",
-    "published": "2026-10-10"
+    "headline": "US payrolls rose just 29,000 in September; wage growth lowest since 2021",
+    "teaser": "Nonfarm payrolls missed (84,000 expected), unemployment rose to 4.2%, and average hourly earnings were up 3.0% from a year earlier. Markets read it as cementing an October Fed hold.",
+    "source": "CNBC",
+    "url": "https://www.cnbc.com/2026/10/02/jobs-report-september-2026.html",
+    "published": "2026-10-02T08:31:00-04:00",
+    "tag": "Jobs",
+    "tags": [
+     "Macro",
+     "US jobs",
+     "Labor market",
+     "Fed",
+     "CNBC"
+    ],
+    "note": "This report is from 2 October, so it is background (9 days old) rather than breaking news.",
+    "brief": [
+     {
+      "h": "What happened",
+      "b": [
+       "US employers added 29,000 jobs in September versus 84,000 expected; unemployment rose to 4.2% from 4.1%.",
+       "Revisions subtracted 60,000: August is now +133,000 and July is a 10,000 loss.",
+       "Stock futures rose and Treasury yields fell after a run to multi-decade highs."
+      ]
+     },
+     {
+      "h": "Key numbers",
+      "b": [
+       "Household employment +406,000; labour force +485,000; participation up 0.2 pt to 61.8%, the highest since May. This is why unemployment rose.",
+       "Broader unemployment measure 7.6%, the lowest since January 2025.",
+       "Average hourly earnings +0.1% on the month and +3.0% year on year, the lowest since May 2021 (3.1% expected).",
+       "By sector: healthcare +17,000, construction +11,000, manufacturing +9,000. Government −17,000, temporary help −11,000, information −10,000, finance −7,000.",
+       "GDP: Q1 revised to 2.5% and Q2 to 2.2%; the Atlanta Fed tracks Q3 at 3.7%."
+      ]
+     },
+     {
+      "h": "Fed implications",
+      "b": [
+       "CME FedWatch put the odds of a hold at the 27–28 October meeting at 82.8% after the report.",
+       "Jefferies' Thomas Simons: 'this number should be the nail in the coffin for an October hike'.",
+       "Navy Federal's Heather Long called the market 'stable' and doubts the Fed will be dissuaded from a December hike.",
+       "Core inflation is at a 3% annual rate, well above the 2% target."
+      ]
+     },
+     {
+      "h": "Why it matters",
+      "b": [
+       "It is a 'low-hire, low-fire' economy: weekly jobless claims are low and one layoff indicator is at a four-year low.",
+       "Weak wage growth against 3% core inflation squeezes real incomes.",
+       "Waller said on 8 October that the labour market 'continued to be solid and stable' and policy focus stays on inflation."
+      ]
+     },
+     {
+      "h": "More detail",
+      "b": [
+       "Average workweek was unchanged at 34.6 hours; Wall Street had looked for 0.3% monthly wage growth and 3.1% annual.",
+       "Jefferies says August's strength looks like a rebound from very weak June and July hiring, not new momentum.",
+       "Markets now expect the Fed to wait until December for its next hike. The FOMC raised rates by a quarter point in September.",
+       "Jim Bianco noted on X that the four-week average of initial jobless claims equalled its lowest level ever (57 years of data).",
+       "Heather Long said wage growth is 'being wiped out entirely by inflation'."
+      ]
+     },
+     {
+      "h": "What to watch next",
+      "b": [
+       "September CPI on 14 October.",
+       "27–28 October FOMC: hold priced, with a December hike the base case.",
+       "Whether wage growth stabilises or falls further."
+      ]
+     }
+    ],
+    "id": "514bcfb2"
    },
    {
-    "tag": "Flows",
-    "headline": "BoJ balance sheet shrinks further; US semiconductor imports hit a record",
-    "summary": "The Bank of Japan's total assets fell another ~$98bn in Q3 to $3.95tn (lowest since Q1 2020), down ~$828bn from the Q1 2024 peak. Separately, US semiconductor imports jumped $2.4bn in August to a record $15.4bn, up 69% over five months — a flow marker of AI hardware demand.",
-    "source": "The Kobeissi Letter (X)",
-    "url": "https://x.com/KobeissiLetter/status/2108991201378496677",
-    "published": "2026-10-10T18:41:00+00:00"
+    "headline": "France's bond spread hits crisis-era levels as CAC 40 enters correction",
+    "teaser": "Rothschild & Co says the 10-year OAT–Bund spread widened to ~140bp, the most since the eurozone debt crisis, with long yields near 5% and the euro near 17-month lows.",
+    "source": "Rothschild & Co Wealth Management",
+    "url": "https://www.rothschildandco.com/en-ch/newsroom/insights/2026/10/wm-strategy-blog-france-fiscal-pressure/",
+    "published": "2026-10-05",
+    "tag": "Rates",
+    "tags": [
+     "Rates",
+     "France",
+     "Europe",
+     "Fiscal",
+     "Rothschild & Co"
+    ],
+    "note": "Wealth-manager strategy note with an investment view; treat the opinion as the author's, not fact.",
+    "brief": [
+     {
+      "h": "What happened",
+      "b": [
+       "French assets are under renewed pressure: the CAC 40 is in correction territory (about 10% down since early August) and long-term borrowing costs are near the 5% level.",
+       "The 10-year OAT–Bund spread widened to about 140bp, a level not seen since the depths of the eurozone debt crisis.",
+       "The euro is 'flirting with 17-month lows'."
+      ]
+     },
+     {
+      "h": "Why France is singled out",
+      "b": [
+       "Fiscal slippage: the government will miss its 5%-of-GDP deficit target for 2026; that ambition is deferred to 2027.",
+       "Political uncertainty ahead of the 2027 presidential election as support for the centre fades.",
+       "The 2027 budget includes spending restraint but is unlikely to win consensus. Rothschild expects a modified budget pushed through under Article 49.3 rather than a no-confidence collapse."
+      ]
+     },
+     {
+      "h": "Key facts",
+      "b": [
+       "Five EU countries had gross debt above 100% of GDP at end-2025: Greece, Italy, France, Belgium and Spain.",
+       "French public spending is almost three-fifths of GDP.",
+       "Average maturity of French debt is about 8.5 years, so higher yields feed into interest costs gradually.",
+       "Marine Le Pen is the 2027 frontrunner; Mélenchon's party rejects consolidation and proposes to 'restructure' debt."
+      ]
+     },
+     {
+      "h": "Rothschild's view",
+      "b": [
+       "'A politically precarious moment, but not yet a sovereign-debt crisis.' France is investment grade.",
+       "The ECB's untested Transmission Protection Instrument could in extremis be used to stop a self-fulfilling run, though subject to legal and political scrutiny.",
+       "Yields are rising across developed markets, driven mostly by a firmer business cycle. The wider spread may offer an opportunity, but the risk premium 'may not have peaked'."
+      ]
+     },
+     {
+      "h": "More detail",
+      "b": [
+       "Macron has run a succession of minority governments since the June 2024 snap election.",
+       "Le Pen's route to fiscal discipline is spending cuts aimed at immigration and non-citizen welfare, which Rothschild says 'would not land well in Brussels'.",
+       "Mélenchon proposes to tax the wealthy to fund higher wages, pensions and spending.",
+       "Mohamed El-Erian posted on 9 October that the French–Italian spread move reported by Bloomberg 'was thought unlikely, if not unthinkable, not so long ago'. A Briefs headline says the French 10-year premium over Italy hit 30bp.",
+       "Rothschild's inclination is to see the wider spread as a potential opportunity if fiscal credibility remains intact."
+      ]
+     },
+     {
+      "h": "What to watch next",
+      "b": [
+       "The 2027 budget process and any Article 49.3 move or no-confidence vote.",
+       "French and eurozone CPI on 15–16 October.",
+       "ECB meeting on 29 October."
+      ]
+     }
+    ],
+    "id": "5ce28682"
+   },
+   {
+    "headline": "Week ahead: US CPI, bank earnings and TSMC in a holiday-shortened week",
+    "teaser": "US CPI on 14 October is forecast at 3.6% y/y headline and 2.5% core; JPMorgan reports Tuesday and Taiwan Semiconductor on Thursday. Cash Treasuries are closed Monday.",
+    "source": "CMC Markets (Michael Kramer)",
+    "url": "https://www.cmcmarkets.com/en-gb/news-and-analysis/the-week-ahead-us-cpi-eurozone-cpi-jpmorgan-earnings",
+    "published": "2026-10-09T12:30:00+01:00",
+    "tag": "Calendar",
+    "tags": [
+     "Markets",
+     "Calendar",
+     "CPI",
+     "Earnings",
+     "CMC Markets"
+    ],
+    "note": "Forecasts and technical levels are the author's/consensus expectations, not outcomes.",
+    "brief": [
+     {
+      "h": "What happened",
+      "b": [
+       "Michael Kramer (Mott Capital Management) set out the week beginning Monday 12 October for CMC Markets.",
+       "It is holiday-shortened in the US: cash Treasuries are closed for Columbus Day, though equities and Treasury futures trade.",
+       "It marks the start of main earnings season, with CPI releases in the US and eurozone against rising rates."
+      ]
+     },
+     {
+      "h": "Key dates and numbers",
+      "b": [
+       "Tuesday 13 Oct: JPMorgan Q3. EPS expected +16.4% to $5.90, revenue +8.8% to $51.3bn, trading income −18.4% to $5.8bn. Goldman Sachs, Wells Fargo, J&J, UnitedHealth also report.",
+       "Wednesday 14 Oct: US CPI: headline +0.6% m/m (prior 0.4%), 3.6% y/y (from 3.4%); core +0.2% m/m, 2.5% y/y (from 2.4%). Also the Fed Beige Book and China CPI.",
+       "Thursday 15 Oct: US PPI and retail sales, UK GDP, France CPI, Taiwan Semiconductor Q3.",
+       "Friday 16 Oct: eurozone CPI. German CPI on 13 Oct is expected at 3.3% y/y."
+      ]
+     },
+     {
+      "h": "Why it matters",
+      "b": [
+       "CPI and PPI help estimate PCE. A cooler report 'would strengthen the case for the Fed to remain on hold until after the midterm elections'.",
+       "The euro is weak (EUR/USD under $1.13, oversold) while markets do not price another ECB hike until potentially February.",
+       "TSMC will test the market's 'infatuation with the AI trade'."
+      ]
+     },
+     {
+      "h": "Gold and levels",
+      "b": [
+       "Gold is near support at $4,100; a break would put $3,950 in view, with resistance toward $4,250.",
+       "JPMorgan shares sit near $325 support; options positioning is described as bearish with possible rally if hedges unwind."
+      ]
+     },
+     {
+      "h": "More from the calendar",
+      "b": [
+       "Monday 12 Oct: Fed's Hammack speaks; BoE's Breeden and Mann speak.",
+       "Tuesday 13 Oct also brings RBA minutes, US ADP data and existing home sales.",
+       "Wednesday 14 Oct earnings: Bank of America, BlackRock, Morgan Stanley, State Street. Thursday: BNY Mellon, Schwab, PNC, Prologis. Friday: Truist, M&T and others.",
+       "JPMorgan's net interest income is expected up 12.1% to $26.9bn; the options market implies about a 3.3% post-earnings move, with put gamma near $320 and call gamma near $350.",
+       "EUR/USD has consolidated between about $1.1160 and $1.1260; a break above $1.1290 would signal a reversal, a cooler-than-expected eurozone CPI report could point toward $1.1000."
+      ]
+     },
+     {
+      "h": "What to watch next",
+      "b": [
+       "Whether core CPI comes in at or below 0.2%.",
+       "Bank trading revenue against the expected fall.",
+       "TSMC guidance for the AI trade."
+      ]
+     }
+    ],
+    "id": "e0f63101"
+   },
+   {
+    "headline": "Yen holds near 158 as Ueda signals conditional tightening; Bangkok IMF meetings loom",
+    "teaser": "USD/JPY sits just above 158 with about a 25% chance priced for a BoJ hike on 29–30 October; Japan's record ¥11.73 trillion intervention earlier this year frames the risk of action.",
+    "source": "VT Markets",
+    "url": "https://www.vtmarkets.com/en-eu/live-updates/ueda-signals-conditional-tightening-as-usd-jpy-holds-158-markets-price-october-hike-odds/",
+    "published": "2026-10-07",
+    "tag": "FX",
+    "tags": [
+     "FX",
+     "Japan",
+     "Yen",
+     "BoJ",
+     "VT Markets"
+    ],
+    "note": "Source is broker commentary (VT Markets) with trading views; facts about speeches and interventions are stated by the broker.",
+    "brief": [
+     {
+      "h": "What happened",
+      "b": [
+       "BoJ Governor Ueda gave his first major speech since the 18 September rate rise. USD/JPY stayed just above 158.00.",
+       "He said further tightening will track the outlook for the economy, prices and financial conditions, still 'accommodative'. The board would weigh a hike if upside inflation risks begin to dominate downside growth risks.",
+       "Finance Minister Katayama said on 2 October that the government agrees reflation has ended and supports the BoJ."
+      ]
+     },
+     {
+      "h": "Key numbers",
+      "b": [
+       "Derivatives imply roughly a 25% chance of a hike at the 29–30 October meeting.",
+       "Japan bought a record ¥11.73 trillion of yen between 30 April and 27 May, then intervened again at end-July, when the US Treasury joined.",
+       "The US–Japan 10-year yield spread is over 300bp.",
+       "August wages forecast at 3.7% y/y after 4.7%.",
+       "Levels: resistance 158.50 and 159.00; support just under 157.50 and 157.00 (Stoch RSI near 83).",
+       "On 10 October USD/JPY was 158.31 (The Daily DXY)."
+      ]
+     },
+     {
+      "h": "Why it matters",
+      "b": [
+       "A wide rate gap keeps pressure on the yen, and officials have signalled a tougher stance on weakness.",
+       "The next coordinated communication point is the IMF/World Bank meetings in Bangkok, 12–18 October.",
+       "Verbal warnings there 'could rapidly trigger sharp downside moves' for the pair, per VT Markets."
+      ]
+     },
+     {
+      "h": "Context from X",
+      "b": [
+       "The Kobeissi Letter posted that the BoJ's total assets fell $98bn in Q3 to $3.95 trillion, the lowest since Q1 2020, and are down 17.4% from the Q1 2024 peak (see the Tweets tab).",
+       "JGB holdings are $3.19 trillion, down 14.9% from their 2023 peak."
+      ]
+     },
+     {
+      "h": "More detail",
+      "b": [
+       "Japanese nominal wage growth averaged under 1% for nearly two decades before the recent inflation push, so any print above 3% signals structural change.",
+       "FOMC minutes are due Wednesday at 18:00 GMT; hawkish minutes would widen the rate gap and push the pair toward 159.",
+       "Ueda said the board would weigh a hike if upside inflation risks begin to dominate downside growth risks, 'even with Middle East uncertainty'.",
+       "Broker view: favourable risk-reward for longs above 157.50, targets 158.50 and 159.00; a close below 157.00 would invalidate it."
+      ]
+     },
+     {
+      "h": "What to watch next",
+      "b": [
+       "Bangkok IMF meetings and any joint statements on the yen.",
+       "Japan wage data and the 29–30 October BoJ meeting with its Outlook Report.",
+       "Fed rhetoric: hawkish signals would push USD/JPY toward 159."
+      ]
+     }
+    ],
+    "id": "9d523250"
+   },
+   {
+    "headline": "Gold hits a two-month low near $4,090 as real yields bite",
+    "teaser": "Spot gold touched about $4,090 on 7 October as the 30-year yield hit 5.67% (highest since 2002), even though NY Fed one-year inflation expectations rose to 3.9%.",
+    "source": "Mitrade",
+    "url": "https://www.mitrade.com/insights/commodity-analysis/gold/gold-two-month-low-real-yields-20261008J1531",
+    "published": "2026-10-08",
+    "tag": "Commodities",
+    "tags": [
+     "Commodities",
+     "Gold",
+     "Real yields",
+     "Treasuries",
+     "Mitrade"
+    ],
+    "note": "Based on a retail-broker analysis piece; price targets are opinions of the named analysts.",
+    "brief": [
+     {
+      "h": "What happened",
+      "b": [
+       "Gold fell to a two-month low on 7 October: spot touched roughly $4,090 and COMEX December futures settled at $4,140.70, down 1.1%.",
+       "Silver briefly lost $60 (low $59.53) and platinum fell more than 3% to $1,633.",
+       "Dip-buying lifted spot to about $4,137 in Asia the next day."
+      ]
+     },
+     {
+      "h": "Why gold fell despite hot inflation",
+      "b": [
+       "The NY Fed survey showed one-year inflation expectations rising to 3.9% from 3.6% (three-year 3.3%).",
+       "But Treasury yields are higher: the 30-year at 5.67% (5.732% intraday) is its highest since 2002; the 10-year is 5.28%.",
+       "Real yields keep rising, and gold pays no yield. The dollar index is near an 18-month high.",
+       "Natixis' Bernard Dahdah argued gold has re-established a negative correlation with oil and cut his year-end target to $4,100."
+      ]
+     },
+     {
+      "h": "Key numbers",
+      "b": [
+       "Published targets range from $3,500 (Natixis bear case) to $7,150 (ICBC Standard Bank).",
+       "State Street's Aakash Doshi calls $4,000 a 'structural floor' with a path to $5,000 by Q2 2027.",
+       "China's post-Golden Week buying season has begun; the Shanghai gold premium was at a three-month high before the holiday.",
+       "Levels: support $4,100, $4,000 and $3,950; resistance $4,200, $4,251 and $4,300."
+      ]
+     },
+     {
+      "h": "More detail",
+      "b": [
+       "COMEX gold closed the week from 2 October near $4,160 before sliding to a $4,091.20 low on Wednesday, the weakest since early August.",
+       "Silver fell 2.1% to $60.29 and platinum's overnight low of $1,633 was down over 3%: Mitrade says the two industrial-levered metals 'are acting like risk assets, not havens'.",
+       "Oil above $100 keeps the energy-inflation channel open, with Brent around $100.20 that day.",
+       "On 8 October the market faced US jobless claims (consensus 200k, prior 197k) and a $22 billion 30-year auction (previous award 5.308%); a strong auction would pull the long-end yield back from its highs.",
+       "Physical demand: China's buying season is underway and the Shanghai premium was at a three-month high before the holiday."
+      ]
+     },
+     {
+      "h": "What to watch next",
+      "b": [
+       "The 30-year yield against its 5.732% high and the dollar.",
+       "CMC's week-ahead note sees gold near $4,100 support into 14 October CPI.",
+       "Scenario A: $4,100 holds and gold rebounds toward $4,200. Scenario B: a close below $4,090 opens a test of $4,000."
+      ]
+     }
+    ],
+    "id": "1cc8b48d"
    }
   ],
   "tweets": [
    {
-    "kind": "tweet",
-    "headline": "*Walter Bloomberg (@DeItaone)",
-    "summary": "OIL TANKER EXPLODES AFTER REPORTED MINE STRIKE IN STRAIT OF HORMUZ\n\nIran’s Revolutionary Guards say an oil tanker exploded and caught fire after striking a naval mine while crossing the Strait of Hormuz, according to Iranian state media.\n\nThe vessel’s identity and flag remain",
-    "source": "X",
-    "url": "https://x.com/DeItaone/status/2108970700769825185",
-    "published": "2026-10-10T17:19:32+00:00"
-   },
-   {
-    "kind": "tweet",
-    "headline": "*Walter Bloomberg (@DeItaone)",
-    "summary": "TRUMP DEMANDS UKRAINE STOP STRIKING RUSSIAN OIL REFINERIES\n\nPresident Trump warned Zelensky to immediately stop attacks on Russian refineries, declaring: “He better damn well stop.”\n\nTrump also called for new leadership in Ukraine, saying: “I suggest they get a new leader who can",
-    "source": "X",
-    "url": "https://x.com/DeItaone/status/2108970479012778026",
-    "published": "2026-10-10T17:18:39+00:00"
-   },
-   {
-    "kind": "tweet",
-    "headline": "The Kobeissi Letter (@KobeissiLetter)",
-    "summary": "BREAKING: Saudi Arabia has evacuated and closed its international airport in Riyadh after a missile attack by Yemen’s Houthis killed at least 12 people and left dozens injured.\n\nPresident Trump is now saying the US could join Saudi strikes on the Houthis in light of the airport",
-    "source": "X",
-    "url": "https://x.com/KobeissiLetter/status/2109036513182749144",
-    "published": "2026-10-10T21:41:03+00:00"
-   },
-   {
-    "kind": "tweet",
-    "headline": "The Kobeissi Letter (@KobeissiLetter)",
-    "summary": "BREAKING: The Bank of Japan's total assets declined -$98 billion in Q3 2026, to $3.95 trillion, the lowest since Q1 2020.\n\nSince the Q1 2024 peak, the BoJ has reduced its balance sheet by -$828 billion, or -17.4%.\n\nAs a result, the BoJ's Asset-to-GDP ratio has fallen -28",
+    "headline": "The Kobeissi Letter (@KobeissiLetter) · markets newsletter",
+    "teaser": "The BoJ's balance sheet fell $98bn in Q3 to $3.95tn, the lowest since Q1 2020, as it keeps unwinding stimulus.",
     "source": "X",
     "url": "https://x.com/KobeissiLetter/status/2108991201378496677",
-    "published": "2026-10-10T18:41:00+00:00"
+    "published": "2026-10-10T18:41:00+00:00",
+    "tag": "Japan",
+    "kind": "tweet",
+    "quote": "BREAKING: The Bank of Japan's total assets declined -$98 billion in Q3 2026, to $3.95 trillion, the lowest since Q1 2020.\n\nSince the Q1 2024 peak, the BoJ has reduced its balance sheet by -$828 billion, or -17.4%.\n\nAs a result, the BoJ's Asset-to-GDP ratio has fallen -28 percentage points over this period, to 94%, the lowest since 2018.\n\nFurthermore, Japanese government bond holdings fell -$90 billion in Q3, to $3.19 trillion, the lowest since Q1 2020.\n\nSince the 2023 peak, JGB holdings have dropped -$556 billion, or -14.9%.\n\nThe BoJ also sold -$568 million in equity ETFs and J-REITs last quarter, bringing its holdings down to $233 billion, the lowest since Q3 2021.\n\nThe Bank of Japan continues to unwind its balance sheet.",
+    "tags": [
+     "Japan",
+     "BoJ",
+     "Balance sheet",
+     "@KobeissiLetter"
+    ],
+    "note": "Tweet-based: the tweet's numbers could not be verified against a BoJ release; context comes from VT Markets and The Daily DXY.",
+    "brief": [
+     {
+      "h": "What the post says",
+      "b": [
+       "BoJ total assets fell $98bn in Q3 2026 to $3.95 trillion, the lowest since Q1 2020.",
+       "Since the Q1 2024 peak the balance sheet is down $828bn, or 17.4%.",
+       "Asset-to-GDP has fallen 28 percentage points to 94%, the lowest since 2018.",
+       "JGB holdings fell $90bn in Q3 to $3.19 trillion (lowest since Q1 2020) and are down $556bn, or 14.9%, from the 2023 peak.",
+       "The BoJ sold $568 million of equity ETFs and J-REITs last quarter, taking holdings to $233 billion, the lowest since Q3 2021."
+      ]
+     },
+     {
+      "h": "Context from other reporting",
+      "b": [
+       "BoJ Governor Ueda gave his first major speech since the 18 September rate rise on 7 October; he said further tightening depends on the outlook for the economy, prices and financial conditions (VT Markets).",
+       "Derivatives imply roughly a 25% chance of another hike at the 29–30 October meeting.",
+       "USD/JPY was 158.31 on Friday (The Daily DXY), with the US–Japan 10-year spread above 300bp (VT Markets)."
+      ]
+     },
+     {
+      "h": "Why it matters",
+      "b": [
+       "A shrinking BoJ balance sheet means less central-bank demand for JGBs, in a global bond sell-off where the US 30-year is near 5.6% (The Daily DXY).",
+       "Together with rate hikes, it is part of a tightening process, though Ueda described financial conditions as still 'accommodative' (VT Markets).",
+       "Note the figures are the poster's own calculations in US dollars; they are not an official BoJ release."
+      ]
+     },
+     {
+      "h": "Reach and timing",
+      "b": [
+       "Posted 11 Oct 2026, 02:41 SGT.",
+       "Engagement as of 11 Oct 2026 (X API): about 157,968 views, 1,066 likes, 158 reposts and 100 replies.",
+       "Reach is a rough signal of how widely the item is being shared, not of accuracy."
+      ]
+     },
+     {
+      "h": "What to watch next",
+      "b": [
+       "The BoJ meeting on 29–30 October and its Outlook Report.",
+       "Japan's August wage data (forecast 3.7%).",
+       "IMF/World Bank meetings in Bangkok 12–18 October, where officials could comment on the yen."
+      ]
+     }
+    ],
+    "id": "352a8d7a"
    },
    {
-    "kind": "tweet",
     "headline": "Nick Timiraos (@NickTimiraos) · WSJ",
-    "summary": "Trump has created a commission to evaluate the mortgage fraud allegations made against Fed Governor Lisa Cook and has scheduled an in-person hearing at the White House on Nov. 5.\n\n“Governor Cook shall appear at the hearing and be examined by the Committee, its representatives,",
+    "teaser": "WSJ's Fed reporter flags Trump's new commission on Governor Cook, with a White House hearing set for 5 November.",
     "source": "X",
     "url": "https://x.com/NickTimiraos/status/2108563844633145657",
-    "published": "2026-10-09T14:22:50+00:00"
+    "published": "2026-10-09T14:22:50+00:00",
+    "tag": "Fed",
+    "kind": "tweet",
+    "quote": "Trump has created a commission to evaluate the mortgage fraud allegations made against Fed Governor Lisa Cook and has scheduled an in-person hearing at the White House on Nov. 5.\n\n“Governor Cook shall appear at the hearing and be examined by the Committee, its representatives, and her legal counsel, if any.”",
+    "tags": [
+     "Fed independence",
+     "Lisa Cook",
+     "Donald Trump",
+     "@NickTimiraos"
+    ],
+    "note": "Tweet-based; context from CNBC's explainer.",
+    "brief": [
+     {
+      "h": "What the post says",
+      "b": [
+       "Trump has created a commission to evaluate mortgage-fraud allegations against Fed Governor Lisa Cook.",
+       "An in-person hearing at the White House is scheduled for 5 November.",
+       "Quoting the order: 'Governor Cook shall appear at the hearing and be examined by the Committee, its representatives, and her legal counsel, if any.'"
+      ]
+     },
+     {
+      "h": "Context from CNBC",
+      "b": [
+       "The 'committee of inquiry' has three members: Kevin Hassett, Keith Sonderling and Andrea Lucas, all Trump appointees.",
+       "Cook has until 10 November to follow up. The committee only recommends; Trump decides, with no deadline.",
+       "The Supreme Court blocked an earlier attempt on procedural grounds but said Trump could try again. It said she is entitled to notice, evidence and a chance to respond.",
+       "Cook's lawyers have 'grave doubts' that the hearing is legitimate, and it is unclear whether her testimony could be used in a criminal case."
+      ]
+     },
+     {
+      "h": "Why it matters",
+      "b": [
+       "It is a new step in the fight over Fed independence, and the quote shows she can be 'examined' by the committee and its representatives.",
+       "No immediate rate impact: Cook is expected to vote at the 28 October FOMC.",
+       "Any firing would likely return to the Supreme Court and could take months."
+      ]
+     },
+     {
+      "h": "Reach and timing",
+      "b": [
+       "Posted 09 Oct 2026, 22:22 SGT.",
+       "Engagement as of 11 Oct 2026 (X API): about 159,243 views, 149 likes, 35 reposts and 29 replies.",
+       "Reach is a rough signal of how widely the item is being shared, not of accuracy."
+      ]
+     },
+     {
+      "h": "What to watch next",
+      "b": [
+       "The 5 November hearing and Cook's attorneys' response.",
+       "Whether she seeks assurances about use of her testimony.",
+       "Whether Trump acts on a recommendation."
+      ]
+     }
+    ],
+    "id": "7834d22b"
    },
    {
-    "kind": "tweet",
-    "headline": "unusual_whales (@unusual_whales)",
-    "summary": "BREAKING: Trump says Ukraine should get a new president as he blames Zelenskyy for U.S. diesel prices, per AP",
+    "headline": "Walter Bloomberg (@DeItaone) · news feed",
+    "teaser": "Headline alert on an IRGC claim that a tanker hit a mine in the Strait of Hormuz; identity and casualties unknown.",
     "source": "X",
-    "url": "https://x.com/unusual_whales/status/2108992039140659577",
-    "published": "2026-10-10T18:44:19+00:00"
+    "url": "https://x.com/DeItaone/status/2108970700769825185",
+    "published": "2026-10-10T17:19:32+00:00",
+    "tag": "Oil",
+    "kind": "tweet",
+    "quote": "OIL TANKER EXPLODES AFTER REPORTED MINE STRIKE IN STRAIT OF HORMUZ\n\nIran’s Revolutionary Guards say an oil tanker exploded and caught fire after striking a naval mine while crossing the Strait of Hormuz, according to Iranian state media.\n\nThe vessel’s identity and flag remain unknown, with no immediate details on casualties or damage.",
+    "tags": [
+     "Geopolitics",
+     "Strait of Hormuz",
+     "Oil",
+     "@DeItaone"
+    ],
+    "note": "Tweet-based; this is a second-hand report of an IRGC claim, and context comes from Anadolu and Reuters.",
+    "brief": [
+     {
+      "h": "What the post says",
+      "b": [
+       "Iran's Revolutionary Guards say an oil tanker exploded and caught fire after striking a naval mine in the Strait of Hormuz, per Iranian state media.",
+       "The vessel's identity and flag remain unknown, with no details on casualties or damage."
+      ]
+     },
+     {
+      "h": "Context from Anadolu",
+      "b": [
+       "The IRGC said the vessel was a supertanker able to carry about 2 million barrels, had switched off its navigation systems and used an unauthorised southern exit route.",
+       "It warned that 'the fate of every vessel that ignores the rules in the Strait of Hormuz is a horrific fire'.",
+       "A day earlier, Iranian state TV reported heavy explosions in the strait.",
+       "Iran says it closed Hormuz again on 12 July; talks with the US remain deadlocked over navigation."
+      ]
+     },
+     {
+      "h": "Market context",
+      "b": [
+       "Brent settled at $104.72 on Friday and WTI at $91.85 (Reuters).",
+       "Hormuz carried about 20% of global oil and fuel before the war (Reuters).",
+       "Iran said it is reviewing a US response to its proposal to reopen the strait in seven days."
+      ]
+     },
+     {
+      "h": "Reach and timing",
+      "b": [
+       "Posted 11 Oct 2026, 01:19 SGT.",
+       "Engagement as of 11 Oct 2026 (X API): about 181,107 views, 746 likes, 110 reposts and 73 replies.",
+       "Reach is a rough signal of how widely the item is being shared, not of accuracy."
+      ]
+     },
+     {
+      "h": "What to watch next",
+      "b": [
+       "Independent confirmation of the incident, ship identity and any casualties.",
+       "Monday's oil open.",
+       "The US-Iran talks on shipping."
+      ]
+     }
+    ],
+    "id": "bceeb23b"
    },
    {
-    "kind": "tweet",
-    "headline": "unusual_whales (@unusual_whales)",
-    "summary": "11% of U.S. adults now take a GLP-1 for weight loss, roughly 28 million people, up from just 3% in 2024, per Gallup.",
+    "headline": "The Kobeissi Letter (@KobeissiLetter) · markets newsletter",
+    "teaser": "Riyadh's international airport was evacuated and closed after a Houthi missile strike; Trump says the US could join Saudi strikes.",
     "source": "X",
-    "url": "https://x.com/unusual_whales/status/2109011334041874493",
-    "published": "2026-10-10T20:01:00+00:00"
+    "url": "https://x.com/KobeissiLetter/status/2109036513182749144",
+    "published": "2026-10-10T21:41:03+00:00",
+    "tag": "Geopolitics",
+    "kind": "tweet",
+    "quote": "BREAKING: Saudi Arabia has evacuated and closed its international airport in Riyadh after a missile attack by Yemen’s Houthis killed at least 12 people and left dozens injured.\n\nPresident Trump is now saying the US could join Saudi strikes on the Houthis in light of the airport attack.",
+    "tags": [
+     "Geopolitics",
+     "Saudi Arabia",
+     "Houthis",
+     "Oil",
+     "@KobeissiLetter"
+    ],
+    "note": "Tweet-based; context from AP and ISW.",
+    "brief": [
+     {
+      "h": "What the post says",
+      "b": [
+       "Saudi Arabia evacuated and closed its Riyadh international airport after a Houthi missile attack that killed at least 12 and injured dozens.",
+       "President Trump is 'now saying the US could join Saudi strikes on the Houthis'."
+      ]
+     },
+     {
+      "h": "Context from AP",
+      "b": [
+       "The missile struck a complex housing terminals 3 and 4 for domestic flights at King Khalid International Airport; the New York Times reported at least 12 dead and 50 injured.",
+       "Trump: 'We may. We're going to look at it.'",
+       "At least 225 flights at Riyadh were cancelled over 24 hours (FlightAware); Air India, flydubai, Lufthansa Group and PIA suspended Saudi flights.",
+       "The attacks follow a Saudi-led offensive against the Houthis; Saudi Arabia is reportedly low on interceptors."
+      ]
+     },
+     {
+      "h": "Why it matters",
+      "b": [
+       "Saudi Arabia is the world's top oil exporter and the attacks have 'rattled markets' (AP).",
+       "ISW says US involvement would be the first direct US action against the Houthis since Operation Rough Rider ended in May 2025.",
+       "The Houthis' Red Sea gains threaten a corridor that is a crucial alternative to Hormuz."
+      ]
+     },
+     {
+      "h": "Reach and timing",
+      "b": [
+       "Posted 11 Oct 2026, 05:41 SGT.",
+       "Engagement as of 11 Oct 2026 (X API): about 407,254 views, 4,992 likes, 491 reposts and 105 replies.",
+       "Reach is a rough signal of how widely the item is being shared, not of accuracy."
+      ]
+     },
+     {
+      "h": "What to watch next",
+      "b": [
+       "A US decision on strikes ('we move very quickly').",
+       "Airline and airspace guidance, and oil on Monday.",
+       "The energy conference due to begin in Riyadh on Sunday."
+      ]
+     }
+    ],
+    "id": "8d54e94e"
    },
    {
-    "kind": "tweet",
-    "headline": "zerohedge (@zerohedge)",
-    "summary": "Houthi Missile Attack On Busy Terminal At Riyadh Airport Kills 12, Leaves Scores Wounded",
+    "headline": "Walter Bloomberg (@DeItaone) · news feed",
+    "teaser": "Trump tells Zelenskyy to stop hitting Russian refineries and calls for new Ukrainian leadership, a day after a US–Russia diesel deal.",
     "source": "X",
-    "url": "https://x.com/zerohedge/status/2109044334221721847",
-    "published": "2026-10-10T22:12:08+00:00"
+    "url": "https://x.com/DeItaone/status/2108970479012778026",
+    "published": "2026-10-10T17:18:39+00:00",
+    "tag": "Energy",
+    "kind": "tweet",
+    "quote": "TRUMP DEMANDS UKRAINE STOP STRIKING RUSSIAN OIL REFINERIES\n\nPresident Trump warned Zelensky to immediately stop attacks on Russian refineries, declaring: “He better damn well stop.”\n\nTrump also called for new leadership in Ukraine, saying: “I suggest they get a new leader who can make a deal.”\n\nThe remarks come just one day after Trump announced a Russian diesel supply agreement.",
+    "tags": [
+     "Ukraine",
+     "Diesel",
+     "Donald Trump",
+     "@DeItaone"
+    ],
+    "note": "Tweet-based; context from Al Jazeera.",
+    "brief": [
+     {
+      "h": "What the post says",
+      "b": [
+       "Trump warned Zelensky to stop attacks on Russian oil refineries immediately: 'He better damn well stop.'",
+       "He also said: 'I suggest they get a new leader who can make a deal.'",
+       "The remarks came one day after Trump announced a Russian diesel supply agreement."
+      ]
+     },
+     {
+      "h": "Context from Al Jazeera",
+      "b": [
+       "The deal: Russia to supply over 300,000 tonnes of diesel immediately, 500,000 tonnes in November, one million tonnes 'immediately thereafter' and three million more later.",
+       "Trump blames Ukraine's refinery strikes for record-high US diesel prices rather than the US-led war in Iran.",
+       "Zelenskyy said Russia 'expressed its thanks' by dropping five glide bombs on Zaporizhzhia, where strikes killed at least 20 people.",
+       "Ukraine's foreign minister Andriy Sybiga: Zelenskyy 'has the support of the Ukrainian people'. European allies expressed dismay at the deal."
+      ]
+     },
+     {
+      "h": "Why it matters",
+      "b": [
+       "It is a reversal of years of US pressure on Moscow, just after Trump signed a sweeping Russia sanctions law last month.",
+       "Energy politics now directly shapes diplomacy, with the 3 November US midterms approaching.",
+       "Mohamed El-Erian's post notes diesel prices have become a multi-directional link between geopolitics, domestic politics and economics."
+      ]
+     },
+     {
+      "h": "Reach and timing",
+      "b": [
+       "Posted 11 Oct 2026, 01:18 SGT.",
+       "Engagement as of 11 Oct 2026 (X API): about 190,855 views, 742 likes, 67 reposts and 110 replies.",
+       "Reach is a rough signal of how widely the item is being shared, not of accuracy."
+      ]
+     },
+     {
+      "h": "What to watch next",
+      "b": [
+       "Kyiv's response and European sanctions stance.",
+       "Diesel volumes arriving under the Russia deal and the US fuel price trend.",
+       "Talks between Witkoff and Kushner and Ukrainian officials on ending the war."
+      ]
+     }
+    ],
+    "id": "14348018"
+   },
+   {
+    "headline": "Mohamed A. El-Erian (@elerianm) · Wharton / Allianz adviser",
+    "teaser": "El-Erian says diesel prices now link geopolitics, domestic politics and economics, citing the US–Russia diesel announcement.",
+    "source": "X",
+    "url": "https://x.com/elerianm/status/2108834341530804266",
+    "published": "2026-10-10T08:17:41+00:00",
+    "tag": "Energy",
+    "kind": "tweet",
+    "quote": "With diesel back under the spotlight, please find below Google's summary of price movements over the last year.\nUnderlying this is what has become an increasingly influential, multi-directional causal relationship between geopolitics, domestic politics, and economics.\nFor example, as geopolitical tensions drove diesel prices higher, the negative economic impact began affecting domestic politics. That, in turn, increasingly influenced economic policies and, as illustrated by yesterday's US-Russia announcements, geopolitical decisions as well.",
+    "tags": [
+     "Energy",
+     "Diesel",
+     "Geo-economics",
+     "@elerianm"
+    ],
+    "note": "Tweet-based; the chart referenced in the post is not reproduced. Context from Al Jazeera and Reuters.",
+    "brief": [
+     {
+      "h": "What the post says",
+      "b": [
+       "Diesel is 'back under the spotlight'. He posts Google's chart of price moves over the past year (not reproduced here).",
+       "There is an 'increasingly influential, multi-directional causal relationship between geopolitics, domestic politics, and economics'.",
+       "His example: tensions pushed diesel up, the economic damage fed into domestic politics, which then shaped economic policy and, 'as illustrated by yesterday's US-Russia announcements', geopolitical decisions."
+      ]
+     },
+     {
+      "h": "Context from reporting",
+      "b": [
+       "Trump struck a diesel deal with Putin on Friday: over 300,000 tonnes straight away and millions more later (Al Jazeera).",
+       "He blames Ukraine's strikes on Russian refineries for record-high US diesel prices ahead of the midterms.",
+       "Reuters says the Iran war and the Russia–Ukraine conflict have disrupted refined fuels, especially diesel, and that Trump teased a diesel announcement and a possible federal gasoline-tax suspension.",
+       "Brent settled at $104.72 on Friday."
+      ]
+     },
+     {
+      "h": "Why it matters",
+      "b": [
+       "El-Erian's point is that energy prices are now a political driver, so policy responses can feed back into markets.",
+       "It explains why Washington reversed course on Russian diesel despite last month's sanctions law.",
+       "In another post that day he said the reactions of European governments 'will be fascinating'."
+      ]
+     },
+     {
+      "h": "Reach and timing",
+      "b": [
+       "Posted 10 Oct 2026, 16:17 SGT.",
+       "Engagement as of 11 Oct 2026 (X API): about 28,243 views, 147 likes, 20 reposts and 28 replies.",
+       "Reach is a rough signal of how widely the item is being shared, not of accuracy."
+      ]
+     },
+     {
+      "h": "What to watch next",
+      "b": [
+       "European governments' response to the Russia diesel deal.",
+       "Whether a US federal gasoline-tax suspension is announced.",
+       "Diesel prices into the 3 November midterms."
+      ]
+     }
+    ],
+    "id": "d645471d"
+   },
+   {
+    "headline": "Mohamed A. El-Erian (@elerianm) · Wharton / Allianz adviser",
+    "teaser": "El-Erian notes the US deficit reached nearly $2 trillion in FY2026, about 6% of GDP, despite solid growth.",
+    "source": "X",
+    "url": "https://x.com/elerianm/status/2108445964881088785",
+    "published": "2026-10-09T06:34:25+00:00",
+    "tag": "Fiscal",
+    "kind": "tweet",
+    "quote": "Good morning.\nAs reported below by the WSJ, the US budget deficit climbed to nearly $2 trillion ($1.993 trillion) for the fiscal year ending September 30.\nWhat remains historically notable is that the US has continued to run a deficit of around 6% of GDP despite solid economic growth and a robust labor market.",
+    "tags": [
+     "Fiscal",
+     "US deficit",
+     "Treasuries",
+     "@elerianm"
+    ],
+    "note": "Tweet-based; the underlying WSJ article was not accessed. Context from Mitrade, The Daily DXY and CNBC.",
+    "brief": [
+     {
+      "h": "What the post says",
+      "b": [
+       "The US budget deficit climbed to nearly $2 trillion ($1.993 trillion) in the fiscal year ending 30 September, citing the WSJ.",
+       "It is 'historically notable' that the US keeps running a deficit around 6% of GDP despite solid growth and a robust labour market."
+      ]
+     },
+     {
+      "h": "Context from other reporting",
+      "b": [
+       "Treasury yields are near multi-decade highs: the 30-year was 5.605% and the 10-year 5.248% on Friday (The Daily DXY); the 30-year hit 5.67% on 7 October, the highest since 2002 (Mitrade).",
+       "Ray Dalio told CNBC on 8 October that 'we are in a bond bear market' and expects more to go as governments and companies compete for capital.",
+       "CNBC lists large deficits, persistent inflation and AI-related borrowing among reasons yields are high."
+      ]
+     },
+     {
+      "h": "Why it matters",
+      "b": [
+       "Deficits of this size mean heavy Treasury issuance; Dalio argues rising debt issuance pressures investor demand.",
+       "It sits alongside a Fed that is hiking: Waller said policy is focused on inflation.",
+       "Gold has fallen as real yields rose (Mitrade)."
+      ]
+     },
+     {
+      "h": "Reach and timing",
+      "b": [
+       "Posted 09 Oct 2026, 14:34 SGT.",
+       "Engagement as of 11 Oct 2026 (X API): about 47,909 views, 513 likes, 101 reposts and 90 replies.",
+       "Reach is a rough signal of how widely the item is being shared, not of accuracy."
+      ]
+     },
+     {
+      "h": "What to watch next",
+      "b": [
+       "Treasury auctions and the long-end yield.",
+       "The 27–28 October FOMC meeting.",
+       "Whether Treasury trims long-bond issuance; a Briefs headline cites Citigroup saying it likely will, with the 20-year at risk (headline only)."
+      ]
+     }
+    ],
+    "id": "4618ab25"
+   },
+   {
+    "headline": "Jim Bianco (@biancoresearch) · Bianco Research",
+    "teaser": "Bianco says AI-related stocks would be 51% of the S&P 500 with SpaceX added, a concentration not seen since 19th-century railroads.",
+    "source": "X",
+    "url": "https://x.com/biancoresearch/status/2108168186315047185",
+    "published": "2026-10-08T12:10:38+00:00",
+    "tag": "AI",
+    "kind": "tweet",
+    "quote": "If SpaceX ($SPCX) was in the $SPX now, AI-related stocks would be 51% of the index. \n\nWith Anthropic and OpenAI coming public, add them to the $SPX in 2027 and AI would be ~55% of the $SPX.\n\nThe last time a single theme was >50% of the $SPX was the railroads in the 19th century.",
+    "tags": [
+     "AI",
+     "Equities concentration",
+     "S&P 500",
+     "@biancoresearch"
+    ],
+    "note": "Tweet-based; the 51%/55% figures are the poster's own estimates. Context from other cited tweets and articles.",
+    "brief": [
+     {
+      "h": "What the post says",
+      "b": [
+       "If SpaceX ($SPCX) were in the S&P 500 now, AI-related stocks would be 51% of the index.",
+       "Adding Anthropic and OpenAI after their expected listings in 2027 would take AI to about 55%.",
+       "The last time a single theme exceeded 50% of the S&P 500 was railroads in the 19th century."
+      ]
+     },
+     {
+      "h": "The post he quoted",
+      "b": [
+       "Alex Malitas (CFA) posted that AI-related stocks (defined by the JPM basket) already make up 49% of the S&P 500.",
+       "Those same 41 companies account for about two-thirds of the S&P 500's year-to-date market-cap change."
+      ]
+     },
+     {
+      "h": "Other context",
+      "b": [
+       "Michael Burry tweeted that the 'bubble private company valuation' of Anthropic would buy 78 profitable S&P 500 companies, including Domino's, Clorox and Smucker.",
+       "Lone Pine, Coatue, Light Street and others that emphasise AI stocks lost much of their first-half gains in Q3 (Institutional Investor).",
+       "Micron is up 671% over the past year and trades near $960, per New Market Perspective.",
+       "On 9 October stocks nudged toward records 'as AI fears eased' (a Briefs headline)."
+      ]
+     },
+     {
+      "h": "Why it matters",
+      "b": [
+       "A concentrated index means index returns depend on one theme, and a reversal in AI stocks would hit passive investors broadly.",
+       "Bianco's other posts this week show he is bullish on bonds ('I've been making the case for bonds') and sceptical of 'doom porn'.",
+       "Treat the 51%/55% figures as the poster's own counterfactual calculations, not official index weights."
+      ]
+     },
+     {
+      "h": "Reach and timing",
+      "b": [
+       "Posted 08 Oct 2026, 20:10 SGT.",
+       "Engagement as of 11 Oct 2026 (X API): about 108,798 views, 851 likes, 174 reposts and 81 replies.",
+       "Reach is a rough signal of how widely the item is being shared, not of accuracy."
+      ]
+     },
+     {
+      "h": "What to watch next",
+      "b": [
+       "TSMC earnings on 15 October, a test for the AI trade (CMC Markets).",
+       "Any IPO filings from SpaceX, Anthropic or OpenAI.",
+       "Whether the S&P 500 concentration debate affects flows."
+      ]
+     }
+    ],
+    "id": "cc4b3b13"
    }
   ],
   "hedge_funds": [
    {
-    "tag": "Performance",
     "headline": "Lone Pine long-short −31% in Q3, wiping out first-half gains",
-    "summary": "Stephen Mandel's Tiger Cub long-short fund lost ~31% in Q3 (about 25% in July alone) and finished flat year-to-date after surging 51% in Q2; the long-only fund fell 23% in Q3 but remains +6% YTD. AI-heavy peers Coatue, Light Street and Discovery also gave back large first-half gains.",
+    "teaser": "Stephen Mandel's Tiger Cub long-short fund lost about 31% in Q3 (about 25% in July alone) and finished flat for the year after surging 51% in Q2; the long-only fund fell 23% but is +6% YTD.",
     "source": "Institutional Investor",
     "url": "https://www.institutionalinvestor.com/article/lone-pines-reversal-fortune",
-    "published": "2026-10-08"
+    "published": "2026-10-08",
+    "tag": "Performance",
+    "tags": [
+     "Hedge funds",
+     "Performance",
+     "Lone Pine",
+     "AI stocks",
+     "Institutional Investor"
+    ],
+    "note": "Figures come from the article's investor sources; Lone Pine has not published them. The article also contains a visible editor's comment about one sentence.",
+    "brief": [
+     {
+      "h": "What happened",
+      "b": [
+       "Lone Pine Capital's long-short fund surged 51% in Q2 and the long-only fund 50%, then reversed sharply in Q3.",
+       "The long-short fund lost 31% in Q3, including about 25% in July, and finished the period flat for the year, according to an investor.",
+       "The long-only fund dropped 23% in Q3 but is still up 6% for the year."
+      ]
+     },
+     {
+      "h": "Key numbers and facts",
+      "b": [
+       "Lone Pine manages $18–19 billion; two-thirds to three-quarters of that is in the long fund and roughly 80% is invested in the US.",
+       "The gap between the funds suggests Lone Pine's shorts fared slightly worse than its longs.",
+       "In Q2 five of the seven largest US-listed longs were newly established; the top seven made up roughly 40% of the US portfolio.",
+       "Top long at end-June: Nebius Group (a new ~4.3 million-share stake worth $1.176 billion, 7.2% of the US portfolio). Nebius lost nearly a third of its value in July and was still down nearly 15% in Q3.",
+       "Other new Q2 positions: Seagate (No. 3 long, −4.5% in Q3), Applied Materials (No. 5, −29%), Home Depot and Linde.",
+       "Q2 sales: Vistra (the Q1 top long), Talen Energy and Clariant."
+      ]
+     },
+     {
+      "h": "Peers also gave back gains",
+      "b": [
+       "Robert Citrone's Discovery Capital fell about 10% in Q3 but is +16.8% YTD, ahead of the Nasdaq Composite's +15.6%.",
+       "Coatue lost half of its first-half gain, finishing the quarter up just over 12%.",
+       "Light Street's long-short fund lost more than half of its 37%+ first-half gain; it is up 15.7%. Glen Kacher's long-only fund is +26.75%.",
+       "Valiant Capital is up 1.42% YTD after double-digit losses in July and August; Flight Deck Capital is +80% YTD after losing 25% in July."
+      ]
+     },
+     {
+      "h": "Why it matters",
+      "b": [
+       "It shows how violent the AI-stock unwind in July was for crowded growth funds.",
+       "Concentrated, high-conviction books gained the most in Q2 and gave back the most in Q3.",
+       "Reuters notes global hedge funds averaged +7.25% YTD by 25 September, much less than the Nasdaq's 15.4% for the first nine months."
+      ]
+     },
+     {
+      "h": "What to watch next",
+      "b": [
+       "Q3 13F filings showing what Lone Pine and Tiger Cubs held at 30 September.",
+       "Whether AI-heavy funds recover in Q4.",
+       "Further quarter-end performance disclosures from the large macro and multi-manager funds."
+      ]
+     }
+    ],
+    "id": "f29a57f5"
    },
    {
-    "tag": "Macro view",
-    "headline": "Dalio: bond bear market has “more to go”; stocks' yield cushion is shrinking",
-    "summary": "Speaking at the Milken Institute Asia Summit in Singapore, the Bridgewater founder said equities have absorbed higher rates thanks to earnings growth, but that cushion is narrowing and credit spreads are starting to widen. He expects free cash flow to deteriorate even as earnings improve.",
+    "headline": "Macro and CTA funds surge in September as bond rout hits equity hedge, relative value",
+    "teaser": "HFR says the HFRI Macro (Total) index is up 12.2% through three quarters, while Equity Hedge, Relative Value and Event-Driven fell as rates spiked and bond markets slid for a second month.",
+    "source": "HFR",
+    "url": "https://www.hfr.com/media/market-commentary/macro-cta-hedge-funds-surge-accelerate-through-historic-interest-rates-spike/",
+    "published": "2026-10-07",
+    "tag": "Macro funds",
+    "tags": [
+     "Hedge funds",
+     "Performance",
+     "Macro",
+     "CTA",
+     "HFR"
+    ],
+    "also": [
+     {
+      "name": "Briefs (Millennium, Quantedge)",
+      "url": "https://www.briefs.co/news/millennium-flat-quantedge-surges-north-rock-edges-up-as-bond/"
+     }
+    ],
+    "note": "HFR's press release omits the composite's September change and gives only one hard figure (12.2%), so some detail comes from the Briefs article on individual funds.",
+    "brief": [
+     {
+      "h": "What happened",
+      "b": [
+       "HFR reported on 7 October that hedge funds had a 'decisive split' in September.",
+       "Macro and CTA strategies surged while interest-rate-sensitive Relative Value, Equity Hedge and Event-Driven strategies declined.",
+       "The HFRI Fund Weighted Composite Index fell in September (the press-release text omits the figure).",
+       "HFRI Commodity and CTA again led sub-strategy performance; the Technology Index gained."
+      ]
+     },
+     {
+      "h": "Key numbers and facts",
+      "b": [
+       "HFRI Macro (Total) is up 12.2% through the first three quarters of 2026.",
+       "Interest rates experienced an 'unprecedented spike' and global bond markets came under pressure for the second consecutive month.",
+       "Inflationary pressure rose and the outlook for the Iran conflict remained uncertain.",
+       "Figures are estimates as of 7 October."
+      ]
+     },
+     {
+      "h": "What drove it",
+      "b": [
+       "HFR president Kenneth Heinz said managers 'traded the powerful trend of over-correlation between oil and interest rates'.",
+       "That deviation from the historical relationship helped systematic trend-following and commodity managers extend their lead.",
+       "Heinz expects investors to keep favouring managers whose performance is uncorrelated to these shocks, given bond-market pressure and geopolitical risks."
+      ]
+     },
+     {
+      "h": "Individual fund data (Briefs, 1 Oct)",
+      "b": [
+       "Millennium Management ($97 billion) was flat in September and is up 8.1% YTD.",
+       "Quantedge ($7.6 billion, Singapore) rose 4.3% in September and is up 49.3% YTD, profiting in commodities and stocks but losing on some fixed-income trades.",
+       "North Rock added about 0.35 point in September and is +5.1% YTD.",
+       "Bridgewater's Pure Alpha is +18.4% over nine months (see the Bridgewater item)."
+      ]
+     },
+     {
+      "h": "Why it matters",
+      "b": [
+       "Macro funds are winning the year because they are positioned for rising yields and an oil shock; equity-focused and rate-sensitive strategies are not.",
+       "Dispersion is large, from Quantedge at +49% to Millennium at +8% and Lone Pine flat."
+      ]
+     },
+     {
+      "h": "More detail",
+      "b": [
+       "HFR's Heinz said bond-market pressure and geopolitical risks could lead to more dislocations and dispersion.",
+       "Reuters notes the S&P 500 is up 11.5% and the Nasdaq 15.4% over nine months, while global hedge funds average +7.25% (Morgan Stanley note of 25 September).",
+       "Lone Pine, Coatue and Light Street, all AI-heavy, gave back large first-half gains in Q3 (Institutional Investor)."
+      ]
+     },
+     {
+      "h": "What to watch next",
+      "b": [
+       "October fund results as the 28 October FOMC and CPI loom.",
+       "Whether the oil–rates correlation reverts.",
+       "Q3 13F filings in mid-November."
+      ]
+     }
+    ],
+    "id": "1f4e679d"
+   },
+   {
+    "headline": "Bridgewater's Pure Alpha up 18.4% through September; AI-driven fund +16.4%",
+    "teaser": "Reuters, citing sources, says Bridgewater's flagship macro fund is up 18.4% in nine months despite July's AI selloff; its AIA Macro fund is +16.4%, and the firm manages about $102 billion.",
+    "source": "Reuters (via WHBL)",
+    "url": "https://whbl.com/2026/10/01/bridgewaters-flagship-macro-fund-posts-robust-double-digit-gains-this-year-sources-say/",
+    "published": "2026-10-01",
+    "tag": "Performance",
+    "tags": [
+     "Hedge funds",
+     "Performance",
+     "Bridgewater",
+     "Macro",
+     "Reuters"
+    ],
+    "note": "Figures come from anonymous sources cited by Reuters; the firm has not published them.",
+    "brief": [
+     {
+      "h": "What happened",
+      "b": [
+       "Reuters reported on 1 October that Bridgewater's Pure Alpha macro fund climbed 18.4% in the first nine months of 2026, per people familiar.",
+       "It did so after a volatile third quarter and a big selloff in AI stocks in July, when many hedge funds gave up large gains from unwinding technology trades.",
+       "The AI-focused AIA Macro fund gained 16.4% to 29 September."
+      ]
+     },
+     {
+      "h": "Key numbers and facts",
+      "b": [
+       "Bridgewater manages about $102 billion.",
+       "AIA Macro has an annualised return of 13.2% since launching in late 2023 and manages over $4.5 billion.",
+       "For context: the S&P 500 is up 11.5% and the Nasdaq Composite 15.4% over nine months; global hedge funds average +7.25% YTD (Morgan Stanley note of 25 September).",
+       "Last year Pure Alpha surged 34%, outperforming all major hedge-fund peers."
+      ]
+     },
+     {
+      "h": "People and strategy",
+      "b": [
+       "AIA's strategy began in 2018 under Greg Jensen, who leads an 80-member Artificial Investor team and is an early investor in OpenAI and Anthropic.",
+       "CEO Nir Bar Dea's 2023 overhaul restricted inflows into Pure Alpha and returned some assets to clients to maximise returns.",
+       "Dalio sold his remaining stake last year and left the board; Bob Prince chairs the board. Co-CIOs are Karen Karniol-Tambour, Jensen and Prince."
+      ]
+     },
+     {
+      "h": "Why it matters",
+      "b": [
+       "It shows a macro-oriented fund thriving where equity long-short funds like Lone Pine suffered.",
+       "It supports the HFR finding that macro strategies lead the year.",
+       "Jensen has argued that governments, not industry, should set standards for AI model development."
+      ]
+     },
+     {
+      "h": "More detail",
+      "b": [
+       "Reuters says Bridgewater has, to an extent, reversed years of underperformance before Nir Bar Dea became co-CEO in 2022; the 2023 overhaul included restricting new inflows into Pure Alpha.",
+       "Bridgewater was founded by Dalio in 1975 out of a two-bedroom apartment in New York and is based in Westport, Connecticut.",
+       "Last year's 34% gain for Pure Alpha was described as record-breaking, ahead of all major hedge fund peers.",
+       "Bridgewater named Ben Melkman deputy chief investment officer in January alongside David Trinh and Blake Cecil."
+      ]
+     },
+     {
+      "h": "What to watch next",
+      "b": [
+       "Q4 performance as yields, oil and AI trades keep moving.",
+       "Any move by Bridgewater to open its AI fund to more capital.",
+       "Bridgewater's 13F filing next month."
+      ]
+     }
+    ],
+    "id": "ceb577f4"
+   },
+   {
+    "headline": "Dalio: bond bear market has 'more to go'; stocks' yield cushion is shrinking",
+    "teaser": "Speaking at the Milken Institute Asia Summit in Singapore, the Bridgewater founder said equities have absorbed higher rates thanks to earnings growth, but that cushion is narrowing and credit spreads are widening.",
     "source": "CNBC",
     "url": "https://www.cnbc.com/2026/10/08/ray-dalio-stocks-bond-yields.html",
-    "published": "2026-10-08T07:04:00-04:00"
+    "published": "2026-10-08T07:04:00-04:00",
+    "tag": "Macro view",
+    "tags": [
+     "Hedge funds",
+     "Macro view",
+     "Ray Dalio",
+     "Bonds",
+     "CNBC"
+    ],
+    "brief": [
+     {
+      "h": "What happened",
+      "b": [
+       "On 8 October (Thursday) Ray Dalio told CNBC's Sri Jegarajah at the Milken Institute Asia Summit in Singapore that stocks face growing pressure from rising bond yields and weaker corporate cash flows.",
+       "He said equities have so far weathered the global bond sell-off because earnings growth kept expected returns attractive relative to bonds, but that advantage will narrow."
+      ]
+     },
+     {
+      "h": "Key quotes",
+      "b": [
+       "'We're in the part of the cycle where interest rates can rise without sending the equity market down because there's enough earnings growth and there's enough expected return.'",
+       "'When that cushion comes down, then you're coming later into that cycle.'",
+       "'We are in a bond bear market, that's I think, pretty clear, and I think that there's more to go would be my guess.'",
+       "'Now you're starting to see credit spreads start to widen.'"
+      ]
+     },
+     {
+      "h": "Free cash flow warning",
+      "b": [
+       "Dalio told investors to watch free cash flow, not only earnings: 'if you're earning and then you're investing and you're not getting money out of that, you have a liquidity issue that's evolving'.",
+       "He expects earnings to keep improving while free cash flows deteriorate.",
+       "He stopped short of predicting an earnings decline or an imminent correction, and said financial conditions have not yet tightened enough to curb credit and spending."
+      ]
+     },
+     {
+      "h": "Why it matters",
+      "b": [
+       "Treasury yields are near multi-decade highs (30-year at 5.6%) with large deficits, persistent inflation and AI-related borrowing.",
+       "Dalio argues governments and companies competing for capital keeps upward pressure on rates; higher borrowing costs will eventually force less credit and spending.",
+       "He says the tightening process is only beginning."
+      ]
+     },
+     {
+      "h": "Background",
+      "b": [
+       "CNBC says Treasury yields hover near multi-decade highs while investors grapple with large government deficits, persistent inflation and rising borrowing tied to AI investment.",
+       "Bridgewater's Pure Alpha is up 18.4% this year (Reuters), though Dalio sold his remaining stake and left the board last year.",
+       "In an X post on 8 October he described the long-term debt cycle: debts rise faster than incomes, until repayments force cutbacks that reverse the cycle."
+      ]
+     },
+     {
+      "h": "What to watch next",
+      "b": [
+       "Credit spreads, which he says are starting to widen.",
+       "Q3 earnings and free-cash-flow trends starting with the bank results this week.",
+       "Treasury auctions and the 28 October FOMC."
+      ]
+     }
+    ],
+    "id": "aa636ac8"
    },
    {
-    "tag": "13F",
-    "headline": "Citadel slashes Micron and TSMC stakes in latest 13F",
-    "summary": "Citadel Advisors cut Micron by ~87% (to ~600k shares) and TSMC by ~87%, and trimmed STMicro by 44%, though the filing gives no rationale and the cuts were broad-based across sectors.",
+    "headline": "Citadel slashes Micron and TSMC stakes in Q2 13F",
+    "teaser": "Citadel Advisors cut Micron by about 87% (to ~600k shares) and TSMC by ~87%, and trimmed STMicro by 44%; the filing gives no rationale and the cuts were broad-based across sectors.",
     "source": "New Market Perspective",
-    "url": "https://newmarketperspective.com/ken-griffins-citadel-significantly-lowers-stake-in-surging-chip-stock/"
+    "url": "https://newmarketperspective.com/ken-griffins-citadel-significantly-lowers-stake-in-surging-chip-stock/",
+    "published": "2026-08-14",
+    "tag": "13F",
+    "tags": [
+     "Hedge funds",
+     "13F",
+     "Citadel",
+     "Micron",
+     "New Market Perspective"
+    ],
+    "note": "Single-author blog-style article; 13F data are quarter-end snapshots that lag, and no source states why Citadel cut. The article shows no date; the timestamp is the original filing date of the Q2 13F (14 Aug 2026, amended 1 Sep per 13Radar).",
+    "brief": [
+     {
+      "h": "What happened",
+      "b": [
+       "New 13F data reviewed by the author show Citadel Advisors, Ken Griffin's hedge fund, cut its Micron holdings by 86.93%, from about 4.6 million shares to 600,523.",
+       "It also cut Taiwan Semiconductor by 86.97% (about 3.5 million shares) and STMicroelectronics by 44.25% (just over 3 million shares).",
+       "The filing does not explain the moves."
+      ]
+     },
+     {
+      "h": "Broader pattern",
+      "b": [
+       "Citadel's filing shows large cuts across many sectors: GE −72.02%, Citigroup −62.90%, Merck −49.40%, Tesla −41.39%, Meta −38.77%.",
+       "That suggests risk reduction across the portfolio rather than a specific bearish call, though the Micron and TSM cuts stand out.",
+       "Hedge funds trim for many reasons, including rebalancing, risk management and locking in gains."
+      ]
+     },
+     {
+      "h": "Micron facts cited",
+      "b": [
+       "Shares are up 671% over the past year and trade near $960, a market cap of roughly $1 trillion and 21% below the all-time high.",
+       "Fiscal Q3 revenue was $41.5 billion (+346% y/y), gross margin 85%; guidance for fiscal Q4 is $50 billion ±$1 billion.",
+       "The CEO said memory demand continues to exceed supply and tight conditions should last beyond 2027. The firm has signed 16 strategic customer agreements.",
+       "It trades at 9.5x forward earnings; 31 of 32 analysts say Buy, with an average target of $1,555."
+      ]
+     },
+     {
+      "h": "The bear case",
+      "b": [
+       "Michael Burry has been adding to a short position against Micron, saying he wants to reduce gross exposure while staying bearish; the position was roughly break-even.",
+       "Burry cites memory's boom-and-bust history and Micron's fiscal-Q4 capex guidance near $10 billion."
+      ]
+     },
+     {
+      "h": "More detail",
+      "b": [
+       "The filing shows Citadel's Micron position fell from about 4.6 million shares by roughly four million over the last three months, even as the stock kept climbing.",
+       "Micron executive Sumit Sadana said at the KeyBanc forum on 10 August that AI performance now depends on memory capacity and speed; strategic customer agreements cover about a quarter of projected revenue.",
+       "The article stresses the filing does not say whether the cuts reflect caution on memory or a broader risk reduction.",
+       "Micron has a beta of about 2.2, twice as volatile as the market."
+      ]
+     },
+     {
+      "h": "What to watch next",
+      "b": [
+       "Other 13F filings through mid-November for similar cuts.",
+       "TSMC earnings on 15 October.",
+       "Whether Micron keeps rallying toward $1,000."
+      ]
+     }
+    ],
+    "id": "bb66cdd8"
    },
    {
-    "kind": "tweet",
     "headline": "Michael Burry (@michaeljburry) · Scion founder",
-    "summary": "By early 2000, 70-80% of stocks were in bear markets, and the indices continued to move higher.\n\nI have a word for that. Denial.",
+    "teaser": "Burry argues markets are in the 'denial' stage of a bear market, citing 2000, when most stocks were already falling but indices kept rising.",
     "source": "X",
     "url": "https://x.com/michaeljburry/status/2108629557721149887",
-    "published": "2026-10-09T18:43:57+00:00"
-   },
-   {
+    "published": "2026-10-09T18:43:57+00:00",
+    "tag": "Burry",
     "kind": "tweet",
-    "headline": "unusual_whales (@unusual_whales)",
-    "summary": "Look at this.\n\nPalantir, $PLTR, insiders have been cashing out all year.\n\nFeb. 20: CEO Alex Karp sold $65.9 million\nMar. 2: Peter Thiel sold about $290 million\nAug. 20: Karp sold another $86 million\n\nIn August alone, six Palantir executives sold about $95 million combined.\n\nNot",
-    "source": "X",
-    "url": "https://x.com/unusual_whales/status/2109026434065035487",
-    "published": "2026-10-10T21:01:00+00:00"
-   },
-   {
-    "kind": "tweet",
-    "headline": "unusual_whales (@unusual_whales)",
-    "summary": "Look at this.\n\nMeta, $META, insiders have made 172 trades in their own stock over the past six months.\n\nPurchases: zero.\n\nCFO Susan Li: ~$95 million sold\nCOO Javier Olivan: ~$24 million sold, often every week\nProduct chief Chris Cox: $13 million sold on Sept. 9\nCTO Andrew",
-    "source": "X",
-    "url": "https://x.com/unusual_whales/status/2108996235151429845",
-    "published": "2026-10-10T19:01:00+00:00"
+    "quote": "By early 2000, 70-80% of stocks were in bear markets, and the indices continued to move higher.\n\nI have a word for that. Denial.",
+    "tags": [
+     "Hedge funds",
+     "Michael Burry",
+     "Market breadth",
+     "Bear market",
+     "@michaeljburry"
+    ],
+    "note": "Tweet-based; the breadth chart and article text were not accessed, so details come from his other posts and from third-party articles.",
+    "brief": [
+     {
+      "h": "What the post says",
+      "b": [
+       "'By early 2000, 70-80% of stocks were in bear markets, and the indices continued to move higher.'",
+       "'I have a word for that. Denial.'",
+       "It quotes his X article 'Short Thoughts: The AI Cloud Oligopoly, Stages of Grief & a Flashing Bear Market Indicator' (8 October)."
+      ]
+     },
+     {
+      "h": "Related posts this week",
+      "b": [
+       "6 Oct: 'The stock market is quite obviously in its first stage of grief, denial. Per 2000 and 2008, this stage lasts 6-9 months.'",
+       "8 Oct: the article says denial 'is most easily found in market breadth indicators' and that he follows one that gives a strong signal every few decades.",
+       "He also wrote that the market's grieving process has been interrupted by 'monetary and fiscal cocaine'.",
+       "6 Oct: CEOs are spending wildly on data centres because they assume they will be granted an oligopoly that is too big to fail.",
+       "8 Oct: Anthropic's valuation would buy 78 profitable S&P 500 companies."
+      ]
+     },
+     {
+      "h": "Context from other sources",
+      "b": [
+       "Per New Market Perspective, Burry has been adding to a short against Micron as it neared $1,000 and called the position roughly break-even.",
+       "Jim Bianco (X) says AI stocks would be 51% of the S&P 500 if SpaceX were included. He also replied 'Too much doom porn' to an FT post titled 'The danger of pessimism fatigue'.",
+       "Dalio told CNBC the equity cushion against rising yields is shrinking."
+      ]
+     },
+     {
+      "h": "Why it matters",
+      "b": [
+       "Burry is a prominent bear whose public calls move sentiment; he is an interested party, and New Market Perspective says his Micron short was roughly break-even and tipping toward a loss.",
+       "His claim is that breadth is weak beneath rising index levels. The post is an opinion, and no breadth data were provided in the tweet itself.",
+       "The 2000 and 2008 analogies are his, with a 6–9 month stage he gives for denial."
+      ]
+     },
+     {
+      "h": "Reach and timing",
+      "b": [
+       "Posted 10 Oct 2026, 02:43 SGT.",
+       "Engagement as of 11 Oct 2026 (X API): about 254,453 views, 2,894 likes, 321 reposts and 207 replies.",
+       "Reach is a rough signal of how widely the item is being shared, not of accuracy."
+      ]
+     },
+     {
+      "h": "What to watch next",
+      "b": [
+       "Further 'Short Thoughts' posts and any 13F disclosure of Scion positions.",
+       "Market breadth versus index highs.",
+       "Q3 earnings, TSMC on 15 October."
+      ]
+     }
+    ],
+    "id": "d4fafaff"
    }
   ]
  },
  "politics": [
   {
-   "tag": "US · Ukraine",
    "headline": "Trump says Ukraine needs a new president who will agree to end the war",
-   "summary": "At the White House on Saturday Trump said Zelenskyy should be replaced by a leader who can \"make a deal,\" blaming Kyiv's strikes on Russian refineries for high US diesel prices after Friday's US–Russia diesel purchase deal. Ukraine's foreign minister said Zelenskyy has the people's support; Zelenskyy said Russian bombs on Zaporizhzhia answered the sanctions easing.",
+   "teaser": "Trump said Zelenskyy should be replaced by a leader who can 'make a deal', blaming Kyiv's refinery strikes for high US diesel prices a day after a US–Russia diesel deal.",
    "source": "Al Jazeera",
    "url": "https://www.aljazeera.com/news/2026/10/10/trump-says-ukraine-needs-a-new-president-who-will-agree-to-end-the-war",
-   "published": "2026-10-10"
+   "published": "2026-10-10",
+   "tag": "US · Ukraine",
+   "tags": [
+    "US–Ukraine",
+    "Russia",
+    "Energy",
+    "Donald Trump",
+    "Al Jazeera (AFP/AP)"
+   ],
+   "brief": [
+    {
+     "h": "What happened",
+     "b": [
+      "At the White House on Saturday, Trump said: 'I suggest they get a new leader who can make a deal', adding that 'for some reason [Zelenskyy] never does'.",
+      "He said Ukraine has 'lost 30 percent of your country' and that 'it's time for Ukraine to get a new president'.",
+      "He lashed out at Kyiv's strikes on Russian oil refineries, which he links to high diesel prices before the US midterms.",
+      "The remarks came hours after Russian strikes killed at least 20 people in the Zaporizhzhia region."
+     ]
+    },
+    {
+     "h": "The diesel deal",
+     "b": [
+      "On Friday Trump said he had struck a deal with Putin to buy Russian diesel: 300,000+ tonnes immediately, 500,000 tonnes in November, one million tonnes 'immediately thereafter' and three million more soon after.",
+      "It reverses years of US pressure on Moscow and contrasts with a sweeping Russia sanctions law he signed last month.",
+      "Trump has blamed record-high US diesel prices on Ukraine rather than the US-led war in Iran.",
+      "It was announced as envoy Steve Witkoff and Jared Kushner met Ukrainian officials in Miami on a proposal to end the war."
+     ]
+    },
+    {
+     "h": "Reactions",
+     "b": [
+      "Ukraine's foreign minister Andriy Sybiga: 'He has the support of the Ukrainian people, and they have the right to decide.'",
+      "Zelenskyy said Russia 'expressed its thanks for the lifting of sanctions on diesel exports by dropping five glide bombs on residential buildings in Zaporizhzhia'.",
+      "He says every extra billion dollars Russia earns pays for weapons, drones and recruitment, and spoke with Macron on air defence and Stubb on F-16 ammunition.",
+      "Ukraine's European allies expressed dismay and said they stand by sanctions."
+     ]
+    },
+    {
+     "h": "Why it matters",
+     "b": [
+      "The war is a long-range aerial duel with armies largely deadlocked on the ground, more than four and a half years in; Russian bombardments have killed at least 60 people in four days.",
+      "Energy prices are now shaping US diplomacy before the 3 November midterms.",
+      "Trump's remarks follow weeks of urging Zelenskyy to stop attacking Russian energy infrastructure."
+     ]
+    },
+    {
+     "h": "What to watch next",
+     "b": [
+      "Further talks on the proposal to end the war.",
+      "Europe's response and the fate of the sanctions regime.",
+      "Russian strikes and Ukraine's refinery campaign."
+     ]
+    }
+   ],
+   "id": "7c082136"
   },
   {
-   "tag": "Middle East",
    "headline": "Houthi missile hits Riyadh airport terminal; 12 dead, Trump weighs US strikes",
-   "summary": "A missile struck the domestic-flight terminal complex at King Khalid International Airport on Saturday, killing at least 12 and wounding dozens; the airport was evacuated and operations suspended. Trump said the US \"may\" join Saudi strikes on the Houthis after a week of attacks on Saudi airports and infrastructure.",
+   "teaser": "A missile struck the domestic terminals at King Khalid International Airport on Saturday, killing at least 12 and wounding about 50; Trump said the US 'may' join Saudi strikes on the Houthis.",
    "source": "Associated Press (via Inquirer)",
    "url": "https://www.inquirer.com/news/nation-world/missile-attack-riyadh-airport-houthis-yemen-saudi-arabia-iran-us-war-trump-20261010.html",
-   "published": "2026-10-10T15:04:00-04:00"
-  },
-  {
+   "published": "2026-10-10T15:04:00-04:00",
    "tag": "Middle East",
-   "headline": "IRGC claims oil tanker exploded after mine strike in Strait of Hormuz",
-   "summary": "Iran's Revolutionary Guards said a large tanker using an unauthorised southern exit route hit a naval mine, exploded and caught fire; identity and casualties were unconfirmed. Tehran warned vessels ignoring Hormuz rules face \"horrific fire\" as US–Iran talks remain deadlocked over navigation.",
-   "source": "Anadolu Agency",
-   "url": "https://www.aa.com.tr/en/middle-east/supertanker-explodes-after-striking-mine-in-strait-of-hormuz-irans-revolutionary-guards-say/4084743",
-   "published": "2026-10-10"
+   "tags": [
+    "Middle East",
+    "Saudi Arabia",
+    "Houthis",
+    "Iran war",
+    "Associated Press"
+   ],
+   "brief": [
+    {
+     "h": "What happened",
+     "b": [
+      "A missile hit the complex housing terminals 3 and 4 for domestic flights at Riyadh's King Khalid airport; the airport was evacuated and operations suspended.",
+      "The New York Times reported at least 12 killed and 50 injured, per briefed officials.",
+      "Trump said he was evaluating whether the US should join Saudi strikes on the Houthis: 'We may. We're going to look at it.'"
+     ]
+    },
+    {
+     "h": "Key facts",
+     "b": [
+      "The Houthis have claimed this week's attacks on the airport, other Saudi airports, military facilities and oil infrastructure.",
+      "The surge follows a Saudi-led coalition offensive launched about a week ago.",
+      "At least 225 flights were cancelled at Riyadh in 24 hours; Air India, flydubai, Lufthansa Group and PIA suspended flights. The US, UK, Germany, Australia and Canada warned citizens off the airport.",
+      "Attacks on Thursday damaged three aircraft; three Saudi citizens including a pilot were killed days earlier.",
+      "Saudi Arabia is running low on interceptors and has asked France, Britain, Pakistan and Egypt for air-defence support."
+     ]
+    },
+    {
+     "h": "Why it matters",
+     "b": [
+      "Saudi Arabia is the world's top exporter of oil and the attacks have rattled markets and the region.",
+      "Houthi gains on the Red Sea give them better surveillance of a corridor that is a crucial alternative to Hormuz, where Iran has been attacking ships.",
+      "EASA has widened its guidance on Saudi airspace and warns of a greater risk of misidentification of civil aircraft.",
+      "The Saudi energy ministry was still promoting an international energy conference in Riyadh set for Sunday."
+     ]
+    },
+    {
+     "h": "Diplomacy",
+     "b": [
+      "Saudi and Omani foreign ministers spoke about 'supporting diplomatic solutions to de-escalate tensions'.",
+      "Riyadh warned that filming or sharing missile-impact information exposes people to legal liability."
+     ]
+    },
+    {
+     "h": "More detail",
+     "b": [
+      "The Houthis earlier warned global airlines 'for the last time' about operating in Saudi airspace.",
+      "The Houthis told AP they target only Saudi shipping as part of a blockade in retaliation for one imposed on them; concerns about wider attacks persist.",
+      "Officials said US assistance has included intelligence sharing, target identification and planning for the offensive.",
+      "Saudi authorities warned the public this week that 'filming, publishing or sharing information related to countering missiles and drones' creates legal liability."
+     ]
+    },
+    {
+     "h": "What to watch next",
+     "b": [
+      "A US decision on strikes.",
+      "Airline suspensions and oil on Monday.",
+      "Whether the Houthis expand attacks beyond Saudi targets."
+     ]
+    }
+   ],
+   "id": "79fe0349"
   },
   {
-   "tag": "Yemen",
    "headline": "ISW: Houthis press Taiz encirclement as Saudi air campaign intensifies",
-   "summary": "Weekend ISW update: Houthi forces are attacking south and west of Taiz City while Saudi Joint Forces Command says it has destroyed 136 Houthi targets and aims to degrade ballistic-missile capabilities. Trump is separately considering offensive US strikes after the Riyadh airport attack.",
+   "teaser": "A weekend ISW update says Houthi forces are attacking south and west of Taiz City while Saudi forces claim 136 Houthi targets destroyed; US strikes would be the first on the Houthis since May 2025.",
    "source": "Institute for the Study of War",
    "url": "https://understandingwar.org/research/middle-east/iran-update-october-10-2026/",
-   "published": "2026-10-10"
+   "published": "2026-10-10",
+   "tag": "Yemen",
+   "tags": [
+    "Yemen",
+    "Houthis",
+    "Saudi Arabia",
+    "Taiz",
+    "ISW"
+   ],
+   "note": "Weekend ISW update is abbreviated; ISW is a US think-tank and uses its own assessments of probability.",
+   "brief": [
+    {
+     "h": "What happened",
+     "b": [
+      "Trump told reporters on 10 October he is considering offensive US strikes against the Houthis after attacks on Saudi airports and other civilian infrastructure.",
+      "The Houthis 'almost certainly' conducted the 10 October missile attack on King Khalid airport in Riyadh.",
+      "Houthi forces are attacking Yemeni government positions south and west of Taiz City, Yemen's third-largest city, in an attempt to encircle and capture it."
+     ]
+    },
+    {
+     "h": "Key facts",
+     "b": [
+      "Fighting is within 10 km south of the city (Jabal Sabr, Najd Qasim) and near Wadi al Dhabab on its southwestern edge; government-aligned forces say they repelled attempts there and at al Shaqab (~12 km south).",
+      "The Houthis claim control of central Taiz Governorate districts (Mawasit, Sama, al Salu); ISW found no verifiable corroboration.",
+      "Saudi Joint Forces Command says it has destroyed 136 Houthi military targets and aims to destroy Houthi ballistic-missile capabilities. It offers 24-hour close air support to government forces.",
+      "Houthi attacks on Saudi airports escalated after government-aligned forces launched a counteroffensive on the Red Sea coastal plain on 4 October."
+     ]
+    },
+    {
+     "h": "Why it matters",
+     "b": [
+      "US participation would be the first direct US military action against the Houthis since Operation Rough Rider ended in May 2025.",
+      "ISW notes the US and partners have expanded intelligence, targeting and air-defence support to Saudi Arabia.",
+      "Houthi announcements reopening roads in Taiz are likely meant to weaken the will of government forces and civilians as encirclement worsens shortages.",
+      "ISW says Saudi and Yemeni government air superiority has gone largely unchallenged."
+     ]
+    },
+    {
+     "h": "More detail",
+     "b": [
+      "Houthi 'governor' Ahmed al Masawi announced on 9 October that roads including Mokha–Najd al Nashamah had reopened for civilians, a sign the group believes it controls the roadways.",
+      "Government-aligned forces say they repelled attempts at Wadi al Dhabab, near Taiz's southwestern edge, and at al Shaqab.",
+      "Saudi and Yemeni government drones and warplanes have struck Houthi reinforcements, weapons depots and logistics behind the lines in recent weeks.",
+      "The US, Turkey and others have expanded assistance to Saudi Arabia, including intelligence, targeting and air-defence support."
+     ]
+    },
+    {
+     "h": "What to watch next",
+     "b": [
+      "A US decision on strikes.",
+      "Whether the Taiz front falls or holds.",
+      "More Houthi missile attacks on Saudi airports."
+     ]
+    }
+   ],
+   "id": "48f141e2"
   },
   {
-   "tag": "Brazil",
+   "headline": "US suspends green-card sponsorship for Microsoft, Adobe and Indian IT firms; India calls Vance's remarks 'deeply offensive'",
+   "teaser": "The US will stop processing PERM green-card applications from Microsoft, Adobe, Capgemini, Cognizant, Infosys, TCS, Wipro and HCL; India says Vance's 'indentured servants' remark is unwarranted.",
+   "source": "Al Jazeera",
+   "url": "https://www.aljazeera.com/news/2026/10/9/indentured-servants-us-green-card-move-will-hit-thousands-of-it-workers",
+   "published": "2026-10-09",
+   "tag": "US · India",
+   "tags": [
+    "US immigration",
+    "India",
+    "Technology",
+    "H-1B",
+    "Al Jazeera"
+   ],
+   "brief": [
+    {
+     "h": "What happened",
+     "b": [
+      "On Thursday, Vice President JD Vance and Labor Secretary Keith Sonderling announced the suspension of top tech firms from the PERM labor-certification program that lets employers sponsor green cards.",
+      "Vance said the program 'has become rife with fraud' and accused firms of replacing US workers with 'foreign indentured servants'.",
+      "Sonderling: 'We will not accept any new or process any pending permanent labour certification applications involving these companies.'"
+     ]
+    },
+    {
+     "h": "Who is hit",
+     "b": [
+      "Microsoft, Adobe, Capgemini (French) and the Indian firms Cognizant, Infosys, TCS, Wipro and HCL.",
+      "Meta, Amazon and Google are not affected.",
+      "Vance said Microsoft laid off 6,000 US workers last year while securing 6,300 H-1B visas and almost 3,000 green cards. Microsoft says 80% of its roughly 6,000 H-1B filings were to extend or change status of existing employees.",
+      "Sonderling said the suspended firms received more than 230,000 H-1B visas and over 100,000 labour certifications since 2009."
+     ]
+    },
+    {
+     "h": "Numbers on the backlog",
+     "b": [
+      "About 1.25 million people are in the employment green-card backlog; roughly one million of them are Indians (79%).",
+      "Indian nationals hold about 70% of existing H-1B visas; there are 85,000 new H-1B slots a year.",
+      "In August the administration proposed a $103,000 fee for H-1B applications."
+     ]
+    },
+    {
+     "h": "India's response",
+     "b": [
+      "India's Ministry of External Affairs said the suspension does not 'advance the shared ambitions of both countries' and called Vance's comments 'unwarranted' and 'deeply offensive', evoking 'painful historical and colonial legacy connotations'.",
+      "It said Indian professionals are 'highly educated and skilled contributors' to the US economy."
+     ]
+    },
+    {
+     "h": "More detail",
+     "b": [
+      "The PERM program requires employers to show there are insufficient US workers for a role and that hiring a foreign worker will not affect pay or conditions.",
+      "H-1B holders often transition to green cards via PERM; 62% of FY2025 H-1B beneficiaries worked in computer-related jobs.",
+      "Only about 140,000 employment-based green cards are issued a year, with a seven-percent per-country cap, so Indian applicants face decades-long waits.",
+      "A 2025 Congressional Research Service analysis found Indian applicants in some categories already faced multi-decade waits."
+     ]
+    },
+    {
+     "h": "What to watch next",
+     "b": [
+      "Possible legal challenges and any widening of the list of suspended firms.",
+      "The effect on tens of thousands of workers with pending applications.",
+      "India–US diplomatic fallout."
+     ]
+    }
+   ],
+   "id": "c4396b56"
+  },
+  {
+   "headline": "US puts the entire International Criminal Court on its sanctions list; Japan objects",
+   "teaser": "The Trump administration ordered the Treasury to add the whole ICC to its SDN list, going beyond sanctions on officials; Japan's PM Takaichi finds herself in a bind as the court's president is Japanese.",
+   "source": "The Japan Times",
+   "url": "https://www.japantimes.co.jp/news/2026/10/10/japan/politics/japan-us-icc-takaichi-trump/",
+   "published": "2026-10-10",
+   "tag": "International law",
+   "tags": [
+    "International law",
+    "ICC",
+    "US–Japan",
+    "Sanctions",
+    "The Japan Times"
+   ],
+   "note": "Thin briefing: only the first paragraphs of the Japan Times article were retrievable (paywalled), plus search snippets from Japanese outlets.",
+   "brief": [
+    {
+     "h": "What happened",
+     "b": [
+      "On Friday the Trump administration ordered the Treasury to add the entire International Criminal Court to its Specially Designated Nationals list.",
+      "The move would impose financial punishment on any entity that does business with the court.",
+      "It goes a step beyond earlier targeted sanctions on top officials, including ICC President Tomoko Akane, who is Japanese."
+     ]
+    },
+    {
+     "h": "Reactions (headline-level)",
+     "b": [
+      "The Japan Times says Prime Minister Sanae Takaichi 'again found herself in a tough spot' as the US is Japan's key security ally.",
+      "Search listings from JIJI and NHK report that Japan voiced 'deep concern' and Foreign Minister Motegi spoke with Secretary of State Rubio; Japan and seven other states issued a joint statement opposing the sanctions. (Only headlines and snippets were retrieved.)"
+     ]
+    },
+    {
+     "h": "Why it matters",
+     "b": [
+      "The sanctions escalate US pressure on international justice institutions.",
+      "The Nobel Committee's announcement on the same day said 'judges are sanctioned, and their institutions are attacked' (see the Nobel item).",
+      "It puts allies such as Japan, which supports the ICC, in a difficult position."
+     ]
+    },
+    {
+     "h": "What to watch next",
+     "b": [
+      "Which countries and banks respond to the SDN designation.",
+      "Whether other allies join the joint objection.",
+      "How sanctions affect the ICC's operations and staff."
+     ]
+    }
+   ],
+   "id": "9f8bfbae"
+  },
+  {
+   "headline": "Nobel Peace Prize 2026 goes to Navi Pillay for advancing international law",
+   "teaser": "The Norwegian Nobel Committee honoured the South African jurist, former UN human-rights chief and ICC judge for helping ensure war crimes, crimes against humanity and genocide are prosecuted.",
+   "source": "NobelPrize.org",
+   "url": "https://www.nobelprize.org/prizes/peace/2026/press-release/",
+   "published": "2026-10-09",
+   "tag": "Nobel",
+   "tags": [
+    "Nobel Peace Prize",
+    "International law",
+    "Navi Pillay",
+    "Human rights",
+    "NobelPrize.org"
+   ],
+   "brief": [
+    {
+     "h": "What happened",
+     "b": [
+      "On 9 October the Norwegian Nobel Committee awarded the 2026 Peace Prize to Navanethem 'Navi' Pillay 'for her efforts to promote peace and international law'.",
+      "It said she led the way towards 'a more comprehensive global legal order'."
+     ]
+    },
+    {
+     "h": "Who she is",
+     "b": [
+      "Born into an Indian Tamil family in Durban under apartheid, she became a lawyer who defended Nelson Mandela and others.",
+      "She has served as a High Court judge in South Africa, on the International Criminal Tribunal for Rwanda and the International Criminal Court, and as UN High Commissioner for Human Rights.",
+      "She chaired the UN Independent International Commission of Inquiry on the Occupied Palestinian Territory until recently and is now a judge at the ICJ in the case where Myanmar is accused of genocide."
+     ]
+    },
+    {
+     "h": "Why the committee chose her",
+     "b": [
+      "At the Rwanda tribunal she helped establish that rape and sexual violence can constitute crimes against humanity and genocide, and that a defendant can face charges of incitement to commit genocide purely for propaganda.",
+      "The committee said international law is under 'tremendous pressure' with 'a shift towards power politics' and said the 125-year-old prize underscores resolving conflicts through law.",
+      "It noted that 'these same judges are sanctioned, and their institutions are attacked'."
+     ]
+    },
+    {
+     "h": "Why it matters",
+     "b": [
+      "The prize is a statement for the rule of law at a time of more wars than 'the world has seen in a long time'.",
+      "It lands as the US puts the entire ICC on its sanctions list (see the ICC item).",
+      "The committee also acknowledged that international law has 'never been perfect' and that the greatest powers have often evaded responsibility."
+     ]
+    },
+    {
+     "h": "What to watch next",
+     "b": [
+      "US and ICC reactions.",
+      "Progress in the ICJ Myanmar case."
+     ]
+    }
+   ],
+   "id": "30a5df91"
+  },
+  {
    "headline": "Flávio Bolsonaro wins first round; Lula runoff set for 25 October",
-   "summary": "Senator Flávio Bolsonaro took ~47% to incumbent Lula's ~45% in Brazil's first-round presidential vote, forcing a 25 Oct runoff. The Liberal Party also led in governors and congressional seats; a Bolsonaro win would align Latin America's largest economy more closely with Trump's US.",
+   "teaser": "Senator Flávio Bolsonaro took about 47% to President Lula's 45% in Brazil's first-round presidential vote, forcing a 25 October runoff; his Liberal Party also led in Congress and governors' races.",
    "source": "BBC News",
    "url": "https://www.bbc.com/news/articles/ck1l34ed592no",
-   "published": "2026-10-05"
+   "published": "2026-10-05",
+   "tag": "Brazil",
+   "tags": [
+    "Brazil",
+    "Elections",
+    "Latin America",
+    "Lula",
+    "BBC News"
+   ],
+   "brief": [
+    {
+     "h": "What happened",
+     "b": [
+      "Right-wing Flávio Bolsonaro won Brazil's first round, beating Lula but falling short of a majority: about 47% to Lula's 45% with almost all votes counted.",
+      "A runoff between the two is set for 25 October.",
+      "His Liberal Party (PL) has the most governors, senators and federal deputies elected so far."
+     ]
+    },
+    {
+     "h": "Key facts",
+     "b": [
+      "Flávio, 45, is the son of Jair Bolsonaro, who is serving a 27-year prison sentence for masterminding a failed coup. Jair endorsed him after being barred from running; Michelle Bolsonaro was elected to the Senate.",
+      "Lula, 80, is seeking a fourth term. He called the result 'unexpected' and said 'we are in extra time'.",
+      "Flávio pledged amnesty for his father and for 8 January 2023 rioters.",
+      "Trump called it a 'very, very big victory' for Bolsonaro. Brazil's electoral court found no evidence of foreign interference.",
+      "Lula's 2022 win over Jair Bolsonaro was by less than 2%, the closest in Brazil's history."
+     ]
+    },
+    {
+     "h": "Issues and policy",
+     "b": [
+      "Corruption: a scandal around jailed banker Daniel Vorcaro touched both camps; Flávio asked him to bankroll a biopic (134 million reais).",
+      "Crime: Flávio pledges to designate gangs as terrorists and to build maximum-security prisons. The economy, high personal debt and slowing growth are central.",
+      "Flávio pledges a public-debt ceiling, spending cuts, a revision of welfare and support for critical minerals."
+     ]
+    },
+    {
+     "h": "Why it matters",
+     "b": [
+      "A Bolsonaro win would likely see Brazil join the US 'Shield of Americas' coalition against narco-trafficking and align more closely with the US.",
+      "Most of Latin America has elected right-wing presidents aligned with Trump; the runoff decides whether the largest country and economy joins them.",
+      "The BBC says the second round 'looks like his to lose' because several eliminated candidates were right-wing."
+     ]
+    },
+    {
+     "h": "What to watch next",
+     "b": [
+      "The 25 October runoff and polling.",
+      "Endorsements from eliminated right-wing candidates.",
+      "Market reaction to fiscal pledges."
+     ]
+    }
+   ],
+   "id": "df0155db"
   },
   {
-   "tag": "Spain",
    "headline": "Sánchez calls snap Spanish election for 29 November over housing crisis",
-   "summary": "Spain's socialist PM brought forward the general election after Congress rejected emergency housing measures amid nationwide protests. Polls favour the PP but short of a majority, raising the prospect of a PP–Vox deal — the first far-right share of national power since Franco.",
+   "teaser": "Spain's socialist PM brought forward the general election after parliament rejected emergency housing measures; polls favour the PP, which may need Vox, the first far-right share of power since Franco.",
    "source": "The Guardian",
    "url": "https://www.theguardian.com/world/2026/oct/05/pedro-sanchez-gamble-snap-general-election-spain-explainer",
-   "published": "2026-10-05T11:18:00+00:00"
-  },
-  {
-   "tag": "US · Fed",
-   "headline": "White House sets Nov 5 hearing on firing Fed Governor Lisa Cook",
-   "summary": "Trump created a three-person \"committee of inquiry\" (Hassett, Sonderling, Lucas) to recommend whether cause exists to remove Cook over mortgage-fraud claims she denies. Cook is expected to appear Nov 5; any firing would almost certainly return to the Supreme Court.",
-   "source": "CNBC",
-   "url": "https://www.cnbc.com/2026/10/09/trump-lisa-cook-fed-firing-committee-explained.html",
-   "published": "2026-10-09T14:20:00-04:00"
+   "published": "2026-10-05T11:18:00+00:00",
+   "tag": "Spain",
+   "tags": [
+    "Spain",
+    "Elections",
+    "Housing",
+    "Far right",
+    "The Guardian"
+   ],
+   "brief": [
+    {
+     "h": "What happened",
+     "b": [
+      "On Monday 5 October Pedro Sánchez announced a general election for 29 November, months ahead of schedule (due before end of next summer).",
+      "It will be Spain's fifth general election in 10 years and is likely to be dominated by anger over the housing crisis.",
+      "Congress voted down his government's emergency housing measures, with the PP, far-right Vox and Catalan party Junts opposed."
+     ]
+    },
+    {
+     "h": "Key facts",
+     "b": [
+      "Trigger: the eviction last month of Maricarmen Abascal, 87, from the Madrid home where she had lived for 70 years sparked huge protests.",
+      "Sánchez's minority coalition with Sumar has not passed a budget since 2023.",
+      "The government has also faced criticism over Ceuta, where about 70,000 people crossed from Morocco in 48 hours, and corruption allegations around his party and inner circle.",
+      "Sánchez narrowly won in July 2023 by backing an amnesty law for 2017 Catalan separatists."
+     ]
+    },
+    {
+     "h": "Polls and stakes",
+     "b": [
+      "The PSOE has trailed the PP for months. The PP leads but does not appear on course for an absolute majority.",
+      "That would force it to rely on Vox, possibly in coalition: the first time a far-right party governs Spain since Franco's death in 1975.",
+      "The PP has entered regional coalitions with Vox and adopted its hard line on immigration, including 'national priority' for Spanish-born people in housing and services.",
+      "Sánchez framed the vote as a choice between joining 'the far-right wave' or keeping Spain 'a bastion of openness, social justice, and environmental responsibility'."
+     ]
+    },
+    {
+     "h": "Why it matters",
+     "b": [
+      "Spain is a leading EU economy; a PP–Vox deal would be a major shift. Rothschild notes Spain is one of several European political risks alongside France.",
+      "The Bank of Spain has lifted its inflation outlook to 3.9% as the housing crunch intensifies (a Briefs headline)."
+     ]
+    },
+    {
+     "h": "What to watch next",
+     "b": [
+      "Polls through November and any PP–Vox pact.",
+      "Housing policy proposals in the campaign.",
+      "Junts' and other regional parties' stance."
+     ]
+    }
+   ],
+   "id": "2b8c43e8"
   }
  ]
 }
@@ -459,12 +3209,61 @@ noscript{display:block;padding:24px 16px;color:var(--text)}
   /* ---------- DOM helpers ---------- */
   function el(tag, cls, text){var e=document.createElement(tag); if(cls) e.className=cls; if(text!=null) e.textContent=text; return e}
 
-  function renderItem(it){
-    var a = el('article','item'+(it.kind==='tweet'?' tweet':''));
+  /* ---------- deep summaries, Ask Grok, votes ---------- */
+  var VKEY='newsdash.votes';
+  var SECNAME={}; // item id -> readable section label
+  var BYID={};
+  function briefWords(it){var n=0;(it.brief||[]).forEach(function(s){n+=(s.h+' '+s.b.join(' ')).split(/\s+/).length});return n}
+  function readMin(it){return Math.max(1,Math.round(briefWords(it)/200))}
+  function askPrompt(it){
+    if(it.kind==='tweet'){
+      return 'I\u0027m reading this post on X by '+it.headline+': \u201C'+(it.quote||'').replace(/\s+/g,' ').slice(0,400)+'\u201D ('+it.url+'). Summary: '+it.teaser+' Explain it further and let me ask follow-up questions.';
+    }
+    return 'I\u0027m reading this news: '+it.headline+(it.url?' ('+it.url+')':'')+'. Summary: '+it.teaser+' Explain it further and let me ask follow-up questions.';
+  }
+  function grokUrl(p){return 'https://grok.com/?q='+encodeURIComponent(p)}
+  function allItems(){
+    var o=[]; SPORTS.forEach(function(x){o=o.concat((DATA.sports||{})[x[0]]||[])});
+    FIN.forEach(function(x){o=o.concat((DATA.finance||{})[x[0]]||[])}); return o.concat(DATA.politics||[]);
+  }
+  function overallPrompt(){
+    var pick=[], d=DATA.sports||{}, f=DATA.finance||{};
+    ['cricket','football','golf','f1','tennis'].forEach(function(k){if((d[k]||[])[0]) pick.push(d[k][0])});
+    (f.macro||[]).slice(0,2).forEach(function(x){pick.push(x)});
+    (DATA.politics||[]).slice(0,3).forEach(function(x){pick.push(x)});
+    var day=new Date().toLocaleDateString('en-GB',{timeZone:TZ,day:'numeric',month:'long',year:'numeric'});
+    return 'I\u0027m reading my personal news dashboard for '+day+'. Today\u2019s top stories: '+pick.map(function(x,i){return (i+1)+') '+x.headline}).join('; ')+
+      '. Give me a short briefing of what matters most today, how the stories connect (markets, geopolitics, sport), and let me ask follow-up questions.';
+  }
+  var votes={};
+  try{votes=JSON.parse(LS.get(VKEY)||'{}')||{}}catch(e){votes={}}
+  function saveVotes(){LS.set(VKEY,JSON.stringify(votes)); updateFab()}
+  function toast(msg){var t=document.getElementById('toast'); t.textContent=msg; t.hidden=false; clearTimeout(toast._t); toast._t=setTimeout(function(){t.hidden=true},2200)}
+  function copyText(txt){
+    function fallback(){var ta=document.createElement('textarea'); ta.value=txt; ta.setAttribute('readonly',''); ta.style.cssText='position:fixed;top:0;left:0;opacity:0';
+      document.body.appendChild(ta); ta.select(); ta.setSelectionRange(0,txt.length); var ok=false; try{ok=document.execCommand('copy')}catch(e){} document.body.removeChild(ta); return ok}
+    if(navigator.clipboard && window.isSecureContext){return navigator.clipboard.writeText(txt).then(function(){return true},function(){return fallback()})}
+    return Promise.resolve(fallback());
+  }
+  function setVote(it, v, btns){
+    var cur=votes[it.id] && votes[it.id].v;
+    if(cur===v){delete votes[it.id]; v=0}
+    else votes[it.id]={v:v, h:it.headline, s:SECNAME[it.id]||'', t:it.tags||[], ts:Date.now()};
+    saveVotes(); paintVotes(it.id, btns);
+  }
+  function paintVotes(id, btns){
+    var v=votes[id]?votes[id].v:0;
+    btns.up.setAttribute('aria-pressed', v===1); btns.down.setAttribute('aria-pressed', v===-1);
+  }
+
+  function renderItem(it, secLabel){
+    SECNAME[it.id]=secLabel||''; BYID[it.id]=it;
+    var a = el('article','item'+(it.kind==='tweet'?' tweet':'')); a.setAttribute('data-id',it.id);
     if(it.published) a.setAttribute('data-published', it.published);
     if(it.tag) a.appendChild(el('span','chip',it.tag));
     a.appendChild(el('h3','hl',it.headline));
-    a.appendChild(el('p','sum',it.summary));
+    if(it.kind==='tweet' && it.quote) a.appendChild(el('blockquote','quote',it.quote));
+    a.appendChild(el('p','sum',it.teaser));
     var f = el('div','foot');
     if(it.url){
       var l = el('a','src',it.source+' \u2197'); l.href=it.url; l.target='_blank'; l.rel='noopener noreferrer'; f.appendChild(l);
@@ -472,11 +3271,44 @@ noscript{display:block;padding:24px 16px;color:var(--text)}
     f.appendChild(el('span','dot','\u00B7'));
     var tm = el('time','rec'); if(it.published) tm.setAttribute('datetime', it.published); tm.setAttribute('data-published', it.published||'');
     f.appendChild(tm);
+    f.appendChild(el('span','dot','\u00B7')); f.appendChild(el('span','rt','\u2248'+readMin(it)+' min read'));
     a.appendChild(f);
+
+    /* actions */
+    var acts=el('div','acts');
+    var rb=el('button','btn read'); rb.type='button'; rb.setAttribute('aria-expanded','false');
+    rb.appendChild(document.createTextNode('Read (\u2248'+readMin(it)+' min) ')); rb.appendChild(el('span','car','\u25BC'));
+    var bp=el('div','brief'); bp.hidden=true; bp.id='b-'+it.id; rb.setAttribute('aria-controls',bp.id);
+    rb.addEventListener('click',function(){var o=bp.hidden; bp.hidden=!o; rb.setAttribute('aria-expanded',o)});
+    acts.appendChild(rb);
+    var ask=el('a','btn ask','\u2726 Ask Grok'); ask.href=grokUrl(askPrompt(it)); ask.target='_blank'; ask.rel='noopener noreferrer';
+    ask.setAttribute('aria-label','Ask Grok about: '+it.headline); acts.appendChild(ask);
+    var cq=el('button','btn ghost','Copy question'); cq.type='button';
+    cq.addEventListener('click',function(){copyText(askPrompt(it)).then(function(ok){toast(ok?'Question copied \u2014 paste it into Grok':'Copy failed \u2014 long-press to copy')})});
+    acts.appendChild(cq);
+    var vw=el('div','votes'), up=el('button','btn vote up','\uD83D\uDC4D'), dn=el('button','btn vote down','\uD83D\uDC4E');
+    up.type=dn.type='button'; up.title='More like this'; dn.title='Less like this';
+    up.setAttribute('aria-label','More like this'); dn.setAttribute('aria-label','Less like this');
+    var btns={up:up,down:dn}; paintVotes(it.id,btns);
+    up.addEventListener('click',function(){setVote(it,1,btns)}); dn.addEventListener('click',function(){setVote(it,-1,btns)});
+    a._btns=btns; vw.appendChild(up); vw.appendChild(dn); acts.appendChild(vw);
+    a.appendChild(acts);
+
+    /* deep summary */
+    (it.brief||[]).forEach(function(sec){
+      bp.appendChild(el('h4',null,sec.h)); var ul=el('ul'); sec.b.forEach(function(b){ul.appendChild(el('li',null,b))}); bp.appendChild(ul);
+    });
+    if(it.note) bp.appendChild(el('p','bnote','Note: '+it.note));
+    var sp=el('p','bsrc','Source: '); 
+    if(it.url){var sl=el('a',null,it.source+' \u2197'); sl.href=it.url; sl.target='_blank'; sl.rel='noopener noreferrer'; sp.appendChild(sl)} else sp.appendChild(document.createTextNode(it.source));
+    (it.also||[]).forEach(function(x){sp.appendChild(document.createTextNode(' \u00B7 ')); var al=el('a',null,x.label+' \u2197'); al.href=x.url; al.target='_blank'; al.rel='noopener noreferrer'; sp.appendChild(al)});
+    sp.appendChild(document.createTextNode(' \u00B7 Briefing compiled from the source above'+(it.kind==='tweet'?' and related reporting':'')+'; check the original for full detail.'));
+    bp.appendChild(sp);
+    a.appendChild(bp);
     return a;
   }
 
-  function renderGroup(key, title, icon, items, openDefault){
+  function renderGroup(key, title, icon, items, openDefault, secLabel){
     var d = el('details','group'); d.id='g-'+key;
     var saved = LS.get('newsdash.open.'+key);
     d.open = saved===null ? openDefault : saved==='1';
@@ -486,9 +3318,99 @@ noscript{display:block;padding:24px 16px;color:var(--text)}
     s.appendChild(el('span','chev','\u25B6')); d.appendChild(s);
     var w = el('div','items');
     if(!items.length) w.appendChild(el('div','empty','Nothing verified for this section yet.'));
-    items.forEach(function(it){w.appendChild(renderItem(it))});
+    items.forEach(function(it){w.appendChild(renderItem(it, secLabel))});
     d.appendChild(w); return d;
   }
+
+  function askBar(){
+    var w=el('div','askbar');
+    var a=el('a','btn ask','\u2726 Ask Grok about today\u2019s news'); a.href=grokUrl(overallPrompt()); a.target='_blank'; a.rel='noopener noreferrer'; w.appendChild(a);
+    var c=el('button','btn ghost','Copy question'); c.type='button';
+    c.addEventListener('click',function(){copyText(overallPrompt()).then(function(ok){toast(ok?'Question copied \u2014 paste it into Grok':'Copy failed \u2014 long-press to copy')})});
+    w.appendChild(c);
+    w.appendChild(el('span','hint','Opens grok.com with a prefilled question. Each story also has its own Ask Grok button.'));
+    return w;
+  }
+
+  /* ---------- feedback panel ---------- */
+  var REPO='vikasgelara-ship-it/news-dashboard';
+  var lastSent=[], fbNote='';
+  function votedList(){
+    return Object.keys(votes).map(function(id){var x=votes[id]; return {id:id,v:x.v,h:x.h,s:x.s,t:x.t||[],ts:x.ts||0}}).sort(function(a,b){return a.ts-b.ts});
+  }
+  function fbText(level){
+    var L=votedList(), day=dayF.format(new Date());
+    var out=['Dashboard feedback '+day+' (SGT)'];
+    [[1,'MORE LIKE THIS'],[-1,'LESS LIKE THIS']].forEach(function(g){
+      var xs=L.filter(function(x){return x.v===g[0]}); if(!xs.length) return;
+      out.push('',g[1]);
+      xs.forEach(function(x){
+        var h=x.h.replace(/\s+/g,' '); if(level>=2&&h.length>70) h=h.slice(0,67)+'...';
+        var tg=level>=2?'':(level===1?x.t.slice(0,2):x.t).join(', ');
+        out.push((g[0]>0?'+ ':'- ')+'['+x.s+'] '+h+(tg?' | tags: '+tg:'')+' | id: '+x.id);
+      });
+    });
+    if(fbNote.trim()) out.push('','NOTES',fbNote.trim());
+    return out.join('\n');
+  }
+  function issueUrl(){
+    var L=votedList(), up=L.filter(function(x){return x.v===1}).length, dn=L.length-up, title='Feedback '+dayF.format(new Date())+': +'+up+' / -'+dn;
+    for(var lv=0;lv<3;lv++){
+      var u='https://github.com/'+REPO+'/issues/new?title='+encodeURIComponent(title)+'&labels=feedback&body='+encodeURIComponent(fbText(lv));
+      if(u.length<7000||lv===2) return {url:u, trimmed:lv>0, long:u.length>=7000};
+    }
+  }
+  function updateFab(){var n=Object.keys(votes).length, b=document.getElementById('fab-n'); b.textContent=n; b.hidden=!n}
+  function repaintAll(){
+    var arts=document.querySelectorAll('article.item');
+    for(var i=0;i<arts.length;i++){var a=arts[i]; if(a._btns) paintVotes(a.getAttribute('data-id'),a._btns)}
+  }
+  function openFb(){
+    var sc=document.getElementById('scrim'), sh=document.getElementById('sheet'); sh.textContent='';
+    sh.appendChild(el('h2',null,'Send feedback')).id='fb-t';
+    var L=votedList();
+    sh.appendChild(el('p','sub',L.length?'Your \uD83D\uDC4D/\uD83D\uDC4E marks. They shape what tomorrow\u2019s refresh picks.':'No marks yet. Tap \uD83D\uDC4D or \uD83D\uDC4E on any story, then come back here.'));
+    [[1,'\uD83D\uDC4D More like this'],[-1,'\uD83D\uDC4E Less like this']].forEach(function(g){
+      var xs=L.filter(function(x){return x.v===g[0]}); if(!xs.length) return;
+      sh.appendChild(el('h5',null,g[1]+' ('+xs.length+')'));
+      xs.forEach(function(x){
+        var r=el('div','fbrow'); r.appendChild(el('span','v',g[0]>0?'\uD83D\uDC4D':'\uD83D\uDC4E'));
+        var tx=el('div','tx'); tx.appendChild(el('div','t1',x.h)); tx.appendChild(el('div','t2',x.s+(x.t.length?' \u00B7 '+x.t.join(', '):''))); r.appendChild(tx);
+        var rm=el('button','x','\u00D7'); rm.type='button'; rm.title='Remove'; rm.setAttribute('aria-label','Remove this mark');
+        rm.addEventListener('click',function(){delete votes[x.id]; saveVotes(); repaintAll(); openFb()});
+        r.appendChild(rm); sh.appendChild(r);
+      });
+    });
+    var ta=el('textarea'); ta.placeholder='Optional note (e.g. "more cricket, fewer Brazil items")'; ta.value=fbNote; ta.setAttribute('aria-label','Optional note');
+    ta.addEventListener('input',function(){fbNote=ta.value; refresh()});
+    var after=el('div','after'); after.hidden=true;
+    function ask(){
+      after.hidden=false; after.textContent='';
+      after.appendChild(el('div',null,'Sent it? Clear these '+lastSent.length+' votes from this device?'));
+      var rw=el('div','row'); var y=el('button','btn','Clear sent votes'); y.type='button'; var n=el('button','btn ghost','Keep them'); n.type='button';
+      y.addEventListener('click',function(){lastSent.forEach(function(id){delete votes[id]}); fbNote=''; saveVotes(); repaintAll(); toast('Cleared'); openFb()});
+      n.addEventListener('click',function(){after.hidden=true});
+      rw.appendChild(y); rw.appendChild(n); after.appendChild(rw);
+    }
+    var row=el('div','row'), send=el('a','btn ask','\u2726 Send to News'.replace('\u2726 ','')); send.target='_blank'; send.rel='noopener noreferrer';
+    var cp=el('button','btn','Copy'); cp.type='button'; var cl=el('button','btn ghost','Close'); cl.type='button';
+    var warn=el('p','warn'); warn.hidden=true;
+    function refresh(){var u=issueUrl(); send.href=u.url; warn.hidden=!u.trimmed; warn.textContent=u.long?'Very long list: the GitHub link was trimmed. Use Copy for the full text.':'Long list: tags were shortened in the GitHub link. Use Copy for full detail.'}
+    send.addEventListener('click',function(){lastSent=votedList().map(function(x){return x.id}); setTimeout(ask,400)});
+    cp.addEventListener('click',function(){copyText(fbText(0)).then(function(ok){toast(ok?'Feedback copied \u2014 paste it into chat':'Copy failed'); if(ok){lastSent=votedList().map(function(x){return x.id}); ask()}})});
+    cl.addEventListener('click',closeFb);
+    if(!L.length){send.setAttribute('aria-disabled','true'); send.style.opacity='.5'; send.style.pointerEvents='none'; cp.disabled=true; cp.style.opacity='.5'}
+    row.appendChild(send); row.appendChild(cp); row.appendChild(cl);
+    sh.appendChild(el('h5',null,'Note')); sh.appendChild(ta); sh.appendChild(row); sh.appendChild(warn);
+    sh.appendChild(el('p','sub','\u201CSend to News\u201D opens a prefilled GitHub issue on your phone \u2014 just tap Submit. \u201CCopy\u201D puts the same text on your clipboard to paste into chat.')).style.marginTop='10px';
+    sh.appendChild(after); refresh();
+    sc.hidden=false; document.body.style.overflow='hidden'; sh.scrollTop=0;
+  }
+  function closeFb(){document.getElementById('scrim').hidden=true; document.body.style.overflow=''}
+  document.getElementById('fab').addEventListener('click',openFb);
+  document.getElementById('scrim').addEventListener('click',function(e){if(e.target===this) closeFb()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape') closeFb()});
+  updateFab();
 
   function counts(){
     var c={}; c.sports=0; SPORTS.forEach(function(x){c.sports+=((DATA.sports||{})[x[0]]||[]).length});
@@ -499,6 +3421,7 @@ noscript{display:block;padding:24px 16px;color:var(--text)}
   function build(){
     var tabs=document.getElementById('tabs'), main=document.getElementById('main'), c=counts();
     main.textContent='';
+    main.appendChild(askBar());
     TABS.forEach(function(t){
       var b=el('button','tab'); b.type='button'; b.id='tab-'+t.id; b.setAttribute('role','tab'); b.setAttribute('aria-controls','p-'+t.id);
       b.appendChild(document.createTextNode(t.label)); b.appendChild(el('span','n',String(c[t.id])));
@@ -511,9 +3434,9 @@ noscript{display:block;padding:24px 16px;color:var(--text)}
       tabs.appendChild(b);
       var p=el('section','panel'); p.id='p-'+t.id; p.setAttribute('role','tabpanel'); p.setAttribute('aria-labelledby','tab-'+t.id); p.hidden=true;
       p.appendChild(el('p','lede',t.lede));
-      if(t.id==='sports') SPORTS.forEach(function(x){p.appendChild(renderGroup(x[0],x[1],x[2],(DATA.sports||{})[x[0]]||[],true))});
-      if(t.id==='finance') FIN.forEach(function(x){p.appendChild(renderGroup(x[0],x[1],x[2],(DATA.finance||{})[x[0]]||[],true))});
-      if(t.id==='politics'){ var w=el('div','items flat'); (DATA.politics||[]).forEach(function(it){w.appendChild(renderItem(it))}); p.appendChild(w) }
+      if(t.id==='sports') SPORTS.forEach(function(x){p.appendChild(renderGroup(x[0],x[1],x[2],(DATA.sports||{})[x[0]]||[],true,'Sports › '+x[1]))});
+      if(t.id==='finance') FIN.forEach(function(x){p.appendChild(renderGroup(x[0],x[1],x[2],(DATA.finance||{})[x[0]]||[],true,'Finance › '+x[1]))});
+      if(t.id==='politics'){ var w=el('div','items flat'); (DATA.politics||[]).forEach(function(it){w.appendChild(renderItem(it,'Global politics'))}); p.appendChild(w) }
       main.appendChild(p);
     });
     var saved=LS.get('newsdash.tab'); select(TABS.some(function(t){return t.id===saved})?saved:'sports', false);
