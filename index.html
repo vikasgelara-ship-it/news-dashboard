@@ -166,6 +166,24 @@ details.tour .brief{display:block;margin-top:8px;padding-top:8px;border-top:0}
 .empty{color:var(--muted);padding:6px 4px 16px;font-size:14px}
 footer{max-width:1100px;margin:26px auto 0;padding:0 16px;color:var(--muted);font-size:12px;line-height:1.6}
 noscript{display:block;padding:24px 16px;color:var(--text)}
+/* ---- newspaper tabs ---- */
+.tab.nopaper{opacity:.62}
+.paper-bar{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center;margin:0 0 10px}
+.paper-bar .pname{font-family:var(--serif);font-weight:700;font-size:17px;margin-right:2px}
+.paper-bar .pdate{font-size:12.5px;color:var(--muted);flex:1 1 160px;min-width:0}
+.paper-bar .pdate b{color:var(--text);font-weight:600}
+.paper-bar .pdate .stale{color:#d8c98a}
+.paper-bar .btn{min-height:40px;font-size:14px}
+.paper-wrap{border:1px solid var(--line);border-radius:12px;background:#fff;overflow:hidden}
+.paper-wrap iframe{display:block;width:100%;border:0;background:#fff;height:calc(100vh - 220px);min-height:360px}
+.paper-hint{font-size:12px;color:var(--muted);margin:8px 2px 0}
+.paper-na{background:var(--bg2);padding:34px 20px;text-align:center;color:var(--muted)}
+.paper-na .big{font-size:34px;margin-bottom:6px}
+.paper-na h3{font-family:var(--serif);font-size:19px;margin:0 0 6px;color:var(--text)}
+.paper-na p{margin:0;font-size:14px}
+body.paper-tab .askbar,body.paper-tab .fab,body.paper-tab footer{display:none}
+body.paper-tab main{padding-top:12px}
+body.paper-tab{padding-bottom:calc(var(--sab) + 8px)}
 @media (max-width:440px){
   .tab{font-size:13px;padding:10px 5px 11px;gap:4px}.tab .n{padding:0 5px}
 }
@@ -193,7 +211,7 @@ noscript{display:block;padding:24px 16px;color:var(--text)}
 {
  "meta": {
   "title": "News",
-  "generated_at": "2026-10-11T21:04:56+08:00",
+  "generated_at": "2026-10-11T21:10:30+08:00",
   "timezone": "Asia/Singapore",
   "note": "Times are ISO-8601 with offset (or date-only / absent when the source did not state a time). The page renders everything in SGT."
  },
@@ -4245,6 +4263,62 @@ noscript{display:block;padding:24px 16px;color:var(--text)}
       count:function(){return (DATA.trending||[]).length},
       render:function(p){var w=el('div','items flat'); (DATA.trending||[]).forEach(function(it,i){it.rank=i+1; w.appendChild(renderItem(it,'Trending on X'))}); p.appendChild(w)}}
   ];
+  /* Newspaper tabs: PAPERS is filled at build time from /workspace/newspapers (files present + meta.json); a missing paper renders a placeholder, never a broken frame.
+     Each page is lazy-loaded into an iframe the first time its tab is opened (onShow). */
+  var PAPERS = [{"id": "ft", "label": "FT", "name": "Financial Times (US edition)", "file": "newspapers/ft.html", "available": false, "edition": "", "generated": ""}, {"id": "nyt", "label": "NYT", "name": "New York Times (US edition)", "file": "newspapers/nyt.html", "available": false, "edition": "", "generated": ""}, {"id": "wsj", "label": "WSJ", "name": "Wall Street Journal", "file": "newspapers/wsj.html", "available": false, "edition": "", "generated": ""}];
+  function usToday(){return dayF2.format(new Date())}
+  var dayF2 = new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'});
+  function fmtEdition(iso){var m=/^(\d{4})-(\d{2})-(\d{2})/.exec(iso||''); if(!m) return iso||''; var d=new Date(Date.UTC(+m[1],+m[2]-1,+m[3]));
+    return d.toLocaleDateString('en-GB',{timeZone:'UTC',weekday:'short',day:'numeric',month:'short',year:'numeric'})}
+  function sizePaperFrame(){
+    var f=document.querySelector('.panel:not([hidden]) .paper-wrap iframe'); if(!f) return;
+    var bar=document.querySelector('.bar'), pb=document.querySelector('.panel:not([hidden]) .paper-bar');
+    var h=window.innerHeight-(bar?bar.offsetHeight:0)-(pb?pb.offsetHeight+10:0)-34;
+    f.style.height=Math.max(360,h)+'px';
+  }
+  function paperPanel(pp){
+    return function(p){
+      var bar=el('div','paper-bar');
+      bar.appendChild(el('span','pname',pp.name));
+      var d=el('span','pdate');
+      if(pp.available){
+        if(pp.edition){
+          d.appendChild(document.createTextNode('Edition: ')); d.appendChild(el('b','',fmtEdition(pp.edition)));
+          if(/^\d{4}-\d{2}-\d{2}/.test(pp.edition) && pp.edition.slice(0,10) < usToday()) d.appendChild(el('span','stale',' \u00B7 not today\u2019s edition yet'));
+        } else d.appendChild(document.createTextNode('Edition date not stated'));
+        if(pp.generated) d.appendChild(document.createTextNode(' \u00B7 generated '+pp.generated));
+      } else d.appendChild(document.createTextNode('Generated daily at 4:30 AM SGT'));
+      bar.appendChild(d);
+      if(pp.available){
+        var a=el('a','btn read','Open full page \u2197'); a.href=pp.file; a.target='_blank'; a.rel='noopener'; a.title='Opens '+pp.name+' in a new tab (best for reading on a phone)';
+        bar.appendChild(a);
+      }
+      var q='Give me a summary and the key stories from today\u2019s '+pp.name+' front page'+(pp.edition?' (edition of '+fmtEdition(pp.edition)+')':'')+'. For each key story, say what happened and why it matters.';
+      var g=el('a','btn ask','\u2726 Ask Grok about this paper'); g.href='https://grok.com/?q='+encodeURIComponent(q); g.target='_blank'; g.rel='noopener';
+      bar.appendChild(g);
+      p.appendChild(bar);
+      var wrap=el('div','paper-wrap'); wrap.id='pw-'+pp.id;
+      if(!pp.available){
+        var na=el('div','paper-na'); na.appendChild(el('div','big','\uD83D\uDCF0')); na.appendChild(el('h3','','Not available yet \u2014 generated daily at 4:30 AM SGT'));
+        na.appendChild(el('p','','The '+pp.name+' front page will appear here once today\u2019s edition has been generated and published.')); wrap.appendChild(na);
+      }
+      p.appendChild(wrap);
+      if(pp.available) p.appendChild(el('p','paper-hint','Tip: on a phone, \u201COpen full page\u201D gives the best reading experience.'));
+    }
+  }
+  function paperShow(pp){
+    return function(){
+      var w=document.getElementById('pw-'+pp.id);
+      if(pp.available && w && !w.querySelector('iframe')){
+        var f=document.createElement('iframe'); f.src=pp.file; f.title=pp.name+' front page'; f.setAttribute('sandbox','allow-scripts allow-popups allow-popups-to-escape-sandbox allow-same-origin'); f.setAttribute('referrerpolicy','no-referrer');
+        w.appendChild(f);
+      }
+      sizePaperFrame();
+    }
+  }
+  PAPERS.forEach(function(pp){
+    TABS.push({id:pp.id, label:pp.label, lede:'', paper:true, empty:!pp.available, count:function(){return null}, render:paperPanel(pp), onShow:paperShow(pp)});
+  });
   var SPORTS = [['cricket','Cricket','\uD83C\uDFCF'],['football','Football','\u26BD'],['golf','Golf','\u26F3'],['f1','F1','\uD83C\uDFCE\uFE0F'],['tennis','Tennis','\uD83C\uDFBE']];
   /* finance groups: [key, title, icon, open by default] */
   var FIN = [['snapshot','Market snapshot','\uD83D\uDCCA',true],['macro','Macro & markets','\uD83C\uDF10',true],['hedge_funds','Hedge fund trades','\uD83C\uDFE6',true],['equities','Equity themes','\uD83D\uDCC8',true],['voices','Macro voices on X','\uD835\uDD4F',true]];
@@ -4549,7 +4623,7 @@ noscript{display:block;padding:24px 16px;color:var(--text)}
     main.appendChild(askBar());
     TABS.forEach(function(t){
       var b=el('button','tab'); b.type='button'; b.id='tab-'+t.id; b.setAttribute('role','tab'); b.setAttribute('aria-controls','p-'+t.id);
-      b.appendChild(document.createTextNode(t.label)); b.appendChild(el('span','n',String(t.count())));
+      b.appendChild(document.createTextNode(t.label)); var cn=t.count(); if(cn!=null) b.appendChild(el('span','n',String(cn))); if(t.empty) b.classList.add('nopaper');
       b.addEventListener('click',function(){select(t.id,true)});
       b.addEventListener('keydown',function(e){
         var i=TABS.findIndex(function(x){return x.id===t.id}), j=-1;
@@ -4558,13 +4632,14 @@ noscript{display:block;padding:24px 16px;color:var(--text)}
       });
       tabs.appendChild(b);
       var p=el('section','panel'); p.id='p-'+t.id; p.setAttribute('role','tabpanel'); p.setAttribute('aria-labelledby','tab-'+t.id); p.hidden=true;
-      p.appendChild(el('p','lede',t.lede));
+      if(t.lede) p.appendChild(el('p','lede',t.lede));
       t.render(p);
       main.appendChild(p);
     });
     var saved=LS.get('newsdash.tab'); select(TABS.some(function(t){return t.id===saved})?saved:TABS[0].id, false);
     tabsOverflow(); window.addEventListener('resize',tabsOverflow);
   }
+  window.addEventListener('resize',sizePaperFrame); window.addEventListener('orientationchange',sizePaperFrame);
   function tabsOverflow(){var tb=document.getElementById('tabs'); tb.classList.toggle('ovf', tb.scrollWidth>tb.clientWidth+2)}
 
   function select(id, persist){
@@ -4573,6 +4648,9 @@ noscript{display:block;padding:24px 16px;color:var(--text)}
       b.setAttribute('aria-selected', on); b.tabIndex = on?0:-1;
       document.getElementById('p-'+t.id).hidden = !on;
     });
+    var cur=TABS.filter(function(t){return t.id===id})[0];
+    document.body.classList.toggle('paper-tab', !!(cur && cur.paper));
+    if(cur && cur.onShow) cur.onShow();
     var sel=document.getElementById('tab-'+id), tb=document.getElementById('tabs');
     if(sel && tb.scrollWidth>tb.clientWidth){ var left=sel.offsetLeft-(tb.clientWidth-sel.offsetWidth)/2; if(tb.scrollTo) tb.scrollTo({left:Math.max(0,left),behavior:persist?'smooth':'auto'}); else tb.scrollLeft=Math.max(0,left) }
     if(persist){ LS.set('newsdash.tab', id); window.scrollTo({top:0}) }
