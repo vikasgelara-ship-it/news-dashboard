@@ -100,6 +100,32 @@ article.item.tweet .sum{font-family:var(--serif);font-size:16px;line-height:1.5;
 .brief li{margin:0 0 5px;font-size:14.5px;line-height:1.55;color:#d9d3c9}
 .brief .bnote{margin:12px 0 0;padding:8px 10px;border-left:3px solid #c9a227;background:rgba(201,162,39,.08);color:#d8c98a;font-size:13px;border-radius:0 8px 8px 0}
 .brief .bsrc{margin:12px 0 0;font-size:12.5px;color:var(--muted)}
+/* sports: synthesised briefings (Read is the main action; sources are a quiet footnote) */
+.foot .src.plain{color:var(--muted);font-weight:500;overflow-wrap:anywhere}
+.acts.sp .btn.read{flex:1 1 100%;justify-content:center;min-height:44px;font-size:14.5px;background:rgba(45,212,191,.12);border-color:var(--teal);color:var(--teal)}
+.acts.sp .btn.read:hover{background:rgba(45,212,191,.22)}
+.srcs{margin:14px 0 0;font-size:12px;color:var(--muted);overflow-wrap:anywhere}
+.srcs summary{cursor:pointer;display:inline-block;list-style:none;opacity:.85}
+.srcs summary::-webkit-details-marker{display:none}
+.srcs summary::before{content:"\25B8 ";font-size:10px}
+.srcs[open] summary::before{content:"\25BE "}
+.srcs ul{margin:6px 0 0;padding-left:18px}
+.srcs li{font-size:12px;margin:0 0 3px;color:var(--muted)}
+.srcs a{color:var(--muted);text-decoration:underline;text-decoration-color:rgba(148,142,131,.45)}
+.srcs a:hover{color:var(--text)}
+.srcs .sn{margin:6px 0 0;font-size:12px}
+details.tour{border:1px solid rgba(45,212,191,.32);background:var(--card);border-radius:12px;margin:2px 12px 14px;overflow:hidden}
+details.tour>summary{list-style:none;cursor:pointer;padding:12px 14px;display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;user-select:none}
+details.tour>summary::-webkit-details-marker{display:none}
+details.tour .tl{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,.35);border-radius:999px;padding:1px 8px;white-space:nowrap}
+details.tour .tn{font-family:var(--serif);font-size:17px;font-weight:700;line-height:1.3;flex:1 1 180px;min-width:0;overflow-wrap:anywhere}
+details.tour .tm{font-size:12px;color:var(--muted);white-space:nowrap}
+details.tour .chev{color:var(--muted);transition:transform .2s;font-size:12px;margin-left:auto}
+details.tour[open]>summary .chev{transform:rotate(90deg)}
+details.tour .tb{padding:0 14px 14px;border-top:1px dashed var(--line)}
+details.tour .tsub{margin:12px 0 4px;font-size:12.5px;color:var(--muted)}
+details.tour .sum{margin:6px 0 4px}
+details.tour .brief{display:block;margin-top:8px;padding-top:8px;border-top:0}
 .askbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 16px;padding:12px;border:1px solid var(--line);background:var(--bg2);border-radius:14px}
 .askbar .hint{font-size:12px;color:var(--muted);flex:1 1 180px}
 .askbar .btn{min-height:40px;font-size:14px}
@@ -160,16 +186,16 @@ noscript{display:block;padding:24px 16px;color:var(--text)}
 {
  "meta": {
   "title": "News",
-  "generated_at": "2026-10-11T11:44:53+08:00",
+  "generated_at": "2026-10-11T12:36:15+08:00",
   "timezone": "Asia/Singapore",
   "note": "Times are ISO-8601 with offset (or date-only / absent when the source did not state a time). The page renders everything in SGT."
  },
  "sports": {
   "cricket": [
    {
-    "headline": "Renshaw's 190 turns first Test; SA 27-1 trailing by 363 overnight",
-    "teaser": "Matt Renshaw's career-best 190 and a 134-run ninth-wicket stand with Nathan Lyon lifted Australia from 124-6 to 390 all out in Durban; South Africa resume day three on 27-1.",
-    "source": "The Guardian",
+    "headline": "Renshaw's 190 turns the first Test in Durban: Australia 390, South Africa 27-1 and 363 behind",
+    "teaser": "From 124-6, Matt Renshaw's career-best 190 and a record 134-run ninth-wicket stand with Nathan Lyon lifted Australia to 390. Hazlewood then removed Rickelton for a duck; day three starts at 3:30pm SGT.",
+    "source": "Guardian · ESPNcricinfo · cricket.com.au · IOL",
     "url": "https://www.theguardian.com/sport/2026/oct/10/south-africa-australia-first-test-second-day-match-report",
     "published": "2026-10-10T15:51:00+00:00",
     "tags": [
@@ -177,62 +203,83 @@ noscript{display:block;padding:24px 16px;color:var(--text)}
      "Test",
      "Australia",
      "South Africa",
-     "Matt Renshaw",
-     "Geoff Lemon (Guardian)"
+     "Renshaw"
+    ],
+    "sources": [
+     {
+      "label": "The Guardian (Geoff Lemon): Renshaw's epic 190 helps Australia turn tables",
+      "url": "https://www.theguardian.com/sport/2026/oct/10/south-africa-australia-first-test-second-day-match-report"
+     },
+     {
+      "label": "ESPNcricinfo (Tristan Lavalette): Renshaw 190 lifts Australia to 390",
+      "url": "https://www.cricinfo.com/series/australia-in-south-africa-2026-27-1525634/south-africa-vs-australia-1st-test-1525659/match-report"
+     },
+     {
+      "label": "cricket.com.au (Josh Schonafinger): Renshaw's epic 190 powers Aussies",
+      "url": "https://www.cricket.com.au/news/4590129/south-africa-australia-first-test-kingsmead-durban-match-report-day-two-news-scores-video-highlights-toss-matthew-renshaw"
+     },
+     {
+      "label": "IOL / The Star: day 1-2 live blog and stumps report",
+      "url": "https://thestar.co.za/sport/cricket/2026-10-09-toss-australia-opt-to-bat-first-against-proteas-on-hot-durban-morning/"
+     }
     ],
     "brief": [
      {
       "h": "What happened",
       "b": [
-       "Australia were 124-6 on day one at Kingsmead; Matt Renshaw (46* overnight) then batted through two long sessions on day two to make 190.",
-       "He was last man out, driving off-spinner Simon Harmer to slip just after tea, with Australia all out for 390.",
-       "Pat Cummins helped add 86 for the seventh wicket before poking an old ball to slip for 43; Mitchell Starc was then bowled by Wiaan Mulder's ball that pitched on leg and took middle and off.",
-       "At 230-8, South Africa expected a quick finish. Instead Renshaw farmed the strike while Nathan Lyon defended.",
-       "Josh Hazlewood then had Ryan Rickelton caught at slip, leaving South Africa 27-1 at stumps, 363 behind."
+       "Australia resumed day two at Kingsmead on 187-6 and were all out for 390, after being 124-6 on a first day cut to 65.2 overs by bad light. South Africa's seamers had taken all six wickets on a green-tinged pitch on Friday.",
+       "Matt Renshaw made 190 off 397 balls, with 21 fours, in nearly eight hours, his highest Test score. His only other Test hundred was 184 against Pakistan at the SCG in January 2017.",
+       "He fell ten short of a maiden double-century, edging Simon Harmer to Aiden Markram at slip two balls into the last session.",
+       "Overnight pair Renshaw and Pat Cummins took their seventh-wicket stand to 86 before Wiaan Mulder had Cummins caught at slip for 43. Mulder then bowled Mitchell Starc for 6 to make it 230-8, with the second new ball just taken.",
+       "Renshaw and Nathan Lyon then added 134 for the ninth wicket, taking the score to 364 before Marco Jansen trapped Lyon lbw for 27.",
+       "South Africa's reply lasted 8.4 overs. Josh Hazlewood had Ryan Rickelton, driving at a ball not full enough, caught by Beau Webster in the slips for a duck. Bad light ended play at 27-1 (Markram 15*, David Bedingham 12*), 363 behind."
       ]
      },
      {
-      "h": "Key numbers and facts",
+      "h": "Key moments & numbers",
       "b": [
-       "190 is Renshaw's highest Test score; his previous best was 184.",
-       "His hundred came after 9 years and 280 days since his last. Only Bob Simpson and Warren Bardsley waited longer between Test centuries for Australia.",
-       "Renshaw and Lyon added 134 for the ninth wicket, Australia's second-highest ninth-wicket partnership.",
-       "Lyon made 27 from 92 balls. He faced 24 balls without scoring across 16 overs around lunch. It was his first century stand in 144 Tests, more than any cricketer had played before achieving one.",
-       "Durban records: highest score by an Australian there (past Phil Hughes' 160) and highest by any batter at No. 5 or lower.",
-       "Australia batted fewer than nine overs in the last session before bad light stopped play."
+       "The Renshaw-Lyon stand of 134 came off 286 balls. Cricinfo and the Guardian call it Australia's second-highest ninth-wicket partnership in Tests; cricket.com.au adds it is their best for that wicket against South Africa and the highest at Kingsmead, passing Mark Boucher and Fanie de Villiers' 86 in 1998.",
+       "Lyon's 27 came off 92 balls in 190 minutes. cricket.com.au says it was the first time in 184 innings that he had lasted over 60 balls in consecutive knocks, and the fourth-longest innings by an Australian No. 10. The Guardian notes he had never been part of a century stand in 144 Tests, the most Tests anyone had played before doing so.",
+       "Renshaw scored 174 of his runs with the last four batters, the most in a Test innings while batting with the tail since 2002 (Cricinfo).",
+       "He reached 100 off 204 balls, in the 93rd over just before lunch, and 150 with a reverse sweep off Keshav Maharaj. On 131 he was hit on the helmet grille by an Anrich Nortje bouncer (143kph per Cricinfo), passed a concussion check and carried on.",
+       "Records: the highest score by an Australian at Durban, beating Phil Hughes' 160, and the highest by any batter at No. 5 or lower at the ground (Guardian). Cricinfo calls it the fourth-highest by an Australian in South Africa.",
+       "Mulder finished with 4-68 and Jansen 3-68. Nortje took two wickets on day one, and Mulder, Jansen and Nortje shared nine wickets in the innings. South Africa's two spinners, Harmer and Maharaj, took one wicket from 48.2 overs.",
+       "Australia added 266 runs for the last four wickets. cricket.com.au points out that teams scoring over 350 first at Kingsmead are unbeaten there (nine wins, four draws)."
+      ]
+     },
+     {
+      "h": "How Renshaw did it",
+      "b": [
+       "The Guardian calls it 'patience, concentration and pacing'. Renshaw defended calmly, kept the score moving with singles and picked off poor balls.",
+       "Bavuma spread the field. Per the Guardian and cricket.com.au, Renshaw would defend or take a few runs early in each over and then turn over the strike from the fourth or fifth ball, leaving Lyon to face only one or two deliveries. Lyon did not score for 16 overs either side of lunch.",
+       "Bavuma did not bring the field up until 90 minutes into the second session, and then only after a request from Maharaj (cricket.com.au). Mulder admitted that 'it just seemed like he got off strike so easily'.",
+       "Renshaw said his leave had always been his strength; cricket.com.au says his sweeping, conventional and reverse, made South Africa's spinners look unthreatening. Even Mulder said he 'left well'."
       ]
      },
      {
       "h": "Why it matters",
       "b": [
-       "Renshaw's innings rescued Australia from peril and moved them to dominance in the first Test.",
-       "South Africa's attack lost its bite: Marco Jansen and Anrich Nortje bowled tough spells, but by the second session the pitch had 'gone to sleep' and even part-timer Aiden Markram was bowling.",
-       "Temba Bavuma's decision to spread the field for Renshaw let him rotate strike. The Guardian notes this tactic often backfires against batters with the right temperament, as it did here."
+       "Australia's batting was reshuffled for the match. Cameron Green is injured, so Nic Maddinson returned as an opener alongside Travis Head and made a 33-ball duck on day one, and Renshaw moved down to No. 5. Cricinfo says he had played there only four times before.",
+       "The Guardian says Renshaw has 'a proper second chance' but where he bats next is still an open question: he may have to go back to opening to make room for Green, who was the most convincing batter in Australia's previous series.",
+       "South Africa are without Kagiso Rabada and Lungi Ngidi, both with hamstring injuries (cricket.com.au). That meant Mulder, a medium-pacer, took the new ball on day one, which IOL called a 'huge surprise' for a country known for fast bowlers.",
+       "Australia lost last year's World Test Championship final to South Africa; Cummins said at the toss 'they got the better of us a year ago'. Cricinfo notes it is Australia's first Test series in South Africa since the 2018 sandpaper scandal, and the crowd was sparse and the atmosphere subdued."
       ]
      },
      {
-      "h": "Selection story behind it",
+      "h": "What's next",
       "b": [
-       "Opening with Nic Maddinson was a bust, but it pushed Renshaw down to No. 5, where he thrived.",
-       "Usman Khawaja went from No. 5 to the top of the order, then Travis Head did the same to replace him.",
-       "Cam Green was the most convincing batter in Australia's previous series but is injured. Renshaw may have to shuttle back to opener when Green returns."
-      ]
-     },
-     {
-      "h": "What to watch next",
-      "b": [
-       "Day three (Sunday): South Africa resume on 27-1, 363 behind.",
-       "Whether Australia's bowlers can build on Hazlewood's early strike, with the Guardian noting bad light has repeatedly stopped play.",
-       "Whether Renshaw gets a settled batting slot, with the No. 5 versus opener question likely to return next week."
+       "Day three starts at 9:30am local time (3:30pm SGT) on Sunday 11 October. South Africa are 27-1 with Markram and Bedingham, who survived a review for lbw (a thick inside edge) late on day two. The match runs to 13 October.",
+       "Cricinfo expects the pitch to spin significantly later in the match, which could bring Lyon, Harmer and Maharaj into play.",
+       "Second Test: 18-22 October at St George's Park, Gqeberha. Third Test: 27-31 October at Newlands, Cape Town. Josh Inglis joins the Australian squad from the second Test (cricket.com.au squad list)."
       ]
      }
     ],
     "id": "1743dd52"
    },
    {
-    "headline": "West Indies chase 250 to level India T20I series; Indore third match tonight",
-    "teaser": "Shai Hope's unbeaten 102 off 45 and Sherfane Rutherford's 84 off 37 powered West Indies to 252-4 in Ranchi, their highest successful T20I chase. Third T20I is Sunday in Indore.",
-    "source": "Al Jazeera (AP)",
+    "headline": "West Indies' record 252 chase levels the India T20I series at 1-1; third T20I in Indore tonight",
+    "teaser": "Shai Hope's unbeaten 102 off 45 and Sherfane Rutherford's 84 off 37 chased down India's 249-5 in Ranchi with nine balls to spare. The third T20I starts at 9:30pm SGT.",
+    "source": "Al Jazeera/AP · ESPNcricinfo · India Today · Wikipedia",
     "url": "https://www.aljazeera.com/sports/2026/10/10/hopes-hundred-fires-west-indies-to-record-t20-win-over-india",
     "published": "2026-10-10T08:21:22+00:00",
     "tags": [
@@ -240,53 +287,87 @@ noscript{display:block;padding:24px 16px;color:var(--text)}
      "T20I",
      "India",
      "West Indies",
-     "Shai Hope",
-     "AP"
+     "Shai Hope"
+    ],
+    "sources": [
+     {
+      "label": "Al Jazeera / Associated Press: West Indies beat India as Hope's hundred secures record T20 chase",
+      "url": "https://www.aljazeera.com/sports/2026/10/10/hopes-hundred-fires-west-indies-to-record-t20-win-over-india"
+     },
+     {
+      "label": "ESPNcricinfo (Sidharth Monga): Hope 102*, Rutherford 84 help West Indies pull off their highest T20I chase",
+      "url": "https://www.cricinfo.com/series/west-indies-in-india-2026-27-1529215/india-vs-west-indies-2nd-t20i-1529231/match-report"
+     },
+     {
+      "label": "ESPNcricinfo (Sidharth Monga): 3rd T20I preview",
+      "url": "https://www.cricinfo.com/series/west-indies-in-india-2026-27-1529215/india-vs-west-indies-3rd-t20i-1529232/match-preview"
+     },
+     {
+      "label": "India Today: 3rd T20I preview, pitch, weather, predicted XIs",
+      "url": "https://www.indiatoday.in/sports/cricket/story/ind-vs-wi-3rd-t20i-indore-preview-pitch-report-weather-forecast-predicted-xis-3014350-2026-10-11"
+     },
+     {
+      "label": "Wikipedia: West Indian cricket team in India in 2026-27 (scores and fixtures)",
+      "url": "https://en.wikipedia.org/wiki/West_Indian_cricket_team_in_India_in_2026%E2%80%9327"
+     }
     ],
     "brief": [
      {
       "h": "What happened",
       "b": [
-       "Playing in Ranchi on Friday, West Indies chased India's 249-5 with 252-4, winning by six wickets with nine balls to spare.",
-       "West Indies captain Shai Hope hit an unbeaten 102 off 45 balls (nine sixes, six fours), his second T20 hundred.",
-       "Sherfane Rutherford made 84 off 37 (seven sixes, seven fours). Romario Shepherd finished it with 34 off 13.",
-       "The five-match series is now level at 1-1."
+       "In the second T20I at Ranchi on Friday 9 October, West Indies chased India's 249-5 with 252-4 in 18.3 overs, winning by six wickets with nine balls to spare. The five-match series is level at 1-1.",
+       "It is West Indies' highest successful T20I chase and the highest successful chase against India. AP calls it the second-highest in T20I history, behind South Africa's 259-4 against West Indies in March.",
+       "Shai Hope was unbeaten on 102 off 45 balls with nine sixes and six fours. It was his second T20I hundred and, per AP, his third century against India in four innings across T20Is and ODIs.",
+       "West Indies won the toss and fielded. India's 249-5 was built by Sanju Samson (82 off 41, four sixes and nine fours) and a 97-run stand in 43 balls with Ishan Kishan (43 off 22), then a late burst of 83 in 32 balls from Shreyas Iyer (40 off 18) and Tilak Varma (44 not out off 18), who hit a hat-trick of sixes in the last over, which went for 23."
       ]
      },
      {
-      "h": "Key numbers and facts",
+      "h": "Key moments & numbers",
       "b": [
-       "It is West Indies' highest successful T20I chase and the second-highest successful chase in all T20 history; South Africa's 259-4 against the West Indies in March is the highest.",
-       "Hope and Rutherford added 120 off 54 balls after West Indies had lost three wickets in the powerplay.",
-       "Hope reached 50 off 24 and 100 off 45, the second fifty coming off 21 balls. It was his third century against India in four innings across T20Is and ODIs.",
-       "India's 249-5 was its eighth-highest T20 total. Sanju Samson made 82 off 41, with a 50 off 21 balls; Ishan Kishan added 43 off 22.",
-       "Shreyas Iyer (40 off 18) and Tilak Varma (44* off 18) put on 83 off 32 balls at the end.",
-       "Roston Chase took 3-24; Mayank Yadav took 3-36, including Pooran for 4 and a golden duck for Hetmyer."
+       "India took 79-1 in the powerplay and reached 100 in 8.1 overs. Roston Chase then dismissed Abhishek Sharma inside the powerplay, bowled Kishan, and bowled Shivam Dube, who had been promoted, to finish with 3-24 from four overs. Cricinfo calls it a 'defensive bowling masterclass' of hard lengths from over the wicket to left-handers.",
+       "Chase's four overs apart, India scored at 14.06 an over against West Indies' 13.62 (Cricinfo).",
+       "West Indies lost three wickets in the powerplay. Mayank Yadav bowled Kamil Pooran for 4 and Shimron Hetmyer for a golden duck in the first over, and later bowled Rovman Powell (24), finishing with 3-36 from three overs. West Indies were 58-3 in the sixth over.",
+       "Hope reached 50 in 24 balls and took Axar Patel, India's best powerplay bowler since the World Cup, for two sixes and a four in the fourth over.",
+       "Sherfane Rutherford then joined him and made 84 off 37 (seven sixes, seven fours), including 23 off an Axar over. Together they added 120 off 54 balls and Rutherford took the powerplay to 72-3. Rutherford reached 1,000 T20I runs in the match (Wikipedia).",
+       "India missed a chance when Mayank dropped Rutherford at short fine leg with 128 needed off the last 10 overs. Cricinfo has him on 39 off 19, India Today on 38 off 18.",
+       "Kuldeep Yadav bowled Rutherford out in the 15th over with 72 needed off 35, but Romario Shepherd made 34 off 13 and Hope hit his eighth and ninth sixes in the 19th over to finish. Kuldeep's four overs cost 53 runs.",
+       "West Indies scored 204 runs in boundaries, the most they have ever made in a T20I and more than India's 148. The match produced 501 runs in 38.3 overs, the second-highest aggregate in T20Is, behind South Africa v West Indies at Centurion three years ago.",
+       "India played without Jasprit Bumrah. Cricinfo recalls that in the World Cup semi-final India's 253 needed Bumrah's best to defend it against England."
+      ]
+     },
+     {
+      "h": "The series so far",
+      "b": [
+       "ODIs, India won 2-1: India won the first by eight wickets (300-2 chasing 295-7; Virat Kohli 139 not out, Justin Greaves' maiden hundred for West Indies). In the second, West Indies made 405-7 and India chased 406-2 in 43.3 overs behind Shubman Gill's 223 not out. West Indies won the third by five wickets, chasing 352 after India's 351-7 (KL Rahul 129 not out), with Hope unbeaten on 162.",
+       "First T20I in Lucknow, 6 October: India won by eight wickets, chasing 172 in 14.4 overs. Iyer made 102 not out off 43, his maiden T20I hundred. Naman Dhir took 3-31 on debut, and Rutherford made 56 for West Indies.",
+       "Cricinfo notes that all five completed matches on the tour before tonight had been won by the chasing side."
       ]
      },
      {
       "h": "Why it matters",
       "b": [
-       "A total of 249 did not hold: the chase is the second-highest in T20 history.",
-       "India still lost despite scoring 79-1 in the powerplay and reaching 100 in 8.1 overs. The late-innings bowling and the middle overs in the chase decided it.",
-       "Former India spinner Ravichandran Ashwin criticised Hope's tactics, saying he bowled Akeal Hosein for three straight powerplay overs to Samson, 'like serving a hungry lion a goat on a platter'."
+       "India's batting has been very strong. Iyer has an unbeaten 102 and a quick 40, and Samson's 82 in Ranchi has strengthened his case, according to India Today. But the bowling has leaked runs, and it again raised questions about defending big totals in dew.",
+       "Cricinfo says that India's policy of using only three specialist bowlers and four overs from a finger-spinner can be punished, and that Kuldeep's effectiveness has been 'on the wane' as matches get shorter.",
+       "India Today says Arshdeep Singh has conceded 79 runs in the first two matches for one wicket; West Indies' Shamar Springer conceded 64 in his four overs in Ranchi.",
+       "Hope has two centuries on the tour according to India Today, and Rutherford has scored fifties in both T20Is, so West Indies' top order has found form."
       ]
      },
      {
-      "h": "What to watch next",
+      "h": "What's next",
       "b": [
-       "Third T20I: Holkar Stadium, Indore, Sunday. Start 7:00pm IST, which is 9:30pm SGT.",
-       "Whether India's bowlers regroup. A Times of India headline reports Gautam Gambhir sending a 'blunt message' after India's bowling struggles.",
-       "Whether Hope and Rutherford can repeat the powerplay recovery against Mayank Yadav and Kuldeep Yadav, who both took wickets in Ranchi."
+       "Third T20I: Sunday 11 October at Holkar Stadium, Indore. Toss 6:30pm IST, play 7pm IST (9:30pm SGT). Indore has not hosted T20 cricket for two years; the last three ODIs there had scores of 399, 385 and 337, and the ground has small boundaries (Cricinfo).",
+       "In Indore, 200-plus scores have been defended in all four matches where that mark was passed, Cricinfo says, so the toss and dew could decide it. India Today forecasts clear skies and no rain, with dew likely later.",
+       "Likely changes (predicted, not confirmed): India may bring in Nitish Kumar Reddy for Dube, and West Indies may use Amir Jangoo in place of Pooran.",
+       "Fourth T20I: Wednesday 14 October in Hyderabad. Fifth T20I: Saturday 17 October in Bengaluru. Both start at 7pm IST (9:30pm SGT)."
       ]
      }
     ],
     "id": "a6376723"
    },
    {
-    "headline": "Rahmat Shah's unbeaten 84 steadies Afghanistan against Bangladesh in Abu Dhabi Test",
-    "teaser": "Afghanistan reached 211-4 on day two of the one-off Test at Sheikh Zayed Stadium, 135 runs behind Bangladesh's 346. Skipper Rahmat Shah is 84 not out.",
-    "source": "Dawn (AFP)",
+    "headline": "Rahmat Shah's unbeaten 84 keeps Afghanistan in the Abu Dhabi Test; they trail Bangladesh by 135",
+    "teaser": "After bowling Bangladesh out for 346, Afghanistan reached 211-4 on day two of the one-off Test, with captain Rahmat Shah 84* and wicketkeeper Ikram Alikhil 26*.",
+    "source": "Dawn/AFP · Cricbuzz · ESPNcricinfo · ACB",
     "url": "https://www.dawn.com/news/2036285/afghanistan-skipper-rahmat-thwarts-bd-in-abu-dhabi-test",
     "published": "2026-10-11T02:37:09+00:00",
     "tags": [
@@ -294,601 +375,844 @@ noscript{display:block;padding:24px 16px;color:var(--text)}
      "Test",
      "Afghanistan",
      "Bangladesh",
-     "Rahmat Shah",
-     "AFP"
+     "Dawn"
     ],
-    "note": "Short briefing: the only full report found was a ~300-word AFP wire story, so detail is limited to what it states.",
+    "sources": [
+     {
+      "label": "Dawn (AFP): Afghanistan skipper Rahmat thwarts BD in Abu Dhabi Test",
+      "url": "https://www.dawn.com/news/2036285/afghanistan-skipper-rahmat-thwarts-bd-in-abu-dhabi-test"
+     },
+     {
+      "label": "Cricbuzz: Rahmat Shah, Abdul Malik lead Afghanistan's strong reply on Day 2",
+      "url": "https://www.cricbuzz.com/cricket-news/140461/rahmat-shah-abdul-malik-lead-afghanistans-strong-reply-on-day-2"
+     },
+     {
+      "label": "ESPNcricinfo (Mohammad Isam): Rahmat, Malik fifties lead Afghanistan's strong reply",
+      "url": "https://africa.espn.com/cricket/series/24801/report/1555116/day/2/afghanistan-vs-bangladesh-only-test-24801"
+     },
+     {
+      "label": "Afghanistan Cricket Board: schedule announcement (8 Sep 2026)",
+      "url": "https://acb.af/en-US/post/afghanistan-to-host-bangladesh-and-zimbabwe-for-multi-format-series-in-uae"
+     }
+    ],
     "brief": [
      {
       "h": "What happened",
       "b": [
-       "Bangladesh resumed day two on 317-8 and were bowled out for 346; their last two wickets lasted only 8.2 overs.",
-       "Afghanistan's openers fell cheaply: Sediqullah Atal made 17 and Shahidullah Kamal 20, both to the Bangladesh pace pair Hasan Mahmud and Ebadot Hossain.",
-       "Skipper Rahmat Shah then took charge, adding 70 for the third wicket with Abdul Malik (62, his maiden Test fifty).",
-       "At stumps Afghanistan were 211-4, 135 behind, with Rahmat on 84 from 186 balls and wicketkeeper Ikram Alikhil on 26."
+       "On day two of the one-off Test at Sheikh Zayed Stadium, Abu Dhabi (Saturday 10 October), Afghanistan finished on 211-4 in 79 overs, 135 runs behind Bangladesh's first-innings 346.",
+       "Bangladesh resumed on 317-8 and added only 29 more, bowled out in 92.3 overs. Mohammad Saleem Safi trapped Taijul Islam lbw (Cricbuzz) or caught behind (ESPNcricinfo) for 9, and Yamin Ahmadzai took the last wicket when Ebadot Hossain was caught at point.",
+       "Nayeem Hasan was unbeaten on 35, the highest score of his Test career. Saleem finished with 4-82, Ahmadzai 3-79 and Ismat Alam 2-20.",
+       "In reply, opener Sediqullah Atal was caught at first slip off Hasan Mahmud for 17, and Shahidullah Kamal (20 off 44) top-edged a hook off Ebadot to be caught by Mahmud at fine leg.",
+       "Abdul Malik and captain Rahmat Shah put on 70 for the third wicket. Malik made a maiden Test fifty (62 off 120, one six, five fours) before edging Ebadot behind in the first over after tea.",
+       "Next over, former captain Hashmatullah Shahidi was stumped off Mehidy Hasan Miraz for a duck, making it 139-4. Rahmat and wicketkeeper Ikram Alikhil then batted out the day with an unbroken 72 for the fifth wicket."
       ]
      },
      {
-      "h": "Key numbers and facts",
+      "h": "Key moments & numbers",
       "b": [
-       "Bangladesh 346 all out. Afghanistan bowlers: Mohammad Saleem 4-82, Yamin Ahmadzai 3-79, Ismat Alam 2-20.",
-       "Afghanistan 211-4 at the close of day two.",
-       "Rahmat Shah 84* (186 balls). Abdul Malik 62, including a six and four fours.",
-       "Unbroken fifth-wicket stand of 72 between Rahmat and Alikhil in the final session.",
-       "Ebadot Hossain was Bangladesh's best bowler with 2-50.",
-       "Former skipper Hashmatullah Shahidi was stumped by Litton Das off Mehidy Hasan Miraz for a duck, to make it 139-4."
+       "Rahmat is on 84 off 186 balls (eight fours and a six). Alikhil has 26 off 91 balls.",
+       "Bangladesh wicketkeeper Litton Das was central to the afternoon: a diving catch to his right to dismiss Malik, then a stumping to remove Shahidi.",
+       "Afghanistan's batting was slow and careful. Alikhil started with two boundaries and then reined himself in for nine overs. After Rahmat's two fours off Nayeem in the 60th over there was a 17-over spell with no boundary, until Rahmat hit Mehidy for two fours in a row in the 77th over to bring up the 200.",
+       "Ebadot was Bangladesh's best bowler on the day, taking 2-50.",
+       "Cricbuzz says the bounce kept varying from one ball to the next. Dawn (AFP) describes a 'dry and hot day' with 'probing pace and spin'.",
+       "Atal survived a caught-behind appeal in the third over. Replays showed an inside edge, but Bangladesh did not review (ESPNcricinfo).",
+       "ESPNcricinfo says it was the first time a fast bowling attack had taken nine wickets in a Test innings in Abu Dhabi. Saleem had taken 6-140 against India in Afghanistan's previous Test, in June.",
+       "Bangladesh's first-innings scorers: Tanzid Hasan Tamim 83, Shadman Islam 67, Litton 53, Nayeem 35 not out (Cricbuzz)."
       ]
      },
      {
       "h": "Why it matters",
       "b": [
-       "The conditions were dry and hot against what Dawn calls probing pace and spin, so Rahmat's innings kept Afghanistan in the contest.",
-       "AFP says the unbroken fifth-wicket stand boosted hopes of a first-innings lead; Afghanistan are 135 runs short of Bangladesh's total."
+       "The match is described by Cricbuzz as 'evenly poised'. Afghanistan have six wickets in hand and, per Dawn, the stand between Rahmat and Alikhil has raised 'hopes of a first innings lead'.",
+       "Bangladesh's quick bowlers have done the early work, but their spin attack of Mehidy, Taijul and Nayeem has not yet broken through this partnership.",
+       "This is the first Test of a long home season for Afghanistan in the UAE. The BCB said it was Bangladesh's first experience of red-ball cricket in the UAE, against an Afghan side that 'has traditionally performed well in these conditions'."
       ]
      },
      {
-      "h": "What to watch next",
+      "h": "What's next",
       "b": [
-       "Day three: can Rahmat convert 84* into a century and can Afghanistan close the 135-run gap?",
-       "Bangladesh's pace pair and Mehidy Hasan Miraz against the lower-middle order.",
-       "Whether Afghanistan secure a first-innings lead in the one-off Test."
+       "Day three is Sunday 11 October and the match is scheduled to run to 13 October. The key question is how many more runs Rahmat and Alikhil can add, and whether Bangladesh can break through in the first session.",
+       "Afterwards, the ACB lists an ODI tri-series in the UAE between Afghanistan, Bangladesh and Zimbabwe from 17 to 23 October, followed by three T20Is against Zimbabwe (27 and 29 October, 1 November) and two Tests (5-9 and 13-17 November)."
       ]
      }
     ],
+    "note": "Based on four sources; all scores are day-two close, and day-three play had not started when this was written.",
     "id": "dcee7f91"
    }
   ],
   "football": [
    {
-    "headline": "Man Utd 1-1 Spurs: Solanke's stoppage-time header rescues 10-man Tottenham",
-    "teaser": "Bryan Mbeumo put United ahead in the 73rd minute; Rodrigo Bentancur was sent off for a headbutt motion at Luke Shaw, but Dominic Solanke levelled in the 90+2nd. United were booed off.",
-    "source": "Sky Sports",
-    "url": "https://www.skysports.com/football/news/13592777/man-utd-1-1-tottenham-dominic-solanke-rescues-dramatic-draw-for-10-man-spurs-at-old-trafford",
-    "published": "2026-10-10T19:30:00+01:00",
+    "headline": "Man City, found guilty on financial rules, visit Liverpool tonight at 11:30pm SGT",
+    "teaser": "Premier League leaders City play their first match since an independent commission found them guilty of serious financial-rule breaches. Liverpool are without Isak and Gakpo; City have Haaland fit but Foden suspended.",
+    "source": "Al Jazeera · Sky Sports · This Is Anfield · BBC Sport · Premier League",
+    "url": "https://www.aljazeera.com/sports/2026/10/10/liverpool-man-city-premier-league-isak-haaland-predictions-financial-breach",
+    "published": "2026-10-10T00:00:00+00:00",
     "tags": [
      "Football",
      "Premier League",
-     "Manchester United",
-     "Tottenham",
-     "Dominic Solanke",
-     "Sky Sports"
+     "Man City",
+     "Liverpool",
+     "Anfield"
+    ],
+    "sources": [
+     {
+      "label": "Al Jazeera (AFP/Reuters): Liverpool vs Man City preview",
+      "url": "https://www.aljazeera.com/sports/2026/10/10/liverpool-man-city-premier-league-isak-haaland-predictions-financial-breach"
+     },
+     {
+      "label": "Sky Sports: Liverpool vs Man City team news and preview",
+      "url": "https://www.skysports.com/football/news/13595453/liverpool-vs-man-city-how-to-watch-tv-channel-live-stream-now-tv-team-news-and-score-prediction"
+     },
+     {
+      "label": "This Is Anfield: team news, likely line-ups",
+      "url": "https://www.thisisanfield.com/2026/10/liverpool-vs-man-city-preview-team-news-lineups-watch/"
+     },
+     {
+      "label": "Premier League statement on the Manchester City commission decision (29 Sep)",
+      "url": "https://www.premierleague.com/en/news/4727779/premier-league-statement-manchester-city-fc/"
+     },
+     {
+      "label": "BBC Sport: Man City confirm appeal against guilty verdict",
+      "url": "https://www.bbc.com/sport/football/articles/cqn7470513n0o"
+     }
     ],
     "brief": [
      {
-      "h": "What happened",
+      "h": "What's happening",
       "b": [
-       "Spurs dominated the opening hour at Old Trafford but wasted chances, with Dominic Solanke particularly guilty of spurning them.",
-       "Bryan Mbeumo broke the deadlock in the 73rd minute, combining with Matheus Cunha and turning to finish low across Antonin Kinsky.",
-       "Five minutes later Rodrigo Bentancur was sent off for a headbutt motion towards Luke Shaw, sparking a touchline brawl between both benches.",
-       "Spurs still equalised: in the 90+2nd minute Solanke glanced in a Sandro Tonali cross, with Martinez losing sight of the ball and Senne Lammens static in goal."
+       "Liverpool host Manchester City at Anfield on Sunday 11 October, kick-off 4:30pm BST (11:30pm SGT), live on Sky Sports. It is the first City match since an independent commission found them guilty of serious breaches of the Premier League's financial rules.",
+       "City top the table with 15 points from five wins. Liverpool, under Andoni Iraola, are unbeaten (two wins, three draws) on nine points and, per Sky and Al Jazeera, sit sixth, six behind City.",
+       "Al Jazeera expects a hostile reception: a social-media post urged fans to gather near the ground hours before kick-off with flags, banners and flares for the City coach, and Merseyside Police say a policing operation will be in place. Gary Neville said it will be 'a brutal day'."
       ]
      },
      {
-      "h": "Key numbers and facts",
+      "h": "The verdict and the appeal",
       "b": [
-       "Final score 1-1. United have 6 points from 6 games, their fewest at this stage since 1986-87, and their worst start to a season in 40 years.",
-       "Spurs are off the foot of the table but remain in the relegation zone, without a league win since May.",
-       "Missed chances for Spurs: 3' Bergvall pass and Solanke miss; 21' Kudus hooked wide; 42' Gallagher took too long; 51' Solanke ballooned from six yards.",
-       "United were booed off at half time and full time.",
-       "It was Solanke's first game as captain."
+       "On 29 September the Premier League announced that the commission found City guilty of all the charges on serious financial-rule breaches between 2009/10 and 2017/18, and most charges about failing to co-operate with the investigation (three of four upheld). BBC says City were found guilty of 114 of 115 charges.",
+       "The commission found City arranged 'sham' sponsorship and other contracts, with part of the money secretly funded by the owner's company ADUG, plus a circular image-rights arrangement with Fordham. The Premier League says this inflated revenue and cut costs by more than £900m. BBC reports a 'disguised funding scheme' of £830.69m, so the sources differ on the figure.",
+       "The commission also found City filed misstated accounts and concealed their true finances from auditors and regulators, and that they would have breached both the Premier League's and UEFA's spending limits 'by a very substantial amount'.",
+       "The Premier League began investigating in December 2018 and issued the complaint in February 2023; the hearing ran 42 days and ended in December 2024.",
+       "City lodged an appeal on Thursday 1 October, calling the ruling one with 'clear material errors, of law, principle and fact' that is 'unsafe'. A new three-person commission will hear it in private. BBC says the rules call for a hearing within 12 weeks (24 December), but that deadline can be disapplied.",
+       "Sanctions are decided in a separate hearing. BBC says precedent suggests they come after the appeal. Al Jazeera lists points deductions, fines, transfer embargoes and even relegation as possible punishments if the verdict is upheld.",
+       "Outside the case: the FA says the verdict has 'significant implications for the integrity of the game' and will 'take action where appropriate'. Etihad Airways says it is considering legal action against the Premier League over the findings' implications for it, and MPs on two parliamentary committees have written to HMRC and the government (BBC)."
       ]
      },
      {
-      "h": "What the managers and pundits said",
+      "h": "Team news",
       "b": [
-       "Michael Carrick: 'With the ball, without the ball, we were off it.' He said he is not hiding from the points tally and wants United to be 'more streetwise and stubborn'.",
-       "Roberto De Zerbi: 'for the first time we showed we're a team' and he wants to see that character every week.",
-       "Gary Neville said Spurs deserved a point and that Carrick has a lot to think about after a 'worrying' performance.",
-       "Jamie Redknapp saw no connections in midfield and said United look 'devoid of any confidence, ideas, or patterns of play'."
+       "Liverpool: Alexander Isak (thigh, had scored four in the first five league games) and Cody Gakpo (ankle) are out after international duty; Iraola does not think either is long-term. Jeremy Jacquet is available. Federico Chiesa is back in training.",
+       "Iraola said Liverpool 'probably only have Koumas' as a proper No. 9 but have wingers who have played up front.",
+       "City: Phil Foden is suspended for the last game of a three-match ban after his red card in the Manchester derby. Erling Haaland is fit after limping off for Norway; Enzo Maresca said he is 'ready for Anfield'. Antoine Semenyo (ankle) and Nico O'Reilly (muscle) were doubts, though Semenyo was expected to feature (This Is Anfield).",
+       "The predicted line-ups differ between outlets. Al Jazeera has Frimpong, Munoz and Barcola in Liverpool's side and Nunes, Fernandez, Doku, Cherki and Ndiaye in City's, while This Is Anfield has Araujo at right-back and Semenyo starting. Treat both as guesses.",
+       "Referee: Chris Kavanagh."
+      ]
+     },
+     {
+      "h": "Numbers",
+      "b": [
+       "Opta's supercomputer gives City a 40.7% chance of winning, Liverpool 34.6% and a draw 24.7% (Al Jazeera).",
+       "Premier League head-to-head: 58 matches, Liverpool 23 wins, City 14, draws 21. Last Premier League meeting: Liverpool 1-2 City on 8 February 2026. They last met on 4 April in the FA Cup quarter-final, which City won 4-0 with a Haaland hat-trick and a goal from Semenyo.",
+       "City have won in front of a capacity Anfield crowd only once in 24 meetings across all competitions, 2-1 last season (This Is Anfield).",
+       "Haaland has 169 goals in 205 games for City (Al Jazeera)."
       ]
      },
      {
       "h": "Why it matters",
       "b": [
-       "Sky calls it a result that leaves 'more questions than answers' for both clubs.",
-       "United's start is historically poor, and Spurs' predicament is 'arguably more damning still' because they have not won since May."
+       "Al Jazeera says the season is 'in stasis' awaiting the ruling on the appeal and any sanction. Rivals argue the wrongdoing helped build City's golden era under Pep Guardiola, who stepped down at the end of last season; Enzo Maresca was appointed in June.",
+       "Sky's analyst says there is 'little evidence' the verdict has destabilised City's playing group and that a siege mentality is possible, which is why he finds City 'tantalising' at 7/5 to win.",
+       "At Old Trafford on Saturday, United fans chanted 'You're going down with the City', according to the Guardian, a sign of how the case is shaping the mood around the league.",
+       "Maresca has said repeatedly 'when we win this appeal'. Iraola said the worst part is the uncertainty: 'no one knows what's going to happen'."
       ]
      },
      {
-      "h": "What to watch next",
+      "h": "What's next",
       "b": [
-       "Whether Carrick can quickly fix a start he called 'challenging', with Neville saying a big week lies ahead.",
-       "Whether De Zerbi's 'different character' turns into a first Spurs league win of the season.",
-       "Any suspension for Bentancur after the red card (the report does not say)."
+       "Liverpool start a run of four league games against the current top four: City, then Brentford, Brighton and Arsenal (This Is Anfield). Liverpool also play LASK in the Champions League on Wednesday.",
+       "City host Paris Saint-Germain in the Champions League on Wednesday 14 October; the appeal and sanction hearings continue in private."
+      ]
+     }
+    ],
+    "note": "Result not known at time of writing; this is a preview. Source figures differ on the £ amount of the funding scheme.",
+    "id": "177bafcc"
+   },
+   {
+    "headline": "Man Utd 1-1 Spurs: Solanke's stoppage-time header rescues 10-man Tottenham after Bentancur red",
+    "teaser": "Mbeumo put United ahead in the 73rd minute, Bentancur was sent off for a headbutt motion on Shaw, and Solanke equalised in the 92nd. United have their worst start in 40 years and Spurs are still winless.",
+    "source": "Sky Sports · The Guardian",
+    "url": "https://www.skysports.com/football/news/13592777/man-utd-1-1-tottenham-dominic-solanke-rescues-dramatic-draw-for-10-man-spurs-at-old-trafford",
+    "published": "2026-10-10T19:30:00+01:00",
+    "tags": [
+     "Football",
+     "Premier League",
+     "Man Utd",
+     "Tottenham",
+     "Solanke"
+    ],
+    "sources": [
+     {
+      "label": "Sky Sports: Man Utd 1-1 Tottenham report and key moments",
+      "url": "https://www.skysports.com/football/news/13592777/man-utd-1-1-tottenham-dominic-solanke-rescues-dramatic-draw-for-10-man-spurs-at-old-trafford"
+     },
+     {
+      "label": "The Guardian (Jamie Jackson): Solanke strikes late as 10-man Spurs salvage point",
+      "url": "https://www.theguardian.com/football/2026/oct/10/manchester-united-tottenham-premier-league-match-report"
+     },
+     {
+      "label": "Sky Sports: live Premier League table",
+      "url": "https://www.skysports.com/football/manchester-united-vs-tottenham-hotspur/table/559502"
+     },
+     {
+      "label": "Squawka: Atletico Madrid v Manchester United preview",
+      "url": "https://www.squawka.com/us/news/champions-league/match-preview-atletico-madrid-vs-manchester-united-13-10-26-champions-league/"
+     }
+    ],
+    "brief": [
+     {
+      "h": "What happened",
+      "b": [
+       "Manchester United 1-1 Tottenham at Old Trafford on Saturday 10 October. Bryan Mbeumo scored in the 73rd minute; Rodrigo Bentancur was sent off in the 78th; Dominic Solanke equalised in the 92nd.",
+       "Spurs were the better side for most of the match, but could not finish. Both Sky and the Guardian describe a first hour of Tottenham chances and a disjointed United.",
+       "Mbeumo's goal came when Luke Shaw fed Matheus Cunha down the left and Cunha crossed to Mbeumo, who spun and finished low past Antonin Kinsky (Sky has Cunha and Mbeumo combining in the box).",
+       "Bentancur lunged at Shaw with a scissor challenge, Shaw chased and shoved him, and the Spurs midfielder pushed his head into Shaw's. Both benches got involved. Referee Stuart Attwell sent off Bentancur, and booked Shaw (the Guardian thought he was lucky not to be sent off) and Jan Paul van Hecke.",
+       "In stoppage time Sandro Tonali crossed from the left, Lisandro Martinez failed to clear and Solanke outfought him to glance a header past Senne Lammens."
+      ]
+     },
+     {
+      "h": "Key moments & numbers",
+      "b": [
+       "3': Lucas Bergvall seized on a poor Lammens pass and put Solanke through, but he could not score.",
+       "21': Savio set up Mohammed Kudus, who hooked his first-time shot wide.",
+       "42': Solanke played in Conor Gallagher, who took too long and was saved by Lammens.",
+       "51': Savio crossed and Solanke put the ball over from six yards. The Guardian also notes a Kudus cross that Archie Gray beat Lammens with but not the post.",
+       "United's only good first-half moment was a counter in which Mbeumo found Amad, whose low shot was easily saved by Kinsky (34').",
+       "Carlos Baleba made his United debut on the hour, and immediately flicked a ball into Bruno Fernandes' path, per the Guardian.",
+       "United have six points from six games, their fewest at this stage since 1986-87 (Sky), and have one win this season (against Ipswich).",
+       "Spurs are winless after six league games, only the fourth time in their history. Solanke's goal was his first of the season and only Spurs' third league goal, and he was captain for the first time (Guardian, Sky).",
+       "Spurs have now scored three goals in six matches, though the point lifts them off the foot of the table, to 18th on three points, with Coventry and Fulham below them on the Sky table."
+      ]
+     },
+     {
+      "h": "Reaction",
+      "b": [
+       "Michael Carrick: 'With the ball, without the ball, we were off it.' He said United needed to be 'more streetwise and stubborn' and that they could not see the game out.",
+       "Roberto De Zerbi: 'We did not deserve to lose.' He said it was the first time Spurs had shown they were a team, and described the group as 'a great group of players but we are not a team yet'.",
+       "Gary Neville said Tottenham deserved a point and called United's display 'worrying'. Jamie Redknapp saw a team 'devoid of confidence, ideas, or patterns of play' and said Spurs were better in every department.",
+       "United were booed off at half-time and full-time (Sky)."
+      ]
+     },
+     {
+      "h": "Why it matters",
+      "b": [
+       "Both managers entered the game under pressure and neither is clearly relieved: the Guardian says the draw gives no clear answer to which of Carrick and De Zerbi is more under pressure.",
+       "United are 12th with six points and one win this season, three points above the bottom three (Sky table).",
+       "Spurs are 18th and in the relegation zone, still without a league win since May (Sky).",
+       "The Guardian calls the game 'the tale, in microcosm, of their seasons': Spurs could not finish and United were disjointed."
+      ]
+     },
+     {
+      "h": "What's next",
+      "b": [
+       "Manchester United visit Atlético Madrid in the Champions League on Tuesday 13 October (about 3am SGT Wednesday).",
+       "Spurs go to Marbella for warm-weather training, according to the Guardian.",
+       "Manchester United's Champions League matchday 1 result was a 4-0 home win over Sabah."
       ]
      }
     ],
     "id": "69fdd22e"
    },
    {
-    "headline": "Arsenal 2-1 Leeds: Calafiori and Guimarães complete comeback",
-    "teaser": "Leeds led through James Justin at 54 minutes, but Riccardo Calafiori equalised and substitute Bruno Guimarães won it with his first Emirates goal. Arsenal now have 5 wins from 6.",
-    "source": "Arsenal FC",
+    "headline": "Arsenal 2-1 Leeds: Calafiori and Guimarães turn it round after Justin's goal",
+    "teaser": "Leeds led through James Justin before Calafiori equalised and substitute Bruno Guimarães scored the winner, giving Arsenal five wins from six and ending Leeds' unbeaten start.",
+    "source": "Arsenal.com · The Guardian",
     "url": "https://www.arsenal.com/news/report-arsenal-2-1-leeds-united-aZRg37i5KpH0",
     "published": "2026-10-10",
     "tags": [
      "Football",
      "Premier League",
      "Arsenal",
-     "Leeds United",
-     "Bruno Guimarães",
-     "Arsenal.com (club site)"
+     "Leeds",
+     "Guimarães"
     ],
-    "note": "Source is the club's own match report, so tone is partisan; facts and stats were taken as stated.",
+    "sources": [
+     {
+      "label": "Arsenal.com: Report, Arsenal 2-1 Leeds United",
+      "url": "https://www.arsenal.com/news/report-arsenal-2-1-leeds-united-aZRg37i5KpH0"
+     },
+     {
+      "label": "The Guardian (Paul MacInnes): Bruno Guimarães completes Arsenal comeback",
+      "url": "https://www.theguardian.com/football/2026/oct/10/arsenal-leeds-premier-league-match-report"
+     },
+     {
+      "label": "Sky Sports: Arsenal 2-1 Leeds report and table",
+      "url": "https://www.skysports.com/football/arsenal-vs-leeds-united/report/559494"
+     },
+     {
+      "label": "UEFA.com: Champions League Matchday 2 key stats",
+      "url": "https://www.uefa.com/uefachampionsleague/news/02aa-21c5297d7408-32d70b5a4443-1000--champions-league-matchday-2-key-stats-and-what-to-look-o/"
+     }
+    ],
     "brief": [
      {
       "h": "What happened",
       "b": [
-       "After a slow, ponderous first half with many offsides, Leeds were the better side; David Raya made a chest save from Justin and a point-blank stop from Gabriel Gudmundsson.",
-       "Leeds went ahead in the 54th/56th minute (the report gives both) when Gudmundsson's low cross reached James Justin, who finished first time.",
-       "Within five minutes, Ben White nodded a Noni Madueke delivery across goal and Calafiori's shot spun in off keeper James Trafford for 1-1.",
-       "Mikel Arteta then brought on Viktor Gyokeres, Jurrien Timber and Bruno Guimarães. Guimarães tucked into the bottom corner (69th) after Declan Rice's backheel."
+       "Arsenal beat Leeds 2-1 at the Emirates on Saturday 10 October to make it five wins from six league games. Leeds had been unbeaten and had the joint-best defensive record before the game.",
+       "The first half was ponderous. It was Arsenal's first home game in 34 days. Leeds had the better chances: Saka had to block an Okafor curler, Raya saved with his chest from Justin, and he made an excellent stop to deny Gabriel Gudmundsson at the end of the half.",
+       "James Justin put Leeds ahead around the 55th minute: Gudmundsson ran down the left, his low cross evaded everyone, and Justin hit it first time despite Gabriel on the line.",
+       "Arsenal equalised within five minutes. Noni Madueke crossed, Ben White nodded it across goal, and Riccardo Calafiori's shot into the ground was fumbled into the net by Leeds goalkeeper James Trafford.",
+       "Arteta then brought on Viktor Gyökeres, Jurrien Timber and Bruno Guimarães. About 70 minutes in, Saka and Ødegaard played a one-two, Rice burst into the box and backheeled to the edge, and Guimarães steered it into the bottom corner."
       ]
      },
      {
-      "h": "Key numbers and facts",
+      "h": "Key moments & numbers",
       "b": [
-       "Arsenal: five wins from six games to start their title defence; level on 15 points with Manchester City.",
-       "Leeds suffered their first Premier League loss of the season; their winless run against Arsenal is now 17 games in all competitions.",
-       "Leeds' first win at Arsenal in 23 years remained out of reach.",
-       "Arsenal are the first team to win two league games from behind this season (also beating Chelsea 2-1).",
-       "Guimarães is the first player to score twice from the bench this season. Both his league goals have come from outside the box, assisted by Rice.",
-       "Calafiori has 3 goal involvements (1 goal, 2 assists), as many in six games as in 26 appearances last term; it is his first league goal since August 2025.",
-       "Leeds had not lost a Premier League game after opening the scoring in the second half since October 1992."
+       "Between Leeds' goal and the winner, Arsenal had five efforts on goal, the same number as in the previous 55 minutes (Guardian).",
+       "Arsenal should have scored more: Ødegaard missed from two yards after a Rice cross hit Tarik Muharemovic and then Ødegaard, and Trafford saved from Saka one-on-one in the last move.",
+       "Arsenal are the first team to win two league games from behind this season (the other was 2-1 against Chelsea).",
+       "Leeds lost a Premier League game in which they scored first in the second half for the first time since October 1992. Their winless run against Arsenal is now 17 games in all competitions, and Leeds have not won at Arsenal in 23 years.",
+       "Both of Guimarães' Premier League goals this season have been long-range, as a substitute, assisted by Rice, and have put Arsenal in front. He is the first player to score twice from the bench this season. Only Eberechi Eze and Phil Foden (10 each) have more Premier League goals from outside the box than his nine since February 2022.",
+       "Calafiori has three goal involvements this season (one goal, two assists), as many as he had in 26 games last season. Rice has three assists (Guardian).",
+       "Justin's goal was his seventh in the Premier League; three of the seven came at the Emirates."
+      ]
+     },
+     {
+      "h": "Tactical picture",
+      "b": [
+       "The Guardian says Arsenal's midfield was 'outmuscled and outplayed' for the first hour and that Gabriel and Ezri Konsa looked uncertain against the accuracy and variety of Leeds' deep crosses.",
+       "Leeds' first ten minutes of the second half deservedly gave them a goal, but the Guardian says Leeds were not an attacking threat in the final half hour.",
+       "Guimarães changed the tempo: he was 'desperate for everything to go faster, more aggressively'. Arteta's substitutions were 'effective', in the Guardian's words."
+      ]
+     },
+     {
+      "h": "Reaction",
+      "b": [
+       "Arteta said Arsenal had to 'pinch our desire to win' against a side that 'hadn't lost' and are 'incredibly dangerous'. He cited the earlier defeat against Brighton, a 12:30 kick-off, as part of the context.",
+       "Daniel Farke said the Arsenal equaliser was bundled home by Calafiori after White's knock-down and that if Trafford had got a hand to it, 'we would have gone on to take three points'. He said Leeds had played 'exactly on their level, more or less'.",
+       "Arsenal.com notes this came in the week Arteta signed a new contract."
       ]
      },
      {
       "h": "Why it matters",
       "b": [
-       "The win keeps Arsenal level with City at the top and shows they can turn a game with substitutions.",
-       "It also extends Leeds' bad record at the Emirates despite their unbeaten start and joint-best defensive record before kickoff.",
-       "The club site notes it came in the week Arteta signed a new contract."
+       "Arsenal, last season's champions, are second on 15 points from six games, level with leaders City (who have played five) according to the Sky table.",
+       "For Leeds, the defeat is their first of the season; they sit sixth on nine points (Sky table).",
+       "The match gave an early look at the depth of Arsenal's squad: the Guardian describes Guimarães as Arteta's 'key summer signing' who had been 'biding his time'."
       ]
      },
      {
-      "h": "What to watch next",
+      "h": "What's next",
       "b": [
-       "Tuesday: Arsenal host Lille in the Champions League.",
-       "Next Sunday: away at Nottingham Forest.",
-       "Wednesday 21 October: away at Bayern Munich, which the club calls a 'massive match'."
+       "Arsenal host Lille in the Champions League on Tuesday 13 October, then visit Nottingham Forest the following Sunday, then go to Bayern Munich on Wednesday 21 October (Arsenal.com).",
+       "UEFA's matchday-2 stat pack says Arsenal have won 13 consecutive league-phase matches in the Champions League.",
+       "Leeds' next fixtures were not in the sources used."
       ]
      }
     ],
     "id": "12a25d3b"
-   },
-   {
-    "headline": "Chelsea 5-1 Bournemouth: Henderson double, early goals and a bounce-back win",
-    "teaser": "Jordan Henderson scored twice, including a free-kick, and Joao Pedro also netted a double as Chelsea were 2-0 up inside three minutes and went fifth.",
-    "source": "Sky Sports",
-    "url": "https://www.skysports.com/football/news/13592771/chelsea-5-1-bournemouth-jordan-hendersons-stunning-strikes-help-fast-starting-blues-to-bounce-back-win",
-    "published": "2026-10-10T18:01:00+01:00",
-    "tags": [
-     "Football",
-     "Premier League",
-     "Chelsea",
-     "Bournemouth",
-     "Jordan Henderson",
-     "Sky Sports"
-    ],
-    "brief": [
-     {
-      "h": "What happened",
-      "b": [
-       "Chelsea bounced back from their bad loss at Brentford before the international break with a 5-1 win at Stamford Bridge.",
-       "Jordan Henderson, 36, scored after 65 seconds, a shot in off the post after good play by Cole Palmer.",
-       "Morgan Rogers' shot flicked off Antonio Silva for the second goal at 2 minutes 29 seconds, the earliest Chelsea have ever led 2-0 in a Premier League game.",
-       "Thirty seconds into the second half, Silva's mistake let Pedro Neto cut the ball back for Joao Pedro to make it 3-0.",
-       "Evanilson blocked Moises Caicedo's clearance into his own net for 3-1, then Joao Pedro tapped in Pep Chavarria's cross (67') and Henderson curled in a free-kick from 25 yards (70')."
-      ]
-     },
-     {
-      "h": "Key numbers and facts",
-      "b": [
-       "Final: Chelsea 5-1 Bournemouth. Chelsea move up to fifth.",
-       "Chelsea's early goals this season: Joao Pedro 1 min v Fulham, Lavia 4 min v Brighton, Rogers 2 min v Arsenal, Rogers 7 min v Hull, and now Henderson 2 min and Rogers 3 min.",
-       "Bournemouth have 3 points after six games and are still winless.",
-       "Cole Palmer extended his Chelsea contract earlier in the day.",
-       "Chelsea keeper Emi Martinez made a one-on-one double save at 36'."
-      ]
-     },
-     {
-      "h": "What the managers said",
-      "b": [
-       "Xabi Alonso called it a 'very complete performance' and praised Henderson's work beyond the goals.",
-       "Marco Rose: 'We were not ready, we were not sharp enough', and said he can deal with rumours about his job.",
-       "Alonso said Caicedo played 65 minutes so his load could be adjusted."
-      ]
-     },
-     {
-      "h": "Why it matters",
-      "b": [
-       "Sky says Chelsea's season will be shaped by the run of games before the November international break, with the aim of returning to Champions League football.",
-       "A Carabao Cup tie at Liverpool is described as a possible launchpad for early silverware.",
-       "The defensive record remains a concern: Chelsea were nervy after the 3-1 goal."
-      ]
-     },
-     {
-      "h": "What to watch next",
-      "b": [
-       "Chelsea's key run of games before the November break, including the Carabao Cup tie at Liverpool.",
-       "Bournemouth: three points from six games and pressure on Rose.",
-       "Whether Henderson, Palmer, Rogers and Joao Pedro can keep clicking."
-      ]
-     }
-    ],
-    "id": "806fd48a"
    }
   ],
   "golf": [
    {
-    "headline": "Open de España: Forrest and Dean share lead at −13 ahead of Sunday final",
-    "teaser": "Grant Forrest and Joe Dean are tied at 13 under at Real Club de Campo after round three, with Girrbach, Perez and Skov Olesen one shot back on −12.",
-    "source": "DP World Tour",
-    "url": "https://www.europeantour.com/dpworld-tour/news/articles/detail/grant-forrest-and-joe-dean-share-lead-ahead-of-final-round-in-madrid/",
-    "published": "2026-10-10",
-    "tags": [
-     "Golf",
-     "DP World Tour",
-     "Open de España",
-     "Grant Forrest",
-     "Joe Dean",
-     "DP World Tour (official site)"
-    ],
-    "note": "Short briefing: the official report is brief (about 450 words) and gives no final-round tee times, so none are shown.",
-    "brief": [
-     {
-      "h": "What happened",
-      "b": [
-       "Grant Forrest began Saturday one shot ahead but slipped back after birdies at the third and fourth were followed by a bogey and five pars.",
-       "He then birdied the 11th, 14th and 16th to reach 13 under and share the lead with England's Joe Dean.",
-       "Dean had eight birdies in his first 15 holes to lead by three, then made a double bogey at the 16th and a bogey at the 17th.",
-       "He birdied the last from 31 feet to tie Forrest at 13 under."
-      ]
-     },
-     {
-      "h": "Key numbers and facts",
-      "b": [
-       "Forrest: 66-67-67. Dean: 68-67-65. Both −13 at Real Club de Campo, Madrid.",
-       "One shot back on −12: Joel Girrbach, Victor Perez and Jacob Skov Olesen.",
-       "Forrest shared the first-round lead and led alone after round two; he is chasing a wire-to-wire win and his third DP World Tour title.",
-       "Forrest's birdie putts on Saturday included 14 feet (3rd), 32 feet (11th) and 20 feet (16th), plus an 11-foot par save at 17.",
-       "Dean's birdie at the last was from 31 feet."
-      ]
-     },
-     {
-      "h": "What the players said",
-      "b": [
-       "Forrest: 'I didn't have my best stuff but I'm really proud of how I dug in and made some nice putts'. He called it one of his favourite tournaments.",
-       "Dean said the last-hole birdie 'gave a little bit of hope after those previous two holes', adding 'nothing's guaranteed in this game'."
-      ]
-     },
-     {
-      "h": "Why it matters",
-      "b": [
-       "A two-man tie with three players one back makes the final round a genuine five-way fight on a course where scoring was 'favourable'.",
-       "Forrest has led from the start while Dean's late wobble and recovery shows how quickly a lead can disappear.",
-       "The article describes Forrest as in contention for a wire-to-wire victory."
-      ]
-     },
-     {
-      "h": "What to watch next",
-      "b": [
-       "Sunday's final round at the Open de España presented by Madrid.",
-       "Whether Forrest can complete a wire-to-wire win for a third DP World Tour title.",
-       "Whether Dean, Girrbach, Perez or Skov Olesen can overtake the leaders."
-      ]
-     }
-    ],
-    "id": "f26fcc45"
-   },
-   {
-    "headline": "DP World Tour in advanced talks to take in exiting LIV players; Rahm out of LIV 2.0",
-    "teaser": "Golfweek, citing Today's Golfer, reports several LIV players are negotiating exit deals for 2027 DP World Tour starts; Jon Rahm's lawyer told a LIV bankruptcy hearing his client will not take part in LIV 2.0.",
-    "source": "Golfweek (USA Today)",
-    "url": "https://golfweek.usatoday.com/story/sports/golf/dpworldtour/2026/10/09/report-dp-world-tour-advanced-talks-liv-golfers-return/92170303007/",
-    "published": "2026-10-09T12:30:00-04:00",
-    "tags": [
-     "Golf",
-     "LIV Golf",
-     "DP World Tour",
-     "Jon Rahm",
-     "Golfweek (USA Today)"
-    ],
-    "note": "Based on Golfweek's account of a Today's Golfer report; talks are not confirmed deals.",
-    "brief": [
-     {
-      "h": "What happened",
-      "b": [
-       "Today's Golfer reported that several LIV Golf players are in advanced talks over an exit plan with deals promising playing opportunities on the European circuit.",
-       "Jon Rahm is the most recent LIV golfer to say he is done with the league. His lawyer John Beck spoke at a LIV bankruptcy hearing on Wednesday.",
-       "Beck said Rahm 'independently reviewed the proposed terms of LIV 2.0 … and has determined that those terms are unacceptable to him, and he will not be participating going forward.'"
-      ]
-     },
-     {
-      "h": "Key facts",
-      "b": [
-       "There is a looming Oct. 25 deadline for LIV golfers to re-up on LIV 2.0 terms.",
-       "The DP World Tour agreement reportedly requires golfers to 'reject the new terms proposed for LIV 2.0'.",
-       "Returning players would be allowed into multiple DP World Tour events in 2027 but not the Rolex Series, the five marquee events, 'for now'.",
-       "LIV announced a restructuring agreement with BC Partners two days before the hearing. CEO Scott O'Neal said it showed he was 'delivering' on a 'new player-owned, team-focused, truly global league'.",
-       "The PGA Tour has a rule that LIV players face a one-year suspension from their last competitive LIV round before they can seek any return.",
-       "Some LIV golfers hold DP World Tour exemptions, but this phase of talks involves players without DP World Tour membership."
-      ]
-     },
-     {
-      "h": "The Tour's stated position",
-      "b": [
-       "A DP World Tour representative said interest is high: 'Given the high volume of inbound interest and inquiries we have received in recent weeks, we are exploring the terms on which we are willing to accommodate players'.",
-       "Conditions: players must be free of third-party contractual restrictions and abide by membership regulations."
-      ]
-     },
-     {
-      "h": "Why it matters",
-      "b": [
-       "Golfweek says the Today's Golfer story paints a 'much more dire picture' for LIV's future, with the league 'about to lose many of its players'.",
-       "It would give the European tour a route to attract top players back, but with limits on the biggest events.",
-       "The story is a report of talks, not a finalised deal."
-      ]
-     },
-     {
-      "h": "What to watch next",
-      "b": [
-       "The Oct. 25 LIV 2.0 deadline.",
-       "Which players follow Rahm in rejecting the LIV 2.0 terms.",
-       "Whether the DP World Tour confirms its terms and whether the Rolex Series restriction stays.",
-       "How the PGA Tour's one-year-suspension rule affects any wider return."
-      ]
-     }
-    ],
-    "id": "929e3452"
-   },
-   {
-    "headline": "Baycurrent Classic: three tied at −13, Adam Scott one back and chasing first PGA Tour win in six years",
-    "teaser": "Michael Brennan, Zach Bauchou and Jacob Bridgeman share the 54-hole lead in Yokohama; Scott (65 with two eagles) and Justin Thomas are among five at −12. The final round is under way Sunday.",
-    "source": "PGA Tour (AP)",
+    "headline": "Baycurrent Classic: Bridgeman, Brennan and Bauchou tied at -13 after round three; Scott and Thomas one back",
+    "teaser": "A bunched leaderboard in Yokohama: three Americans share the lead, eight players are within a shot, and no one has ever defended this title. The final round was under way at time of writing.",
+    "source": "PGA Tour/AP · Golfweek · PGA Tour",
     "url": "https://www.pgatour.com/article/news/daily-wrapup/2026/10/10/round-three-baycurrent-classic-yokohama-country-club-scores-leaderboards-results-hideki-matsuyama-xander-schauffele",
     "published": "2026-10-10",
     "tags": [
      "Golf",
      "PGA Tour",
      "Baycurrent Classic",
-     "Adam Scott",
-     "Zach Bauchou",
-     "AP"
+     "Yokohama",
+     "Adam Scott"
     ],
-    "note": "Short briefing: the AP report is brief; some figures (purse, notes) come from the PGA Tour's round-three notes.",
+    "sources": [
+     {
+      "label": "PGA Tour / Associated Press: round-three wrap-up",
+      "url": "https://www.pgatour.com/article/news/daily-wrapup/2026/10/10/round-three-baycurrent-classic-yokohama-country-club-scores-leaderboards-results-hideki-matsuyama-xander-schauffele"
+     },
+     {
+      "label": "PGA Tour: live leaderboard",
+      "url": "https://www.pgatour.com/tournaments/2026/baycurrent-classic/R2026527"
+     },
+     {
+      "label": "Golfweek: Mitchell and Bridgeman share the lead after two rounds",
+      "url": "https://golfweek.usatoday.com/story/sports/golf/pga/2026/10/09/baycurrent-classic-2026-keith-mitchell-jacob-bridgeman-share-lead-round-2/92166402007/"
+     },
+     {
+      "label": "PGA Tour: Baycurrent Classic facts and figures",
+      "url": "https://www.pgatour.com/article/news/latest/2026/10/06/baycurrent-classic-facts-and-figures-yokohama-country-club-yokohama-2026"
+     },
+     {
+      "label": "TurfTrio: round-three recap, tee times and player quotes",
+      "url": "https://turftrio.com/baycurrent-classic-2026-round-3-leaderboard-final-round-tee-times/"
+     }
+    ],
     "brief": [
      {
-      "h": "What happened",
+      "h": "What happened on Saturday",
       "b": [
-       "After three rounds at Yokohama Country Club, Michael Brennan (65 on Saturday), Zach Bauchou (67) and first-round leader Jacob Bridgeman (69) share the lead at 13-under 200.",
-       "Adam Scott shot a 6-under 65 with two eagles, including an approach from 97 yards that set up an eagle at No. 9. He and Justin Thomas (67) are one stroke back.",
-       "Eight players are within a stroke of the lead."
+       "After three rounds at Yokohama Country Club, Jacob Bridgeman (63-68-69), Michael Brennan (68-67-65) and tour rookie Zach Bauchou (69-64-67) are tied at 13-under 200. Eight players are within one stroke of the lead, per AP.",
+       "Adam Scott shot a 6-under 65 with two eagles, one set up by a 97-yard approach at the ninth, and Justin Thomas shot 67. They are in a five-way tie for fourth at 12 under with Stephan Jaeger, Keith Mitchell and Jordan Smith.",
+       "Defending champion Xander Schauffele also shot 65 and is at 9 under, four shots off the lead.",
+       "The leaders went out together in the final group at 10:21am Japan time (9:21am SGT)."
       ]
      },
      {
-      "h": "Key numbers and facts",
+      "h": "Key moments & numbers",
       "b": [
-       "Leaders at −13: Brennan 68-67-65, Bauchou 69-64-67, Bridgeman 63-68-69.",
-       "At −12: Scott (69-67-65), Jordan Smith (64-71-66), Thomas (69-65-67), Stephan Jaeger (69-65-67), Keith Mitchell (66-65-70).",
-       "Defending champion Xander Schauffele shot 65 and is T12 at −9.",
-       "Tournament: Oct 8–11, par 71, $8 million purse, winner's share $1.44 million, 500 FedExCup points; the third of eight FedExCup Fall events.",
-       "Bauchou is a Tour rookie. The three leaders are all Americans and play in the final group.",
-       "The leaders tee off at 9:21pm ET Saturday, which is about 9:21am SGT Sunday, so the final round is under way or finishing."
+       "Bridgeman opened with an 8-under 63 and has held at least a share of the lead after every round. He was 15 under and four under through 15 holes on Saturday before bogeys at the 16th and 18th. He said he struggled with the speed of his putts but did not feel nervous.",
+       "Brennan made a double bogey at the 18th on Friday and said it 'eats at you'. On Saturday he birdied the 12th, 13th, 14th and 17th for a 65. The 24-year-old won the 2026 Wyndham Championship and is on his first trip to Asia.",
+       "Bauchou, a 30-year-old rookie, shot a 64 on Friday and said his driving on the narrow fairways has made the difference. He reached 16 under on Saturday before giving shots back late.",
+       "Scott is looking for his first PGA Tour win in six years: 'It would be nice just to win anything, to be honest with you, at this point.' Thomas, a 16-time Tour winner, missed the cut in his first start of 2026 after back surgery, and has twice finished runner-up in Japan.",
+       "Ben Kohles shot a 62 on Friday with a front-nine 29 that included five birdies and an eagle (Golfweek).",
+       "At the top after two rounds were Keith Mitchell and Bridgeman at 11 under; Mitchell said he 'loves' Japan and has finished in the top 30 in each of his three starts at this event.",
+       "At stake: $1.44 million from an $8 million purse and 500 FedExCup points."
       ]
      },
      {
-      "h": "What the players said",
+      "h": "Course and field",
       "b": [
-       "Scott: 'You got to be pleased with that and something like that tomorrow might be enough. It's not a bad spot to be a few back.'",
-       "Scott is looking for his first PGA Tour win in six years."
+       "Yokohama Country Club is a par 71 of 7,322 yards. It uses 16 holes from the West Course and two from the East Course, and was remodelled by Bill Coore and Ben Crenshaw in 2015.",
+       "The PGA Tour's only stop in Asia this year has its strongest field of the FedExCup Fall, with 13 of the 24 players from the Presidents Cup two weeks ago at Medinah (eight Internationals, five Americans), including Scott and Bridgeman.",
+       "It is the third of eight FedExCup Fall events, with crucial chances to secure top-100 status and a 2027 PGA Tour exemption (PGA Tour).",
+       "Weather: mostly cloudy for the final round, with winds easing from 10-20 mph on Saturday to about 10-15 mph on Sunday (PGA Tour forecast)."
       ]
      },
      {
-      "h": "Why it matters",
+      "h": "Storylines",
       "b": [
-       "This is the PGA Tour's only stop in Asia this year and has the strongest field of the FedExCup Fall, with 13 of the 24 Presidents Cup players from two weeks ago at Medinah.",
-       "With eight players within one shot, the final round is wide open."
+       "Bridgeman's hot streak: he won the Biltmore Championship Asheville three weeks ago and holed the clinching putt for the U.S. at the Presidents Cup, and a win would be his third on the PGA Tour this year (Golfweek and TurfTrio).",
+       "Scott's chase: his 65 was part of a late run into contention; he said 'something like that tomorrow might be enough'.",
+       "No repeat champions: nobody has ever successfully defended the Baycurrent Classic title, and Schauffele, who won last year at 19 under, is four back.",
+       "Course record: Matt McCarty's 60 in the final round last year is the tournament's best round, a reminder of how low the course can go on Sunday.",
+       "Only two international players have won this event: Hideki Matsuyama (2022) and Nico Echavarria (2024)."
       ]
      },
      {
-      "h": "More detail",
+      "h": "Where it stands now",
       "b": [
-       "Round three was played in mostly sunny conditions, high of 77°F, with a NE wind of 8–14 mph, on a par-71 course of about 7,315 yards.",
-       "At −10: Ryan Gerard, Max Homa and Mac Meissner. At −9: Brian Harman, Sungjae Im, Michael Kim and Xander Schauffele.",
-       "Tournament notes call it the third of eight FedExCup Fall events, with 500 FedExCup points for the winner.",
-       "The three leaders were all in the final group; Scott's group goes out just ahead of them."
-      ]
-     },
-     {
-      "h": "What to watch next",
-      "b": [
-       "Sunday's final round: check the PGA Tour leaderboard for the result, since play was in progress when this was compiled.",
-       "Whether Scott can end his six-year drought, or a rookie like Bauchou can win."
+       "A PGA Tour leaderboard snapshot at time of writing, with the final round still in progress and most players mid-round, had Stephan Jaeger and Keith Mitchell at 16 under through 11 holes, Zach Bauchou at 15 under through 10, and Schauffele, Scott, Brennan and Bridgeman at 14 under.",
+       "The snapshot may be a few minutes old and the result will change by the time you read this, so check the live leaderboard for the winner."
       ]
      }
     ],
     "id": "7a7e3976"
-   }
-  ],
-  "f1": [
+   },
    {
-    "headline": "Singapore GP: Verstappen on pole ahead of Leclerc and Hamilton; race 8pm SGT",
-    "teaser": "Max Verstappen took his first Singapore pole with 1:31.373, 0.054s clear of Charles Leclerc. Hamilton was third; Russell starts 21st after a 40-place penalty. The race starts at 8:00pm SGT Sunday.",
-    "source": "Formula 1",
-    "url": "https://www.formula1.com/en/latest/article/verstappen-beats-leclerc-to-pole-position-for-the-singapore-gp.7yum1V3S9aSTyj3Zzzs0Y9",
-    "published": "2026-10-10T14:46:00+00:00",
+    "headline": "Open de España: Forrest and Dean share the lead at -13 going into Sunday's final round",
+    "teaser": "Grant Forrest (67) and Joe Dean (65, with a closing birdie) are tied at the top in Madrid. Reed and Rose missed the cut, and Chacarra, playing through a toe injury, is five back.",
+    "source": "DP World Tour · AP",
+    "url": "https://www.europeantour.com/dpworld-tour/news/articles/detail/grant-forrest-and-joe-dean-share-lead-ahead-of-final-round-in-madrid/",
+    "published": "2026-10-10",
     "tags": [
-     "F1",
-     "Singapore Grand Prix",
-     "Max Verstappen",
-     "Charles Leclerc",
-     "Lewis Hamilton",
-     "Formula 1 (official site)"
+     "Golf",
+     "DP World Tour",
+     "Open de España",
+     "Madrid",
+     "Joe Dean"
+    ],
+    "sources": [
+     {
+      "label": "DP World Tour: Forrest and Dean share lead ahead of final round",
+      "url": "https://www.europeantour.com/dpworld-tour/news/articles/detail/grant-forrest-and-joe-dean-share-lead-ahead-of-final-round-in-madrid/"
+     },
+     {
+      "label": "DP World Tour: Day three digest",
+      "url": "https://www.europeantour.com/dpworld-tour/news/articles/detail/2026-open-de-espana-presented-by-madrid-day-three-digest/"
+     },
+     {
+      "label": "DP World Tour: Day two digest",
+      "url": "https://www.europeantour.com/dpworld-tour/news/articles/detail/open-de-espana-presented-by-madrid-2026-day-two-digest/"
+     },
+     {
+      "label": "Associated Press: Dean saves round and shares Spanish Open lead",
+      "url": "https://apnews.com/article/spanish-open-european-tour-joe-dean-grant-forrest-beeaa40ccd7d8758dab798a7e0764080"
+     }
+    ],
+    "brief": [
+     {
+      "h": "What happened on Saturday",
+      "b": [
+       "Grant Forrest of Scotland and Joe Dean of England are tied on 13-under 200 after three rounds of the Open de España at Real Club de Campo Villa de Madrid. Forrest has rounds of 66-67-67 and Dean 68-67-65.",
+       "Victor Perez, Joel Girrbach and Jacob Skov Olesen are one shot back on 12 under.",
+       "Dean made eight birdies in his first 15 holes to open a three-shot lead. He then double-bogeyed the 16th (bunker to bunker, came up short, chipped too strong and missed from 15 feet) and bogeyed the 17th, which wiped out the lead, before holing a 31-foot birdie putt at the last.",
+       "Forrest started the day a shot ahead but slipped back after birdies at the third and fourth, a bogey at the fifth and a run of pars. He then birdied the 11th, 14th and 16th and saved par from 11 feet at the 17th to get back to 13 under."
+      ]
+     },
+     {
+      "h": "Key moments & numbers",
+      "b": [
+       "Forrest shared the first-round lead, took it alone on Friday (a 67 for nine under) and is looking for a wire-to-wire win and his third DP World Tour title. He has twice finished tied third in this event (2021 and 2024) and has never missed a cut in his six previous appearances at this course.",
+       "Dean won his first DP World Tour title only six weeks ago, in the British Masters. AP says a win on Sunday would move the 32-year-old 'well into the top 10' of the Race to Dubai and 'practically assure' him a PGA Tour card for 2027.",
+       "Francesco Molinari holed a 53-foot birdie putt at the eighth on Saturday (DP World Tour).",
+       "Romain Langasque's caddie climbed a tree during the round, per a DP World Tour post.",
+       "Dean's 65 was the low round of the leaders; Forrest said: 'I didn't have my best stuff but I'm really proud of how I dug in.'"
+      ]
+     },
+     {
+      "h": "Race to Dubai angle",
+      "b": [
+       "Patrick Reed, the long-time leader of the Race to Dubai, missed the 36-hole cut (Justin Rose also missed it, at two over, according to a headline summary).",
+       "Eugenio Chacarra is, per AP, 'trying to overtake' Reed for the lead. The Spaniard banged his toe in the night (the DP World Tour mentions a fractured toe) and is playing through it, medication and crowd support helping: he shot 69 on Friday and 70 on Saturday and is five shots behind.",
+       "A Chacarra victory would take him past both Reed and Rory McIlroy to the top of the standings (DP World Tour). Because Reed is out of the event, the title race has an opening this weekend.",
+       "Eddie Pepperell made the cut on the number with four birdies in his last seven holes. He came in 101st in the Race to Dubai and needs a top-100 finish to keep a near-full schedule next year."
+      ]
+     },
+     {
+      "h": "Storylines to watch",
+      "b": [
+       "Forrest's wire-to-wire bid against a streaky Dean: Dean's lead went from three to zero in two holes on Saturday, and he said 'it only takes a slight lapse in concentration ... before you know it you're chasing'.",
+       "The chasing pack: Perez, Girrbach and Olesen are one back, so any of five or more players could win.",
+       "Absentees and big names: Jon Rahm skipped the event because his fourth child was due 'any day' (GOLF.com). Reed and Rose missed the cut. Sergio Garcia spoke here about the Ryder Cup earlier in the week (BBC).",
+       "Nicolai Højgaard made his second career hole-in-one in the second round but missed the cut at four over."
+      ]
+     },
+     {
+      "h": "What's next",
+      "b": [
+       "Final round Sunday 11 October in Madrid. I could not retrieve tee times for the final groups.",
+       "The winner will be known late on Sunday afternoon in Spain, which is the evening in Singapore."
+      ]
+     }
+    ],
+    "note": "Final-round scoring was not available at the time of writing; scores are through three rounds.",
+    "id": "f26fcc45"
+   },
+   {
+    "headline": "Rahm leaves LIV over 'unacceptable' LIV 2.0 terms as the DP World Tour reportedly talks to exiting players",
+    "teaser": "With LIV in bankruptcy and its restructuring deadline on 25 October, Jon Rahm said he won't be part of LIV 2.0, and the DP World Tour is reportedly negotiating exits and 2027 playing rights for several players.",
+    "source": "BBC Sport · GOLF.com · Golfweek",
+    "url": "https://golfweek.usatoday.com/story/sports/golf/dpworldtour/2026/10/09/report-dp-world-tour-advanced-talks-liv-golfers-return/92170303007/",
+    "published": "2026-10-09T12:30:00-04:00",
+    "tags": [
+     "Golf",
+     "LIV Golf",
+     "Jon Rahm",
+     "DP World Tour",
+     "PGA Tour"
+    ],
+    "sources": [
+     {
+      "label": "Golfweek (Todd Kelly): DP World Tour in advanced talks to bring LIV golfers back",
+      "url": "https://golfweek.usatoday.com/story/sports/golf/dpworldtour/2026/10/09/report-dp-world-tour-advanced-talks-liv-golfers-return/92170303007/"
+     },
+     {
+      "label": "BBC Sport: Rahm to leave LIV Golf over 'unacceptable' terms",
+      "url": "https://www.bbc.com/sport/golf/articles/c65yngj00477o"
+     },
+     {
+      "label": "GOLF.com (Dylan Dethier): Jon Rahm is officially leaving LIV Golf",
+      "url": "https://golf.com/news/jon-rahm-leaving-liv/"
+     }
     ],
     "brief": [
      {
       "h": "What happened",
       "b": [
-       "Verstappen claimed his first career Singapore pole with a 1m 31.373s on his first Q3 run and was not beaten.",
-       "Ferrari's Hamilton had set the pace in Q1 and Q2, but could not improve on his final lap and was third.",
-       "Leclerc improved on his final run to take P2, only 0.054s off pole."
+       "At a US bankruptcy hearing on Wednesday 7 October, lawyers for Jon Rahm said he had reviewed the proposed terms for 'LIV 2.0' and 'determined that those terms are unacceptable to him, and he will not be participating going forward'.",
+       "LIV and Rahm's representatives said they are in 'advanced discussions' on a consensual separation agreement. GOLF.com says the target date is 15 October; BBC says it is hoped to be finalised by a court hearing on 5 November.",
+       "A report in Today's Golfer, relayed by Golfweek on 9 October, says several LIV players are in advanced talks on an exit plan that would give them playing opportunities on the DP World Tour.",
+       "Rahm is the latest big name to leave: GOLF.com says Brooks Koepka and Patrick Reed were among those who had already left, and BBC says Sergio Garcia was granted a deal at the same hearing allowing his contract to be terminated."
       ]
      },
      {
-      "h": "Key numbers and facts",
+      "h": "Background: LIV's collapse and 2.0 plan",
       "b": [
-       "Top five: Verstappen 1:31.373, Leclerc 1:31.427, Hamilton 1:31.496, Antonelli 1:31.562, Norris 1:31.712.",
-       "Next: Russell (before penalty), Piastri 7th, Gasly, Lawson, Lindblad.",
-       "Hamilton's Q2 benchmark was 1:31.529; Verstappen had complained of 'insanely bad shifts' in Q2.",
-       "Knocked out in Q1: Alonso, Albon, Stroll, Perez, Bottas, Hadjar. Aston Martin had hoped for a good weekend but failed to reach Q2.",
-       "Red Bull's Isack Hadjar had a nightmare day: he retired from the Sprint and again had reliability problems and set no representative lap.",
-       "Russell takes a 40-place grid penalty for power-unit changes and starts 21st; Hadjar is 22nd after being allowed to start. Verstappen and Leclerc share the front row."
+       "BBC reports LIV filed for Chapter 11 bankruptcy protection in the US in September after Saudi Arabia withdrew its multibillion-dollar funding. GOLF.com says LIV cancelled events, shortened its postseason and fired most of its staff.",
+       "On the Monday before the hearing LIV announced a restructuring agreement with BC Partners, with possible financing of $300m (BBC). The Saudi PIF is providing $49.6m of debtor-in-possession funding.",
+       "LIV's 2027 vision, 'LIV 2.0', is described by its CEO Scott O'Neal as 'a new player-owned, team-focused, truly global league'. Players have until 25 October to commit; BBC says there is no obligation on players to sign, even those on multi-year contracts.",
+       "BC Partners Credit's Ted Goldthorpe told the BBC he is 'confident' of the 'critical mass' of players and does not have a hard number or list of players required."
       ]
      },
      {
-      "h": "What Verstappen said",
+      "h": "Rahm's position",
       "b": [
-       "'The margins are very close I think between us throughout the whole of Qualifying. Of course, I'm very happy to be on pole, because this is the one that I wanted.'",
-       "He said the car has been strong all weekend."
+       "Rahm, 31, left the PGA Tour in December 2023 in a deal reported at £222m ($300m) by BBC and about $350m by GOLF.com. He won his third straight LIV season title in August.",
+       "Money owed: GOLF.com says court filings suggest he is still owed more than $100m. BBC says his unsecured claim of $7.5m tops the list of LIV's 30 largest unsecured creditors, so the two sources describe different measures.",
+       "In May Rahm reached a deal with the DP World Tour to keep his membership and remain eligible for the Ryder Cup, which BBC notes keeps him eligible for next year's team. He skipped this week's Open de España because his wife is expecting their fourth child 'any day' (GOLF.com).",
+       "His 2026 had been disappointing by his standards (GOLF.com): a tie for second at the PGA Championship, two LIV runner-up finishes, a missed cut at the US Open and a T46 at the Open Championship. He is No. 15 in the world rankings."
+      ]
+     },
+     {
+      "h": "What the DP World Tour is offering",
+      "b": [
+       "Golfweek, citing Today's Golfer, says returning LIV players would get access to multiple DP World Tour events in 2027 but would not be allowed into the Rolex Series, the five marquee events, 'for now'.",
+       "The reported deal is contingent on players rejecting the LIV 2.0 terms by the 25 October deadline.",
+       "A DP World Tour representative said there has been a 'high volume of inbound interest' and that the tour is 'exploring the terms on which we are willing to accommodate players provided they are free from third-party contractual restrictions'.",
+       "BBC says the DP World Tour is unwilling to talk to LIV players unless it has proof their contracts have been terminated. That issue goes back to court on 14 October."
       ]
      },
      {
       "h": "Why it matters",
       "b": [
-       "Verstappen has never won in Singapore, a track F1 notes is one of the few where he has never won, despite more than one second place.",
-       "Overtaking is hard: Verstappen himself said 'you can't pass around here', F1's stats show 58 overtakes in 2025, and the safety-car probability is 67% based on the last six races.",
-       "Pole run to Turn 1 braking point is 198 metres."
+       "Losing Rahm, described by GOLF.com as LIV 1.0's best player, is a major blow to the 2.0 plan. GOLF.com says Bryson DeChambeau, now the highest-profile name, is the 'biggest decider' for what happens next.",
+       "The PGA Tour route is harder: players face an automatic one-year suspension from their last LIV round, and GOLF.com says PGA Tour CEO Brian Rolapp has no plans to 'roll out the red carpet'. The DP World Tour offers a pathway because its top 10 earn PGA Tour membership (BBC).",
+       "GOLF.com notes Rahm could potentially lean on his 2023 Masters exemption to return to the PGA Tour in 2028, depending on how the tour rules."
       ]
      },
      {
-      "h": "What to watch next",
+      "h": "What's next",
       "b": [
-       "Race start: 8:00pm SGT Sunday (20:00 local) at Marina Bay.",
-       "Whether Verstappen can convert pole after his start problems in the Sprint.",
-       "How far Russell can climb from 21st and whether Antonelli (4th) extends his championship lead."
+       "14 October: court hearing on whether rejecting LIV contracts equals terminating them, which players such as DeChambeau and Cameron Smith want clarity on (BBC).",
+       "15 October: target for a Rahm-LIV separation agreement (GOLF.com).",
+       "25 October: LIV 2.0 player commitment deadline. 5 November: next court hearing (BBC)."
+      ]
+     }
+    ],
+    "id": "929e3452"
+   }
+  ],
+  "f1": [
+   {
+    "headline": "Singapore GP: Verstappen takes a first Marina Bay pole by 0.054s from Leclerc; lights out 8pm SGT",
+    "teaser": "Max Verstappen beat Ferrari's Leclerc and Hamilton to pole, with Antonelli fourth. Russell starts 21st on a 40-place penalty, and a one-stop race is expected with rain a possibility.",
+    "source": "Formula1.com · The Race · Pirelli · RacingNews365",
+    "url": "https://www.formula1.com/en/latest/article/verstappen-beats-leclerc-to-pole-position-for-the-singapore-gp.7yum1V3S9aSTyj3Zzzs0Y9",
+    "published": "2026-10-10T14:46:00+00:00",
+    "tags": [
+     "F1",
+     "Singapore GP",
+     "Qualifying",
+     "Verstappen",
+     "Ferrari"
+    ],
+    "sources": [
+     {
+      "label": "Formula1.com: Verstappen beats Leclerc to pole (qualifying report)",
+      "url": "https://www.formula1.com/en/latest/article/verstappen-beats-leclerc-to-pole-position-for-the-singapore-gp.7yum1V3S9aSTyj3Zzzs0Y9"
+     },
+     {
+      "label": "The Race: starting grid after two penalties",
+      "url": "https://www.the-race.com/formula-1/f1-2026-singapore-grand-prix-starting-grid-after-two-penalties/"
+     },
+     {
+      "label": "Pirelli: Max dominates in Singapore, tyre outlook",
+      "url": "https://press.pirelli.com/max-dominates-in-singapore-first-on-inters-then-on-softs/"
+     },
+     {
+      "label": "Formula1.com: Risk Perspective (Singapore strategy and Overtake Mode)",
+      "url": "https://www.formula1.com/en/latest/article/the-risk-perspective-how-f1-drivers-engineers-and-strategists-tackle-the-singapore-grand-prix.5hcVFIGmI8lG1LyPPzxvFR"
+     },
+     {
+      "label": "Formula1.com: Singapore GP weather forecast",
+      "url": "https://www.formula1.com/en/latest/article/what-is-the-weather-forecast-for-the-2026-singapore-grand-prix.4DFAwBl2esxhHp1mCv3VSF"
+     }
+    ],
+    "brief": [
+     {
+      "h": "What happened",
+      "b": [
+       "Max Verstappen took pole position for the Singapore Grand Prix for the first time in his career, with a 1m 31.373s on his first Q3 run. Charles Leclerc was 0.054s slower in second (1m 31.427s) and Lewis Hamilton third (1m 31.496s).",
+       "Hamilton had been the pace-setter in Q1 and Q2, but could not improve on his final lap. Leclerc improved on his second Q3 run to take P2; Verstappen did not need a second lap.",
+       "Kimi Antonelli was fourth (1m 31.562s) and Lando Norris fifth (1m 31.712s). Oscar Piastri was seventh after recovering from the collision with Norris in the Sprint, ahead of Pierre Gasly, Liam Lawson and Arvid Lindblad.",
+       "The race starts at 8pm local time on Sunday 11 October (8pm SGT)."
+      ]
+     },
+     {
+      "h": "Key moments & numbers",
+      "b": [
+       "Verstappen's pole is his first at Marina Bay, where he has yet to win a race (Pirelli). He also won Saturday's Sprint, so he is attempting a 'clean sweep'.",
+       "George Russell qualified sixth or seventh depending on the source (F1.com has him sixth, The Race seventh), but takes a 40-place grid penalty for engine components after his Sepang retirement, so he starts 21st. The Race says Isack Hadjar, who could not set a time, was given permission to start and lines up 22nd.",
+       "Hadjar's weekend: retired from the Sprint with a mechanical issue, then reliability trouble in qualifying, including an engine switch-off in Q1, so he did not set a representative lap.",
+       "Aston Martin is changing the power unit on Fernando Alonso's car, which should push him to the back, though the FIA had not confirmed the penalty (The Race). Alonso was knocked out in Q1 and qualified 16th.",
+       "Q1 eliminations: Alonso, Albon, Stroll, Perez, Bottas, Hadjar. Q2 eliminations: Hulkenberg, Bearman, Ocon, Sainz, Bortoleto, Colapinto (who scraped the wall on his last lap). Aston Martin had predicted a good opportunity but failed to reach Q2.",
+       "Before the penalties the top 10 was Verstappen, Leclerc, Hamilton, Antonelli, Norris, Russell, Piastri, Gasly, Lawson, Lindblad. After them the top ten is Verstappen, Leclerc, Hamilton, Antonelli, Norris, Piastri, Gasly, Lawson, Lindblad, Hulkenberg (The Race).",
+       "Verstappen complained of 'insanely bad shifts' in Q2 but said the car 'has been pretty strong the whole weekend' and described the margins as 'very close'.",
+       "Mercedes did an extra preparation lap for the Soft tyres in Q3, but Pirelli says it gave no significant advantage over teams who pushed immediately."
+      ]
+     },
+     {
+      "h": "Strategy, tyres and weather",
+      "b": [
+       "Pirelli expects a one-stop race: a two-stop is estimated to be around ten seconds slower. The C5 Soft is the most interesting starting tyre, because of its grip in the opening phase and low degradation, with many drivers likely to try to stretch the first stint and wait for a Safety Car. For the second stint, Medium and Hard are similar, with the C4 offering slightly more grip.",
+       "The F1.com forecast (issued on Wednesday) called for a hot and humid race day with a high of 33C and a 40% chance of a pop-up shower or thunderstorm in mid/late afternoon. Pirelli said on Saturday that no rain was currently forecast for the race.",
+       "F1.com's Risk Perspective notes that the 2026 tyres are more robust than in recent seasons with very low degradation on street circuits, so undercuts and tyre-delta moves may be less powerful. But it says Marina Bay is where Overtake Mode and the extra half-megajoule of energy deployment may be most effective, with attacks possible 'almost straight away' on the straight into Turn 7.",
+       "Last year's race had 19 overtakes in the final 20 laps, the same article notes, when tyre ages differed."
+      ]
+     },
+     {
+      "h": "Why it matters",
+      "b": [
+       "Pole is a big advantage on a circuit where overtaking is hard, and Verstappen has won the last Grand Prix (the Bahrain Grand Prix in Malaysia) and Saturday's Sprint.",
+       "Ferrari took second and third and had the quickest car for much of qualifying (Hamilton set the pace in Q1 and Q2). Verstappen starts ahead of both, but the two Ferraris can attack from behind.",
+       "Title race: Antonelli is fourth on the grid and leads Russell by 89 points. Russell starting 21st makes it hard for him to claw points back on race day.",
+       "Singapore has often been decided by strategy and safety cars; The F1.com piece cites the 2023 race, where a Safety Car and a late Virtual Safety Car reshuffled the field."
+      ]
+     },
+     {
+      "h": "What's next",
+      "b": [
+       "The Singapore Grand Prix starts at 8pm SGT on Sunday 11 October.",
+       "The next race is the United States Grand Prix in Austin on 25 October, and Antonelli's earliest possible title clinch is there (Grande Prêmio, F1.com)."
       ]
      }
     ],
     "id": "721126f4"
    },
    {
-    "headline": "Verstappen wins rain-hit Singapore Sprint; Russell crashes, McLarens collide",
-    "teaser": "After a long rain delay, Verstappen won from Hamilton and Leclerc. Russell crashed at the end of lap one while leading, and Norris tagged Piastri late.",
-    "source": "Formula 1",
+    "headline": "Verstappen wins rain-hit Singapore Sprint as Russell crashes from the lead and the McLarens collide",
+    "teaser": "Verstappen won from Hamilton and Leclerc after Russell, who had passed him at the start, crashed on lap one. Norris tagged Piastri late on, and Antonelli finished fourth.",
+    "source": "Formula1.com · RacingNews365 · RaceFans · Pirelli",
     "url": "https://www.formula1.com/en/latest/article/verstappen-wins-dramatic-rain-hit-singapore-sprint-as-russell-crashes-and-mclarens-collide.4r90mH2skljBa5sinFAsyp",
     "published": "2026-10-10T10:30:00+00:00",
     "tags": [
      "F1",
-     "Singapore Grand Prix",
+     "Singapore GP",
      "Sprint",
-     "Max Verstappen",
-     "George Russell",
-     "Formula 1 (official site)"
+     "Verstappen",
+     "Russell"
+    ],
+    "sources": [
+     {
+      "label": "Formula1.com: Verstappen wins dramatic, rain-hit Sprint",
+      "url": "https://www.formula1.com/en/latest/article/verstappen-wins-dramatic-rain-hit-singapore-sprint-as-russell-crashes-and-mclarens-collide.4r90mH2skljBa5sinFAsyp"
+     },
+     {
+      "label": "RacingNews365: standings after the Singapore Sprint",
+      "url": "https://racingnews365.com/2026-f1-championship-standings-after-singapore-grand-prix-sprint"
+     },
+     {
+      "label": "RaceFans: Sprint result and championship points",
+      "url": "https://www.racefans.net/2026/10/10/2026-singapore-grand-prix-sprint-race-result-and-championship-points/"
+     },
+     {
+      "label": "Pirelli: tyre report (intermediates in the Sprint)",
+      "url": "https://press.pirelli.com/max-dominates-in-singapore-first-on-inters-then-on-softs/"
+     }
     ],
     "brief": [
      {
       "h": "What happened",
       "b": [
-       "A pre-race downpour delayed the start by about half an hour; the field started on intermediate tyres after a Safety Car formation lap at 5:30pm local.",
-       "Russell passed polesitter Verstappen at Turn 1 and pulled away, but crashed at the final corner of lap one ('I'm fine. Sorry, sorry, sorry').",
-       "Verstappen led after the restart on lap 6, managed his intermediates as the track dried and won.",
-       "Late on, Norris tagged Piastri at Turn 5 as they fought for a podium; both spun. Piastri stopped and classified 14th, Norris fell to 8th, no penalty was given."
+       "Max Verstappen won the first ever Singapore Sprint, from Lewis Hamilton (+2.591s) and Charles Leclerc (+16.871s), in a wet-to-dry race. Kimi Antonelli was fourth, Liam Lawson fifth, then Ollie Bearman, Nico Hulkenberg and Lando Norris, with Pierre Gasly and Esteban Ocon completing the points (RaceFans listing).",
+       "Heavy rain before the start delayed the race by about half an hour. All drivers started on intermediate tyres, with sectors one and three soaked and the middle sector merely damp.",
+       "Verstappen had taken Sprint pole but Russell passed him at the start. At the final corner of the first lap Russell lost control, slid into the concrete wall and retired. He said: 'I'm fine. Sorry, sorry, sorry.'",
+       "Verstappen led after a Safety Car and a restart on lap six and then managed his intermediates as the track dried, pulling away from the Ferraris and McLarens.",
+       "Late on, Leclerc's intermediates were heavily worn, and Norris, attacking Piastri at Turn 5, made contact and sent both into a spin. Piastri finished lapped in 14th and Norris dropped to eighth. Stewards reviewed it and issued no penalty."
       ]
      },
      {
-      "h": "Key numbers and facts",
+      "h": "Key moments & numbers",
       "b": [
-       "Result: Verstappen (39:48.162, 8 pts), Hamilton +2.591s, Leclerc +16.871s, Antonelli, Lawson.",
-       "Bearman and Hulkenberg completed the points scorers; Norris was eighth.",
-       "Antonelli finished fourth for 5 points. Russell, in the race lead, scored none; he is now 89 points behind Antonelli in the Drivers' Championship.",
-       "Early retirements included Perez and Stroll (collision), Hadjar, Colapinto and Russell; Albon, Bortoleto and Bottas were also out after a three-car collision, eight non-finishers in all.",
-       "It was the first Sprint ever in Singapore."
+       "Hamilton started sixth and moved up to third with a rapid getaway, then second when Russell crashed.",
+       "Five drivers were out within five laps: Russell (crash), Sergio Perez and Lance Stroll (collided on lap one, stewards took no action), Isack Hadjar (mechanical, stopped at Turn 5) and Franco Colapinto (stopped at Turn 14).",
+       "At the restart Gabriel Bortoleto, Alex Albon and Valtteri Bottas were involved in a three-car chain collision, with the Williams hitting the Audi and the Cadillac hitting the Williams. Bortoleto and Bottas retired and Albon retired later; stewards noted it but did not penalise.",
+       "Hulkenberg cleared Gasly at Turn 1 while they were running for the last points places, and Gasly complained 'he pushed me wide'. Gasly finished ninth.",
+       "Halfway through, Verstappen led Hamilton by 1.3 seconds. Nobody pitted for slicks despite the drying track; asked how far away dry tyres were, Norris replied 'It's not'.",
+       "Verstappen said the start was 'horrendous again' and that 'if you have something like that tomorrow, that's your race over', and that he 'got a bit lucky' with Russell's crash.",
+       "Pirelli's Dario Marrafuschi said the intermediates 'delivered remarkably consistent performance' to the flag, with graining having no significant impact."
       ]
      },
      {
-      "h": "What the winner said",
+      "h": "Championship effect",
       "b": [
-       "Verstappen: 'the start was horrendous again, so that's definitely something that we need to improve on'.",
-       "He admitted a bit of luck with Russell's crash but added 'I want to win tomorrow, not today.'"
+       "Russell lost another five points to Antonelli and is now 89 behind (RacingNews365). Antonelli leads the standings on 325, Russell 236, Hamilton 221, Leclerc 197, Verstappen 196, Norris 189.",
+       "Hamilton is 104 behind Antonelli and 15 behind Russell. Antonelli started the Sprint seventh and benefited from the McLaren collision.",
+       "Constructors: Mercedes 561, Ferrari 418, McLaren 317, Red Bull 306, Racing Bulls 94 (RacingNews365).",
+       "This was the final Sprint of the 2026 season (RacingNews365)."
       ]
      },
      {
       "h": "Why it matters",
       "b": [
-       "It was Verstappen's second straight win after Bahrain GP in Malaysia.",
-       "Russell lost points to Antonelli in the title race and enters Sunday's race with a heavy grid penalty as well.",
-       "Qualifying followed at 9:00pm local, the same evening."
+       "Verstappen has now won back-to-back, having taken the Bahrain Grand Prix in Malaysia last weekend, and Red Bull's recovery is relevant to the title: every Red Bull or Ferrari between the two Mercedes cars reduces what Russell can take from Antonelli (Grande Prêmio).",
+       "Russell's engine penalty applies to the Grand Prix, not the Sprint, so he is starting from the back; The Race says the penalty is 40 places.",
+       "McLaren's intra-team clash, which a RacingNews365 headline calls 'not acceptable', cost both cars points while Piastri was in a podium fight."
       ]
      },
      {
-      "h": "What to watch next",
+      "h": "What's next",
       "b": [
-       "Sunday's Grand Prix at 8:00pm SGT.",
-       "Whether Verstappen fixes his starts, which he called 'horrendous again'.",
-       "McLaren's intra-team tension after Norris and Piastri's collision."
+       "Qualifying followed that evening, and Verstappen took pole by 0.054s from Leclerc.",
+       "Singapore Grand Prix: 8pm SGT on Sunday 11 October."
       ]
      }
     ],
     "id": "37018ad0"
    },
    {
-    "headline": "Russell starts 21st in Singapore after 40-place penalty; Antonelli leads title race by 89",
-    "teaser": "Mercedes' George Russell, now 89 points behind team-mate Kimi Antonelli, starts at the back after engine-part changes, with seven races left.",
-    "source": "The Race",
+    "headline": "Antonelli leads the title race by 89 points as Russell starts 21st in Singapore on a 40-place penalty",
+    "teaser": "Kimi Antonelli cannot clinch in Singapore, but the earliest he can win the title is the 25 October US GP in Austin. The standings, the maths and what Russell needs.",
+    "source": "The Race · RacingNews365 · F1.com · Grande Prêmio",
     "url": "https://www.the-race.com/formula-1/f1-2026-singapore-grand-prix-starting-grid-after-two-penalties/",
     "published": "2026-10-10",
     "tags": [
      "F1",
-     "Singapore Grand Prix",
-     "Kimi Antonelli",
-     "George Russell",
-     "Mercedes",
-     "The Race"
+     "Championship",
+     "Antonelli",
+     "Russell",
+     "Mercedes"
     ],
-    "note": "Based on a one-paragraph grid report plus F1's preview; the penalty total and standings are from The Race, F1 and the Independent.",
+    "sources": [
+     {
+      "label": "The Race: Singapore grid after two penalties",
+      "url": "https://www.the-race.com/formula-1/f1-2026-singapore-grand-prix-starting-grid-after-two-penalties/"
+     },
+     {
+      "label": "RacingNews365: championship standings after the Sprint",
+      "url": "https://racingnews365.com/2026-f1-championship-standings-after-singapore-grand-prix-sprint"
+     },
+     {
+      "label": "RaceFans: Sprint result and championship points",
+      "url": "https://www.racefans.net/2026/10/10/2026-singapore-grand-prix-sprint-race-result-and-championship-points/"
+     },
+     {
+      "label": "Formula1.com: points permutations, earliest Antonelli title",
+      "url": "https://www.formula1.com/en/latest/article/points-permutations-when-is-the-earliest-antonelli-could-win-the-world-championship.24UKT2fsQl4GmC5DMrmYUy"
+     },
+     {
+      "label": "Grande Prêmio: Antonelli can't win the title in Singapore",
+      "url": "https://grandepremio.com/en/f1/antonelli-cant-win-the-title-in-singapore-but-he-can-put-one-hand-on-it/"
+     }
+    ],
     "brief": [
      {
-      "h": "What happened",
+      "h": "Where the title race stands",
       "b": [
-       "Russell's late retirement from the Bahrain Grand Prix in Malaysia forced Mercedes to fit new power-unit components, triggering a grid penalty at Singapore.",
-       "The Race puts the total at 40 places. Russell will therefore start 21st, ahead only of Red Bull's Isack Hadjar, who set no time in qualifying but was allowed to start.",
-       "Aston Martin said it will change the power unit on Fernando Alonso's car, which should send him to the back too, but the FIA had not yet confirmed that penalty.",
-       "Verstappen (Red Bull) and Leclerc (Ferrari) share the front row."
+       "After the Singapore Sprint, Kimi Antonelli (Mercedes) has 325 points. George Russell is second on 236 (89 behind), Lewis Hamilton third on 221 (104 behind), Charles Leclerc fourth on 197 (128 behind), Max Verstappen fifth on 196 (129 behind) and Lando Norris sixth on 189 (136 behind).",
+       "Oscar Piastri is seventh on 128, Isack Hadjar eighth on 96, Liam Lawson ninth on 69 (RaceFans and RacingNews365).",
+       "Constructors: Mercedes 561, Ferrari 418, McLaren 317, Red Bull 306, Racing Bulls 94, Alpine 68, Haas 30, Audi 19, Williams 12, Aston Martin 7, Cadillac 0.",
+       "Antonelli has led since round 3 in Japan (F1.com). It is a 23-race season."
       ]
      },
      {
-      "h": "Key numbers and facts",
+      "h": "How the lead grew",
       "b": [
-       "Before the weekend Antonelli led by 84 points (Independent standings: Antonelli 320, Russell 236, Hamilton 214, Leclerc 191, Norris 188, Verstappen 188).",
-       "Russell then scored no points in the Sprint while Antonelli took 5, so the gap is 89 points.",
-       "Constructors before the weekend: Mercedes 556, Ferrari 405, McLaren 316, Red Bull 298.",
-       "Penalty rules (F1): a first exceedance of an element brings 10 places, later ones 5; any total over 15 sends the driver to the back.",
-       "Singapore is Round 17 and the final Sprint weekend; the Grand Prix is on Sunday 11 October."
+       "Before the Singapore weekend Antonelli led Russell by 84 after Russell retired from third place with a power-unit failure five laps from the end in Malaysia, while Antonelli finished second (Grande Prêmio, F1.com).",
+       "Russell led the Singapore Sprint early after passing Verstappen at the start, then crashed at the last corner of lap one, scoring no points. Antonelli started the Sprint seventh, benefited from the late McLaren collision and finished fourth for five points. The lead went from 84 to 89.",
+       "Antonelli qualified fourth for the Grand Prix; Russell qualified sixth or seventh (sources differ) and drops to 21st with the 40-place penalty for engine components. The Race says he starts ahead of only Hadjar."
       ]
      },
      {
-      "h": "What Russell said",
+      "h": "The title maths",
       "b": [
-       "'All-out attack; just trying to enjoy the weekend.'",
-       "He said Singapore is probably the 'second bottom of the list after Monaco' as a place to take a penalty, but he loves the circuit and will 'carve my way through the pack'.",
-       "He also suggested his own title chances may be over and said he will probably have to take another penalty later in the season."
+       "Antonelli cannot be champion in Singapore: even a perfect Grand Prix weekend leaves enough points available for Russell to recover (Grande Prêmio).",
+       "Earliest possible clinch is the United States GP in Austin on 25 October. Grande Prêmio says that after Austin 125 points remain, so he would need a lead of at least 126 over every rival at that point.",
+       "By my arithmetic from the standings: with 89 over Russell, 104 over Hamilton, 128 over Leclerc, 129 over Verstappen and 136 over Norris, the most he can add in Singapore and Austin is 50 points (two wins), so he would need to outscore Russell by at least 37 and Hamilton by at least 22 across the two races, while not losing more than 2 points net to Leclerc, 3 to Verstappen or 10 to Norris.",
+       "F1.com's pre-Singapore modelling said that if Antonelli and Russell kept finishing at their season medians (P1 and P3.5), the earliest clinch would be round 19 in Mexico. It said Austin would need a lead of 100 or more over Russell, a win there, and Russell scoring zero."
       ]
      },
      {
-      "h": "Why it matters",
+      "h": "Russell's problem",
       "b": [
-       "Starting 21st at a circuit where passing is hard limits Russell's ability to recover points, while Antonelli starts fourth.",
-       "Russell won pole and the race in Singapore last year, per F1, so the penalty hurts at a track that suited him.",
-       "Mercedes are also comparing old and new W17 specs: Antonelli the latest updates, Russell his previous package."
+       "The penalty came from Sepang. The failure used up his engine allocation, and Grande Prêmio notes Mercedes had planned to fit the new unit later in the year, perhaps at Austin where overtaking is easier.",
+       "Russell said after Sepang that his title chances had become 'exceptionally unlikely'.",
+       "Mercedes is also dealing with a performance question: Toto Wolff said after Sepang qualifying that the team appeared to have gone 'four or five tenths backwards' with its upgrade relative to expectations, and Mercedes was comparing old and new W17 specifications in Singapore practice, with Russell on the old one (Grande Prêmio)."
       ]
      },
      {
-      "h": "What to watch next",
+      "h": "The rest of the order",
       "b": [
-       "Sunday's race at 8:00pm SGT, and how far Russell moves up.",
-       "FIA confirmation of Alonso's grid penalty.",
-       "Russell says there are 'still seven races to go' and he expects to take another penalty later."
+       "Verstappen won at Sepang and in the Sprint, and starts Sunday's race on pole; Ferrari's Leclerc and Hamilton start second and third. Each one finishing between the Mercedes drivers shrinks Russell's chance of closing the gap.",
+       "Alonso's grid penalty for a power-unit change was expected but not yet confirmed by the FIA at the time of The Race's report.",
+       "Further down, the constructors' table has Racing Bulls on 94, Alpine 68, Haas 30, Audi 19, Williams 12, Aston Martin 7 and Cadillac with none (RacingNews365)."
+      ]
+     },
+     {
+      "h": "What's next",
+      "b": [
+       "Singapore Grand Prix: 8pm SGT, Sunday 11 October.",
+       "Next: United States GP, Austin, 25 October. F1.com said before Singapore that if Antonelli scored nothing more and no one passed his total, the other contenders would have to wait until Qatar to take the title."
       ]
      }
     ],
@@ -897,194 +1221,244 @@ noscript{display:block;padding:24px 16px;color:var(--text)}
   ],
   "tennis": [
    {
-    "headline": "Hurkacz stuns Djokovic 6-4, 6-3 in Shanghai second round",
-    "teaser": "Hubert Hurkacz, the 2023 champion, won his first match in nine meetings against Djokovic, who looked low on energy after winning Beijing days earlier.",
-    "source": "ATP Tour",
+    "headline": "Hurkacz stuns Djokovic 6-4, 6-3 in Shanghai for his first win in nine meetings",
+    "teaser": "Fresh from winning Beijing, Djokovic looked flat in his sixth match in ten days. Hubert Hurkacz, the 2023 champion, served superbly (82% of first-serve points) and has now won eight straight in Shanghai.",
+    "source": "ATP Tour · Tennis365",
     "url": "https://www.atptour.com/en/news/djokovic-hurkacz-shanghai-2026-friday",
     "published": "2026-10-09",
     "tags": [
      "Tennis",
      "ATP Masters 1000",
      "Shanghai",
-     "Hubert Hurkacz",
-     "Novak Djokovic",
-     "ATP Tour (official site)"
+     "Djokovic",
+     "Hurkacz"
+    ],
+    "sources": [
+     {
+      "label": "ATP Tour: Hurkacz downs Djokovic in R2 upset",
+      "url": "https://www.atptour.com/en/news/djokovic-hurkacz-shanghai-2026-friday"
+     },
+     {
+      "label": "ATP Tour: Djokovic gives schedule update",
+      "url": "https://www.atptour.com/en/news/djokovic-shanghai-2026-reaction-friday"
+     },
+     {
+      "label": "Tennis365: Everything Djokovic said after exit",
+      "url": "https://www.tennis365.com/tennis-news/everything-novak-djokovic-said-after-shanghai-masters-exit"
+     },
+     {
+      "label": "Rolex Shanghai Masters: Sunday preview",
+      "url": "https://en.rolexshanghaimasters.com/en/media/news/sunday-preview-zverev-shelton-zhou-in-action"
+     },
+     {
+      "label": "ATP Tour: Shanghai draw preview",
+      "url": "https://www.atptour.com/en/news/shanghai-2026-draw-preview"
+     }
     ],
     "brief": [
      {
       "h": "What happened",
       "b": [
-       "In a Friday-night upset at the Rolex Shanghai Masters, Hubert Hurkacz beat Novak Djokovic 6-4, 6-3 in 87 minutes at Qi Zhong Tennis Center.",
-       "It was the Pole's first win over Djokovic in nine meetings.",
-       "Djokovic appeared to struggle physically in his sixth match in 10 days; Hurkacz looked the fresher player even after beating James Duckworth in round one.",
-       "Hurkacz saved two break points in the third game, then was largely in control."
+       "On Friday night (9 October) at the Qi Zhong Tennis Center, Hubert Hurkacz beat Novak Djokovic 6-4, 6-3 in 87 minutes in the second round of the Rolex Shanghai Masters.",
+       "It was the Pole's first win in nine meetings with the Serbian. Hurkacz, 29, won the title here in 2023 and was playing in Shanghai for the first time since. He is now on an eight-match winning streak in the city.",
+       "Both sets turned on a single break, Tennis365 reports: Hurkacz broke at 5-4 in the first set and at 2-1 in the second.",
+       "Hurkacz beat James Duckworth in round one. The ATP said he looked the fresher player, while Djokovic 'appeared to struggle physically' and delivered a 'low-energy performance'.",
+       "Hurkacz fended off two break points in the third game and, per the ATP, 'was largely in control from then on'."
       ]
      },
      {
-      "h": "Key numbers and facts",
+      "h": "Key moments & numbers",
       "b": [
-       "Hurkacz won 82% (36/44) of points behind his first serve.",
-       "He is only the fourth player with at least one hard-court win against all of Federer, Nadal and Djokovic, after Andy Murray, Dominic Thiem and Alexander Zverev.",
-       "Hurkacz, 29, is competing in Shanghai for the first time since winning it in 2023 and is on an eight-match winning streak there.",
-       "Djokovic won his 102nd tour-level title at the China Open in Beijing on Tuesday; Hurkacz reached the Chengdu final a week earlier.",
-       "Djokovic, 39, is ninth in the PIF ATP Live Race To Turin."
+       "Hurkacz won 82% (36 of 44) of points behind his first serve, according to Infosys ATP Stats.",
+       "He became the fourth player with at least one hard-court win over each of Roger Federer, Rafael Nadal and Djokovic, after Andy Murray, Dominic Thiem and Alexander Zverev.",
+       "Djokovic won his 102nd tour-level title on Tuesday at the China Open in Beijing, so Shanghai was his sixth match in 10 days. He is 39, and is 19-7 this season, which includes the Australian Open final in February.",
+       "Hurkacz reached the Chengdu Open final a week earlier and then retired from his Beijing semi-final with an adductor injury, per the ATP. Another report has the Beijing semi-final withdrawal as De Minaur's, so I have not leaned on that detail.",
+       "Tennis365 says Djokovic had been 8-0 against Hurkacz, a former world No. 6 who is ranked 34th."
       ]
      },
      {
       "h": "What the players said",
       "b": [
-       "Hurkacz: 'It's a special night. I've been playing Novak for like seven years, so it's been unsuccessful but [he has been] such a great champion for so many years.'",
-       "He said it was vital to 'stay there with Novak' early, because if Djokovic gets ahead 'it's not easy to come back'.",
-       "He admitted feeling nerves towards the end but said he stayed focused."
+       "Djokovic: 'I wasn't close to what I was playing in Beijing. I'm slightly more tired, not fresh.' He said he did not feel himself 'in terms of feeling the ball' on a 'super quick surface, completely different from Beijing'.",
+       "He said it was enough to lose serve once per set, and that Hurkacz's serve was 'almost impossible' to return: 'I did not adjust.' He added it was 'a really tough draw' to meet Hurkacz first up.",
+       "Hurkacz: 'It's a special night. I've been playing Novak for like seven years, so it's been unsuccessful.' He said it was important to 'stay there with Novak' early because 'if he gets ahead, he presents such a great level'.",
+       "In the closing stages he admitted to 'feeling some nerves'; he said he had led by a break against Djokovic before and tried to stay focused on his own game."
       ]
      },
      {
       "h": "Why it matters",
       "b": [
-       "The former World No. 1, fresh from a Beijing title, is out in the second round of a Masters 1000.",
-       "Djokovic is now in the contention zone for the Nitto ATP Finals in Turin; his next scheduled event is November's Rolex Paris Masters.",
-       "Hurkacz next plays third-round opponent Zhou Yi."
+       "The draw had placed Zverev and Djokovic in the same half, with a possible semi-final meeting (ATP draw preview). That path is now gone for Zverev, the top seed, who is chasing year-end No. 1 (Rolex Shanghai Masters).",
+       "Djokovic is ninth in the live Race To Turin per the ATP, so he remains in contention for the Nitto ATP Finals, but he lost the points a deeper Shanghai run would have brought.",
+       "Sinner, the 2024 champion, had already withdrawn with a knee injury, so the title race is more open. Other early seeded casualties on Friday included Musetti (24) and Rublev (23)."
       ]
      },
      {
-      "h": "What to watch next",
+      "h": "What's next",
       "b": [
-       "Hurkacz v home wild card Zhou Yi (world No. 277, who beat Lorenzo Musetti in a third-set tie-break) on Sunday.",
-       "Djokovic's European indoor season, starting with the Paris Masters.",
-       "The Race to Turin standings."
+       "Hurkacz plays Chinese wild card Zhou Yi in the third round on Sunday. Zhou, ranked 277, beat Lorenzo Musetti in a third-set tie-break on Friday.",
+       "Djokovic said he is 'planning only to play in Paris' and wants to be at the Nitto ATP Finals ('I would like to'). Paris starts in November; the ATP says the European indoor season is his next stop."
       ]
      }
     ],
+    "note": "Sourced from the ATP Tour, Tennis365 and the tournament preview. Sources differ on who withdrew from a Beijing semi-final, so that detail is left out.",
     "id": "3b5a31d1"
    },
    {
-    "headline": "Shanghai Masters: Alcaraz, Medvedev, Fritz and Vacherot advance on Saturday",
-    "teaser": "Second seed Carlos Alcaraz beat Juan Manuel Cerundolo 6-3, 6-3; Medvedev and Auger-Aliassime came from behind; Fritz, Fils, Tsitsipas and defending champion Vacherot also won.",
-    "source": "ATP Tour",
+    "headline": "Shanghai Masters: Alcaraz extends his streak to seven; Medvedev, Auger-Aliassime and Jodar come back from a set down; Vacherot begins his defence",
+    "teaser": "Saturday's round of 64 saw all the top seeds in action advance: Alcaraz needed 66 minutes, while Medvedev, Auger-Aliassime and Jodar recovered from first-set losses. Tsitsipas and Ruud also won.",
+    "source": "ATP Tour · Rolex Shanghai Masters",
     "url": "https://www.atptour.com/en/news/shanghai-2026-results",
     "published": "2026-10-10",
     "tags": [
      "Tennis",
      "ATP Masters 1000",
      "Shanghai",
-     "Carlos Alcaraz",
-     "Daniil Medvedev",
-     "ATP Tour (official site)"
+     "Alcaraz",
+     "Medvedev"
+    ],
+    "sources": [
+     {
+      "label": "ATP Tour: Saturday 10 October results",
+      "url": "https://www.atptour.com/en/news/shanghai-2026-results"
+     },
+     {
+      "label": "ATP Tour: Alcaraz unveils new mo-tivation, Vacherot begins title defence",
+      "url": "https://www.atptour.com/en/news/alcaraz-cerundolo-shanghai-2026-saturday"
+     },
+     {
+      "label": "ATP Tour: Jodar, Medvedev, Auger-Aliassime fight back",
+      "url": "https://www.atptour.com/en/news/jodar-medvedev-auger-aliassime-shanghai-2026-saturday"
+     },
+     {
+      "label": "Rolex Shanghai Masters: Alcaraz and Vacherot report",
+      "url": "https://en.rolexshanghaimasters.com/en/media/news/alcaraz-cerundolo-shanghai-2026-saturday"
+     },
+     {
+      "label": "ATP Tour: Shanghai draw preview",
+      "url": "https://www.atptour.com/en/news/shanghai-2026-draw-preview"
+     }
     ],
     "brief": [
      {
       "h": "What happened",
       "b": [
-       "Round of 64 play continued Saturday at the Rolex Shanghai Masters (7-18 October).",
-       "Second seed Carlos Alcaraz beat Juan Manuel Cerundolo 6-3, 6-3.",
-       "Fifth seed Daniil Medvedev rallied from a set down to beat Jan-Lennard Struff 4-6, 6-4, 6-3 and improve to 10-2 against him.",
-       "Fourth seed Felix Auger-Aliassime beat Camilo Ugo Carabelli 4-6, 7-6(1), 7-5 after squandering a 5-2 lead in the second set."
+       "Carlos Alcaraz (seed 2) beat Juan Manuel Cerundolo 6-3, 6-3 in 66 minutes. It was his seventh straight win following his title defence in Tokyo.",
+       "Daniil Medvedev (5) recovered from 4-6 to beat Jan-Lennard Struff 4-6, 6-4, 6-3. Felix Auger-Aliassime (4) beat Camilo Ugo Carabelli 4-6, 7-6(1), 7-5, and Rafael Jodar (12) beat Thiago Agustin Tirante 4-6, 6-2, 6-3.",
+       "Defending champion Valentin Vacherot (17) beat Sebastian Baez 6-4, 7-6(5). Taylor Fritz (11) beat Matteo Arnaldi 7-5, 6-4; Arthur Fils (8) beat qualifier Pavel Kotov 6-3, 6-4; Casper Ruud (20) beat wild card Yunchaokete Bu 6-1, 7-6(2).",
+       "Others through: Tommy Paul (15), Learner Tien (14), Stefanos Tsitsipas (beat 18th seed Luciano Darderi 6-3, 6-4), Jiri Lehecka (22), qualifier Dalibor Svrcina (beat 28th seed Tomas Martin Etcheverry), Pablo Carreno Busta (beat 29th seed Alejandro Tabilo), Botic van de Zandschulp and Zizou Bergs."
       ]
      },
      {
-      "h": "Key results",
+      "h": "Key moments & numbers",
       "b": [
-       "Arthur Fils (8) d Pavel Kotov 6-3, 6-4. Taylor Fritz (11) d Matteo Arnaldi 7-5, 6-4.",
-       "Rafael Jodar (12) d Thiago Tirante 4-6, 6-2, 6-3 on debut. He is 11th in the Race to Turin.",
-       "Learner Tien (14) d Zachary Svajda 7-5, 7-5; Tommy Paul (15) d Adolfo Vallejo 6-2, 6-2.",
-       "Defending champion Valentin Vacherot (17) d Sebastian Baez 6-4, 7-6(5).",
-       "Stefanos Tsitsipas d Luciano Darderi (18) 6-3, 6-4; Casper Ruud (20) d Yunchaokete Bu 6-1, 7-6(2).",
-       "Qualifier Dalibor Svrcina d Tomas Martin Etcheverry (28) 6-3, 3-6, 7-5; Jiri Lehecka (22) d Nuno Borges 6-3, 3-6, 6-3."
-      ]
-     },
-     {
-      "h": "Doubles and other notes",
-      "b": [
-       "In doubles, Medvedev and Ivan Liutarevich beat Alexander Bublik and Ben Shelton 6-4, 6-3.",
-       "Home pair Zhizhen Zhang and Yi Zhou won through; Sander Arends and Luke Johnson beat Marcelo Melo and Alexander Zverev 7-6(5), 7-6(5)."
+       "Alcaraz played with a freshly trimmed moustache. He said it was agreed with his team that if he won in Tokyo, they would all grow it: 'It's going to stay for the week.' He hit 24 winners and won 13 of 20 points at the net, and said the aggression was a mid-match adjustment because he started 'not very well' on the very fast court.",
+       "Alcaraz missed four-and-a-half months with a wrist injury, returned at the US Open (quarter-final loss to Ben Shelton), and won the 27th tour-level title of his career in Tokyo. Shanghai is one of three Masters 1000 events he has not won, with Canada and Paris. He could become the first Spanish man to win it.",
+       "Cerundolo, who beat Jannik Sinner at Roland Garros this year, was trying to be the first to beat both Sinner and Alcaraz in the same season since Andrey Rublev in 2024.",
+       "Medvedev has a Tour-leading 31 hard-court wins in 2026, including titles in Dubai, Brisbane and Hangzhou. He moved to 10-2 against Struff.",
+       "Jodar, a 20-year-old in the top 13 who rose from outside the top 100 in January, saved all six break points in the decider. He had lost in round one at both the US Open and Tokyo.",
+       "Auger-Aliassime squandered a 5-2 lead in the second set before levelling and breaking in the 11th game of the third.",
+       "Vacherot won the title last year as the World No. 204, the lowest-ranked Masters 1000 champion ever. He is now No. 14 in the rankings but 32nd in the live rankings because of the points he must defend (ATP).",
+       "Fritz's match was moved indoors under the roof of Grandstand 2 because of rain.",
+       "Ruud saved two set points at 5-6 in the second set before an impressive tie-break against home wild card Bu.",
+       "Fritz, a former Shanghai semi-finalist, and Fils, who won his first Masters 1000 at Cincinnati this year among two 2026 titles, both won in straight sets. Fils is seventh in the live Race To Turin."
       ]
      },
      {
       "h": "Why it matters",
       "b": [
-       "The favourites are advancing, but several needed three sets, such as Medvedev, Auger-Aliassime and Jodar.",
-       "Jodar's win keeps his bid to reach the Nitto ATP Finals alive after a breakout season.",
-       "Vacherot, the defending champion, is through."
+       "Alcaraz's quarter includes Medvedev, Fritz, Paul and Vacherot (ATP draw preview). He plays Bergs next; the Vacherot-Paul winner is a potential fourth-round opponent.",
+       "Jodar next faces Lehecka and is 11th in the live Race To Turin; Medvedev is eighth; Fils seventh; Fritz 12th; Auger-Aliassime 14th, so these results shape the Nitto ATP Finals race (ATP).",
+       "Medvedev's opponent next is Svrcina, who knocked out the 28th seed as a qualifier.",
+       "The ATP's draw preview had Alcaraz's potential quarter-final opponent as Medvedev or Fritz, both of whom won on Saturday; Alcaraz, Medvedev and Fritz are all on the same side of a draw that also holds Auger-Aliassime and Fils in the same half.",
+       "Medvedev was on a seven-match winning streak going into the tournament, according to the draw preview, and he is aiming to qualify for the Nitto ATP Finals for the seventh time after missing the cut last year."
       ]
      },
      {
-      "h": "More detail",
+      "h": "What's next",
       "b": [
-       "Singles round-of-64 results also included Zizou Bergs d Ignacio Buse 6-0, 6-3 and Botic van de Zandschulp d Alex Michelsen 6-4, 6-4.",
-       "Pablo Carreno Busta d Alejandro Tabilo 4-6, 7-6(2), 6-4.",
-       "World No. 1 Jannik Sinner is out of the event with a knee injury, leaving Alexander Zverev as top seed (Rolex Shanghai Masters).",
-       "Several matches went three sets, with Auger-Aliassime levelling after squandering a 5-2 second-set lead."
-      ]
-     },
-     {
-      "h": "What to watch next",
-      "b": [
-       "The tournament continues Sunday; the final is on 18 October.",
-       "See the Sunday preview for Zverev v Halys, Shelton v Gea and Hurkacz v Zhou Yi."
+       "Third-round matches continue on Sunday 11 October (Day 5). Alcaraz plays Bergs, Medvedev plays Svrcina, Jodar plays Lehecka, Auger-Aliassime plays Carreno Busta, and Vacherot plays 15th seed Tommy Paul, their first meeting. The winner of that match is Alcaraz's potential fourth-round opponent if he gets past Bergs.",
+       "The tournament runs to 18 October."
       ]
      }
     ],
+    "note": "I did not confirm any Sunday results. Alcaraz's draw path and other schedule items come from ATP articles published Saturday.",
     "id": "74532976"
    },
    {
-    "headline": "Zverev eyes year-end No. 1 in Shanghai as Sinner sits out; Sunday third-round preview",
-    "teaser": "Top seed Alexander Zverev meets Quentin Halys Sunday; reaching the semi-finals would clinch year-end No. 1. Ben Shelton, Hurkacz v Zhou Yi and de Minaur also play.",
-    "source": "Rolex Shanghai Masters",
+    "headline": "Zverev eyes year-end No. 1 in Shanghai as Sinner sits out: Sunday's third-round card",
+    "teaser": "Top seed Zverev meets Halys on Day 5, with year-end No. 1 within reach. Shelton, Hurkacz-Zhou and De Minaur also play.",
+    "source": "Rolex Shanghai Masters · ATP Tour",
     "url": "https://en.rolexshanghaimasters.com/en/media/news/sunday-preview-zverev-shelton-zhou-in-action",
     "published": "2026-10-10",
     "tags": [
      "Tennis",
      "ATP Masters 1000",
      "Shanghai",
-     "Alexander Zverev",
-     "Jannik Sinner",
-     "Rolex Shanghai Masters (official site)"
+     "Zverev",
+     "Year-end No. 1"
     ],
-    "note": "Source is an official tournament preview; Sinner's injury detail is from a secondary aggregator (stats-data.com).",
+    "sources": [
+     {
+      "label": "Rolex Shanghai Masters: Sunday preview",
+      "url": "https://en.rolexshanghaimasters.com/en/media/news/sunday-preview-zverev-shelton-zhou-in-action"
+     },
+     {
+      "label": "ATP Tour: Sinner withdraws from Shanghai",
+      "url": "https://www.atptour.com/en/news/sinner-shanghai-2026-withdrawal"
+     },
+     {
+      "label": "ATP Tour: Shanghai draw preview",
+      "url": "https://www.atptour.com/en/news/shanghai-2026-draw-preview"
+     },
+     {
+      "label": "ATP Tour: Hurkacz beats Djokovic",
+      "url": "https://www.atptour.com/en/news/djokovic-hurkacz-shanghai-2026-friday"
+     }
+    ],
     "brief": [
      {
-      "h": "What happened",
+      "h": "What's happening",
       "b": [
-       "Sunday's Day 5 order of play in Shanghai is headlined by top seed Alexander Zverev against Frenchman Quentin Halys.",
-       "Zverev is chasing his first Masters 1000 title of the year. He has won just two events in 2026, but they were Roland Garros and the US Open, his first two majors.",
-       "Current World No. 1 Jannik Sinner has ruled himself out for the rest of the season; a secondary report says the knee injury has kept him off court since Wimbledon in July."
+       "Top seed Alexander Zverev plays Frenchman Quentin Halys on Day 5 (Sunday 11 October) in the third round. Zverev, 29, has won two tournaments in 2026, Roland Garros and the US Open, his first two majors, and is chasing a first Masters 1000 title of the season.",
+       "He beat China's Wu Yibing 6-4, 7-6(4) on Friday for his 30th hard-court win of the year.",
+       "Halys, ranked No. 48, trails Zverev 0-3 in 2026 meetings: he pushed Zverev to four sets at Roland Garros and to two tie-breaks at the Miami Open, then held a two-sets-to-one lead at the US Open before Zverev clawed back via a fourth-set tie-break and won in five, a match that finished after 2am. Zverev hit 29 aces and converted five of 20 break points. Afterwards Zverev said he trains 'to be able to come out on top of these difficult moments when you're not playing best'.",
+       "One results aggregator reported the Shanghai score as 6-4, 6-4 to Zverev; I could not confirm that against the ATP or the tournament site, so check the official result."
       ]
      },
      {
-      "h": "Key numbers and facts",
+      "h": "The year-end No. 1 race",
       "b": [
-       "Zverev, 29, won his 30th hard-court match of the year on Friday, beating Wu Yibing 6-4, 7-6(4).",
-       "If he reaches the semi-finals he clinches year-end No. 1 honours. He also clinches it if neither Carlos Alcaraz nor Ben Shelton wins the title.",
-       "Even if he wins Shanghai he cannot immediately move to World No. 1, because Sinner's late-season 2025 points remain on his ranking.",
-       "Halys (No. 48) trails 0-3 in career meetings, all in 2026, but led two sets to one at the US Open in a match that finished after 2am; Zverev hit 29 aces, creating 20 break points and converting five.",
-       "Zverev has not won three or more titles in a season since 2021, when he won six."
+       "The tournament preview says Zverev would clinch year-end No. 1 if he reaches the semi-finals. He would also clinch it if neither Alcaraz nor Ben Shelton wins the title.",
+       "In a quirk, Zverev cannot immediately become World No. 1 even if he wins Shanghai: Jannik Sinner is current No. 1 but has ruled himself out for the rest of the season, and his late-2025 points remain on his ranking for now.",
+       "Sinner withdrew from Shanghai with a knee injury. He has not played since winning Wimbledon in July, has a 44-3 record this season and has won Indian Wells, Miami, Monte-Carlo, Madrid and Rome to complete the Career Golden Masters (ATP).",
+       "Zverev lost to Djokovic in the Beijing quarter-finals last week, so he comes into Shanghai looking to bounce back (ATP)."
       ]
      },
      {
-      "h": "The rest of the card",
+      "h": "Rest of Sunday's card",
       "b": [
-       "Ben Shelton (3), a recent US Open finalist, meets 21-year-old Arthur Gea for the first time; Shelton is next in line to qualify for the Nitto ATP Finals.",
-       "Zhou Yi, 21, world No. 277, plays 2023 champion Hubert Hurkacz after beating Lorenzo Musetti in a third-set tie-break.",
-       "Alex de Minaur (9) plays Rei Sakamoto, who upset Andrey Rublev; de Minaur received a walkover from Alex Molcan.",
-       "Jakub Mensik plays Francisco Cerundolo; Alexander Bublik plays Brandon Nakashima."
+       "Ben Shelton (3), the US Open finalist, plays 21-year-old Frenchman Arthur Gea for the first time. He beat Daniel Altmaier 6-3, 7-6(6) in the second round and is next in line to qualify for the Nitto ATP Finals.",
+       "Hubert Hurkacz faces 21-year-old Zhou Yi, ranked 277, who upset Lorenzo Musetti in a third-set tie-break.",
+       "Alex de Minaur (9) plays Rei Sakamoto, who upset 23rd seed Andrey Rublev. De Minaur had withdrawn from his Beijing semi-final with a groin injury but got a walkover from Alex Molcan here.",
+       "Also: Jakub Mensik v Francisco Cerundolo, and Alexander Bublik v Brandon Nakashima. In the draw, Zverev's quarter also contains Flavio Cobolli and De Minaur, while Shelton's holds the highest seed in the section that also had Djokovic and Tiafoe."
       ]
      },
      {
       "h": "Why it matters",
       "b": [
-       "The year-end No. 1 race is decided largely by Zverev's results this week.",
-       "Zverev's quote after the US Open match: this is what he trains for, 'to be able to come out on top of these difficult moments when you're not playing best'."
+       "Djokovic's loss removes Zverev's projected semi-final opponent, and a semi-final berth alone would settle year-end No. 1 honours, an unusual route to the top with Sinner absent. The tournament preview says he has not won three or more titles in a season since 2021, when he won six, including two Masters 1000s, Olympic gold and the Nitto ATP Finals.",
+       "Shelton is next in line to qualify for the Nitto ATP Finals, and the Race To Turin chasers (Cobolli, Tiafoe, Fils, Medvedev, De Minaur, Djokovic, Jodar, Fritz, Mensik, Paul, Auger-Aliassime, who were 5th to 15th in the live race before the week) have rankings points on the line, with a 1,165-point gap between 5th and 15th."
       ]
      },
      {
-      "h": "What to watch next",
+      "h": "What's next",
       "b": [
-       "Zverev v Halys, then whether Zverev reaches the semi-finals.",
-       "Shelton's push toward the Nitto ATP Finals.",
-       "Whether Zhou Yi can pull off another upset against Hurkacz."
+       "Third round continues Sunday; fourth round and quarter-finals follow. The tournament runs through 18 October."
       ]
      }
     ],
+    "note": "Sunday's results were not confirmed from official sources when this was written.",
     "id": "27159a2b"
    }
   ]
@@ -3161,7 +3535,736 @@ noscript{display:block;padding:24px 16px;color:var(--text)}
    ],
    "id": "2b8c43e8"
   }
- ]
+ ],
+ "tournaments": {
+  "cricket": [
+   {
+    "name": "Australia in South Africa: three-Test series",
+    "subtitle": "9-31 Oct 2026 · Durban, Gqeberha, Cape Town · 1st Test in progress (day 2 complete)",
+    "updated": "2026-10-11T13:45:00+08:00",
+    "teaser": "A rematch of last year's World Test Championship final and Australia's first Test tour of South Africa since 2018. Australia lead the first Test after Renshaw's 190; two more Tests follow.",
+    "tags": [
+     "Cricket",
+     "Test series",
+     "Australia",
+     "South Africa"
+    ],
+    "sources": [
+     {
+      "label": "cricket.com.au: day-two report with schedule and squads",
+      "url": "https://www.cricket.com.au/news/4590129/south-africa-australia-first-test-kingsmead-durban-match-report-day-two-news-scores-video-highlights-toss-matthew-renshaw"
+     },
+     {
+      "label": "ESPNcricinfo: day-two match report",
+      "url": "https://www.cricinfo.com/series/australia-in-south-africa-2026-27-1525634/south-africa-vs-australia-1st-test-1525659/match-report"
+     },
+     {
+      "label": "The Guardian: second-day match report",
+      "url": "https://www.theguardian.com/sport/2026/oct/10/south-africa-australia-first-test-second-day-match-report"
+     },
+     {
+      "label": "IOL / The Star: day 1-2 live blog",
+      "url": "https://thestar.co.za/sport/cricket/2026-10-09-toss-australia-opt-to-bat-first-against-proteas-on-hot-durban-morning/"
+     }
+    ],
+    "brief": [
+     {
+      "h": "Format and schedule",
+      "b": [
+       "Three Tests. 1st: 9-13 October, Kingsmead, Durban (9:30am local, 3:30pm SGT). 2nd: 18-22 October, St George's Park, Gqeberha (10am local, 4pm SGT). 3rd: 27-31 October, Newlands, Cape Town (10:30am local, 4:30pm SGT). Times and venues are from cricket.com.au's tour box.",
+       "Australia's first Test series in South Africa since the 2018 sandpaper scandal (Cricinfo). South Africa beat Australia in last year's World Test Championship final, and Pat Cummins said at the toss: 'They got the better of us a year ago.'"
+      ]
+     },
+     {
+      "h": "Highlights so far (first Test)",
+      "b": [
+       "Day one (Friday 9 October): Australia won the toss and batted on a green-tinged pitch. South Africa's seamers took all six wickets that fell, Australia reaching 187-6 when bad light stopped play after 65.2 overs.",
+       "Wiaan Mulder, a medium-pacer, took the new ball ahead of the unavailable Kagiso Rabada and removed Travis Head (9) and, on the stroke of lunch, Marnus Labuschagne (37). Marco Jansen dismissed returning opener Nic Maddinson for a 33-ball duck, and Anrich Nortje, back after three-and-a-half years out of Tests, took the key wickets of Alex Carey and Beau Webster in one over.",
+       "Day two: Renshaw (190) and Cummins (43) took their stand to 86, and then Renshaw and Lyon added a record 134 for the ninth wicket. Australia were all out for 390.",
+       "South Africa lost Ryan Rickelton for a duck to Hazlewood and closed on 27-1, 363 behind."
+      ]
+     },
+     {
+      "h": "Team news and storylines",
+      "b": [
+       "South Africa: Rabada and Lungi Ngidi both have hamstring injuries (cricket.com.au). Bavuma said at the toss the twin spinners (Harmer and Maharaj) gave the attack 'an extra dimension'.",
+       "Australia: Cameron Green is injured, so Nic Maddinson returned as an opener alongside Head; Renshaw was shifted down to No. 5. Josh Inglis joins the squad from the second Test.",
+       "Batting order: the Guardian says it is an open question where Renshaw bats once Green is back.",
+       "Spin: South Africa's spinners took one wicket from 48.2 overs on day two, but Cricinfo expects the pitch to spin significantly later in the match.",
+       "Atmosphere: the crowd at Kingsmead was sparse and subdued (Cricinfo), though local school bands played during day two."
+      ]
+     },
+     {
+      "h": "Numbers worth knowing",
+      "b": [
+       "Renshaw's 190 is the highest by an Australian at Kingsmead and the highest by anyone batting at No. 5 or lower at the ground.",
+       "Renshaw-Lyon: 134 for the ninth wicket, Australia's second-best in Tests and the highest at Kingsmead.",
+       "Teams scoring over 350 first at Kingsmead are unbeaten there (nine wins, four draws), according to cricket.com.au.",
+       "Australian first-innings scoring: 124-6 on day one became 390 all out, with 266 added for the last four wickets."
+      ]
+     },
+     {
+      "h": "What to watch",
+      "b": [
+       "Whether South Africa's top order, with Markram (15*) and Bedingham (12*) in, can answer 390.",
+       "How quickly Australia's new-ball bowlers can strike on Sunday's resumption (3:30pm SGT), and whether the pitch starts turning for Lyon.",
+       "Bad light, which has ended play early on both days so far.",
+       "Selection for Gqeberha, when Inglis rejoins the squad."
+      ]
+     }
+    ],
+    "note": "Series information is as of the end of day two of the first Test; day-three play had not started when this was written.",
+    "id": "42106b2c"
+   },
+   {
+    "name": "West Indies in India: ODIs and five T20Is",
+    "subtitle": "27 Sep-17 Oct 2026 · ODIs: India won 2-1 · T20Is: 1-1 after two, third tonight in Indore",
+    "updated": "2026-10-11T13:45:00+08:00",
+    "teaser": "India won the ODI series 2-1 but West Indies won the decider and the second T20I. The five-match T20I series is level at 1-1 with three to play.",
+    "tags": [
+     "Cricket",
+     "T20I",
+     "ODI",
+     "India",
+     "West Indies"
+    ],
+    "sources": [
+     {
+      "label": "Wikipedia: West Indian cricket team in India in 2026-27",
+      "url": "https://en.wikipedia.org/wiki/West_Indian_cricket_team_in_India_in_2026%E2%80%9327"
+     },
+     {
+      "label": "ESPNcricinfo: 3rd T20I preview (Monga)",
+      "url": "https://www.cricinfo.com/series/west-indies-in-india-2026-27-1529215/india-vs-west-indies-3rd-t20i-1529232/match-preview"
+     },
+     {
+      "label": "ESPNcricinfo: 2nd T20I match report",
+      "url": "https://www.cricinfo.com/series/west-indies-in-india-2026-27-1529215/india-vs-west-indies-2nd-t20i-1529231/match-report"
+     },
+     {
+      "label": "Al Jazeera / AP: 2nd T20I report",
+      "url": "https://www.aljazeera.com/sports/2026/10/10/hopes-hundred-fires-west-indies-to-record-t20-win-over-india"
+     },
+     {
+      "label": "India Today: 3rd T20I preview",
+      "url": "https://www.indiatoday.in/sports/cricket/story/ind-vs-wi-3rd-t20i-indore-preview-pitch-report-weather-forecast-predicted-xis-3014350-2026-10-11"
+     }
+    ],
+    "brief": [
+     {
+      "h": "Format and results so far",
+      "b": [
+       "ODIs, India won 2-1. 1st (27 Sep, Thiruvananthapuram): India won by eight wickets, chasing 295 with 300-2 in 41.4 overs; Virat Kohli 139 not out, Kuldeep Yadav 4-40, and Justin Greaves made a maiden ODI hundred (101) for West Indies. Kohli passed 15,000 ODI runs in the fastest time.",
+       "2nd (30 Sep, Guwahati): West Indies made 405-7, their highest ODI total (Amir Jangoo 114). India chased it with 406-2 in 43.3 overs, with Shubman Gill 223 not out off 133 and Rohit Sharma passing 12,000 ODI runs. Five centuries in one ODI is a record, and it was India's highest successful ODI chase.",
+       "3rd (3 Oct, Mullanpur): India 351-7 (KL Rahul 129 not out), West Indies 352-5 in 48.2 overs. Shai Hope made 162 not out off 143, West Indies' highest successful ODI chase. Gill was player of the series (334 runs); Hope scored 278.",
+       "T20Is: 1st (6 Oct, Lucknow): India won by eight wickets, chasing 172 in 14.4 overs. Shreyas Iyer made 102 not out off 43, his first T20I century. Naman Dhir took 3-31 on debut. 2nd (9 Oct, Ranchi): West Indies won by six wickets, chasing 250 for the win."
+      ]
+     },
+     {
+      "h": "Storylines",
+      "b": [
+       "Chasing: all five completed matches on the tour before the third T20I had been won by the side batting second (Cricinfo). Dew and flat pitches are major factors.",
+       "India's bowling: without Jasprit Bumrah, India's attack has been taken apart in Ranchi (501 runs in 38.3 overs, 352 of them in boundaries). India Today says Arshdeep Singh has conceded 79 runs in two matches for one wicket.",
+       "Hope: the West Indies captain is on 162 not out in the ODI decider, 102 not out in Ranchi, and has scored three centuries in four innings against India across formats (AP).",
+       "Experimentation: coach Gautam Gambhir has indicated India will keep trying combinations, including promoting Shivam Dube to No. 4 in Ranchi (India Today). Naman Dhir debuted in the ODIs and took 3 wickets in the first T20I.",
+       "West Indies' bowling resources are thin, per Cricinfo, with 'not too many other bowling options in their squad'."
+      ]
+     },
+     {
+      "h": "Notable numbers",
+      "b": [
+       "501 runs in the Ranchi T20I, the second-highest T20I match aggregate; West Indies' 204 runs in boundaries is their record.",
+       "West Indies' 252-4 is their highest T20I chase and the second-highest successful chase in T20I history.",
+       "Iyer: 102* off 43 in Lucknow, then 40 off 18 in Ranchi. Samson: 82 off 41. Rutherford: 56 in Lucknow, 84 off 37 in Ranchi.",
+       "West Indies have won three T20Is against India in India, all while chasing: the 2016 World T20 semi-final and Ranchi (Cricinfo)."
+      ]
+     },
+     {
+      "h": "What's coming",
+      "b": [
+       "3rd T20I: Sunday 11 October, Holkar Stadium, Indore, 7pm IST (9:30pm SGT). Indore has short boundaries; the last three ODIs there had scores of 399, 385 and 337.",
+       "4th T20I: Wednesday 14 October, Rajiv Gandhi International Stadium, Hyderabad, 7pm IST (9:30pm SGT).",
+       "5th T20I: Saturday 17 October, M. Chinnaswamy Stadium, Bengaluru, 7pm IST (9:30pm SGT)."
+      ]
+     }
+    ],
+    "id": "eca9f79b"
+   },
+   {
+    "name": "Afghanistan's UAE home season: Bangladesh Test, tri-series, Zimbabwe",
+    "subtitle": "9 Oct-17 Nov 2026 · UAE · one-off Test vs Bangladesh in progress",
+    "updated": "2026-10-11T13:45:00+08:00",
+    "teaser": "Afghanistan host Bangladesh and Zimbabwe in the UAE: a one-off Test (under way), an ODI tri-series, three T20Is and two Tests against Zimbabwe.",
+    "tags": [
+     "Cricket",
+     "Test",
+     "ODI",
+     "Afghanistan",
+     "Bangladesh",
+     "Zimbabwe"
+    ],
+    "sources": [
+     {
+      "label": "Afghanistan Cricket Board: schedule announcement (8 Sep 2026)",
+      "url": "https://acb.af/en-US/post/afghanistan-to-host-bangladesh-and-zimbabwe-for-multi-format-series-in-uae"
+     },
+     {
+      "label": "Cricbuzz: day-two report",
+      "url": "https://www.cricbuzz.com/cricket-news/140461/rahmat-shah-abdul-malik-lead-afghanistans-strong-reply-on-day-2"
+     },
+     {
+      "label": "ESPNcricinfo: day-two report",
+      "url": "https://africa.espn.com/cricket/series/24801/report/1555116/day/2/afghanistan-vs-bangladesh-only-test-24801"
+     },
+     {
+      "label": "Dawn (AFP): day-two report",
+      "url": "https://www.dawn.com/news/2036285/afghanistan-skipper-rahmat-thwarts-bd-in-abu-dhabi-test"
+     }
+    ],
+    "brief": [
+     {
+      "h": "The schedule (all in the UAE)",
+      "b": [
+       "One-off Test, Afghanistan v Bangladesh: 9-13 October.",
+       "ODI tri-series (Afghanistan, Bangladesh, Zimbabwe; each plays the others once and the top two meet in the final): 17 Oct Bangladesh v Zimbabwe; 19 Oct Afghanistan v Zimbabwe; 21 Oct Afghanistan v Bangladesh; final 23 Oct.",
+       "Afghanistan v Zimbabwe, three T20Is: 27 Oct, 29 Oct and 1 Nov.",
+       "Afghanistan v Zimbabwe, two Tests: 5-9 Nov and 13-17 Nov.",
+       "The ACB describes it as an 'extensive international cricket schedule'. Zimbabwe's managing director said the two Tests are 'especially valuable' as the team looks for more regular red-ball cricket."
+      ]
+     },
+     {
+      "h": "Test highlights so far",
+      "b": [
+       "Day one: Bangladesh scored 317-8, with half-centuries from Tanzid Hasan Tamim (83), Shadman Islam (67) and Litton Das (53).",
+       "Day two: Bangladesh were all out for 346 (Saleem 4-82, Ahmadzai 3-79, Ismat Alam 2-20; Nayeem Hasan 35 not out). Afghanistan closed on 211-4, 135 behind: Rahmat Shah 84*, Abdul Malik 62 (maiden Test fifty) and Ikram Alikhil 26*. Ebadot Hossain took 2-50.",
+       "ESPNcricinfo notes it was the first time a fast bowling attack had taken nine wickets in a Test innings in Abu Dhabi."
+      ]
+     },
+     {
+      "h": "Storylines",
+      "b": [
+       "The Bangladesh Cricket Board's CEO said the Test is its players' first red-ball experience in the UAE, against an Afghanistan side that has 'traditionally performed well in these conditions'.",
+       "Afghanistan's previous Test was in June against India, where Mohammad Saleem Safi took 6-140.",
+       "Afghanistan are leaning on captain Rahmat and his deputy Alikhil after losing four wickets for 139 on a pitch where Cricbuzz says the bounce was uneven."
+      ]
+     },
+     {
+      "h": "What's next",
+      "b": [
+       "Day three of the Test is on Sunday 11 October, and the match runs to 13 October.",
+       "The tri-series opens on 17 October with Bangladesh v Zimbabwe."
+      ]
+     }
+    ],
+    "note": "Thinner than the other cricket overviews: built from the ACB announcement and three day-two reports; tri-series venues and start times were not available.",
+    "id": "8ded7873"
+   }
+  ],
+  "football": [
+   {
+    "name": "Premier League 2026/27: matchday 6 weekend",
+    "subtitle": "Sat 10-Mon 12 Oct 2026 · England · City (15 pts, 5 games) lead Arsenal (15, 6) after the international break",
+    "updated": "2026-10-11T13:45:00+08:00",
+    "teaser": "After the international break, Chelsea, Arsenal and Brighton won, Utd drew with Spurs, and Liverpool host unbeaten leaders City tonight with the guilty verdict and appeal looming over the title race.",
+    "tags": [
+     "Football",
+     "Premier League",
+     "Standings",
+     "Man City",
+     "Arsenal"
+    ],
+    "sources": [
+     {
+      "label": "Sky Sports: live Premier League table (as of 10 Oct, 11:12pm UK)",
+      "url": "https://www.skysports.com/football/manchester-united-vs-tottenham-hotspur/table/559502"
+     },
+     {
+      "label": "Sky Sports: Chelsea 5-1 Bournemouth report",
+      "url": "https://www.skysports.com/football/news/13592771/chelsea-5-1-bournemouth-jordan-hendersons-stunning-strikes-help-fast-starting-blues-to-bounce-back-win"
+     },
+     {
+      "label": "Arsenal.com: report, Arsenal 2-1 Leeds",
+      "url": "https://www.arsenal.com/news/report-arsenal-2-1-leeds-united-aZRg37i5KpH0"
+     },
+     {
+      "label": "The Guardian: Man Utd 1-1 Spurs",
+      "url": "https://www.theguardian.com/football/2026/oct/10/manchester-united-tottenham-premier-league-match-report"
+     },
+     {
+      "label": "Sky Sports: Liverpool vs Man City preview",
+      "url": "https://www.skysports.com/football/news/13595453/liverpool-vs-man-city-how-to-watch-tv-channel-live-stream-now-tv-team-news-and-score-prediction"
+     },
+     {
+      "label": "Premier League: Manchester City statement (29 Sep)",
+      "url": "https://www.premierleague.com/en/news/4727779/premier-league-statement-manchester-city-fc/"
+     }
+    ],
+    "brief": [
+     {
+      "h": "Results so far this weekend",
+      "b": [
+       "Saturday: Chelsea 5-1 Bournemouth; Arsenal 2-1 Leeds; Manchester United 1-1 Tottenham; Sunderland 0-2 Brighton (per a results listing; I did not open a report for Sunderland-Brighton).",
+       "Chelsea 5-1 Bournemouth: Jordan Henderson scored in the 2nd minute and added a 70th-minute free-kick, Morgan Rogers (3rd) and Joao Pedro (46th, 67th) also scored, and Evanilson got Bournemouth's goal at 51 minutes. It was the earliest Chelsea have ever led 2-0 in a Premier League game (2 mins 29 secs). Chelsea went fifth.",
+       "Arsenal 2-1 Leeds and Manchester United 1-1 Tottenham are covered in the match briefings above.",
+       "Still to come today: Crystal Palace v Nottingham Forest and Hull v Everton (2pm BST, 9pm SGT, per the Sky Sports build-up), then Liverpool v Man City (4:30pm BST, 11:30pm SGT)."
+      ]
+     },
+     {
+      "h": "The table (Sky Sports, late Saturday)",
+      "b": [
+       "1 Man City 15 pts (5 games, +8); 2 Arsenal 15 (6, +5); 3 Brighton 13 (6, +13); 4 Brentford 10 (6, +6); 5 Chelsea 10 (6, +2); 6 Leeds 9 (6, +3); 7 Liverpool 9 (5, +3); 8 Everton 9 (5); 9 Ipswich 9 (6); 10 Hull 8 (5); 11 Newcastle 8 (5).",
+       "Bottom half: 12 Man United 6; 13 Nottingham Forest 5 (5 games); 14 Aston Villa 5; 15 Crystal Palace 4 (5); 16 Sunderland 4; 17 Bournemouth 3; 18 Tottenham 3; 19 Coventry 3 (5); 20 Fulham 2.",
+       "City, Everton, Liverpool, Hull, Newcastle, Forest, Palace and Coventry have played only five games, so the table will move after tonight's games."
+      ]
+     },
+     {
+      "h": "Storylines",
+      "b": [
+       "City's guilty verdict: an independent commission found City guilty on 29 September of the financial-rule charges covering 2009/10-2017/18. City appealed on 1 October; sanctions come later, in a separate private hearing. Points deductions and other penalties are possible but not yet decided. Al Jazeera says the season is 'in stasis'.",
+       "Man City's start: five wins from five under new manager Enzo Maresca, appointed in June after Pep Guardiola stepped down. They have scored 13 and conceded five (goal difference +8).",
+       "Arsenal: champions, with five wins and one defeat (against Brighton in a 12:30 kick-off before the break). Mikel Arteta signed a new contract this week. They have won twice this season from behind.",
+       "Man United and Tottenham: United have six points from six, their worst start since 1986-87; Spurs are winless in six, for only the fourth time in their history. Both managers (Michael Carrick, Roberto De Zerbi) are under pressure.",
+       "Chelsea: Xabi Alonso's side bounced back from a heavy loss at Brentford. Sky says they face a 'potentially defining run' before the November international break, including a Carabao Cup tie at Liverpool. Cole Palmer extended his contract on Saturday.",
+       "Bournemouth: three points from six games; manager Marco Rose acknowledged rumours around his future but said he is confident.",
+       "Leeds and Brighton: Leeds had been unbeaten until Saturday; Brighton lead the goal-difference race (+13) in third place."
+      ]
+     },
+     {
+      "h": "Notable numbers",
+      "b": [
+       "Brighton have scored 18 goals in six games, the most in the league.",
+       "Coventry have scored just one goal in five games.",
+       "Chelsea's early goals this season: Joao Pedro (1 min v Fulham), Lavia (4 v Brighton), Rogers (2 v Arsenal, 7 v Hull, 3 v Bournemouth), Henderson (2 v Bournemouth) (Sky).",
+       "Man City have won in front of a capacity Anfield only once in 24 meetings across all competitions (This Is Anfield)."
+      ]
+     },
+     {
+      "h": "What's next",
+      "b": [
+       "Tonight: Liverpool v Man City, 11:30pm SGT. Liverpool then face Brentford, Brighton and Arsenal.",
+       "Midweek is the Champions League: Arsenal v Lille and Atlético v Man United on Tuesday, Liverpool at LASK and Man City v PSG on Wednesday (SGT mornings of 14 and 15 October).",
+       "Arsenal's next league game is at Nottingham Forest on Sunday 18 October."
+      ]
+     }
+    ],
+    "note": "Table is Sky Sports' late-Saturday snapshot; Sunday's games will change it. Sunderland 0-2 Brighton is from a results listing only.",
+    "id": "0048f924"
+   },
+   {
+    "name": "UEFA Champions League 2026/27: league phase, matchday 2",
+    "subtitle": "13-14 Oct 2026 · 18 matches · English clubs: Arsenal, Man Utd, Liverpool, Man City, Aston Villa",
+    "updated": "2026-10-11T13:45:00+08:00",
+    "teaser": "Matchday 2 brings Arsenal v Lille, Atlético v Man United, Liverpool at LASK and Man City v PSG. After matchday 1 the league phase has 14 teams on three points.",
+    "tags": [
+     "Football",
+     "Champions League",
+     "UEFA",
+     "League phase"
+    ],
+    "sources": [
+     {
+      "label": "UEFA.com: Matchday 2 key stats and what to look out for",
+      "url": "https://www.uefa.com/uefachampionsleague/news/02aa-21c5297d7408-32d70b5a4443-1000--champions-league-matchday-2-key-stats-and-what-to-look-o/"
+     },
+     {
+      "label": "UEFA.com: all league phase fixtures and results",
+      "url": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-champions-league-all-the-league-phase-fixtures-a/"
+     },
+     {
+      "label": "Squawka: Atletico Madrid v Manchester United preview",
+      "url": "https://www.squawka.com/us/news/champions-league/match-preview-atletico-madrid-vs-manchester-united-13-10-26-champions-league/"
+     },
+     {
+      "label": "Arsenal.com: Arsenal 2-1 Leeds report (what's next)",
+      "url": "https://www.arsenal.com/news/report-arsenal-2-1-leeds-united-aZRg37i5KpH0"
+     }
+    ],
+    "brief": [
+     {
+      "h": "Format and timing",
+      "b": [
+       "The league phase started on 8 September and runs to 27 January 2027 across eight matchdays.",
+       "Matchday 2 is Tuesday 13 and Wednesday 14 October. UEFA lists kick-offs at 21:00 CET (about 3am SGT) with early games at 18:45 (about 12:45am SGT); Squawka's 3pm ET for Atlético v United confirms the 3am SGT slot.",
+       "After matchday 1, 14 teams have three points and the other 22 have none, per a standings summary (PSG, Bayern, Barcelona, Man United, Como, Sporting, Stuttgart, Man City, Villa, Lens, Betis, Dortmund, Liverpool, Real Madrid). The full MD1 results listing I retrieved was truncated, so only some results are quoted here."
+      ]
+     },
+     {
+      "h": "Tuesday 13 October",
+      "b": [
+       "Arsenal v Lille: Arsenal have won 13 consecutive league-phase matches, have kept clean sheets in five of their last seven Champions League matches and scored three or more in five of their last six home league-phase games (UEFA). Gabriel played 52 times for Lille, and Viktor Gyökeres made his Champions League debut against them. Lille have lost their last eight away matches against English teams.",
+       "Atlético v Manchester United (Riyadh Air Metropolitano): Atlético lost 2-1 at Liverpool on matchday 1; United won 4-0 at home to Sabah (Fernandes, Cunha, Martínez, Šeško scored). UEFA notes Atlético have never won a league-phase/group match against an English team (D4 L7) and United have lost one of their last 11 against Spanish opposition. Matheus Cunha played for Atlético from 2021 to 2023;",
+       "Inter v Club Brugge: Inter have lost six of their last seven Champions League matches, three in a row, which ties their longest losing run in the competition (UEFA).",
+       "Galatasaray v Barcelona: Lamine Yamal has 12 Champions League goals as a teenager, one short of Kylian Mbappé's record; Barcelona have not kept a clean sheet in 16 Champions League games.",
+       "Viking v Bayern: Harry Kane has scored in eight successive Champions League matches, only the fourth player to do so.",
+       "Also: Lens v Sporting, Sabah v Slavia, Leipzig v PSV, Villarreal v Napoli."
+      ]
+     },
+     {
+      "h": "Wednesday 14 October",
+      "b": [
+       "Manchester City v PSG: Erling Haaland has 59 goals in 59 Champions League games and would break the record for most goals in a player's first 60 appearances (Ruud van Nistelrooy, 48) if he plays; he is level with Sergio Agüero on 36 as City's joint-record Champions League scorer. PSG's Ousmane Dembélé has scored in five straight Champions League appearances. City have lost only one of their last 25 home league-phase matches. This is City's first Champions League match since the verdict.",
+       "LASK v Liverpool: LASK are winless in their last nine European group/league-phase matches; Liverpool have won 19 of their last 22 such matches (UEFA).",
+       "Roma v Real Madrid: Kylian Mbappé could become the youngest player to make 100 Champions League appearances; Jose Mourinho returns to Roma, whom he coached from 2021 to 2024, as Madrid's coach.",
+       "Aston Villa v Fenerbahçe: Villa are unbeaten in 13 home European games; Romelu Lukaku needs one goal to become the first Belgian to score 50 in UEFA club competition.",
+       "Bodø/Glimt v Dortmund; Feyenoord v Como; Shakhtar v AEK; Real Betis v Porto; Slovan Bratislava v Stuttgart also play."
+      ]
+     },
+     {
+      "h": "Storylines",
+      "b": [
+       "English clubs: Arsenal's perfect league-phase run, United's 4-0 Champions League opener despite a poor league start, City's off-field case, and Liverpool's trip to Austria.",
+       "Records: Haaland (59 goals in 59 games), Yamal (12 as a teenager), Kane (eight games in a row scoring) and Mbappé (could become youngest to 100 appearances).",
+       "Struggling sides: UEFA notes Slavia are winless in 20 Champions League proper matches since 2007, Villarreal have lost their last seven league-phase matches and Inter have lost three in a row."
+      ]
+     },
+     {
+      "h": "What's coming",
+      "b": [
+       "Matchday 3 is 20-21 October, with Liverpool v Villarreal, Man City v AEK, Como v Man United and Bayern v Arsenal in Munich on 21 October.",
+       "Matchday 4 is 3-4 November, and the league phase ends with matchday 8 on 27 January 2027."
+      ]
+     }
+    ],
+    "note": "Matchday-1 results and the full standings were not retrieved in full; the overview relies on UEFA's matchday-2 stat pack and fixture list.",
+    "id": "f0d6630a"
+   }
+  ],
+  "golf": [
+   {
+    "name": "Baycurrent Classic (PGA Tour, FedExCup Fall)",
+    "subtitle": "8-11 Oct 2026 · Yokohama Country Club, Japan · final round under way",
+    "updated": "2026-10-11T13:50:00+08:00",
+    "teaser": "The third of eight FedExCup Fall events, with 13 Presidents Cup players in the field. Three players led after 54 holes at -13; eight were within one shot.",
+    "tags": [
+     "Golf",
+     "PGA Tour",
+     "FedExCup Fall",
+     "Japan"
+    ],
+    "sources": [
+     {
+      "label": "PGA Tour: live leaderboard",
+      "url": "https://www.pgatour.com/tournaments/2026/baycurrent-classic/R2026527"
+     },
+     {
+      "label": "PGA Tour / AP: round-three wrap-up",
+      "url": "https://www.pgatour.com/article/news/daily-wrapup/2026/10/10/round-three-baycurrent-classic-yokohama-country-club-scores-leaderboards-results-hideki-matsuyama-xander-schauffele"
+     },
+     {
+      "label": "PGA Tour: facts and figures",
+      "url": "https://www.pgatour.com/article/news/latest/2026/10/06/baycurrent-classic-facts-and-figures-yokohama-country-club-yokohama-2026"
+     },
+     {
+      "label": "Golfweek: round two",
+      "url": "https://golfweek.usatoday.com/story/sports/golf/pga/2026/10/09/baycurrent-classic-2026-keith-mitchell-jacob-bridgeman-share-lead-round-2/92166402007/"
+     },
+     {
+      "label": "TurfTrio: round-three recap",
+      "url": "https://turftrio.com/baycurrent-classic-2026-round-3-leaderboard-final-round-tee-times/"
+     }
+    ],
+    "brief": [
+     {
+      "h": "The event",
+      "b": [
+       "$8 million purse, $1.44 million and 500 FedExCup points to the winner. Played at Yokohama Country Club (par 71, 7,322 yards, 16 West Course holes and two East).",
+       "It is the PGA Tour's only stop in Asia this year. The field includes 15 of the world's top 50, led by world No. 5 Wyndham Clark, and 13 Presidents Cup players (eight International, five American). Nine players from the Tour Championship are playing.",
+       "Defending champion: Xander Schauffele (19 under last year). Past winners: Echavarria (2024), Bradley (2023), Matsuyama (2022), Cantlay (2021). Nobody has ever successfully defended the title.",
+       "This is a FedExCup Fall event: players are competing for top-100 status and a 2027 PGA Tour exemption."
+      ]
+     },
+     {
+      "h": "How it has gone",
+      "b": [
+       "Round 1: Jacob Bridgeman shot a tournament-leading 8-under 63.",
+       "Round 2: Keith Mitchell and Bridgeman shared the lead at 11 under; Ben Kohles shot a 62 with a front-nine 29, and Zach Bauchou a 64. Max Homa and Mac Meissner joined Kohles and Bauchou at 9 under, two off the lead.",
+       "Round 3: Bridgeman (69), Brennan (65) and Bauchou (67) tied at 13 under. Scott (65, two eagles) and Thomas (67) were one back with Jaeger, Mitchell and Smith. Schauffele (65) was four back, and Hideki Matsuyama was tied for 30th at 3 under after round two.",
+       "Final round: a snapshot of the live leaderboard had Jaeger and Mitchell at 16 under (through 11), Bauchou at 15 under (through 10), and Schauffele, Scott, Brennan and Bridgeman at 14 under. Ren Yonezawa had finished with a 64 at 12 under."
+      ]
+     },
+     {
+      "h": "Storylines",
+      "b": [
+       "Bridgeman: two wins this season already, including the Biltmore Championship three weeks ago, and the clinching point at the Presidents Cup. A third would be, in his words, 'just magic'.",
+       "Scott: seeking his first PGA Tour win in six years.",
+       "Rookie Bauchou in the final group in his first season, chasing a first Tour win.",
+       "Brennan: 24, 2026 Wyndham Championship winner, first trip to Asia.",
+       "Schauffele: trying to become the first repeat winner.",
+       "Matsuyama: the 2022 champion was at 9 under through 16 holes in the live snapshot."
+      ]
+     },
+     {
+      "h": "Notable numbers",
+      "b": [
+       "Course record for a round: 60 by Matt McCarty in the final round last year. Largest 54-hole lead: three strokes (Tiger Woods, 2019). Largest margin of victory: six (Collin Morikawa, 2023). Best comeback: three strokes (Patrick Cantlay, 2021).",
+       "Eight players were within one shot of the lead after 54 holes, the AP says."
+      ]
+     },
+     {
+      "h": "What's next",
+      "b": [
+       "The tournament ends Sunday in Yokohama. The PGA Tour says this is the third of eight FedExCup Fall events; I did not retrieve the date or venue of the next one."
+      ]
+     }
+    ],
+    "note": "Final-round information is a live snapshot; the winner was not known when this was written. Next-event details were not retrieved.",
+    "id": "6d885b35"
+   },
+   {
+    "name": "Open de España presented by Madrid (DP World Tour)",
+    "subtitle": "8-11 Oct 2026 · Real Club de Campo Villa de Madrid · final round Sunday",
+    "updated": "2026-10-11T13:50:00+08:00",
+    "teaser": "Grant Forrest and Joe Dean share the lead at -13 after 54 holes, with Reed and Rose out after the cut and the Race to Dubai lead up for grabs.",
+    "tags": [
+     "Golf",
+     "DP World Tour",
+     "Madrid",
+     "Race to Dubai"
+    ],
+    "sources": [
+     {
+      "label": "DP World Tour: Forrest and Dean share lead",
+      "url": "https://www.europeantour.com/dpworld-tour/news/articles/detail/grant-forrest-and-joe-dean-share-lead-ahead-of-final-round-in-madrid/"
+     },
+     {
+      "label": "DP World Tour: Day two digest",
+      "url": "https://www.europeantour.com/dpworld-tour/news/articles/detail/open-de-espana-presented-by-madrid-2026-day-two-digest/"
+     },
+     {
+      "label": "DP World Tour: Day three digest",
+      "url": "https://www.europeantour.com/dpworld-tour/news/articles/detail/2026-open-de-espana-presented-by-madrid-day-three-digest/"
+     },
+     {
+      "label": "Associated Press: Dean shares Spanish Open lead",
+      "url": "https://apnews.com/article/spanish-open-european-tour-joe-dean-grant-forrest-beeaa40ccd7d8758dab798a7e0764080"
+     }
+    ],
+    "brief": [
+     {
+      "h": "Leaderboard after three rounds",
+      "b": [
+       "T1: Grant Forrest (SCO) 66-67-67 and Joe Dean (ENG) 68-67-65, both 13 under (200).",
+       "T3: Joel Girrbach (SUI), Victor Perez (FRA) and Jacob Skov Olesen (DEN), 12 under.",
+       "Eugenio Chacarra (ESP): 70 on Saturday, five behind, playing with a foot injury.",
+       "Francesco Molinari and Romain Langasque also played on Saturday, so both made the cut."
+      ]
+     },
+     {
+      "h": "How the week has gone",
+      "b": [
+       "Round 1: Forrest shared the first-round lead.",
+       "Round 2: Forrest carded a 67 to lead at nine under, a shot ahead of Connor Syme and Joel Girrbach. Chacarra shot 69 despite a fractured toe. Patrick Reed missed the cut, and Eddie Pepperell made it on the number with four late birdies.",
+       "Round 3: Dean made eight birdies in 15 holes to lead by three, then dropped shots at the 16th and 17th before a 31-foot birdie at the 18th; Forrest birdied the 11th, 14th and 16th to catch him.",
+       "Reed and Justin Rose missed the cut on 144, two over par (per a summary of a Loop Golf report); Nicolai Højgaard missed on four over.",
+       "Forrest has never missed a cut in six previous appearances at this course; he finished tied third here in 2021 and 2024."
+      ]
+     },
+     {
+      "h": "Storylines",
+      "b": [
+       "Dean, 32, won his first European title six weeks ago at the British Masters. A win would take him well into the Race to Dubai top 10 and 'practically assure' him a PGA Tour card for 2027 (AP).",
+       "Forrest: chasing a wire-to-wire win and a third DP World Tour title, at one of his 'favourite tournaments'.",
+       "Race to Dubai: Reed led it for a long time. Chacarra can pass Reed and Rory McIlroy with a win; a top-three finish would pass McIlroy for second.",
+       "Pepperell, 101st in the Race to Dubai, is fighting for a top-100 finish to keep full status next year.",
+       "Nicolai Højgaard made a hole-in-one in the second round but missed the cut."
+      ]
+     },
+     {
+      "h": "What's next",
+      "b": [
+       "Final round on Sunday 11 October. I did not find final-round tee times or results.",
+       "Reed's and McIlroy's standing in the Race to Dubai will be updated by the result."
+      ]
+     }
+    ],
+    "note": "Thin on course background (not in the sources used). Final-round results not available at writing.",
+    "id": "3c95b2ed"
+   }
+  ],
+  "f1": [
+   {
+    "name": "2026 Formula 1 Singapore Grand Prix weekend (Round 17)",
+    "subtitle": "9-11 Oct 2026 · Marina Bay Street Circuit · Sprint weekend · race 8pm SGT Sunday",
+    "updated": "2026-10-11T13:55:00+08:00",
+    "teaser": "The final Sprint of the season: Verstappen won the Sprint and took pole. Ferrari start second and third, Antonelli fourth, and Russell 21st after a 40-place penalty.",
+    "tags": [
+     "F1",
+     "Singapore GP",
+     "Marina Bay",
+     "Sprint weekend"
+    ],
+    "sources": [
+     {
+      "label": "Formula1.com: qualifying report",
+      "url": "https://www.formula1.com/en/latest/article/verstappen-beats-leclerc-to-pole-position-for-the-singapore-gp.7yum1V3S9aSTyj3Zzzs0Y9"
+     },
+     {
+      "label": "Formula1.com: Sprint report",
+      "url": "https://www.formula1.com/en/latest/article/verstappen-wins-dramatic-rain-hit-singapore-sprint-as-russell-crashes-and-mclarens-collide.4r90mH2skljBa5sinFAsyp"
+     },
+     {
+      "label": "The Race: starting grid",
+      "url": "https://www.the-race.com/formula-1/f1-2026-singapore-grand-prix-starting-grid-after-two-penalties/"
+     },
+     {
+      "label": "RacingNews365: standings after the Sprint",
+      "url": "https://racingnews365.com/2026-f1-championship-standings-after-singapore-grand-prix-sprint"
+     },
+     {
+      "label": "Pirelli: tyre outlook",
+      "url": "https://press.pirelli.com/max-dominates-in-singapore-first-on-inters-then-on-softs/"
+     },
+     {
+      "label": "Formula1.com: weather forecast",
+      "url": "https://www.formula1.com/en/latest/article/what-is-the-weather-forecast-for-the-2026-singapore-grand-prix.4DFAwBl2esxhHp1mCv3VSF"
+     },
+     {
+      "label": "Formula1.com: Risk Perspective (strategy)",
+      "url": "https://www.formula1.com/en/latest/article/the-risk-perspective-how-f1-drivers-engineers-and-strategists-tackle-the-singapore-grand-prix.5hcVFIGmI8lG1LyPPzxvFR"
+     }
+    ],
+    "brief": [
+     {
+      "h": "Weekend so far",
+      "b": [
+       "Friday (9 Oct): one practice session, then Sprint Qualifying at 8:30pm SGT. Verstappen took Sprint pole from Russell, Leclerc and Piastri, and avoided a grid penalty after a stewards' investigation into a yellow-flag incident in SQ1. George Russell topped FP1 on Mercedes' older aerodynamic package (Grande Prêmio).",
+       "Saturday Sprint: Verstappen won from Hamilton and Leclerc, with Antonelli fourth. Russell passed Verstappen at the start but crashed at the last corner of lap one. Retirements included Russell, Perez, Stroll, Hadjar and Colapinto early on, and Bortoleto, Bottas and later Albon after a three-car collision. Norris tagged Piastri late on.",
+       "Saturday qualifying: Verstappen on pole (1m 31.373s), Leclerc 0.054s behind, Hamilton third.",
+       "Sprint points: Verstappen 8, Hamilton 7, Leclerc 6, Antonelli 5, Lawson 4."
+      ]
+     },
+     {
+      "h": "Starting grid (after penalties)",
+      "b": [
+       "1 Verstappen (Red Bull), 2 Leclerc (Ferrari), 3 Hamilton (Ferrari), 4 Antonelli (Mercedes), 5 Norris (McLaren), 6 Piastri (McLaren), 7 Gasly (Alpine), 8 Lawson (Racing Bulls), 9 Lindblad (Racing Bulls), 10 Hulkenberg (Audi).",
+       "11 Bearman (Haas), 12 Ocon (Haas), 13 Sainz (Williams), 14 Bortoleto (Audi), 15 Colapinto (Alpine), 16 Alonso (Aston Martin), 17 Albon (Williams), 18 Stroll (Aston Martin), 19 Perez (Cadillac), 20 Bottas (Cadillac), 21 Russell (Mercedes, 40-place penalty), 22 Hadjar (Red Bull, no time set).",
+       "Alonso's engine change, announced by Aston Martin, should move him to the back; FIA confirmation was pending (The Race)."
+      ]
+     },
+     {
+      "h": "Storylines",
+      "b": [
+       "Title race: Antonelli leads Russell by 89. He cannot clinch in Singapore; his earliest chance is Austin on 25 October.",
+       "Verstappen: first Singapore pole, still without a Singapore win. He won at Sepang and in Saturday's Sprint, and his Sprint start was 'horrendous again'.",
+       "Ferrari: Hamilton set the pace in Q1 and Q2 and finished second in the Sprint; Leclerc and Hamilton start second and third, behind Verstappen.",
+       "McLaren: Norris and Piastri collided in the Sprint; stewards issued no penalty, but the incident cost them points. They start fifth and sixth.",
+       "Red Bull's second car: Hadjar's weekend has been dogged by reliability problems.",
+       "Aston Martin: expected a good weekend but failed to reach Q2 (Alonso 16th, Stroll 18th).",
+       "Haas and Audi scored points in the Sprint (Bearman sixth, Hulkenberg seventh)."
+      ]
+     },
+     {
+      "h": "Race outlook",
+      "b": [
+       "Expect a one-stop race (Pirelli): most teams to start on Softs and move to Mediums or Hards; a two-stop is estimated 10s slower.",
+       "Weather: F1.com's forecast was a 40% chance of a shower or thunderstorm in the afternoon; Pirelli said Saturday that no rain was currently forecast. A Safety Car or rain would favour a longer Soft stint.",
+       "Overtaking: hard on the street circuit, but 2026 cars with Overtake Mode and extra energy deployment could allow attacks into Turn 7 early in the lap (F1.com).",
+       "Russell's recovery drive from 21st and the Ferrari-Verstappen fight at the front are the main storylines."
+      ]
+     },
+     {
+      "h": "What's next",
+      "b": [
+       "Singapore Grand Prix: 8pm SGT, Sunday 11 October.",
+       "United States GP in Austin follows on 25 October, with Antonelli's first possible title clinch."
+      ]
+     }
+    ],
+    "note": "Pre-race information; the race result was not known at the time of writing.",
+    "id": "d0b70f7a"
+   }
+  ],
+  "tennis": [
+   {
+    "name": "Rolex Shanghai Masters (ATP Masters 1000)",
+    "subtitle": "7-18 Oct 2026 · Qi Zhong Tennis Center, Shanghai · Day 5 (third round) on Sunday",
+    "updated": "2026-10-11T14:00:00+08:00",
+    "teaser": "Sinner is out, so Zverev is top seed and chasing year-end No. 1. Djokovic fell to Hurkacz, Alcaraz is on a seven-match streak and defending champion Vacherot is still in the draw.",
+    "tags": [
+     "Tennis",
+     "ATP Masters 1000",
+     "Shanghai"
+    ],
+    "sources": [
+     {
+      "label": "ATP Tour: Saturday results",
+      "url": "https://www.atptour.com/en/news/shanghai-2026-results"
+     },
+     {
+      "label": "ATP Tour: draw preview (5 Oct)",
+      "url": "https://www.atptour.com/en/news/shanghai-2026-draw-preview"
+     },
+     {
+      "label": "ATP Tour: Hurkacz beats Djokovic",
+      "url": "https://www.atptour.com/en/news/djokovic-hurkacz-shanghai-2026-friday"
+     },
+     {
+      "label": "ATP Tour: Alcaraz and Vacherot",
+      "url": "https://www.atptour.com/en/news/alcaraz-cerundolo-shanghai-2026-saturday"
+     },
+     {
+      "label": "ATP Tour: Jodar, Medvedev, Auger-Aliassime",
+      "url": "https://www.atptour.com/en/news/jodar-medvedev-auger-aliassime-shanghai-2026-saturday"
+     },
+     {
+      "label": "ATP Tour: Sinner withdraws",
+      "url": "https://www.atptour.com/en/news/sinner-shanghai-2026-withdrawal"
+     },
+     {
+      "label": "Rolex Shanghai Masters: Sunday preview",
+      "url": "https://en.rolexshanghaimasters.com/en/media/news/sunday-preview-zverev-shelton-zhou-in-action"
+     }
+    ],
+    "brief": [
+     {
+      "h": "Key highlights so far",
+      "b": [
+       "Sinner withdrew on 3 October with a knee injury, having not played since winning Wimbledon in July. Zverev became top seed and Alcaraz second. Sinner won the title in 2024, beating Djokovic in the final.",
+       "Friday: Hurkacz beat Djokovic 6-4, 6-3, his first win in nine meetings; Djokovic had won the Beijing title on Tuesday. Zhou Yi, ranked 277, beat Musetti in a third-set tie-break, and Rei Sakamoto upset 23rd seed Rublev.",
+       "Friday: Zverev beat Wu Yibing 6-4, 7-6(4) and Shelton beat Altmaier 6-3, 7-6(6).",
+       "Saturday: Alcaraz beat Juan Manuel Cerundolo 6-3, 6-3 (seventh straight win after Tokyo). Medvedev, Auger-Aliassime and Jodar all came back from a set down. Defending champion Vacherot beat Baez 6-4, 7-6(5)."
+      ]
+     },
+     {
+      "h": "Results (Saturday, round of 64)",
+      "b": [
+       "Alcaraz d Cerundolo 6-3 6-3; Auger-Aliassime d Ugo Carabelli 4-6 7-6(1) 7-5; Medvedev d Struff 4-6 6-4 6-3; Fils d Kotov 6-3 6-4; Fritz d Arnaldi 7-5 6-4; Jodar d Tirante 4-6 6-2 6-3; Tien d Svajda 7-5 7-5; Paul d Vallejo 6-2 6-2.",
+       "Vacherot d Baez 6-4 7-6(5); Tsitsipas d Darderi 6-3 6-4; Ruud d Bu 6-1 7-6(2); Lehecka d Borges 6-3 3-6 6-3; Svrcina d Etcheverry 6-3 3-6 7-5; Carreno Busta d Tabilo 4-6 7-6(2) 6-4; van de Zandschulp d Michelsen 6-4 6-4; Bergs d Buse 6-0 6-3."
+      ]
+     },
+     {
+      "h": "Storylines",
+      "b": [
+       "Alcaraz's quarter: Medvedev, Fritz, Paul and Vacherot are in his section. Shanghai is one of three Masters 1000 events he has not won (with Canada and Paris), and he is bidding to be the first Spanish men's champion in Shanghai. He plays Bergs next.",
+       "Zverev: two majors this year (Roland Garros, US Open), no Masters 1000 yet. Year-end No. 1 is in play. He plays Halys on Sunday.",
+       "Vacherot: last year's champion from No. 204. He is No. 14 now but 32nd in the live rankings. He plays Tommy Paul.",
+       "Medvedev: Tour-leading 31 hard-court wins in 2026 and titles in Dubai, Brisbane and Hangzhou.",
+       "Jodar: 20, No. 13, through to the third round on debut after two first-round exits (US Open, Tokyo). He plays Lehecka.",
+       "Turin race: Cobolli, Tiafoe, Fils, Medvedev, De Minaur, Djokovic, Jodar, Fritz, Mensik, Paul and Auger-Aliassime were 5th to 15th in the live race before the week, with a 1,165-point gap between 5th and 15th (ATP)."
+      ]
+     },
+     {
+      "h": "Upsets and numbers",
+      "b": [
+       "Hurkacz's win over Djokovic makes him the fourth player with a hard-court win over Federer, Nadal and Djokovic.",
+       "Zhou Yi (277) over Musetti; Sakamoto over Rublev; Svrcina (qualifier) over 28th seed Etcheverry; Carreno Busta over 29th seed Tabilo; van de Zandschulp over 31st seed Michelsen; Bergs over 32nd seed Buse.",
+       "Cerundolo, who beat Sinner at Roland Garros, lost to Alcaraz."
+      ]
+     },
+     {
+      "h": "What's coming",
+      "b": [
+       "Sunday (Day 5): Zverev v Halys, Shelton v Gea, Hurkacz v Zhou Yi, De Minaur v Sakamoto, Mensik v F. Cerundolo, Bublik v Nakashima.",
+       "Potential fourth round: Alcaraz v the Vacherot-Paul winner. Zverev reaching the semi-finals would clinch year-end No. 1.",
+       "The tournament finishes on 18 October."
+      ]
+     }
+    ],
+    "note": "Sunday's results were not confirmed from official sources when this was written.",
+    "id": "c103c3a2"
+   }
+  ]
+ }
 }
 </script>
 <script>
@@ -3173,7 +4276,7 @@ noscript{display:block;padding:24px 16px;color:var(--text)}
             set:function(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
 
   var TABS = [
-    {id:'sports',   label:'Sports',          lede:'Latest results and what is coming up.'},
+    {id:'sports',   label:'Sports',          lede:'3\u20135 minute briefings on the latest results, plus a tournament overview wherever a series is on.'},
     {id:'finance',  label:'Finance & Macro', lede:'Rates, FX, central banks, volatility, flows - and who is saying what.'},
     {id:'politics', label:'Global Politics', lede:'The developments most likely to move things.'}
   ];
@@ -3216,6 +4319,9 @@ noscript{display:block;padding:24px 16px;color:var(--text)}
   function briefWords(it){var n=0;(it.brief||[]).forEach(function(s){n+=(s.h+' '+s.b.join(' ')).split(/\s+/).length});return n}
   function readMin(it){return Math.max(1,Math.round(briefWords(it)/200))}
   function askPrompt(it){
+    if(it.kind==='tournament'){
+      return 'I\u0027m following the '+it.name+' ('+(it.sport||'sport')+'): '+it.subtitle+'. Summary: '+it.teaser+' Give me a deeper overview of this tournament - results and standings so far, key storylines, notable upsets and numbers, and what\u0027s coming next - and let me ask follow-up questions.';
+    }
     if(it.kind==='tweet'){
       return 'I\u0027m reading this post on X by '+it.headline+': \u201C'+(it.quote||'').replace(/\s+/g,' ').slice(0,400)+'\u201D ('+it.url+'). Summary: '+it.teaser+' Explain it further and let me ask follow-up questions.';
     }
@@ -3256,31 +4362,16 @@ noscript{display:block;padding:24px 16px;color:var(--text)}
     btns.up.setAttribute('aria-pressed', v===1); btns.down.setAttribute('aria-pressed', v===-1);
   }
 
-  function renderItem(it, secLabel){
-    SECNAME[it.id]=secLabel||''; BYID[it.id]=it;
-    var a = el('article','item'+(it.kind==='tweet'?' tweet':'')); a.setAttribute('data-id',it.id);
-    if(it.published) a.setAttribute('data-published', it.published);
-    if(it.tag) a.appendChild(el('span','chip',it.tag));
-    a.appendChild(el('h3','hl',it.headline));
-    if(it.kind==='tweet' && it.quote) a.appendChild(el('blockquote','quote',it.quote));
-    a.appendChild(el('p','sum',it.teaser));
-    var f = el('div','foot');
-    if(it.url){
-      var l = el('a','src',it.source+' \u2197'); l.href=it.url; l.target='_blank'; l.rel='noopener noreferrer'; f.appendChild(l);
-    } else f.appendChild(el('span','src',it.source));
-    f.appendChild(el('span','dot','\u00B7'));
-    var tm = el('time','rec'); if(it.published) tm.setAttribute('datetime', it.published); tm.setAttribute('data-published', it.published||'');
-    f.appendChild(tm);
-    f.appendChild(el('span','dot','\u00B7')); f.appendChild(el('span','rt','\u2248'+readMin(it)+' min read'));
-    a.appendChild(f);
-
-    /* actions */
-    var acts=el('div','acts');
-    var rb=el('button','btn read'); rb.type='button'; rb.setAttribute('aria-expanded','false');
-    rb.appendChild(document.createTextNode('Read (\u2248'+readMin(it)+' min) ')); rb.appendChild(el('span','car','\u25BC'));
-    var bp=el('div','brief'); bp.hidden=true; bp.id='b-'+it.id; rb.setAttribute('aria-controls',bp.id);
-    rb.addEventListener('click',function(){var o=bp.hidden; bp.hidden=!o; rb.setAttribute('aria-expanded',o)});
-    acts.appendChild(rb);
+  function sourcesNote(it){
+    var list=(it.sources||[]).slice();
+    var d=el('details','srcs'); d.appendChild(el('summary',null,'Sources ('+list.length+')'));
+    var ul=el('ul');
+    list.forEach(function(x){var li=el('li'); var a=el('a',null,x.label); a.href=x.url; a.target='_blank'; a.rel='noopener noreferrer'; li.appendChild(a); ul.appendChild(li)});
+    d.appendChild(ul);
+    d.appendChild(el('p','sn',(it.kind==='tournament'?'Overview':'Briefing')+' synthesised by Grok Bot from the sources above; check them for full detail.'));
+    return d;
+  }
+  function askVote(it, acts){
     var ask=el('a','btn ask','\u2726 Ask Grok'); ask.href=grokUrl(askPrompt(it)); ask.target='_blank'; ask.rel='noopener noreferrer';
     ask.setAttribute('aria-label','Ask Grok about: '+it.headline); acts.appendChild(ask);
     var cq=el('button','btn ghost','Copy question'); cq.type='button';
@@ -3291,7 +4382,56 @@ noscript{display:block;padding:24px 16px;color:var(--text)}
     up.setAttribute('aria-label','More like this'); dn.setAttribute('aria-label','Less like this');
     var btns={up:up,down:dn}; paintVotes(it.id,btns);
     up.addEventListener('click',function(){setVote(it,1,btns)}); dn.addEventListener('click',function(){setVote(it,-1,btns)});
-    a._btns=btns; vw.appendChild(up); vw.appendChild(dn); acts.appendChild(vw);
+    vw.appendChild(up); vw.appendChild(dn); acts.appendChild(vw);
+    return btns;
+  }
+
+  function renderTour(t, secLabel, sportLabel){
+    t.kind='tournament'; t.sport=sportLabel; t.headline='Tournament overview: '+t.name;
+    SECNAME[t.id]=secLabel+' \u203A Tournament overview'; BYID[t.id]=t;
+    var d=el('details','tour'); d.setAttribute('data-id',t.id);
+    var s=el('summary'); s.appendChild(el('span','tl','\uD83C\uDFC6 Tournament overview')); s.appendChild(el('span','tn',t.name));
+    s.appendChild(el('span','tm','\u2248'+readMin(t)+' min')); s.appendChild(el('span','chev','\u25B6')); d.appendChild(s);
+    var b=el('div','tb'); d.appendChild(b);
+    var up=parse(t.updated);
+    b.appendChild(el('p','tsub',t.subtitle+(up?' \u00B7 checked '+fmtSGT(up):'')));
+    b.appendChild(el('p','sum',t.teaser));
+    var bp=el('div','brief');
+    (t.brief||[]).forEach(function(sec){bp.appendChild(el('h4',null,sec.h)); var ul=el('ul'); sec.b.forEach(function(x){ul.appendChild(el('li',null,x))}); bp.appendChild(ul)});
+    if(t.note) bp.appendChild(el('p','bnote','Note: '+t.note));
+    bp.appendChild(sourcesNote(t)); b.appendChild(bp);
+    var acts=el('div','acts'); d._btns=askVote(t,acts); b.appendChild(acts);
+    return d;
+  }
+
+  function renderItem(it, secLabel){
+    SECNAME[it.id]=secLabel||''; BYID[it.id]=it;
+    var a = el('article','item'+(it.kind==='tweet'?' tweet':'')); a.setAttribute('data-id',it.id);
+    if(it.published) a.setAttribute('data-published', it.published);
+    if(it.tag) a.appendChild(el('span','chip',it.tag));
+    a.appendChild(el('h3','hl',it.headline));
+    if(it.kind==='tweet' && it.quote) a.appendChild(el('blockquote','quote',it.quote));
+    a.appendChild(el('p','sum',it.teaser));
+    var f = el('div','foot');
+    if(it.sources){
+      f.appendChild(el('span','src plain','Briefing \u00B7 '+it.sources.length+' sources'));
+    } else if(it.url){
+      var l = el('a','src',it.source+' \u2197'); l.href=it.url; l.target='_blank'; l.rel='noopener noreferrer'; f.appendChild(l);
+    } else f.appendChild(el('span','src',it.source));
+    f.appendChild(el('span','dot','\u00B7'));
+    var tm = el('time','rec'); if(it.published) tm.setAttribute('datetime', it.published); tm.setAttribute('data-published', it.published||'');
+    f.appendChild(tm);
+    f.appendChild(el('span','dot','\u00B7')); f.appendChild(el('span','rt','\u2248'+readMin(it)+' min read'));
+    a.appendChild(f);
+
+    /* actions */
+    var acts=el('div','acts'+(it.sources?' sp':''));
+    var rb=el('button','btn read'); rb.type='button'; rb.setAttribute('aria-expanded','false');
+    rb.appendChild(document.createTextNode((it.sources?'Read the briefing (\u2248':'Read (\u2248')+readMin(it)+' min) ')); rb.appendChild(el('span','car','\u25BC'));
+    var bp=el('div','brief'); bp.hidden=true; bp.id='b-'+it.id; rb.setAttribute('aria-controls',bp.id);
+    rb.addEventListener('click',function(){var o=bp.hidden; bp.hidden=!o; rb.setAttribute('aria-expanded',o)});
+    acts.appendChild(rb);
+    a._btns=askVote(it,acts);
     a.appendChild(acts);
 
     /* deep summary */
@@ -3299,27 +4439,33 @@ noscript{display:block;padding:24px 16px;color:var(--text)}
       bp.appendChild(el('h4',null,sec.h)); var ul=el('ul'); sec.b.forEach(function(b){ul.appendChild(el('li',null,b))}); bp.appendChild(ul);
     });
     if(it.note) bp.appendChild(el('p','bnote','Note: '+it.note));
+    if(it.sources){ bp.appendChild(sourcesNote(it)); }
+    else {
     var sp=el('p','bsrc','Source: '); 
     if(it.url){var sl=el('a',null,it.source+' \u2197'); sl.href=it.url; sl.target='_blank'; sl.rel='noopener noreferrer'; sp.appendChild(sl)} else sp.appendChild(document.createTextNode(it.source));
     (it.also||[]).forEach(function(x){sp.appendChild(document.createTextNode(' \u00B7 ')); var al=el('a',null,x.label+' \u2197'); al.href=x.url; al.target='_blank'; al.rel='noopener noreferrer'; sp.appendChild(al)});
     sp.appendChild(document.createTextNode(' \u00B7 Briefing compiled from the source above'+(it.kind==='tweet'?' and related reporting':'')+'; check the original for full detail.'));
     bp.appendChild(sp);
+    }
     a.appendChild(bp);
     return a;
   }
 
-  function renderGroup(key, title, icon, items, openDefault, secLabel){
+  function renderGroup(key, title, icon, items, openDefault, secLabel, tours){
+    tours=tours||[];
     var d = el('details','group'); d.id='g-'+key;
     var saved = LS.get('newsdash.open.'+key);
     d.open = saved===null ? openDefault : saved==='1';
     d.addEventListener('toggle', function(){LS.set('newsdash.open.'+key, d.open?'1':'0')});
     var s = el('summary'); s.appendChild(el('span','gi',icon)); s.appendChild(el('h2','gt',title));
-    s.appendChild(el('span','gc',items.length+(items.length===1?' item':' items')));
+    s.appendChild(el('span','gc',items.length+(items.length===1?' item':' items')+(tours.length?' \u00B7 '+tours.length+(tours.length===1?' overview':' overviews'):'')));
     s.appendChild(el('span','chev','\u25B6')); d.appendChild(s);
     var w = el('div','items');
     if(!items.length) w.appendChild(el('div','empty','Nothing verified for this section yet.'));
     items.forEach(function(it){w.appendChild(renderItem(it, secLabel))});
-    d.appendChild(w); return d;
+    d.appendChild(w);
+    tours.forEach(function(t){d.appendChild(renderTour(t, secLabel, title))});
+    return d;
   }
 
   function askBar(){
@@ -3434,7 +4580,7 @@ noscript{display:block;padding:24px 16px;color:var(--text)}
       tabs.appendChild(b);
       var p=el('section','panel'); p.id='p-'+t.id; p.setAttribute('role','tabpanel'); p.setAttribute('aria-labelledby','tab-'+t.id); p.hidden=true;
       p.appendChild(el('p','lede',t.lede));
-      if(t.id==='sports') SPORTS.forEach(function(x){p.appendChild(renderGroup(x[0],x[1],x[2],(DATA.sports||{})[x[0]]||[],true,'Sports › '+x[1]))});
+      if(t.id==='sports') SPORTS.forEach(function(x){p.appendChild(renderGroup(x[0],x[1],x[2],(DATA.sports||{})[x[0]]||[],true,'Sports › '+x[1],(DATA.tournaments||{})[x[0]]||[]))});
       if(t.id==='finance') FIN.forEach(function(x){p.appendChild(renderGroup(x[0],x[1],x[2],(DATA.finance||{})[x[0]]||[],true,'Finance › '+x[1]))});
       if(t.id==='politics'){ var w=el('div','items flat'); (DATA.politics||[]).forEach(function(it){w.appendChild(renderItem(it,'Global politics'))}); p.appendChild(w) }
       main.appendChild(p);
@@ -3465,7 +4611,7 @@ noscript{display:block;padding:24px 16px;color:var(--text)}
 
   build(); tick();
   document.getElementById('foot').textContent =
-    'Compiled from public web sources and the X API. Headlines link to the original publisher; tweets are quoted from X and may be truncated. All times shown in SGT (UTC+8). Not financial advice.';
+    'Compiled from public web sources and the X API. Sports briefings and tournament overviews are synthesised from several sources (listed in a small footnote under each); other headlines link to the original publisher; tweets are quoted from X and may be truncated. All times shown in SGT (UTC+8). Not financial advice.';
   setInterval(tick, 60000);
   document.addEventListener('visibilitychange', function(){ if(!document.hidden) tick() });
   window.addEventListener('pageshow', tick);
