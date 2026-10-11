@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>News</title>
+<meta name="theme-color" content="#0b0c0d">
+<meta name="color-scheme" content="dark">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="News">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAE70lEQVR4nO3bPVIcPRCA4V4XGXAGqgjIyTgFh+UUZM4dUOWbOBgXHs9Oz46kbv203jf7Er5BekY/y/py//AoRHv9aP0A1G/gIDVwkBo4SA0cpAYOUgMHqYGD1MBBauAgNXCQGjhIDRykdtf6AeT586P1I/Tb19t7w//7pcmf7AGRUX0oVXFgwqRqSmrgwIRT3krcD6TI8Mt7bB1XjpOP3vbM1Xltx9ALx/FvBYiM6g+pPQ5YuFZzeI1xaI+OCfMqDLXlgRQZNdNG1fCUarZy7D4TLDZtRslkfPxG3gYHMm528EKXD5TT+BvgQMZxda6jHrNQeuZAxnHnTwCFZ4XdMS/8mfafkCKjVeYjX4TjGiYy1qW+uOUXjevxL/mZ+TiQ0WeGPsy2FWRsypsSk08prOYiEwd/ax2rvPnKwcGG0n8mm4vBtoKMPiufF759TmrJODhtnCzvxXVdhlPnrnTlYE/pucYfn9NBqXPT25uWhsPjL87k2maOknYWVg7fzr8/Hb5p7f85ZPiWWXf9PodT4KjULpFuWSwlfNlnrF+M1uXNHWcOUgMHqY2K4/evn60fIX5D4lhk4MO78XCsTeDDtcFwXGvAh189fs4Rab7P/y5PL6+uT5LRYCvHbpEwdVUEHIIPn4LgEHw4FAeH4MO6UDgEH6ZFw0GGBcTB4mFVQByCD6Ni4hB8WBQWh+CjuMg4BB9lBcch+CgoPg7KbgocLB55TYFD8JHVLDgEH+lNhEPwkdhcOAQfKU2HQ/BxurFxdPi9y0iNjUNyfbB4nGl4HNnh42YRcGRvLvg4LgIOwYdPQXAIPhyKg0O4vFgXCodweTEtGg7Bh10BcWSHj00xcXA4NSkmDsGHRWFxCD6Ki4xDuNyWFRyHcHkpKD4OwUduU+DIbnIfs+DgcJrRLDgEH+lNhEPwkdhcOITLbUrT4RAuL6ebEUd2s/mYFAeHjzNNikPwcaJ5cQg+bjU1DuHyctjsOITLix44RPChBI6iYvsAx984nF4Hjn/hYxM4/gsf68Cxjcvtd+DYicvLEjj2w4eAw7xIPsChxuEUHEdN7gMcN5rZBzhuN+3lFhynmvPyAg5SA8fZJtxcwJHQbD7AkdZUPsCR3Dw+wJHTJD7AkdkMPsBBauDIL/ziAY6iYvsAR2mBfYDDoKg+wGFTSB/gMCueD3CQGjgsC7Z4gMO4SD7AYV8YH+BwKYaPu9YPsFOMkX16edW+QzrKL8jKUbtRZAg4XLt2MJAMAYd3aw1jyRBwVGgxMZwMAUedRpQh4KCDEnB8vb2v//P588P6YcilzUxt5vEgVg5SAwepgYPU0nBw7Biu7AOHsHLQQaU4WDx6rnB2knEkrUvUValzx7ZCagY42Fn6rHxecnBcr0746K3rGck4D2SuHJw8xipvvszOHCwe/WQ1F/k42Fz6zGRDWSpaOfDRW4YyxOMqi49WmY98KY5dmPio3+6YF94bDFYOfDTPQ4ZYbSv4aJiTDBG53D88lv+UJU0DH4o45T3glgdS7ZlYQjyq8CparhxLxxRYRQqrObz2OJYgYl79IfXCIad3E6Ac1HYMHXEsceBwzfXVcv+yDwuDX95j675yrGMVMana+1YVx3coyaj+GtwGxzqgHNR2U26Pg7qNb5+TGjhIDRykBg5SAwepgYPUwEFq4CA1cJAaOEgNHKQGDlL7A3sdxxVzMs4HAAAAAElFTkSuQmCC">
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAE70lEQVR4nO3bPVIcPRCA4V4XGXAGqgjIyTgFh+UUZM4dUOWbOBgXHs9Oz46kbv203jf7Er5BekY/y/py//AoRHv9aP0A1G/gIDVwkBo4SA0cpAYOUgMHqYGD1MBBauAgNXCQGjhIDRykdtf6AeT586P1I/Tb19t7w//7pcmf7AGRUX0oVXFgwqRqSmrgwIRT3krcD6TI8Mt7bB1XjpOP3vbM1Xltx9ALx/FvBYiM6g+pPQ5YuFZzeI1xaI+OCfMqDLXlgRQZNdNG1fCUarZy7D4TLDZtRslkfPxG3gYHMm528EKXD5TT+BvgQMZxda6jHrNQeuZAxnHnTwCFZ4XdMS/8mfafkCKjVeYjX4TjGiYy1qW+uOUXjevxL/mZ+TiQ0WeGPsy2FWRsypsSk08prOYiEwd/ax2rvPnKwcGG0n8mm4vBtoKMPiufF759TmrJODhtnCzvxXVdhlPnrnTlYE/pucYfn9NBqXPT25uWhsPjL87k2maOknYWVg7fzr8/Hb5p7f85ZPiWWXf9PodT4KjULpFuWSwlfNlnrF+M1uXNHWcOUgMHqY2K4/evn60fIX5D4lhk4MO78XCsTeDDtcFwXGvAh189fs4Rab7P/y5PL6+uT5LRYCvHbpEwdVUEHIIPn4LgEHw4FAeH4MO6UDgEH6ZFw0GGBcTB4mFVQByCD6Ni4hB8WBQWh+CjuMg4BB9lBcch+CgoPg7KbgocLB55TYFD8JHVLDgEH+lNhEPwkdhcOAQfKU2HQ/BxurFxdPi9y0iNjUNyfbB4nGl4HNnh42YRcGRvLvg4LgIOwYdPQXAIPhyKg0O4vFgXCodweTEtGg7Bh10BcWSHj00xcXA4NSkmDsGHRWFxCD6Ki4xDuNyWFRyHcHkpKD4OwUduU+DIbnIfs+DgcJrRLDgEH+lNhEPwkdhcOITLbUrT4RAuL6ebEUd2s/mYFAeHjzNNikPwcaJ5cQg+bjU1DuHyctjsOITLix44RPChBI6iYvsAx984nF4Hjn/hYxM4/gsf68Cxjcvtd+DYicvLEjj2w4eAw7xIPsChxuEUHEdN7gMcN5rZBzhuN+3lFhynmvPyAg5SA8fZJtxcwJHQbD7AkdZUPsCR3Dw+wJHTJD7AkdkMPsBBauDIL/ziAY6iYvsAR2mBfYDDoKg+wGFTSB/gMCueD3CQGjgsC7Z4gMO4SD7AYV8YH+BwKYaPu9YPsFOMkX16edW+QzrKL8jKUbtRZAg4XLt2MJAMAYd3aw1jyRBwVGgxMZwMAUedRpQh4KCDEnB8vb2v//P588P6YcilzUxt5vEgVg5SAwepgYPU0nBw7Biu7AOHsHLQQaU4WDx6rnB2knEkrUvUValzx7ZCagY42Fn6rHxecnBcr0746K3rGck4D2SuHJw8xipvvszOHCwe/WQ1F/k42Fz6zGRDWSpaOfDRW4YyxOMqi49WmY98KY5dmPio3+6YF94bDFYOfDTPQ4ZYbSv4aJiTDBG53D88lv+UJU0DH4o45T3glgdS7ZlYQjyq8CparhxLxxRYRQqrObz2OJYgYl79IfXCIad3E6Ac1HYMHXEsceBwzfXVcv+yDwuDX95j675yrGMVMana+1YVx3coyaj+GtwGxzqgHNR2U26Pg7qNb5+TGjhIDRykBg5SAwepgYPUwEFq4CA1cJAaOEgNHKQGDlL7A3sdxxVzMs4HAAAAAElFTkSuQmCC">
+<link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjogIk5ld3MgZGFzaGJvYXJkIiwgInNob3J0X25hbWUiOiAiTmV3cyIsICJzdGFydF91cmwiOiAiLiIsICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLCAiYmFja2dyb3VuZF9jb2xvciI6ICIjMGIwYzBkIiwgInRoZW1lX2NvbG9yIjogIiMwYjBjMGQiLCAiaWNvbnMiOiBbeyJzcmMiOiAiZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFMUUFBQUMwQ0FJQUFBQ3lyNUZsQUFBRTcwbEVRVlI0bk8zYlBWSWNQUkNBNFY0WEdYQUdxZ2pJeVRnRmgrVVVaTTRkVU9XYk9CZ1hIczlPejQ2a2J2MjAzamY3RXI1QmVrWS95L3B5Ly9Bb1JIdjlhUDBBMUcvZ0lEVndrQm80U0EwY3BBWU9VZ01IcVlHRDFNQkJhdUFnTlhDUUdqaElEUnlrZHRmNkFlVDU4NlAxSS9UYjE5dDd3Ly83cGNtZjdBR1JVWDBvVlhGZ3dxUnFTbXJnd0lSVDNrcmNENlRJOE10N2JCMVhqcE9QM3ZiTTFYbHR4OUFMeC9GdkJZaU02ZytwUFE1WXVGWnplSTF4YUkrT0NmTXFETFhsZ1JRWk5kTkcxZkNVYXJaeTdENFRMRFp0UnNsa2ZQeEczZ1lITW01MjhFS1hENVRUK0J2Z1FNWnhkYTZqSHJOUWV1WkF4bkhuVHdDRlo0WGRNUy84bWZhZmtDS2pWZVlqWDRUakdpWXkxcVcrdU9VWGpldnhML21aK1RpUTBXZUdQc3kyRldSc3lwc1NrMDhwck9ZaUV3ZC9heDJydlBuS3djR0cwbjhtbTR2QnRvS01QaXVmRjc1OVRtckpPRGh0bkN6dnhYVmRobFBucm5UbFlFL3B1Y1lmbjlOQnFYUFQyNXVXaHNQakw4N2sybWFPa25ZV1ZnN2Z6cjgvSGI1cDdmODVaUGlXV1hmOVBvZFQ0S2pVTHBGdVdTd2xmTmxuckYrTTF1WE5IV2NPVWdNSHFZMks0L2V2bjYwZklYNUQ0bGhrNE1PNzhYQ3NUZUREdGNGd1hHdkFoMTg5ZnM0UmFiN1AveTVQTDYrdVQ1TFJZQ3ZIYnBFd2RWVUVISUlQbjRMZ0VIdzRGQWVINE1PNlVEZ0VINlpGdzBHR0JjVEI0bUZWUUJ5Q0Q2Tmk0aEI4V0JRV2grQ2p1TWc0QkI5bEJjY2grQ2dvUGc3S2Jnb2NMQjU1VFlGRDhKSFZMRGdFSCtsTmhFUHdrZGhjT0FRZktVMkhRL0J4dXJGeGRQaTl5MGlOalVOeWZiQjRuR2w0SE5uaDQyWVJjR1J2THZnNExnSU93WWRQUVhBSVBoeUtnME80dkZnWENvZHdlVEV0R2c3QmgxMEJjV1NIajAweGNYQTROU2ttRHNHSFJXRnhDRDZLaTR4RHVOeVdGUnlIY0hrcEtENE93VWR1VStESWJuSWZzK0RnY0pyUkxEZ0VIK2xOaEVQd2tkaGNPSVRMYlVyVDRSQXVMNmViRVVkMnMvbVlGQWVIanpOTmlrUHdjYUo1Y1FnK2JqVTFEdUh5Y3Rqc09JVExpeDQ0UlBDaEJJNmlZdnNBeDk4NG5GNEhqbi9oWXhNNC9nc2Y2OEN4amN2dGQrRFlpY3ZMRWpqMnc0ZUF3N3hJUHNDaHh1RVVIRWRON2dNY041clpCemh1TiszbEZoeW5tdlB5QWc1U0E4ZlpKdHhjd0pIUWJEN0FrZFpVUHNDUjNEdyt3SkhUSkQ3QWtka01Qc0JCYXVESUwvemlBWTZpWXZzQVIybUJmWUREb0tnK3dHRlRTQi9nTUN1ZUQzQ1FHamdzQzdaNGdNTzRTRDdBWVY4WUgrQndLWWFQdTlZUHNGT01rWDE2ZWRXK1F6cktMOGpLVWJ0UlpBZzRYTHQyTUpBTUFZZDNhdzFqeVJCd1ZHZ3hNWndNQVVlZFJwUWg0S0NERW5COHZiMnYvL1A1ODhQNlljaWx6VXh0NXZFZ1ZnNVNBd2VwZ1lQVTBuQnc3Qml1N0FPSHNITFFRYVU0V0R4NnJuQjJrbkVrclV2VVZhbHp4N1pDYWdZNDJGbjZySHhlY25CY3IwNzQ2SzNyR2NrNEQyU3VISnc4eGlwdnZzek9IQ3dlL1dRMUYvazQyRno2ekdSRFdTcGFPZkRSVzRZeXhPTXFpNDlXbVk5OEtZNWRtUGlvMys2WUY5NGJERllPZkRUUFE0WlliU3Y0YUppVERCRzUzRDg4bHYrVUpVMERING80NVQzZ2xnZFM3WmxZUWp5cThDcGFyaHhMeHhSWVJRcXJPYnoyT0pZZ1lsNzlJZlhDSWFkM0U2QWMxSFlNSFhFc2NlQnd6ZlhWY3YreUR3dURYOTVqNjc1eXJHTVZNYW5hKzFZVngzY295YWorR3R3R3h6cWdITlIyVTI2UGc3cU5iNStUR2poSURSeWtCZzVTQXdlcGdZUFV3RUZxNENBMWNKQWFPRWdOSEtRR0RsTDdBM3NkeHhWek1zNEhBQUFBQUVsRlRrU3VRbUNDIiwgInNpemVzIjogIjE4MHgxODAiLCAidHlwZSI6ICJpbWFnZS9wbmciLCAicHVycG9zZSI6ICJhbnkifV19">
+<style>
+:root{
+  --bg:#0b0c0d; --bg2:#121416; --card:#15181a; --line:#24282b; --text:#ece6dc; --muted:#948e83;
+  --teal:#2dd4bf; --teal-dim:#1c8f82; --serif:Georgia,"Iowan Old Style","Palatino Linotype",Palatino,"Times New Roman",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,system-ui,sans-serif;
+  --sat:env(safe-area-inset-top,0px); --sar:env(safe-area-inset-right,0px);
+  --sab:env(safe-area-inset-bottom,0px); --sal:env(safe-area-inset-left,0px);
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{background:var(--bg);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.5;
+  padding-left:var(--sal);padding-right:var(--sar);padding-bottom:calc(var(--sab) + 28px);min-height:100vh}
+a{color:var(--teal);text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--teal);outline-offset:2px;border-radius:6px}
+
+/* ---- sticky top bar ---- */
+.bar{position:sticky;top:0;z-index:20;background:rgba(11,12,13,.92);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);
+  border-bottom:1px solid var(--line);padding:calc(var(--sat) + 10px) 16px 0}
+.bar-in{max-width:1100px;margin:0 auto}
+.top{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.brand{font-family:var(--serif);font-size:26px;font-weight:700;letter-spacing:-.01em;margin:0}
+.brand i{color:var(--teal);font-style:normal}
+.stamp{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.stamp b{color:var(--text);font-weight:600}
+.tabs{display:flex;gap:2px;margin-top:8px;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{appearance:none;background:none;border:0;border-bottom:2px solid transparent;color:var(--muted);font:600 14px var(--sans);
+  padding:10px 12px 11px;cursor:pointer;white-space:nowrap;display:flex;gap:7px;align-items:center}
+.tab:hover{color:var(--text)}
+.tab[aria-selected="true"]{color:var(--text);border-bottom-color:var(--teal)}
+.tab .n{font-size:11px;font-weight:600;color:var(--bg);background:var(--teal-dim);border-radius:9px;padding:0 6px;line-height:17px}
+.tab[aria-selected="true"] .n{background:var(--teal)}
+
+/* ---- content ---- */
+main{max-width:1100px;margin:0 auto;padding:18px 16px 0}
+.panel[hidden]{display:none}
+.lede{font-family:var(--serif);color:var(--muted);font-style:italic;margin:2px 0 14px;font-size:15px}
+details.group{border:1px solid var(--line);background:var(--bg2);border-radius:14px;margin:0 0 14px;overflow:hidden}
+details.group>summary{list-style:none;cursor:pointer;padding:14px 16px;display:flex;align-items:center;gap:10px;user-select:none}
+details.group>summary::-webkit-details-marker{display:none}
+details.group>summary .chev{margin-left:auto;color:var(--muted);transition:transform .2s;font-size:12px}
+details.group[open]>summary .chev{transform:rotate(90deg)}
+.gt{font-family:var(--serif);font-size:19px;font-weight:700;margin:0}
+.gc{font-size:12px;color:var(--muted)}
+.gi{font-size:18px;width:26px;text-align:center}
+.items{display:grid;gap:12px;padding:2px 12px 14px;grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr))}
+.items.flat{padding:0}
+article.item{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 15px 12px;display:flex;flex-direction:column}
+.chip{align-self:flex-start;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,.35);
+  border-radius:999px;padding:1px 8px;margin-bottom:8px}
+.hl{font-family:var(--serif);font-size:18px;line-height:1.28;font-weight:700;margin:0 0 7px;letter-spacing:-.005em}
+.sum{margin:0 0 12px;color:#cfc9bf;font-size:14.5px;line-height:1.55}
+.foot{margin-top:auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:12.5px;color:var(--muted)}
+.foot .src{font-weight:600}
+.foot .dot{opacity:.5}
+time.rec{font-variant-numeric:tabular-nums;border-bottom:1px dotted var(--muted);cursor:help}
+time.rec.old{opacity:.65}
+article.item.tweet{border-left:3px solid var(--teal)}
+article.item.tweet .hl{font:600 14px var(--sans);color:var(--text);margin-bottom:6px}
+article.item.tweet .sum{font-family:var(--serif);font-size:16px;line-height:1.5;color:var(--text);white-space:pre-line}
+.empty{color:var(--muted);padding:6px 4px 16px;font-size:14px}
+footer{max-width:1100px;margin:26px auto 0;padding:0 16px;color:var(--muted);font-size:12px;line-height:1.6}
+noscript{display:block;padding:24px 16px;color:var(--text)}
+@media (max-width:440px){
+  .tab{font-size:13px;padding:10px 7px 11px;gap:5px}.tab .n{padding:0 5px}
+}
+@media (min-width:760px){
+  .brand{font-size:30px} main{padding-top:24px} .hl{font-size:19px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="bar"><div class="bar-in">
+  <div class="top">
+    <h1 class="brand">News<i>.</i></h1>
+    <div class="stamp" id="stamp">Last updated: <b id="stamp-t">…</b></div>
+  </div>
+  <nav class="tabs" role="tablist" aria-label="Sections" id="tabs"></nav>
+</div></header>
+<main id="main"><noscript>This dashboard needs JavaScript to render the news items.</noscript></main>
+<footer id="foot"></footer>
+
+<script type="application/json" id="news-data">
+{
+ "meta": {
+  "title": "News",
+  "generated_at": "2026-10-11T06:56:36+08:00",
+  "timezone": "Asia/Singapore",
+  "note": "Times are ISO-8601 with offset (or date-only / absent when the source did not state a time). The page renders everything in SGT."
+ },
+ "sports": {
+  "cricket": [
+   {
+    "headline": "Renshaw's 190 turns first Test; SA 27-1 trailing by 363 overnight",
+    "summary": "Matt Renshaw's highest Test score (190 off 397 balls, first century in nine years) and a 134-run ninth-wicket stand with Nathan Lyon lifted Australia to 390 all out at Kingsmead after they had been 124-6 on day one. Josh Hazlewood then removed Ryan Rickelton for a duck; South Africa resume day three (Sunday) on 27-1.",
+    "source": "The Guardian",
+    "url": "https://www.theguardian.com/sport/2026/oct/10/south-africa-australia-first-test-second-day-match-report",
+    "published": "2026-10-10T15:51:00+00:00"
+   },
+   {
+    "headline": "West Indies chase 250 to level India T20I series; Indore third match tonight",
+    "summary": "Shai Hope's unbeaten 102 off 45 and Sherfane Rutherford's 84 off 37 powered West Indies to 252-4 with nine balls spare in Ranchi — their highest successful T20I chase and the second-highest ever. The five-match series is 1-1; the third T20I at Holkar Stadium, Indore starts 7:00pm IST / 9:30pm SGT on Sunday.",
+    "source": "Al Jazeera (AP)",
+    "url": "https://www.aljazeera.com/sports/2026/10/10/hopes-hundred-fires-west-indies-to-record-t20-win-over-india",
+    "published": "2026-10-10T08:21:22+00:00"
+   }
+  ],
+  "football": [
+   {
+    "headline": "Man Utd 1-1 Spurs: Solanke's stoppage-time header rescues 10-man Tottenham",
+    "summary": "Bryan Mbeumo put United ahead in the 73rd minute before Rodrigo Bentancur was sent off for a headbutt on Luke Shaw; Dominic Solanke then glanced Sandro Tonali's cross past Senne Lammens in the 90+2nd. Spurs lift off the bottom on three points but remain winless; United (six points from six) were booed off after their worst league start in 40 years.",
+    "source": "Sky Sports",
+    "url": "https://www.skysports.com/football/news/13592777/man-utd-1-1-tottenham-dominic-solanke-rescues-dramatic-draw-for-10-man-spurs-at-old-trafford",
+    "published": "2026-10-10T19:30:00+01:00"
+   },
+   {
+    "headline": "Arsenal 2-1 Leeds: Calafiori and Guimarães complete comeback",
+    "summary": "James Justin put unbeaten Leeds ahead on 54 minutes at the Emirates before Riccardo Calafiori levelled (62') and substitute Bruno Guimarães won it (69') with his first Emirates goal. Arsenal move level on points with Manchester City (15 from six); Leeds suffer their first Premier League loss of the season.",
+    "source": "Arsenal FC",
+    "url": "https://www.arsenal.com/news/report-arsenal-2-1-leeds-united-aZRg37i5KpH0",
+    "published": "2026-10-10"
+   }
+  ],
+  "golf": [
+   {
+    "headline": "Open de España: Forrest and Dean share lead at −13 ahead of Sunday final",
+    "summary": "Grant Forrest (66-67-67) and Joe Dean (68-67-65) are tied at 13 under at Real Club de Campo after round three; Joel Girrbach, Victor Perez and Jacob Skov Olesen sit one back on −12. Final-round tee times begin around 13:00 local (Madrid) / ~7:00pm SGT Sunday.",
+    "source": "DP World Tour",
+    "url": "https://www.europeantour.com/dpworld-tour/news/articles/detail/grant-forrest-and-joe-dean-share-lead-ahead-of-final-round-in-madrid/",
+    "published": "2026-10-10"
+   },
+   {
+    "headline": "DP World Tour in advanced talks to take in exiting LIV players; Rahm out of LIV 2.0",
+    "summary": "Today's Golfer reports several LIV golfers are negotiating exit deals for 2027 DP World Tour starts, contingent on rejecting LIV 2.0 terms (deadline Oct 25) and excluding Rolex Series events for now. Jon Rahm's lawyer told a LIV bankruptcy hearing the proposed terms are unacceptable and he will not participate going forward.",
+    "source": "Golfweek (USA Today)",
+    "url": "https://golfweek.usatoday.com/story/sports/golf/dpworldtour/2026/10/09/report-dp-world-tour-advanced-talks-liv-golfers-return/92170303007/",
+    "published": "2026-10-09T12:30:00-04:00"
+   }
+  ],
+  "f1": [
+   {
+    "headline": "Singapore GP: Verstappen on pole ahead of Leclerc and Hamilton; race 8pm SGT",
+    "summary": "Max Verstappen took his first Singapore pole with 1:31.373, 0.054s clear of Charles Leclerc and Lewis Hamilton third. Kimi Antonelli and Lando Norris complete the top five; George Russell starts further back after a grid penalty for a power-unit change. The race starts Sunday at 8:00pm SGT.",
+    "source": "Formula 1",
+    "url": "https://www.formula1.com/en/latest/article/verstappen-beats-leclerc-to-pole-position-for-the-singapore-gp.7yum1V3S9aSTyj3Zzzs0Y9",
+    "published": "2026-10-10T14:46:00+00:00"
+   },
+   {
+    "headline": "Verstappen wins rain-hit Singapore Sprint; Russell crashes, McLarens collide",
+    "summary": "After a 30-minute rain delay (formation lap 5:30pm SGT), Verstappen won the Sprint from Hamilton and Leclerc. Russell led into Turn 1 then crashed at the end of lap one; Norris tagged Piastri late, promoting Antonelli to fourth. Qualifying was pushed 30 minutes later to 9:00pm SGT.",
+    "source": "Formula 1",
+    "url": "https://www.formula1.com/en/latest/article/verstappen-wins-dramatic-rain-hit-singapore-sprint-as-russell-crashes-and-mclarens-collide.4r90mH2skljBa5sinFAsyp",
+    "published": "2026-10-10T10:30:00+00:00"
+   }
+  ],
+  "tennis": [
+   {
+    "headline": "Hurkacz stuns Djokovic 6-4, 6-3 in Shanghai second round",
+    "summary": "Hubert Hurkacz, the 2023 champion, won his first match in nine meetings with Novak Djokovic, who looked low on energy after winning Beijing days earlier. Hurkacz next faces Chinese wild card Zhou Yi after Lorenzo Musetti lost; Djokovic's next scheduled event is the Paris Masters in November.",
+    "source": "ATP Tour",
+    "url": "https://www.atptour.com/en/news/djokovic-hurkacz-shanghai-2026-friday",
+    "published": "2026-10-09"
+   },
+   {
+    "headline": "Shanghai Masters: Alcaraz, Medvedev, Fritz and Vacherot advance on Saturday",
+    "summary": "Second seed Carlos Alcaraz beat Juan Manuel Cerundolo 6-3, 6-3; Daniil Medvedev came from a set down to beat Jan-Lennard Struff 4-6, 6-4, 6-3; Taylor Fritz and defending champion Valentin Vacherot also won. Round of 32 continues Sunday; the final is 18 Oct.",
+    "source": "ATP Tour",
+    "url": "https://www.atptour.com/en/news/shanghai-2026-results",
+    "published": "2026-10-10"
+   }
+  ]
+ },
+ "finance": {
+  "macro": [
+   {
+    "tag": "Rates",
+    "headline": "Waller: more Fed hikes likely, but not necessarily consecutive; markets lean to October pause",
+    "summary": "At the Istanbul Economic Forum, Governor Christopher Waller said additional hikes are appropriate if data hold, but need not come at consecutive meetings. Futures price roughly 18% odds of an October 28 hike vs ~87% of one by December; the funds rate sits at 3.75–4.00% after September's 25bp move.",
+    "source": "Federal Reserve",
+    "url": "https://www.federalreserve.gov/newsevents/speech/waller20261008a.htm",
+    "published": "2026-10-08"
+   },
+   {
+    "tag": "FX",
+    "headline": "Dollar firms near 102; USD/CAD jumps on Canadian jobs miss",
+    "summary": "DXY rose to about 102.09 Friday as USD/CAD climbed to ~1.4275 after September Canadian employment fell 68,300 vs a ~9,000 gain expected. EUR/USD hovered near 1.1190 on French fiscal stress; USD/JPY traded around 158.3 on the US–Japan rate gap. US yields: 10-year ~5.25%, 30-year ~5.61%.",
+    "source": "The Daily DXY",
+    "url": "https://www.thedailydxy.com/archive/2026-10-10",
+    "published": "2026-10-10"
+   },
+   {
+    "tag": "Central banks",
+    "headline": "Trump forms inquiry committee on Fed's Lisa Cook; White House hearing Nov 5",
+    "summary": "A three-person panel (Hassett, Sonderling, Lucas) will hear mortgage-fraud allegations Cook denies and recommend whether Trump has cause to fire her; the final call is Trump's and would likely return to the courts. Cook is expected to vote at the Oct 28 FOMC, so no immediate rate impact.",
+    "source": "CNBC",
+    "url": "https://www.cnbc.com/2026/10/09/trump-lisa-cook-fed-firing-committee-explained.html",
+    "published": "2026-10-09T14:20:00-04:00"
+   },
+   {
+    "tag": "Geopolitics",
+    "headline": "IRGC: oil tanker explodes after mine strike in Strait of Hormuz",
+    "summary": "Iran's Revolutionary Guards said a large tanker hit a naval mine while using an unauthorised southern exit route, exploded and caught fire; vessel identity and casualties were not confirmed. Brent closed Friday near $103.89 with WTI ~$91 after Trump said no Iran strike is planned before the Nov 3 midterms.",
+    "source": "Anadolu Agency",
+    "url": "https://www.aa.com.tr/en/middle-east/supertanker-explodes-after-striking-mine-in-strait-of-hormuz-irans-revolutionary-guards-say/4084743",
+    "published": "2026-10-10"
+   },
+   {
+    "tag": "Volatility",
+    "headline": "VIX slips to ~14.85 as equities firm; bond yields stay elevated",
+    "summary": "The VIX fell about 3.6% to 14.85 Friday while the S&P 500 rose ~0.5% and the Dow ~0.7%, a risk-on equity backdrop alongside a steady dollar. The 10-year yield held near 5.25% and the 30-year near 5.61%, keeping rate-sensitive assets under watch into Columbus Day-shortened Monday.",
+    "source": "The Daily DXY",
+    "url": "https://www.thedailydxy.com/archive/2026-10-10",
+    "published": "2026-10-10"
+   },
+   {
+    "tag": "Flows",
+    "headline": "BoJ balance sheet shrinks further; US semiconductor imports hit a record",
+    "summary": "The Bank of Japan's total assets fell another ~$98bn in Q3 to $3.95tn (lowest since Q1 2020), down ~$828bn from the Q1 2024 peak. Separately, US semiconductor imports jumped $2.4bn in August to a record $15.4bn, up 69% over five months — a flow marker of AI hardware demand.",
+    "source": "The Kobeissi Letter (X)",
+    "url": "https://x.com/KobeissiLetter/status/2108991201378496677",
+    "published": "2026-10-10T18:41:00+00:00"
+   }
+  ],
+  "tweets": [
+   {
+    "kind": "tweet",
+    "headline": "*Walter Bloomberg (@DeItaone)",
+    "summary": "OIL TANKER EXPLODES AFTER REPORTED MINE STRIKE IN STRAIT OF HORMUZ\n\nIran’s Revolutionary Guards say an oil tanker exploded and caught fire after striking a naval mine while crossing the Strait of Hormuz, according to Iranian state media.\n\nThe vessel’s identity and flag remain",
+    "source": "X",
+    "url": "https://x.com/DeItaone/status/2108970700769825185",
+    "published": "2026-10-10T17:19:32+00:00"
+   },
+   {
+    "kind": "tweet",
+    "headline": "*Walter Bloomberg (@DeItaone)",
+    "summary": "TRUMP DEMANDS UKRAINE STOP STRIKING RUSSIAN OIL REFINERIES\n\nPresident Trump warned Zelensky to immediately stop attacks on Russian refineries, declaring: “He better damn well stop.”\n\nTrump also called for new leadership in Ukraine, saying: “I suggest they get a new leader who can",
+    "source": "X",
+    "url": "https://x.com/DeItaone/status/2108970479012778026",
+    "published": "2026-10-10T17:18:39+00:00"
+   },
+   {
+    "kind": "tweet",
+    "headline": "The Kobeissi Letter (@KobeissiLetter)",
+    "summary": "BREAKING: Saudi Arabia has evacuated and closed its international airport in Riyadh after a missile attack by Yemen’s Houthis killed at least 12 people and left dozens injured.\n\nPresident Trump is now saying the US could join Saudi strikes on the Houthis in light of the airport",
+    "source": "X",
+    "url": "https://x.com/KobeissiLetter/status/2109036513182749144",
+    "published": "2026-10-10T21:41:03+00:00"
+   },
+   {
+    "kind": "tweet",
+    "headline": "The Kobeissi Letter (@KobeissiLetter)",
+    "summary": "BREAKING: The Bank of Japan's total assets declined -$98 billion in Q3 2026, to $3.95 trillion, the lowest since Q1 2020.\n\nSince the Q1 2024 peak, the BoJ has reduced its balance sheet by -$828 billion, or -17.4%.\n\nAs a result, the BoJ's Asset-to-GDP ratio has fallen -28",
+    "source": "X",
+    "url": "https://x.com/KobeissiLetter/status/2108991201378496677",
+    "published": "2026-10-10T18:41:00+00:00"
+   },
+   {
+    "kind": "tweet",
+    "headline": "Nick Timiraos (@NickTimiraos) · WSJ",
+    "summary": "Trump has created a commission to evaluate the mortgage fraud allegations made against Fed Governor Lisa Cook and has scheduled an in-person hearing at the White House on Nov. 5.\n\n“Governor Cook shall appear at the hearing and be examined by the Committee, its representatives,",
+    "source": "X",
+    "url": "https://x.com/NickTimiraos/status/2108563844633145657",
+    "published": "2026-10-09T14:22:50+00:00"
+   },
+   {
+    "kind": "tweet",
+    "headline": "unusual_whales (@unusual_whales)",
+    "summary": "BREAKING: Trump says Ukraine should get a new president as he blames Zelenskyy for U.S. diesel prices, per AP",
+    "source": "X",
+    "url": "https://x.com/unusual_whales/status/2108992039140659577",
+    "published": "2026-10-10T18:44:19+00:00"
+   },
+   {
+    "kind": "tweet",
+    "headline": "unusual_whales (@unusual_whales)",
+    "summary": "11% of U.S. adults now take a GLP-1 for weight loss, roughly 28 million people, up from just 3% in 2024, per Gallup.",
+    "source": "X",
+    "url": "https://x.com/unusual_whales/status/2109011334041874493",
+    "published": "2026-10-10T20:01:00+00:00"
+   },
+   {
+    "kind": "tweet",
+    "headline": "zerohedge (@zerohedge)",
+    "summary": "Houthi Missile Attack On Busy Terminal At Riyadh Airport Kills 12, Leaves Scores Wounded",
+    "source": "X",
+    "url": "https://x.com/zerohedge/status/2109044334221721847",
+    "published": "2026-10-10T22:12:08+00:00"
+   }
+  ],
+  "hedge_funds": [
+   {
+    "tag": "Performance",
+    "headline": "Lone Pine long-short −31% in Q3, wiping out first-half gains",
+    "summary": "Stephen Mandel's Tiger Cub long-short fund lost ~31% in Q3 (about 25% in July alone) and finished flat year-to-date after surging 51% in Q2; the long-only fund fell 23% in Q3 but remains +6% YTD. AI-heavy peers Coatue, Light Street and Discovery also gave back large first-half gains.",
+    "source": "Institutional Investor",
+    "url": "https://www.institutionalinvestor.com/article/lone-pines-reversal-fortune",
+    "published": "2026-10-08"
+   },
+   {
+    "tag": "Macro view",
+    "headline": "Dalio: bond bear market has “more to go”; stocks' yield cushion is shrinking",
+    "summary": "Speaking at the Milken Institute Asia Summit in Singapore, the Bridgewater founder said equities have absorbed higher rates thanks to earnings growth, but that cushion is narrowing and credit spreads are starting to widen. He expects free cash flow to deteriorate even as earnings improve.",
+    "source": "CNBC",
+    "url": "https://www.cnbc.com/2026/10/08/ray-dalio-stocks-bond-yields.html",
+    "published": "2026-10-08T07:04:00-04:00"
+   },
+   {
+    "tag": "13F",
+    "headline": "Citadel slashes Micron and TSMC stakes in latest 13F",
+    "summary": "Citadel Advisors cut Micron by ~87% (to ~600k shares) and TSMC by ~87%, and trimmed STMicro by 44%, though the filing gives no rationale and the cuts were broad-based across sectors.",
+    "source": "New Market Perspective",
+    "url": "https://newmarketperspective.com/ken-griffins-citadel-significantly-lowers-stake-in-surging-chip-stock/"
+   },
+   {
+    "kind": "tweet",
+    "headline": "Michael Burry (@michaeljburry) · Scion founder",
+    "summary": "By early 2000, 70-80% of stocks were in bear markets, and the indices continued to move higher.\n\nI have a word for that. Denial.",
+    "source": "X",
+    "url": "https://x.com/michaeljburry/status/2108629557721149887",
+    "published": "2026-10-09T18:43:57+00:00"
+   },
+   {
+    "kind": "tweet",
+    "headline": "unusual_whales (@unusual_whales)",
+    "summary": "Look at this.\n\nPalantir, $PLTR, insiders have been cashing out all year.\n\nFeb. 20: CEO Alex Karp sold $65.9 million\nMar. 2: Peter Thiel sold about $290 million\nAug. 20: Karp sold another $86 million\n\nIn August alone, six Palantir executives sold about $95 million combined.\n\nNot",
+    "source": "X",
+    "url": "https://x.com/unusual_whales/status/2109026434065035487",
+    "published": "2026-10-10T21:01:00+00:00"
+   },
+   {
+    "kind": "tweet",
+    "headline": "unusual_whales (@unusual_whales)",
+    "summary": "Look at this.\n\nMeta, $META, insiders have made 172 trades in their own stock over the past six months.\n\nPurchases: zero.\n\nCFO Susan Li: ~$95 million sold\nCOO Javier Olivan: ~$24 million sold, often every week\nProduct chief Chris Cox: $13 million sold on Sept. 9\nCTO Andrew",
+    "source": "X",
+    "url": "https://x.com/unusual_whales/status/2108996235151429845",
+    "published": "2026-10-10T19:01:00+00:00"
+   }
+  ]
+ },
+ "politics": [
+  {
+   "tag": "US · Ukraine",
+   "headline": "Trump says Ukraine needs a new president who will agree to end the war",
+   "summary": "At the White House on Saturday Trump said Zelenskyy should be replaced by a leader who can \"make a deal,\" blaming Kyiv's strikes on Russian refineries for high US diesel prices after Friday's US–Russia diesel purchase deal. Ukraine's foreign minister said Zelenskyy has the people's support; Zelenskyy said Russian bombs on Zaporizhzhia answered the sanctions easing.",
+   "source": "Al Jazeera",
+   "url": "https://www.aljazeera.com/news/2026/10/10/trump-says-ukraine-needs-a-new-president-who-will-agree-to-end-the-war",
+   "published": "2026-10-10"
+  },
+  {
+   "tag": "Middle East",
+   "headline": "Houthi missile hits Riyadh airport terminal; 12 dead, Trump weighs US strikes",
+   "summary": "A missile struck the domestic-flight terminal complex at King Khalid International Airport on Saturday, killing at least 12 and wounding dozens; the airport was evacuated and operations suspended. Trump said the US \"may\" join Saudi strikes on the Houthis after a week of attacks on Saudi airports and infrastructure.",
+   "source": "Associated Press (via Inquirer)",
+   "url": "https://www.inquirer.com/news/nation-world/missile-attack-riyadh-airport-houthis-yemen-saudi-arabia-iran-us-war-trump-20261010.html",
+   "published": "2026-10-10T15:04:00-04:00"
+  },
+  {
+   "tag": "Middle East",
+   "headline": "IRGC claims oil tanker exploded after mine strike in Strait of Hormuz",
+   "summary": "Iran's Revolutionary Guards said a large tanker using an unauthorised southern exit route hit a naval mine, exploded and caught fire; identity and casualties were unconfirmed. Tehran warned vessels ignoring Hormuz rules face \"horrific fire\" as US–Iran talks remain deadlocked over navigation.",
+   "source": "Anadolu Agency",
+   "url": "https://www.aa.com.tr/en/middle-east/supertanker-explodes-after-striking-mine-in-strait-of-hormuz-irans-revolutionary-guards-say/4084743",
+   "published": "2026-10-10"
+  },
+  {
+   "tag": "Yemen",
+   "headline": "ISW: Houthis press Taiz encirclement as Saudi air campaign intensifies",
+   "summary": "Weekend ISW update: Houthi forces are attacking south and west of Taiz City while Saudi Joint Forces Command says it has destroyed 136 Houthi targets and aims to degrade ballistic-missile capabilities. Trump is separately considering offensive US strikes after the Riyadh airport attack.",
+   "source": "Institute for the Study of War",
+   "url": "https://understandingwar.org/research/middle-east/iran-update-october-10-2026/",
+   "published": "2026-10-10"
+  },
+  {
+   "tag": "Brazil",
+   "headline": "Flávio Bolsonaro wins first round; Lula runoff set for 25 October",
+   "summary": "Senator Flávio Bolsonaro took ~47% to incumbent Lula's ~45% in Brazil's first-round presidential vote, forcing a 25 Oct runoff. The Liberal Party also led in governors and congressional seats; a Bolsonaro win would align Latin America's largest economy more closely with Trump's US.",
+   "source": "BBC News",
+   "url": "https://www.bbc.com/news/articles/ck1l34ed592no",
+   "published": "2026-10-05"
+  },
+  {
+   "tag": "Spain",
+   "headline": "Sánchez calls snap Spanish election for 29 November over housing crisis",
+   "summary": "Spain's socialist PM brought forward the general election after Congress rejected emergency housing measures amid nationwide protests. Polls favour the PP but short of a majority, raising the prospect of a PP–Vox deal — the first far-right share of national power since Franco.",
+   "source": "The Guardian",
+   "url": "https://www.theguardian.com/world/2026/oct/05/pedro-sanchez-gamble-snap-general-election-spain-explainer",
+   "published": "2026-10-05T11:18:00+00:00"
+  },
+  {
+   "tag": "US · Fed",
+   "headline": "White House sets Nov 5 hearing on firing Fed Governor Lisa Cook",
+   "summary": "Trump created a three-person \"committee of inquiry\" (Hassett, Sonderling, Lucas) to recommend whether cause exists to remove Cook over mortgage-fraud claims she denies. Cook is expected to appear Nov 5; any firing would almost certainly return to the Supreme Court.",
+   "source": "CNBC",
+   "url": "https://www.cnbc.com/2026/10/09/trump-lisa-cook-fed-firing-committee-explained.html",
+   "published": "2026-10-09T14:20:00-04:00"
+  }
+ ]
+}
+</script>
+<script>
+(function(){
+  "use strict";
+  var DATA = JSON.parse(document.getElementById('news-data').textContent);
+  var TZ = (DATA.meta && DATA.meta.timezone) || 'Asia/Singapore';
+  var LS = {get:function(k){try{return localStorage.getItem(k)}catch(e){return null}},
+            set:function(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+
+  var TABS = [
+    {id:'sports',   label:'Sports',          lede:'Latest results and what is coming up.'},
+    {id:'finance',  label:'Finance & Macro', lede:'Rates, FX, central banks, volatility, flows - and who is saying what.'},
+    {id:'politics', label:'Global Politics', lede:'The developments most likely to move things.'}
+  ];
+  var SPORTS = [['cricket','Cricket','\uD83C\uDFCF'],['football','Football','\u26BD'],['golf','Golf','\u26F3'],['f1','F1','\uD83C\uDFCE\uFE0F'],['tennis','Tennis','\uD83C\uDFBE']];
+  var FIN = [['macro','Macro news','\uD83C\uDF10'],['tweets','Tweets from X','\uD835\uDD4F'],['hedge_funds','Hedge funds','\uD83C\uDFE6']];
+
+  /* ---------- time helpers (all display in SGT) ---------- */
+  var MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var dtf = new Intl.DateTimeFormat('en-GB',{timeZone:TZ,weekday:'short',day:'numeric',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit',hour12:false});
+  function fmtSGT(d){
+    var p={}; dtf.formatToParts(d).forEach(function(x){p[x.type]=x.value});
+    return p.weekday+' '+p.day+' '+p.month+' '+p.year+', '+p.hour+':'+p.minute+' SGT';
+  }
+  var dayF = new Intl.DateTimeFormat('en-CA',{timeZone:TZ,year:'numeric',month:'2-digit',day:'2-digit'});
+  function dayNum(d){var s=dayF.format(d).split('-');return Date.UTC(+s[0],+s[1]-1,+s[2])/864e5}
+  function isDateOnly(s){return /^\d{4}-\d{2}-\d{2}$/.test(s)}
+  function parse(s){ if(!s) return null; var d = isDateOnly(s) ? new Date(s+'T00:00:00+08:00') : new Date(s); return isNaN(d)?null:d }
+  function rel(s, now){
+    var d=parse(s); if(!d) return {text:'time n/a', title:'Publication time not stated by the source', old:false};
+    if(isDateOnly(s)){
+      var n=dayNum(now)-dayNum(d), t = n<=0?'today':(n===1?'yesterday':n+'d ago');
+      return {text:t, title:d.toLocaleDateString('en-GB',{timeZone:TZ,weekday:'short',day:'numeric',month:'short',year:'numeric'})+' (date only; time not stated)', old:n>=3};
+    }
+    var diff=(now-d)/1000, abs=Math.abs(diff), t;
+    if(abs<60) t='just now';
+    else if(abs<3600) t=Math.round(abs/60)+'m';
+    else if(abs<172800) t=Math.floor(abs/3600)+'h';
+    else t=Math.floor(abs/86400)+'d';
+    if(abs>=60) t = diff>=0 ? t+' ago' : 'in '+t;
+    return {text:t, title:fmtSGT(d), old:diff>3*86400};
+  }
+
+  /* ---------- DOM helpers ---------- */
+  function el(tag, cls, text){var e=document.createElement(tag); if(cls) e.className=cls; if(text!=null) e.textContent=text; return e}
+
+  function renderItem(it){
+    var a = el('article','item'+(it.kind==='tweet'?' tweet':''));
+    if(it.published) a.setAttribute('data-published', it.published);
+    if(it.tag) a.appendChild(el('span','chip',it.tag));
+    a.appendChild(el('h3','hl',it.headline));
+    a.appendChild(el('p','sum',it.summary));
+    var f = el('div','foot');
+    if(it.url){
+      var l = el('a','src',it.source+' \u2197'); l.href=it.url; l.target='_blank'; l.rel='noopener noreferrer'; f.appendChild(l);
+    } else f.appendChild(el('span','src',it.source));
+    f.appendChild(el('span','dot','\u00B7'));
+    var tm = el('time','rec'); if(it.published) tm.setAttribute('datetime', it.published); tm.setAttribute('data-published', it.published||'');
+    f.appendChild(tm);
+    a.appendChild(f);
+    return a;
+  }
+
+  function renderGroup(key, title, icon, items, openDefault){
+    var d = el('details','group'); d.id='g-'+key;
+    var saved = LS.get('newsdash.open.'+key);
+    d.open = saved===null ? openDefault : saved==='1';
+    d.addEventListener('toggle', function(){LS.set('newsdash.open.'+key, d.open?'1':'0')});
+    var s = el('summary'); s.appendChild(el('span','gi',icon)); s.appendChild(el('h2','gt',title));
+    s.appendChild(el('span','gc',items.length+(items.length===1?' item':' items')));
+    s.appendChild(el('span','chev','\u25B6')); d.appendChild(s);
+    var w = el('div','items');
+    if(!items.length) w.appendChild(el('div','empty','Nothing verified for this section yet.'));
+    items.forEach(function(it){w.appendChild(renderItem(it))});
+    d.appendChild(w); return d;
+  }
+
+  function counts(){
+    var c={}; c.sports=0; SPORTS.forEach(function(x){c.sports+=((DATA.sports||{})[x[0]]||[]).length});
+    c.finance=0; FIN.forEach(function(x){c.finance+=((DATA.finance||{})[x[0]]||[]).length});
+    c.politics=(DATA.politics||[]).length; return c;
+  }
+
+  function build(){
+    var tabs=document.getElementById('tabs'), main=document.getElementById('main'), c=counts();
+    main.textContent='';
+    TABS.forEach(function(t){
+      var b=el('button','tab'); b.type='button'; b.id='tab-'+t.id; b.setAttribute('role','tab'); b.setAttribute('aria-controls','p-'+t.id);
+      b.appendChild(document.createTextNode(t.label)); b.appendChild(el('span','n',String(c[t.id])));
+      b.addEventListener('click',function(){select(t.id,true)});
+      b.addEventListener('keydown',function(e){
+        var i=TABS.findIndex(function(x){return x.id===t.id}), j=-1;
+        if(e.key==='ArrowRight') j=(i+1)%TABS.length; else if(e.key==='ArrowLeft') j=(i+TABS.length-1)%TABS.length;
+        if(j>=0){e.preventDefault(); select(TABS[j].id,true); document.getElementById('tab-'+TABS[j].id).focus()}
+      });
+      tabs.appendChild(b);
+      var p=el('section','panel'); p.id='p-'+t.id; p.setAttribute('role','tabpanel'); p.setAttribute('aria-labelledby','tab-'+t.id); p.hidden=true;
+      p.appendChild(el('p','lede',t.lede));
+      if(t.id==='sports') SPORTS.forEach(function(x){p.appendChild(renderGroup(x[0],x[1],x[2],(DATA.sports||{})[x[0]]||[],true))});
+      if(t.id==='finance') FIN.forEach(function(x){p.appendChild(renderGroup(x[0],x[1],x[2],(DATA.finance||{})[x[0]]||[],true))});
+      if(t.id==='politics'){ var w=el('div','items flat'); (DATA.politics||[]).forEach(function(it){w.appendChild(renderItem(it))}); p.appendChild(w) }
+      main.appendChild(p);
+    });
+    var saved=LS.get('newsdash.tab'); select(TABS.some(function(t){return t.id===saved})?saved:'sports', false);
+  }
+
+  function select(id, persist){
+    TABS.forEach(function(t){
+      var on = t.id===id, b=document.getElementById('tab-'+t.id);
+      b.setAttribute('aria-selected', on); b.tabIndex = on?0:-1;
+      document.getElementById('p-'+t.id).hidden = !on;
+    });
+    if(persist){ LS.set('newsdash.tab', id); window.scrollTo({top:0}) }
+    else LS.set('newsdash.tab', id);
+  }
+
+  function tick(){
+    var now=new Date();
+    var nodes=document.querySelectorAll('time.rec');
+    for(var i=0;i<nodes.length;i++){
+      var n=nodes[i], r=rel(n.getAttribute('data-published'), now);
+      n.textContent=r.text; n.title=r.title; n.classList.toggle('old', r.old);
+    }
+    var g=parse(DATA.meta && DATA.meta.generated_at), st=document.getElementById('stamp-t');
+    if(g){ st.textContent=fmtSGT(g); st.title='Data compiled '+rel(DATA.meta.generated_at, now).text }
+  }
+
+  build(); tick();
+  document.getElementById('foot').textContent =
+    'Compiled from public web sources and the X API. Headlines link to the original publisher; tweets are quoted from X and may be truncated. All times shown in SGT (UTC+8). Not financial advice.';
+  setInterval(tick, 60000);
+  document.addEventListener('visibilitychange', function(){ if(!document.hidden) tick() });
+  window.addEventListener('pageshow', tick);
+})();
+</script>
+</body>
+</html>
