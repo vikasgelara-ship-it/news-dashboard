@@ -4265,7 +4265,7 @@ body.paper-tab{padding-bottom:calc(var(--sab) + 8px)}
   ];
   /* Newspaper tabs: PAPERS is filled at build time from /workspace/newspapers (files present + meta.json); a missing paper renders a placeholder, never a broken frame.
      Each page is lazy-loaded into an iframe the first time its tab is opened (onShow). */
-  var PAPERS = [{"id": "ft", "label": "FT", "name": "Financial Times (US edition)", "file": "newspapers/ft.html", "available": false, "edition": "", "generated": ""}, {"id": "nyt", "label": "NYT", "name": "New York Times (US edition)", "file": "newspapers/nyt.html", "available": false, "edition": "", "generated": ""}, {"id": "wsj", "label": "WSJ", "name": "Wall Street Journal", "file": "newspapers/wsj.html", "available": false, "edition": "", "generated": ""}];
+  var PAPERS = [{"id": "ft", "label": "FT", "name": "Financial Times (US edition)", "file": "newspapers/ft.html", "available": true, "edition": "2026-10-10", "generated": "2026-10-11 21:34:41 SGT"}, {"id": "nyt", "label": "NYT", "name": "New York Times (US edition)", "file": "newspapers/nyt.html", "available": true, "edition": "2026-10-10", "generated": "2026-10-11 21:34:41 SGT"}, {"id": "wsj", "label": "WSJ", "name": "Wall Street Journal", "file": "newspapers/wsj.html", "available": true, "edition": "2026-10-10", "generated": "2026-10-11 21:34:41 SGT"}];
   function usToday(){return dayF2.format(new Date())}
   var dayF2 = new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'});
   function fmtEdition(iso){var m=/^(\d{4})-(\d{2})-(\d{2})/.exec(iso||''); if(!m) return iso||''; var d=new Date(Date.UTC(+m[1],+m[2]-1,+m[3]));
