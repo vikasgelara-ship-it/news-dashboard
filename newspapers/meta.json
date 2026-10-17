@@ -1,30 +1,34 @@
 {
-  "generated_at_sgt": "2026-10-17 05:28:48 SGT",
-  "generated_at_iso": "2026-10-17T05:28:48+08:00",
-  "run_folder": "/workspace/telegram-news/2026-10-17",
+  "generated_at_sgt": "2026-10-18 05:02:24 SGT",
+  "generated_at_iso": "2026-10-18T05:02:24+08:00",
+  "run_folder": "/workspace/telegram-news/2026-10-18",
+  "mode": "front-page-only",
   "editions": {
     "ft": {
       "name": "Financial Times",
-      "edition_date": "2026-10-16",
-      "source": "FT US edition, 16 Oct 2026",
+      "edition_date": "2026-10-17",
+      "source": "FT Weekend US edition, 17/18 Oct 2026",
       "pdf": "FT US.pdf",
-      "articles": 14,
+      "articles": 8,
+      "mode": "front-page-only",
       "file": "/workspace/newspapers/ft.html"
     },
     "nyt": {
       "name": "The New York Times",
-      "edition_date": "2026-10-16",
-      "source": "NYT U.S. edition, 16 Oct 2026",
-      "pdf": "NYT 1610.pdf",
-      "articles": 20,
+      "edition_date": "2026-10-17",
+      "source": "NYT U.S. edition, 17 Oct 2026",
+      "pdf": "NYT 1710.pdf",
+      "articles": 16,
+      "mode": "front-page-only",
       "file": "/workspace/newspapers/nyt.html"
     },
     "wsj": {
       "name": "The Wall Street Journal",
-      "edition_date": "2026-10-16",
-      "source": "WSJ U.S. edition, 16 Oct 2026",
-      "pdf": "The Wall Street Journal - October 16, 2026.pdf",
-      "articles": 12,
+      "edition_date": "2026-10-17",
+      "source": "WSJ Weekend U.S. edition, 17–18 Oct 2026",
+      "pdf": "The Wall Street Journal Weekend - October 17, 2026.pdf",
+      "articles": 13,
+      "mode": "full",
       "file": "/workspace/newspapers/wsj.html"
     }
   },
