@@ -1,7 +1,7 @@
 {
-  "generated_at_sgt": "2026-10-23 04:41:34 SGT",
-  "generated_at_iso": "2026-10-23T04:41:34+08:00",
-  "run_folder": "/workspace/telegram-news/2026-10-23",
+  "generated_at_sgt": "2026-10-24 04:36:23 SGT",
+  "generated_at_iso": "2026-10-24T04:36:23+08:00",
+  "run_folder": "/workspace/telegram-news/2026-10-24",
   "mode": "no-ocr",
   "editions": {
     "ft": {
@@ -18,13 +18,13 @@
     },
     "nyt": {
       "name": "The New York Times",
-      "edition_date": "2026-10-22",
-      "source": "The New York Times PDF ‘NYT 2210.pdf’",
-      "pdf": "NYT 2210.pdf",
+      "edition_date": "2026-10-23",
+      "source": "The New York Times PDF ‘NYT 2310.pdf’",
+      "pdf": "NYT 2310.pdf",
       "articles": 0,
       "mode": "images",
       "method": "images",
-      "pages": 52,
+      "pages": 46,
       "pages_dir": "/workspace/newspapers/nyt_pages",
       "file": "/workspace/newspapers/nyt.html"
     },
@@ -40,5 +40,6 @@
     }
   },
   "combined": "/workspace/newspapers/all-newspapers.html",
-  "failed": []
+  "failed": [],
+  "notes": "2026-10-24 run built NYT only; ft/wsj entries carried over from run 2026-10-23 (no newer editions). all-newspapers.html contains FT+NYT+WSJ."
 }
