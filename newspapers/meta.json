@@ -1,45 +1,44 @@
 {
-  "generated_at_sgt": "2026-10-24 04:36:23 SGT",
-  "generated_at_iso": "2026-10-24T04:36:23+08:00",
-  "run_folder": "/workspace/telegram-news/2026-10-24",
+  "generated_at_sgt": "2026-10-25 04:50:50 SGT",
+  "generated_at_iso": "2026-10-25T04:50:50+08:00",
+  "run_folder": "/workspace/telegram-news/2026-10-25",
   "mode": "no-ocr",
   "editions": {
     "ft": {
       "name": "Financial Times",
-      "edition_date": "2026-10-22",
+      "edition_date": "2026-10-24",
       "source": "Financial Times PDF ‘FT US.pdf’",
       "pdf": "FT US.pdf",
       "articles": 0,
       "mode": "images",
       "method": "images",
-      "pages": 16,
+      "pages": 50,
       "pages_dir": "/workspace/newspapers/ft_pages",
       "file": "/workspace/newspapers/ft.html"
     },
     "nyt": {
       "name": "The New York Times",
-      "edition_date": "2026-10-23",
-      "source": "The New York Times PDF ‘NYT 2310.pdf’",
-      "pdf": "NYT 2310.pdf",
+      "edition_date": "2026-10-24",
+      "source": "The New York Times PDF ‘NYT 2410.pdf’",
+      "pdf": "NYT 2410.pdf",
       "articles": 0,
       "mode": "images",
       "method": "images",
-      "pages": 46,
+      "pages": 44,
       "pages_dir": "/workspace/newspapers/nyt_pages",
       "file": "/workspace/newspapers/nyt.html"
     },
     "wsj": {
       "name": "The Wall Street Journal",
-      "edition_date": "2026-10-22",
-      "source": "WSJ U.S. edition, 22 Oct 2026",
-      "pdf": "The Wall Street Journal - October 22, 2026.pdf",
-      "articles": 11,
+      "edition_date": "2026-10-24",
+      "source": "WSJ Weekend U.S. edition, 24–25 Oct 2026",
+      "pdf": "The Wall Street Journal - October 24, 2026.pdf",
+      "articles": 13,
       "mode": "full",
       "method": "text",
       "file": "/workspace/newspapers/wsj.html"
     }
   },
   "combined": "/workspace/newspapers/all-newspapers.html",
-  "failed": [],
-  "notes": "2026-10-24 run built NYT only; ft/wsj entries carried over from run 2026-10-23 (no newer editions). all-newspapers.html contains FT+NYT+WSJ."
+  "failed": []
 }
