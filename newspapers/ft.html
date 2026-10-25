@@ -117,7 +117,7 @@ nav#pt button:focus-visible{outline:3px solid #888;outline-offset:2px}
 <main>
  <section>
   <div class="page" id="page"><img id="pimg" alt=""></div>
-  <p class="hint">Tap or click a highlighted story or teaser to read it as text (coloured box = front-page story, second colour = teaser whose full story is on an inside page, dashed = reference to something not in this PDF). All items are also listed alongside/below.</p>
+  <p class="hint">Tap a highlighted front-page story (or any item in the list) to read the text. Coloured boxes = front-page stories/teasers; inside stories appear in the list only. Each article has an AI summary toggle.</p>
  </section>
  <aside><h2>Front-page stories &amp; teasers</h2><ol class="list" id="list"></ol></aside>
 </main>
@@ -184,12 +184,17 @@ function mount(k){
  if(P.viewer){viewer();return}
  pimg.src=P.img;pimg.alt=P.name+' front page';page.style.setProperty('--asp',P.aspect);
  Array.prototype.slice.call(page.querySelectorAll('.hs')).forEach(function(n){n.remove()});list.textContent='';
+ var nFront=0;A.forEach(function(a){if(a.box)nFront++});
  A.forEach(function(a,i){
-  var h=el('a','hs'+(a.kind==='inside'?' in':a.kind==='note'?' in nt':''));h.href='#'+hid(a);h.title=a.headline;h.setAttribute('aria-label',a.headline);
-  h.style.left=a.box[0]+'%';h.style.top=a.box[1]+'%';h.style.width=a.box[2]+'%';h.style.height=a.box[3]+'%';
-  h.appendChild(el('span',null,String(i+1)));page.appendChild(h);
+  if(a.box&&a.box.length>=4){
+   var h=el('a','hs'+(a.kind==='inside'?' in':a.kind==='note'?' in nt':''));h.href='#'+hid(a);h.title=a.headline;h.setAttribute('aria-label',a.headline);
+   h.style.left=a.box[0]+'%';h.style.top=a.box[1]+'%';h.style.width=a.box[2]+'%';h.style.height=a.box[3]+'%';
+   h.appendChild(el('span',null,String(i+1)));page.appendChild(h);
+  }
   var li=el('li'),l=el('a');l.href='#'+hid(a);var b=el('b',null,a.headline);l.appendChild(b);
   var sm=el('small');sm.appendChild(el('span',tagc(a),a.tag));if(a.teaser)sm.appendChild(el('span','tz','Front page: '+a.teaser));l.appendChild(sm);li.appendChild(l);list.appendChild(li)});
+ var asideH=document.querySelector('aside h2');
+ if(asideH)asideH.textContent=(A.length>nFront&&nFront>0)?('Stories ('+A.length+': front page + inside)'): (nFront? 'Front-page stories & teasers':'Stories');
  if(multi)Array.prototype.forEach.call(pt.children,function(b){b.setAttribute('aria-selected',String(b.dataset.k===P.key))})}
 if(multi){pt.hidden=false;PP.forEach(function(p){var b=el('button',null,p.tab);b.type='button';b.dataset.k=p.key;b.setAttribute('role','tab');b.onclick=function(){if(ov.classList.contains('open'))hide();history.replaceState('',document.title,'#'+p.key);mount(p.key)};pt.appendChild(b)})}
 function sec(s,rel){

@@ -1,6 +1,6 @@
 {
-  "generated_at_sgt": "2026-10-25 04:50:50 SGT",
-  "generated_at_iso": "2026-10-25T04:50:50+08:00",
+  "generated_at_sgt": "2026-10-25 08:54:30 SGT",
+  "generated_at_iso": "2026-10-25T08:54:30+08:00",
   "run_folder": "/workspace/telegram-news/2026-10-25",
   "mode": "no-ocr",
   "editions": {
@@ -16,24 +16,12 @@
       "pages_dir": "/workspace/newspapers/ft_pages",
       "file": "/workspace/newspapers/ft.html"
     },
-    "nyt": {
-      "name": "The New York Times",
-      "edition_date": "2026-10-24",
-      "source": "The New York Times PDF ‘NYT 2410.pdf’",
-      "pdf": "NYT 2410.pdf",
-      "articles": 0,
-      "mode": "images",
-      "method": "images",
-      "pages": 44,
-      "pages_dir": "/workspace/newspapers/nyt_pages",
-      "file": "/workspace/newspapers/nyt.html"
-    },
     "wsj": {
       "name": "The Wall Street Journal",
       "edition_date": "2026-10-24",
       "source": "WSJ Weekend U.S. edition, 24–25 Oct 2026",
       "pdf": "The Wall Street Journal - October 24, 2026.pdf",
-      "articles": 13,
+      "articles": 62,
       "mode": "full",
       "method": "text",
       "file": "/workspace/newspapers/wsj.html"
