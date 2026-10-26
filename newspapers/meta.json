@@ -1,21 +1,9 @@
 {
-  "generated_at_sgt": "2026-10-25 08:54:30 SGT",
-  "generated_at_iso": "2026-10-25T08:54:30+08:00",
+  "generated_at_sgt": "2026-10-26 07:22:57 SGT",
+  "generated_at_iso": "2026-10-26T07:22:57+08:00",
   "run_folder": "/workspace/telegram-news/2026-10-25",
   "mode": "no-ocr",
   "editions": {
-    "ft": {
-      "name": "Financial Times",
-      "edition_date": "2026-10-24",
-      "source": "Financial Times PDF ‘FT US.pdf’",
-      "pdf": "FT US.pdf",
-      "articles": 0,
-      "mode": "images",
-      "method": "images",
-      "pages": 50,
-      "pages_dir": "/workspace/newspapers/ft_pages",
-      "file": "/workspace/newspapers/ft.html"
-    },
     "wsj": {
       "name": "The Wall Street Journal",
       "edition_date": "2026-10-24",
