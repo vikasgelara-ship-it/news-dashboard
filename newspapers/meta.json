@@ -1,15 +1,15 @@
 {
-  "generated_at_sgt": "2026-11-04 04:53:58 SGT",
-  "generated_at_iso": "2026-11-04T04:53:58+08:00",
-  "run_folder": "/workspace/telegram-news/2026-11-04",
+  "generated_at_sgt": "2026-11-05 04:40:13 SGT",
+  "generated_at_iso": "2026-11-05T04:40:13+08:00",
+  "run_folder": "/workspace/telegram-news/2026-11-05",
   "mode": "no-ocr",
   "editions": {
     "wsj": {
       "name": "The Wall Street Journal",
-      "edition_date": "2026-11-03",
-      "source": "WSJ U.S. edition, Tuesday 3 Nov 2026",
-      "pdf": "The Wall Street Journal - November 03, 2026.pdf",
-      "articles": 62,
+      "edition_date": "2026-11-04",
+      "source": "WSJ U.S. edition, Wednesday 4 Nov 2026",
+      "pdf": "The Wall Street Journal - November 04, 2026.pdf",
+      "articles": 77,
       "mode": "full",
       "method": "text",
       "file": "/workspace/newspapers/wsj.html"
