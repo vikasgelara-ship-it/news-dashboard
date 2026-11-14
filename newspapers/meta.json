@@ -1,7 +1,7 @@
 {
-  "generated_at_sgt": "2026-11-11 04:42:52 SGT",
-  "generated_at_iso": "2026-11-11T04:42:52+08:00",
-  "run_folder": "/workspace/telegram-news/2026-11-11",
+  "generated_at_sgt": "2026-11-14 16:52:22 SGT",
+  "generated_at_iso": "2026-11-14T16:52:22+08:00",
+  "run_folder": "/workspace/telegram-news/2026-11-14",
   "mode": "no-ocr",
   "editions": {
     "wsj": {
@@ -13,6 +13,16 @@
       "mode": "full",
       "method": "text",
       "file": "/workspace/newspapers/wsj.html"
+    },
+    "economist": {
+      "name": "The Economist",
+      "edition_date": "2026-11-14",
+      "source": "English Trunk Telegram, The Economist UK_1411.pdf",
+      "edition": "UK",
+      "articles": 75,
+      "method": "text",
+      "file": "/workspace/newspapers/economist.html",
+      "pdf": "/workspace/newspapers/economist.pdf"
     }
   },
   "combined": "/workspace/newspapers/all-newspapers.html",
